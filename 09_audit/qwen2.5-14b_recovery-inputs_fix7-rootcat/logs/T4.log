@@ -1,0 +1,651 @@
+[20:30:55] INFO: Extracting 30 diverse entities from context...
+[20:31:18] ERROR: Entity extraction failed: Invalid JSON format from LLM: {
+  "entities": [
+    {
+      "name": "Kevin McCarthy",
+      "type": "person",
+      "bio": "Former US House Speaker",
+      "profession": "Politician"
+    },
+    {
+      "name": "Matt Gaetz",
+      "type": "person",
+      "bio": "US Representative (R-FL)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Jim Jordan",
+      "type": "person",
+      "bio": "US Representative (R-OH)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Tom Emmer",
+      "type": "person",
+      "bio": "US Representative (R-MN)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Steve Scalise",
+      "type": "person",
+      "bio": "US Representative (R-LA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Mike Johnson",
+      "type": "person",
+      "bio": "US Representative (R-LA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Donald Trump",
+      "type": "person",
+      "bio": "Former US President",
+      "profession": "Politician"
+    },
+    {
+      "name": "Hakeem Jeffries",
+      "type": "person",
+      "bio": "US Representative (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "The Wall Street Journal",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Goldman Sachs",
+      "type": "organization",
+      "bio": "Global Investment Bank",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "JP Morgan",
+      "type": "organization",
+      "bio": "Global Investment Bank",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "The Federal Reserve",
+      "type": "organization",
+      "bio": "US Central Bank",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Cato Institute",
+      "type": "organization",
+      "bio": "US Think Tank",
+      "profession": "Think Tank"
+    },
+    {
+      "name": "Heritage Foundation",
+      "type": "organization",
+      "bio": "US Think Tank",
+      "profession": "Think Tank"
+    },
+    {
+      "name": "Freedom Caucus",
+      "type": "organization",
+      "bio": "US Congressional Group",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "Moderate House Republicans",
+      "type": "organization",
+      "bio": "US Congressional Group",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "Trump Loyalist Swing Vote",
+      "type": "organization",
+      "bio": "US Congressional Group",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "House Democrats",
+      "type": "organization",
+      "bio": "US Congressional Group",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "House Republicans",
+      "type": "organization",
+      "bio": "US Congressional Group",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "US House of Representatives",
+      "type": "organization",
+      "bio": "US Legislative Body",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "US Senate",
+      "type": "organization",
+      "bio": "US Legislative Body",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "White House",
+      "type": "organization",
+      "bio": "US Executive Office",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Congressional Budget Office",
+      "type": "organization",
+      "bio": "US Government Agency",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Federal Election Commission",
+      "type": "organization",
+      "bio": "US Government Agency",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "National Association of Manufacturers",
+      "type": "organization",
+      "bio": "US Trade Association",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "National Federation of Independent Business",
+      "type": "organization",
+      "bio": "US Trade Association",
+      "profession": "Interest Group"
+    },
+    {
+      "name": "American Enterprise Institute",
+      "type": "organization",
+      "bio": "US Think Tank",
+      "profession": "Think Tank"
+    },
+    {
+      "name": "Brookings Institution",
+      "type": "organization",
+      "bio": "US Think Tank",
+      "profession": "Think Tank"
+    },
+    {
+      "name": "Pew Research Center",
+      "type": "organization",
+      "bio": "US Think Tank",
+      "profession": "Think Tank"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "CNN",
+      "type": "organization",
+      "bio": "Global News Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Fox News",
+      "type": "organization",
+      "bio": "US News Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Nancy Pelosi",
+      "type": "person",
+      "bio": "Former US House Speaker",
+      "profession": "Politician"
+    },
+    {
+      "name": "Joe Biden",
+      "type": "person",
+      "bio": "US President",
+      "profession": "Politician"
+    },
+    {
+      "name": "Kamala Harris",
+      "type": "person",
+      "bio": "US Vice President",
+      "profession": "Politician"
+    },
+    {
+      "name": "Mitch McConnell",
+      "type": "person",
+      "bio": "US Senator (R-KY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Chuck Schumer",
+      "type": "person",
+      "bio": "US Senator (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Elizabeth Warren",
+      "type": "person",
+      "bio": "US Senator (D-MA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ted Cruz",
+      "type": "person",
+      "bio": "US Senator (R-TX)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Bernie Sanders",
+      "type": "person",
+      "bio": "US Senator (I-VT)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Alexandria Ocasio-Cortez",
+      "type": "person",
+      "bio": "US Representative (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ilhan Omar",
+      "type": "person",
+      "bio": "US Representative (D-MN)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Rashida Tlaib",
+      "type": "person",
+      "bio": "US Representative (D-MI)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ayanna Pressley",
+      "type": "person",
+      "bio": "US Representative (D-MA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ro Khanna",
+      "type": "person",
+      "bio": "US Representative (D-CA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Adam Schiff",
+      "type": "person",
+      "bio": "US Representative (D-CA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Eric Swalwell",
+      "type": "person",
+      "bio": "US Representative (D-CA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ted Deutch",
+      "type": "person",
+      "bio": "US Representative (D-FL)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Jerrold Nadler",
+      "type": "person",
+      "bio": "US Representative (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Jerry Nadler",
+      "type": "person",
+      "bio": "US Representative (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Joe Manchin",
+      "type": "person",
+      "bio": "US Senator (D-WV)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Kyrsten Sinema",
+      "type": "person",
+      "bio": "US Senator (D-AZ)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Susan Collins",
+      "type": "person",
+      "bio": "US Senator (R-ME)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Lisa Murkowski",
+      "type": "person",
+      "bio": "US Senator (R-AK)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John Cornyn",
+      "type": "person",
+      "bio": "US Senator (R-TX)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Mitch McConnell",
+      "type": "person",
+      "bio": "US Senator (R-KY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Chuck Grassley",
+      "type": "person",
+      "bio": "US Senator (R-IA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Lamar Alexander",
+      "type": "person",
+      "bio": "US Senator (R-TN)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Pat Roberts",
+      "type": "person",
+      "bio": "US Senator (R-KS)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Richard Shelby",
+      "type": "person",
+      "bio": "US Senator (R-AL)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Richard Burr",
+      "type": "person",
+      "bio": "US Senator (R-NC)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John Thune",
+      "type": "person",
+      "bio": "US Senator (R-SD)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Roy Blunt",
+      "type": "person",
+      "bio": "US Senator (R-MO)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John Hoeven",
+      "type": "person",
+      "bio": "US Senator (R-ND)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ron Johnson",
+      "type": "person",
+      "bio": "US Senator (R-WI)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John Barrasso",
+      "type": "person",
+      "bio": "US Senator (R-WY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Shelby",
+      "type": "person",
+      "bio": "US Senator (R-AL)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Susan Collins",
+      "type": "person",
+      "bio": "US Senator (R-ME)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Lisa Murkowski",
+      "type": "person",
+      "bio": "US Senator (R-AK)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John Cornyn",
+      "type": "person",
+      "bio": "US Senator (R-TX)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Orrin Hatch",
+      "type": "person",
+      "bio": "US Senator (R-UT)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Bob Dole",
+      "type": "person",
+      "bio": "US Senator (R-KS)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John McCain",
+      "type": "person",
+      "bio": "US Senator (R-AZ)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Ted Kennedy",
+      "type": "person",
+      "bio": "US Senator (D-MA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Daniel Patrick Moynihan",
+      "type": "person",
+      "bio": "US Senator (D-NY)",
+      "profession": "Politician"
+    },
+    {
+      "name": "George McGovern",
+      "type": "person",
+      "bio": "US Senator (D-SD)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Abraham Ribicoff",
+      "type": "person",
+      "bio": "US Senator (D-CT)",
+      "profession": "Politician"
+    },
+    {
+      "name": "John F. Kennedy",
+      "type": "person",
+      "bio": "US Senator (D-MA)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Hubert Humphrey",
+      "type": "person",
+      "bio": "US Senator (D-MN)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Lyndon B. Johnson",
+      "type": "person",
+      "bio": "US Senator (D-TX)",
+      "profession": "Politician"
+    },
+    {
+      "name": "Harry S. Truman",
+      "type": "person",
+      "bio": "US President",
+      "profession": "Politician"
+    },
+    {
+      "name": "Dwight D. Eisenhower",
+      "type": "person",
+      "bio": "US President",
+      "profession": "Politician"
+    },
+    {
+      "name": "Franklin D. Roosevelt",
+      "type": "person",
+      "bio": "US President",
+      "profession": "Politician"
+    },
+    {
+      "name": "The New York Times",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Washington Post",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Bloomberg",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "CNBC",
+      "type": "organization",
+      "bio": "Global News Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "NPR",
+      "type": "organization",
+      "bio": "US Public Radio Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "PBS",
+      "type": "organization",
+      "bio": "US Public Television Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "C-SPAN",
+      "type": "organization",
+      "bio": "US Public Affairs Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Wall Street Journal",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "AP News",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "CNBC",
+      "type": "organization",
+      "bio": "Global News Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Bloomberg",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Financial Times",
+      "type": "organization",
+      "bio": "Global Financial Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Economist",
+      "type": "organization",
+      "bio": "Global News Magazine",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Forbes",
+      "type": "organization",
+      "bio": "Global Business Magazine",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Fortune",
+      "type": "organization",
+      "bio": "Global Business Magazine",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Bloomberg",
+      "type": "organization",
+      "bio": "Global News Agency",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "CNBC",
+      "type": "organization",
+      "bio": "Global News Network",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The New York Times",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Washington Post",
+      "type": "organization",
+      "bio": "Leading US Newspaper",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Bloomberg",
+      "type": "organization",
+      "bio": "Global News Agency",
+Intelligent persona generation failed, falling back to basic seed profile.
+[20:31:18] INFO: Loaded 11 profiles from event checkpoint: T4
+[20:31:18] INFO: Expansion Progress: 11/300. Requesting 3 parallel batches of 5...
+[20:31:24] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 4
+[20:31:24] INFO: Expansion Progress: 11/300. Requesting 3 parallel batches of 5...
+[20:31:35] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 3
+[20:31:35] INFO: Expansion Progress: 11/300. Requesting 3 parallel batches of 5...
+[20:31:44] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 2
+[20:31:44] INFO: Expansion Progress: 11/300. Requesting 3 parallel batches of 5...
+[20:31:52] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 1
+[20:31:52] INFO: Expansion Progress: 11/300. Requesting 3 parallel batches of 5...
+[20:32:01] INFO: Expansion Progress: 16/300. Requesting 3 parallel batches of 5...
+[20:32:11] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 4
+[20:32:11] INFO: Expansion Progress: 16/300. Requesting 3 parallel batches of 5...
+[20:32:21] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 3
+[20:32:21] INFO: Expansion Progress: 16/300. Requesting 3 parallel batches of 5...
+[20:32:30] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 2
+[20:32:30] INFO: Expansion Progress: 16/300. Requesting 3 parallel batches of 5...
+[20:32:38] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 1
+[20:32:38] INFO: Expansion Progress: 16/300. Requesting 3 parallel batches of 5...
+[20:32:43] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 0
+[20:32:43] WARNING: Resorting to DIVERSIFIED rule-based fallback for 284 agents.
+[20:32:43] INFO: Injecting Global Language Rule into 300 profiles...
+DEV_MINIMAL_MODE enabled: polymarket_opening_prior validation relaxed for architecture run.
+DEV_MINIMAL_MODE enabled: leakage preflight skipped for architecture run.
+Neo4j connected — strict telemetry enabled.

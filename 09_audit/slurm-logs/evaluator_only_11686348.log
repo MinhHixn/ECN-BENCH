@@ -1,0 +1,5 @@
+==================================================
+STARTING DEDICATED EVALUATOR JOB (DeepSeek-R1-14B)
+Port: 40355
+==================================================
+[2026-08-21T08:21:21.853] error: *** JOB 11686348 ON gnode1 CANCELLED AT 2026-08-21T08:21:21 DUE to SIGNAL Terminated ***

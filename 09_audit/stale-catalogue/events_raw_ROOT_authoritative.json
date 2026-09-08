@@ -1,0 +1,1104 @@
+{
+  "study": {
+    "title": "Resolved Polymarket Events — Research Dataset",
+    "description": "N=35 resolved Polymarket events for forecasting accuracy research. Core set (N=25) follows a 2x2 taxonomy (Information Type x Resolution Horizon). Supplementary set (N=10) adds purely categorical multi-outcome markets.",
+    "taxonomy_axes": {
+      "axis_1_information_type": ["Social/Behavioral", "Technical/Economic"],
+      "axis_2_resolution_horizon": {
+        "short": "2–4 weeks from market open to resolution",
+        "medium": "1–3 months from market open to resolution"
+      }
+    }
+  },
+  "core_events": {
+    "social_short": [
+      {
+        "id": "S2",
+        "question": "Which party will control the US Senate after the 2024 election?",
+        "market_type": "categorical",
+        "options": ["Republican", "Democrat"],
+        "opened": "2024-10",
+        "resolved": "2024-11-06",
+        "outcome": "Republican",
+        "url": "https://polymarket.com/event/which-party-will-control-the-us-senate-after-the-2024-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "micro_questions": [
+          {
+            "id": "S2_q1_wv_flip",
+            "question": "What is the probability of the West Virginia Senate seat flipping to Republicans?",
+            "options": ["0-25%", "25-50%", "50-75%", "75-100%"],
+            "expected_dominant": "75-100%",
+            "expected_rationale": "Incumbent Joe Manchin is not running in a state Trump won by 38.9% in 2020, making a flip near-certain according to Sabato's Crystal Ball."
+          },
+          {
+            "id": "S2_q2_mt_tester",
+            "question": "Where does the Montana Senate race stand in October 2024 polling averages?",
+            "options": ["Tester (D) +5% or more", "Toss-up (+/- 2%)", "Sheehy (R) +4% to +7%", "Sheehy (R) +10% or more"],
+            "expected_dominant": "Sheehy (R) +4% to +7%",
+            "expected_rationale": "October 2024 polling averages showed Republican Tim Sheehy leading incumbent Jon Tester by 4 to 7 percentage points."
+          },
+          {
+            "id": "S2_q3_oh_brown",
+            "question": "What is the core driver of Sherrod Brown's competitiveness in Ohio?",
+            "options": ["Strong Presidential coattails", "Labor populism and union brand", "Demographic shifts to the left", "High third-party vote share"],
+            "expected_dominant": "Labor populism and union brand",
+            "expected_rationale": "Sherrod Brown relies on a unique cross-partisan brand of labor populism and union endorsements to outrun the top of the ticket in a state Trump won by 8%."
+          }
+        ]
+      },
+      {
+        "id": "S3",
+        "question": "Will Republicans achieve a red sweep in 2024 (Presidency + House + Senate)?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2024-10",
+        "resolved": "2024-11-08",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/balance-of-power-2024-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "micro_questions": [
+          {
+            "id": "S3_q1_pres_prob",
+            "question": "What was the FiveThirtyEight win probability for Trump on November 5, 2024?",
+            "options": ["<45%", "45-48%", "49-51%", ">51%"],
+            "expected_dominant": "49-51%",
+            "expected_rationale": "FiveThirtyEight's final 2024 forecast on Nov 5 placed Trump's win probability at 50% (exactly 50/100 in simulations), reflecting a dead-heat toss-up."
+          },
+          {
+            "id": "S3_q2_house_buffer",
+            "question": "How many seats did Republicans need to flip to lose their House majority?",
+            "options": ["Net 2 seats", "Net 5 seats", "Net 10 seats", "Net 15 seats"],
+            "expected_dominant": "Net 5 seats",
+            "expected_rationale": "With a 222-213 split, losing a net of 5 seats would result in Republicans losing control of the House."
+          },
+          {
+            "id": "S3_q3_correlation",
+            "question": "What is the estimated correlation between the Presidential and House outcomes in 2024?",
+            "options": ["Low (0.0-0.3)", "Moderate (0.3-0.6)", "High (0.6-0.8)", "Near-Perfect (>0.8)"],
+            "expected_dominant": "High (0.6-0.8)",
+            "expected_rationale": "Forecasters estimated a correlation of 0.65-0.75 due to high partisan polarization and low ticket-splitting rates."
+          }
+        ]
+      },
+      {
+        "id": "S4",
+        "question": "Will total 2024 presidential election turnout fall in the 155–160 million bracket?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2024-10",
+        "resolved": "2024-12",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/turnout-in-2024-presidential-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "micro_questions": [
+          {
+            "id": "S4_q1_early_vote",
+            "question": "Approximately how many early votes were cast by November 4, 2024?",
+            "options": ["40-60 million", "60-75 million", "78-82 million", "90-100 million"],
+            "expected_dominant": "78-82 million",
+            "expected_rationale": "Preliminary data from TargetSmart and state election websites indicated approximately 78-82 million early votes were cast."
+          },
+          {
+            "id": "S4_q2_2020_baseline",
+            "question": "What was the total vote count in the 2020 Presidential election?",
+            "options": ["138.8 million", "158.4 million", "165.2 million", "172.0 million"],
+            "expected_dominant": "158.4 million",
+            "expected_rationale": "The 2020 election saw a record 158,429,631 total votes cast, representing a 66.2% VEP turnout rate."
+          },
+          {
+            "id": "S4_q3_vep_growth",
+            "question": "What was the projected Voting Eligible Population (VEP) for 2024?",
+            "options": ["230-235 million", "235-240 million", "244-246 million", "250-255 million"],
+            "expected_dominant": "244-246 million",
+            "expected_rationale": "Projections from the United States Elections Project estimated the 2024 VEP at approximately 244-246 million, up from 239M in 2020."
+          }
+        ]
+      },
+      {
+        "id": "S5",
+        "question": "Will the GOP popular vote margin of victory be less than 1.5%?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2024-11",
+        "resolved": "2024-12",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/popular-vote-margin-of-victory-0pt25-ranges",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "micro_questions": [
+          {
+            "id": "S5_q1_counting_lag",
+            "question": "Which states' counting patterns typically compress Republican popular vote margins over time?",
+            "options": ["Florida and Texas", "Ohio and Pennsylvania", "California and Washington", "Georgia and North Carolina"],
+            "expected_dominant": "California and Washington",
+            "expected_rationale": "Large states with high mail-ballot shares like California and Washington take weeks to certify and historically lean Democratic, narrowing the winner's margin."
+          },
+          {
+            "id": "S5_q2_election_night",
+            "question": "What was the preliminary popular vote margin reported by AP on November 6-7?",
+            "options": ["0.5-1.0%", "1.0-1.5%", "1.5-2.0%", "2.0-3.0%"],
+            "expected_dominant": "1.5-2.0%",
+            "expected_rationale": "Preliminary counts showed Trump with roughly a 1.8 percentage point lead before the full counting of Western mail-in ballots."
+          },
+          {
+            "id": "S5_q3_historical_comp",
+            "question": "By how much did the margin compress between election night and final certification?",
+            "options": ["< 0.15 points", "0.15 - 0.25 points", "0.25 - 0.45 points", "> 0.45 points"],
+            "expected_dominant": "0.25 - 0.45 points",
+            "expected_rationale": "Trump's margin shrank from ~1.8 points on election night to 1.47 points in the final certified count, a compression of 0.33 percentage points (±0.02 variation depending on reporting source)."
+          }
+        ]
+      },
+      {
+        "id": "C3",
+        "question": "Which party wins the most seats in the 2024 French snap legislative election?",
+        "market_type": "categorical",
+        "options": ["Rassemblement National", "Nouveau Front Populaire", "Ensemble", "Other"],
+        "opened": "2024-06",
+        "resolved": "2024-07-07",
+        "outcome": "Nouveau Front Populaire",
+        "url": "https://polymarket.com/event/2024-french-legislative-elections",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "Surprise outcome — RN led first round but NFP won most seats after second round",
+        "micro_questions": [
+          {
+            "id": "C3_q1_first_round",
+            "question": "What was the Rassemblement National's vote share in the first round on June 30?",
+            "options": ["20.0%", "28.0%", "33.1%", "40.2%"],
+            "expected_dominant": "33.1%",
+            "expected_rationale": "The RN and its allies led the first round decisively with 33.1% of the vote."
+          },
+          {
+            "id": "C3_q2_withdrawals",
+            "question": "How many candidates withdrew between rounds to form the 'Republican Front' against RN?",
+            "options": ["Less than 50", "Approx 100", "Over 200", "Exactly 289"],
+            "expected_dominant": "Over 200",
+            "expected_rationale": "Over 200 NFP and Ensemble candidates withdrew to consolidate the anti-RN vote in the second round."
+          },
+          {
+            "id": "C3_q3_majority",
+            "question": "How many seats are required for an absolute majority in the National Assembly?",
+            "options": ["250", "289", "300", "326"],
+            "expected_dominant": "289",
+            "expected_rationale": "The French National Assembly has 577 seats, requiring 289 for an absolute majority."
+          }
+        ]
+      }
+    ],
+    "social_medium": [
+      {
+        "id": "S6",
+        "question": "Which party wins the most seats in the 2024 Austrian legislative election?",
+        "market_type": "categorical",
+        "options": ["FPÖ", "ÖVP", "SPÖ", "Other"],
+        "opened": "2024-08",
+        "resolved": "2024-09-29",
+        "outcome": "FPÖ",
+        "url": "https://polymarket.com/event/which-party-wins-the-most-seats-austrian-legislative-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "micro_questions": [
+          {
+            "id": "S6_q1_poll_leader",
+            "question": "Which party consistently led Austrian polls throughout August and September 2024?",
+            "options": ["ÖVP (People's Party)", "SPÖ (Social Democrats)", "FPÖ (Freedom Party)", "Greens"],
+            "expected_dominant": "FPÖ (Freedom Party)",
+            "expected_rationale": "FPÖ led major institute polls (Unique, SORA, Lazarsfeld) with stable support between 27-30%."
+          },
+          {
+            "id": "S6_q2_market_prob",
+            "question": "What was the Polymarket implied probability for an FPÖ win in the final weeks?",
+            "options": ["~40%", "~60%", "~80%", "~95%"],
+            "expected_dominant": "~80%",
+            "expected_rationale": "Polymarket and Austrian bookmakers gave the FPÖ approximately a 78-82% probability of winning the most seats."
+          },
+          {
+            "id": "S6_q3_cordon",
+            "question": "What is the primary obstacle to the FPÖ forming a government despite winning seats?",
+            "options": ["Presidential veto power", "Constitutional prohibition", "The 'Cordon Sanitaire' pledge", "Lack of funding"],
+            "expected_dominant": "The 'Cordon Sanitaire' pledge",
+            "expected_rationale": "All other major parties ruled out a coalition with Herbert Kickl, creating a political quarantine around the FPÖ."
+          }
+        ]
+      },
+      {
+        "id": "S7",
+        "question": "Will OpenAI become a for-profit company in 2025?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2025-01",
+        "resolved": "2025-12",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/openai-becomes-a-for-profit-in-2025",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "micro_questions": [
+          {
+            "id": "S7_q1_pbc_structure",
+            "question": "What is the target corporate structure for OpenAI's restructuring?",
+            "options": ["Standard C-Corp", "B-Corp Certification", "Public Benefit Corporation (PBC)", "Worker-owned Cooperative"],
+            "expected_dominant": "Public Benefit Corporation (PBC)",
+            "expected_rationale": "Reports in late 2024 indicated OpenAI was exploring conversion to a Public Benefit Corporation structure to balance profit and mission."
+          },
+          {
+            "id": "S7_q2_funding_condition",
+            "question": "Which firm reportedly made restructuring a condition of OpenAI's $6.6B funding round?",
+            "options": ["Microsoft", "Thrive Capital", "SoftBank", "Apple"],
+            "expected_dominant": "Thrive Capital",
+            "expected_rationale": "Thrive Capital and other investors reportedly included restructuring as a condition for the September 2024 funding round."
+          },
+          {
+            "id": "S7_q3_ag_scrutiny",
+            "question": "Which state's Attorney General was most active in monitoring OpenAI's fair-value negotiations?",
+            "options": ["New York", "California", "Texas", "Florida"],
+            "expected_dominant": "California",
+            "expected_rationale": "As a California-based non-profit, the California Attorney General (Rob Bonta) was in active discussions regarding fair-value compensation."
+          }
+        ]
+      },
+      {
+        "id": "S9",
+        "question": "Will there be a US government shutdown in early 2025?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2025-01",
+        "resolved": "2025-03",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/us-government-shutdown-2025",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "micro_questions": [
+          {
+            "id": "S9_q1_funding_deadline",
+            "question": "What was the critical funding deadline in early 2025 following the December CR?",
+            "options": ["January 15", "February 1", "March 14", "April 15"],
+            "expected_dominant": "March 14",
+            "expected_rationale": "The CR passed in December 2024 extended government funding through March 14, 2025."
+          },
+          {
+            "id": "S9_q2_house_margin",
+            "question": "Why was the Republican House majority considered fragile for funding votes?",
+            "options": ["Lack of leadership", "Narrow margin of seats", "Internal filibuster rules", "Democratic committee control"],
+            "expected_dominant": "Narrow margin of seats",
+            "expected_rationale": "A narrow House majority increases the leverage of fiscal hardliners and makes passing appropriations difficult without near-perfect unity."
+          },
+          {
+            "id": "S9_q3_shutdown_history",
+            "question": "What is the primary driver of potential shutdowns in the 2025 context?",
+            "options": ["Debt ceiling limits", "Policy riders and spending levels", "Executive branch refusal", "Judicial stay"],
+            "expected_dominant": "Policy riders and spending levels",
+            "expected_rationale": "Ongoing disagreements over spending levels and specific policy riders are the primary drivers of funding lapses."
+          }
+        ]
+      },
+      {
+        "id": "C2",
+        "question": "Who will be the 2024 Democratic presidential nominee?",
+        "market_type": "categorical",
+        "options": ["Biden", "Harris", "Newsom", "Michelle Obama", "Other"],
+        "opened": "2024-06",
+        "resolved": "2024-08-22",
+        "outcome": "Harris",
+        "url": "https://polymarket.com/event/who-will-be-the-2024-democratic-presidential-nominee",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Large probability shift mid-market after Biden debate performance",
+        "micro_questions": [
+          {
+            "id": "C2_q1_debate_impact",
+            "question": "Which event on June 27, 2024, triggered the push for a new nominee?",
+            "options": ["DNC fundraising gala", "Presidential debate", "Supreme Court ruling", "NATO summit speech"],
+            "expected_dominant": "Presidential debate",
+            "expected_rationale": "Biden's performance in the June 27 debate led to immediate and widespread concerns about his fitness and electability."
+          },
+          {
+            "id": "C2_q2_withdrawal_date",
+            "question": "When did Joe Biden formally withdraw from the 2024 race?",
+            "options": ["July 4", "July 11", "July 21", "August 19"],
+            "expected_dominant": "July 21",
+            "expected_rationale": "Biden formally withdrew and endorsed Harris on July 21, 2024."
+          },
+          {
+            "id": "C2_q3_delegate_math",
+            "question": "What was the status of Biden's pledged delegates after his withdrawal?",
+            "options": ["Automatically transferred to Harris", "Became 'free agents'", "Nullified by DNC", "Locked until first ballot"],
+            "expected_dominant": "Became 'free agents'",
+            "expected_rationale": "Under DNC rules, pledged delegates become free agents if the candidate withdraws, though most quickly rallied behind Harris."
+          }
+        ]
+      },
+      {
+        "id": "C5",
+        "question": "What will be the balance of power after the 2024 US election?",
+        "market_type": "categorical",
+        "options": [
+          "Republican President + Republican Congress",
+          "Republican President + Split Congress",
+          "Democratic President + Democratic Congress",
+          "Democratic President + Split Congress",
+          "Other"
+        ],
+        "opened": "2024-04",
+        "resolved": "2024-11-08",
+        "outcome": "Republican President + Republican Congress",
+        "url": "https://polymarket.com/event/balance-of-power-2024-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "$80M volume; 9-outcome categorical market",
+        "micro_questions": [
+          {
+            "id": "C5_q1_senate_prob",
+            "question": "What was the consensus probability of Republicans winning the Senate on Nov 5?",
+            "options": ["~50%", "~65%", "~85%", "~98%"],
+            "expected_dominant": "~85%",
+            "expected_rationale": "Forecasters and markets gave Republicans an 85-88% chance of taking the Senate due to the favorable map."
+          },
+          {
+            "id": "C5_q2_house_buffer",
+            "question": "What was the Republican seat buffer in the House heading into the election?",
+            "options": ["2 seats", "4 seats", "8 seats", "12 seats"],
+            "expected_dominant": "4 seats",
+            "expected_rationale": "Republicans held 222 seats to Democrats' 213, a slim 4-seat buffer for the majority threshold of 218."
+          },
+          {
+            "id": "C5_q3_ticket_splitting",
+            "question": "What has been the recent trend in split-ticket voting according to MIT data?",
+            "options": ["Increasing rapidly", "Stable since 1990", "Declining dramatically", "Only seen in local races"],
+            "expected_dominant": "Declining dramatically",
+            "expected_rationale": "MIT Election Lab data shows ticket-splitting has declined sharply since 2010 due to nationalization and polarization."
+          }
+        ]
+      }
+    ],
+    "social_short_labor": [
+      {
+        "id": "T1",
+        "question": "Will the UAW reach a contract agreement with all three Big Three automakers (GM, Ford, and Stellantis) before November 1, 2023?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2023-09",
+        "resolved": "2023-10-30",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/will-uaw-reach-agreements-with-all-big-3-automakers",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "First simultaneous strike against all Big Three in UAW's 88-year history. Resolved by worker ratification votes.",
+        "micro_questions": [
+          {
+            "id": "T1_q1_public_sentiment",
+            "question": "Based on the social media discussion, which tone best characterizes the public's perception of the UAW strike?",
+            "options": ["Hostile to workers — union is greedy", "Sympathetic but skeptical of success", "Strongly supportive — workers deserve better wages", "Indifferent — no political significance"],
+            "expected_dominant": "Strongly supportive — workers deserve better wages",
+            "expected_rationale": "Gallup polling showed 75% of Americans supported the UAW strikers, driven by wage stagnation narratives and broad class solidarity sentiment amplified on social media."
+          },
+          {
+            "id": "T1_q2_fain_strategy",
+            "question": "How does the timeline characterize Shawn Fain's 'Stand-Up Strike' tactic?",
+            "options": ["Reckless — risks destroying the UAW", "Unprecedented and tactically effective", "Ineffective — companies won't budge", "Illegal under labor law"],
+            "expected_dominant": "Unprecedented and tactically effective",
+            "expected_rationale": "The wave-escalation model, targeting high-profit truck and SUV plants, created sustained supply disruption while preserving the strike fund — widely seen as a strategic innovation that gave the UAW maximum leverage."
+          },
+          {
+            "id": "T1_q3_stellantis_risk",
+            "question": "Which company is identified as the biggest obstacle to a full tripartite agreement by the deadline?",
+            "options": ["Ford — most vulnerable to disruption", "GM — largest company, most stubborn", "Stellantis — CEO publicly hostile, least US-revenue dependent", "All three — equally resistant"],
+            "expected_dominant": "Stellantis — CEO publicly hostile, least US-revenue dependent",
+            "expected_rationale": "CEO Carlos Tavares took the hardest public line, calling the UAW demands a threat to destroy the industry. Stellantis's smaller North American market share made it structurally more resistant to US strike pressure."
+          }
+        ]
+      },
+      {
+        "id": "T2",
+        "question": "Will there be a US government shutdown before January 1 2025?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2024-09",
+        "resolved": "2024-12-31",
+        "outcome": "NO",
+        "url": "https://polymarket.com/event/us-government-shutdown-before-2025",
+        "information_type": "Technical/Economic",
+        "horizon": "short",
+        "micro_questions": [
+          {
+            "id": "T2_q1_funding_gap",
+            "question": "For how long did a technical funding lapse occur on December 20-21?",
+            "options": ["None", "~5 hours", "3 days", "Over 1 week"],
+            "expected_dominant": "~5 hours",
+            "expected_rationale": "A brief funding lapse occurred after the Dec 20 deadline before a new CR was signed in the early hours of Dec 21."
+          },
+          {
+            "id": "T2_q2_musk_effect",
+            "question": "Which public figure's X campaign against the CR caused House GOP defections?",
+            "options": ["Donald Trump", "Elon Musk", "Mike Johnson", "Bernie Sanders"],
+            "expected_dominant": "Elon Musk",
+            "expected_rationale": "Elon Musk publicly campaigned against the bipartisan CR on Dec 18-19, causing several House Republicans to switch to 'No'."
+          },
+          {
+            "id": "T2_q3_cr_extension",
+            "question": "The CR signed in late December extended funding until which month in 2025?",
+            "options": ["January", "February", "March", "June"],
+            "expected_dominant": "March",
+            "expected_rationale": "The second FY2025 CR funded the government through March 14, 2025."
+          }
+        ]
+      },
+      {
+        "id": "T3",
+        "question": "Which party will win the most votes in the 2024 Taiwanese presidential election?",
+        "market_type": "categorical",
+        "options": ["DPP", "KMT", "TPP"],
+        "opened": "2023-11",
+        "resolved": "2024-01-13",
+        "outcome": "DPP",
+        "url": "https://polymarket.com/event/2024-taiwan-presidential-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "Three-way race with geopolitical, generational, and identity-based cleavages. DPP's Lai Ching-te won with ~40% in a single-round plurality system.",
+        "micro_questions": [
+          {
+            "id": "T3_q1_china_threat",
+            "question": "How does the discussion characterize the impact of PRC military pressure on Taiwanese voter sentiment?",
+            "options": ["Boosts KMT — voters want dialogue", "Boosts DPP — voters want stronger defense", "Benefits TPP — voters want a domestic reset", "Has no measurable effect on preferences"],
+            "expected_dominant": "Boosts DPP — voters want stronger defense",
+            "expected_rationale": "Historical pattern and polling data show PRC military exercises (PLAAF ADIZ incursions) consistently drive Taiwanese voters toward the DPP's assertive defense identity stance."
+          },
+          {
+            "id": "T3_q2_tpp_youth",
+            "question": "What is the primary concern of TPP-supporting young voters on the timeline?",
+            "options": ["Cross-Strait reunification with China", "Housing costs, wages, and domestic reform", "Military preparedness and conscription", "Traditional Taiwanese cultural preservation"],
+            "expected_dominant": "Housing costs, wages, and domestic reform",
+            "expected_rationale": "Ko Wen-je's TPP campaign explicitly targeted urban youth disillusioned with both traditional parties, focusing on housing affordability and bureaucratic corruption rather than geopolitical alignment."
+          },
+          {
+            "id": "T3_q3_opposition_split",
+            "question": "Why did the KMT-TPP unification attempt collapse, and what was the social consequence?",
+            "options": ["Policy disagreement — different economic visions", "Personal conflict and live-streamed negotiation drama — benefited DPP", "US pressure against a joint opposition", "Polling showed a joint ticket would lose anyway"],
+            "expected_dominant": "Personal conflict and live-streamed negotiation drama — benefited DPP",
+            "expected_rationale": "The KMT-TPP coalition talks collapsed in a very public, social-media-amplified display of ego clashes. The 'ego over country' narrative attached to Ko Wen-je, weakening his final support and guaranteeing DPP's plurality advantage in the three-way race."
+          }
+        ]
+      },
+      {
+        "id": "T4",
+        "question": "Who will be elected US House Speaker following Kevin McCarthy's removal in October 2023?",
+        "market_type": "categorical",
+        "options": ["Mike Johnson", "Jim Jordan", "Tom Emmer", "Steve Scalise", "Other"],
+        "opened": "2023-10-04",
+        "resolved": "2023-10-25",
+        "outcome": "Mike Johnson",
+        "url": "https://polymarket.com/event/who-will-be-the-next-us-house-speaker",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "First Speaker removal in US history. 22-day leadership vacuum. Four candidates failed before Johnson elected unanimously by Republicans.",
+        "micro_questions": [
+          {
+            "id": "T4_q1_jordan_collapse",
+            "question": "What does the timeline identify as the primary reason Jim Jordan lost support with each successive floor vote?",
+            "options": ["He lacked policy credentials", "Social pressure campaigns backfired — threatening voters made moderates MORE resistant", "Trump withdrew his endorsement", "Democrats blocked his nomination"],
+            "expected_dominant": "Social pressure campaigns backfired — threatening voters made moderates MORE resistant",
+            "expected_rationale": "Jordan's supporters mounted an aggressive constituent pressure campaign (threats, calls) against moderate Republicans voting against him. This 'intimidation' strategy paradoxically hardened resistance — his vote count declined from 200 to 194 across three floor votes."
+          },
+          {
+            "id": "T4_q2_trump_veto",
+            "question": "How is Trump's social media influence described in relation to Tom Emmer's candidacy?",
+            "options": ["Boosted Emmer's candidacy — Trump endorsed him", "Had no effect — Emmer won the conference vote anyway", "Functioned as a de facto veto — a single Truth Social post collapsed Emmer's majority within hours", "Was ignored by House Republicans who prioritized governance"],
+            "expected_dominant": "Functioned as a de facto veto — a single Truth Social post collapsed Emmer's majority within hours",
+            "expected_rationale": "Emmer won the Republican conference nomination with 117 votes. Trump then attacked him on Truth Social for certifying the 2020 election. Emmer's support evaporated in real-time and he withdrew within 4 hours — the shortest Speaker candidacy in US history."
+          },
+          {
+            "id": "T4_q3_johnson_dark_horse",
+            "question": "What social dynamic made Mike Johnson the eventual consensus winner despite having the lowest public profile?",
+            "options": ["He had the most legislative experience", "His lack of enemies across factions — a 'blank slate' made him non-threatening to all blocs", "He secured Democratic crossover votes", "The Freedom Caucus insisted on him specifically"],
+            "expected_dominant": "His lack of enemies across factions — a 'blank slate' made him non-threatening to all blocs",
+            "expected_rationale": "Johnson's low public profile meant he had accumulated no opposition within any faction. After four failed candidates destroyed by factional conflict, conference exhaustion drove all blocs to converge on the least polarizing option."
+          }
+        ]
+      },
+      {
+        "id": "T5",
+        "question": "Will AB InBev report a year-over-year decline in US revenue in their Q2 2023 earnings due to the Bud Light boycott?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2023-04",
+        "resolved": "2023-07-27",
+        "outcome": "YES",
+        "url": "https://polymarket.com/event/bud-light-boycott-ab-inbev-us-revenue-decline-q2-2023",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "Consumer boycott driven entirely by social media and culture war dynamics. Modelo Especial overtook Bud Light as #1 US beer by dollar sales in May 2023.",
+        "micro_questions": [
+          {
+            "id": "T5_q1_boycott_sentiment",
+            "question": "What is the dominant narrative about the Bud Light controversy in the simulated social discussion?",
+            "options": ["A justified consumer reaction to unwanted brand messaging", "Corporate cowardice — AB InBev abandoned its trans partner under pressure", "A manufactured outrage campaign with no organic consumer base", "An overreaction that will quickly reverse"],
+            "expected_dominant": "A justified consumer reaction to unwanted brand messaging",
+            "expected_rationale": "Conservative-aligned social media drove a 'working-class consumer values' narrative — the boycott framed itself as organic authentic resistance rather than organized political action, which sustained its momentum beyond typical protest cycles."
+          },
+          {
+            "id": "T5_q2_brand_response",
+            "question": "How does the timeline characterize AB InBev CEO Michel Doukeris's public response strategy?",
+            "options": ["Bold and clear — publicly supported the Mulvaney partnership", "Decisive — immediately disavowed the partnership", "Fatally ambiguous — alienated both sides without satisfying either", "Effective — the patriotic summer campaign successfully recovered brand loyalty"],
+            "expected_dominant": "Fatally ambiguous — alienated both sides without satisfying either",
+            "expected_rationale": "Doukeris's non-committal statement and subsequent 'patriotic' rebrand campaign signaled abandonment to LGBTQ+ advocates while remaining insufficient repudiation for conservative boycotters — a classic 'saying nothing pleased nobody' communications failure."
+          },
+          {
+            "id": "T5_q3_replacement_behavior",
+            "question": "What social dynamic most distinguishes this boycott from typical consumer activism campaigns?",
+            "options": ["It was organized by a formal political organization", "It was driven by product quality concerns after a recall", "The replacement behavior (switching to Modelo/Coors) was publicly performed and viral — sustaining momentum through social identity signaling", "It targeted a luxury product with a high-income demographic"],
+            "expected_dominant": "The replacement behavior (switching to Modelo/Coors) was publicly performed and viral — sustaining momentum through social identity signaling",
+            "expected_rationale": "Unlike many boycotts where consumers simply reduce consumption quietly, Bud Light boycotters filmed themselves opening competitor beers and posted it on social media — making the brand switch itself a political identity performance that kept the movement visible for 12+ weeks."
+          }
+        ]
+      }
+    ],
+    "social_medium_elections": [
+      {
+        "id": "T6",
+        "question": "Which party will win the most seats in the 2024 Irish general election?",
+        "market_type": "categorical",
+        "options": ["Fianna Fáil", "Sinn Féin", "Fine Gael", "Other"],
+        "opened": "2024-10",
+        "resolved": "2024-11-29",
+        "outcome": "Fianna Fáil",
+        "url": "https://polymarket.com/event/2024-irish-general-election-most-seats",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "STV proportional representation creates complex transfer dynamics. Housing crisis and immigration controversy dominated the social media campaign.",
+        "micro_questions": [
+          {
+            "id": "T6_q1_housing_crisis",
+            "question": "Which domestic issue most dominates the election discussion on the simulated social timeline?",
+            "options": ["Corporate tax policy and foreign investment", "Housing affordability and homelessness crisis", "Irish neutrality and foreign policy", "Agricultural subsidies and rural decline"],
+            "expected_dominant": "Housing affordability and homelessness crisis",
+            "expected_rationale": "Dublin average rents exceeded €2,200/month, the highest rent-to-income ratio in the EU. Housing was consistently the #1 issue in all campaign polling and dominated social media discourse throughout the campaign."
+          },
+          {
+            "id": "T6_q2_sf_coalition_problem",
+            "question": "What structural social-political obstacle prevents Sinn Féin from forming a government even if they win the most seats?",
+            "options": ["Sinn Féin refuses to enter coalition with other parties", "All other major parties pledged to refuse coalition with Sinn Féin", "Sinn Féin would need 50%+ of seats to govern alone", "Sinn Féin's left-wing program is constitutionally incompatible with Irish governance"],
+            "expected_dominant": "All other major parties pledged to refuse coalition with Sinn Féin",
+            "expected_rationale": "Fianna Fáil, Fine Gael, Greens, Labour and Social Democrats all refused to enter government with SF due to its IRA historical connections and its proposals to restructure the tax and housing systems — creating a structural ceiling on SF's ability to convert seats into power."
+          },
+          {
+            "id": "T6_q3_immigration_backlash",
+            "question": "How does the timeline characterize the political effect of the November 2023 Dublin riots on the 2024 election campaign?",
+            "options": ["Minimal — quickly forgotten after a few weeks", "Legitimized far-right independent candidates and shifted immigration to a top-3 electoral issue", "Caused Sinn Féin to collapse as their open-borders policy was rejected", "Boosted Fine Gael's security credentials and delivered them an early majority"],
+            "expected_dominant": "Legitimized far-right independent candidates and shifted immigration to a top-3 electoral issue",
+            "expected_rationale": "The riot — sparked by a violent incident involving an undocumented foreign national attacking children — created a shock to Irish political identity and dramatically elevated immigration as an electoral concern, allowing far-right independents to contest 15+ constituencies."
+          }
+        ]
+      },
+      {
+        "id": "C6",
+        "question": "Which geographic origin will the next Pope elected in the 2025 Papal Conclave come from?",
+        "market_type": "categorical",
+        "options": ["Italian / European Cardinal", "Latin American Cardinal", "African Cardinal", "North American Cardinal", "Asian or Other Cardinal"],
+        "opened": "2025-04-21",
+        "resolved": "2025-05-08",
+        "outcome": "North American Cardinal",
+        "url": "https://polymarket.com/event/2025-papal-conclave-next-pope-origin",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Robert Francis Prevost (Chicago-born, Peruvian missionary bishop) elected Pope Leo XIV on May 8, 2025 — first US-born Pope in history. 133 cardinal-electors; two-thirds supermajority required.",
+        "micro_questions": [
+          {
+            "id": "C6_q1_progressive_continuity",
+            "question": "How does the timeline characterize the dominant faction among Francis-appointed cardinal-electors?",
+            "options": ["Conservative — want to reverse Francis's liberal reforms", "Progressive-continuity — want to extend synodality, pastoral outreach, and Global South representation", "Institutional — focused solely on Vatican administrative competence", "Nationalist — each region wants a Pope from their own continent"],
+            "expected_dominant": "Progressive-continuity — want to extend synodality, pastoral outreach, and Global South representation",
+            "expected_rationale": "Francis appointed ~80% of the voting cardinals. His appointees broadly shared his reform agenda — decentralization, outreach to the periphery, and pastoral flexibility — making the progressive-continuity bloc the largest single faction despite internal diversity."
+          },
+          {
+            "id": "C6_q2_consensus_mechanism",
+            "question": "Why does the two-thirds supermajority requirement favor a consensus dark-horse candidate over a strong factional frontrunner?",
+            "options": ["Because strong candidates typically withdraw voluntarily", "Because a candidate loved by 50% but blocked by 40% can never reach 89/133 votes — forcing convergence on a less polarizing figure", "Because the Pope is chosen by popular vote among all Catholics", "Because the supermajority applies only to the first ballot"],
+            "expected_dominant": "Because a candidate loved by 50% but blocked by 40% can never reach 89/133 votes — forcing convergence on a less polarizing figure",
+            "expected_rationale": "The 89-vote threshold in a 133-cardinal college mathematically prevents any faction from imposing its preferred candidate. If Parolin (European) and Tagle (Asian) each receive 40+ votes in Round 1 and their blocs refuse to switch, neither can win — forcing both sides to converge on an acceptable compromise."
+          },
+          {
+            "id": "C6_q3_prevost_profile",
+            "question": "What unique social profile made Cardinal Prevost the eventual consensus candidate despite having low public name recognition?",
+            "options": ["He was the oldest cardinal and thus automatically eligible for the senior vote", "He had explicit backing from the US government diplomatic corps", "His mixed American-Peruvian-Roman Curial background crossed all factional boundaries — acceptable to progressives, pragmatists, and institutions simultaneously", "He was the only candidate who spoke all six official Vatican languages"],
+            "expected_dominant": "His mixed American-Peruvian-Roman Curial background crossed all factional boundaries — acceptable to progressives, pragmatists, and institutions simultaneously",
+            "expected_rationale": "Prevost's 20 years as a missionary bishop in Peru satisfied the Global South faction, his role as Prefect of the Dicastery for Bishops (vetting all bishops worldwide) satisfied the institutional faction, and his Francis appointment satisfied the progressive bloc — creating a uniquely cross-factional acceptability profile."
+          }
+        ]
+      },
+      {
+        "id": "T8",
+        "question": "Which party will win the most seats in the 2025 Canadian federal election?",
+        "market_type": "categorical",
+        "options": ["Liberal", "Conservative", "NDP", "Bloc Québécois", "Other"],
+        "opened": "2025-01",
+        "resolved": "2025-04-28",
+        "outcome": "Liberal",
+        "url": "https://polymarket.com/event/2025-canadian-federal-election-winner",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Mark Carney's Liberals reversed a 20-point deficit after Trudeau resignation and Trump tariff crisis. The election featured a dramatic 'rally around the flag' social effect driven by Canadian nationalist sentiment against US annexation rhetoric.",
+        "micro_questions": [
+          {
+            "id": "T8_q1_trump_catalyst",
+            "question": "How does the timeline characterize the role of Trump's tariff announcements and '51st state' rhetoric in shifting Canadian voter sentiment?",
+            "options": ["Minimal impact — Canadian voters focused on domestic economic issues", "Triggered a powerful nationalist 'rally around the flag' effect that dramatically reversed Liberal polling deficits", "Helped the Conservatives by framing Canada-US relations as their policy strength", "Primarily affected Quebec voters through sovereignty resonance"],
+            "expected_dominant": "Triggered a powerful nationalist 'rally around the flag' effect that dramatically reversed Liberal polling deficits",
+            "expected_rationale": "Trump's 25% tariffs and annexation rhetoric caused Canadian approval of the US to collapse to 14% (Abacus Data). The 'Buy Canadian' campaign went viral, and NDP progressive voters switched to Carney's Liberals in a strategic vote to present a unified Canadian front — reversing a 20-point Conservative lead."
+          },
+          {
+            "id": "T8_q2_ndp_collapse",
+            "question": "What social mechanism drove NDP voters to strategically switch to the Liberal Party during the campaign?",
+            "options": ["NDP leader Jagmeet Singh formally endorsed the Liberal Party", "Social media tactical voting campaigns, riding-level websites, and progressive influencer calls to prevent a Conservative government", "NDP's platform merged with the Liberals after a formal coalition announcement", "Polling showed NDP below the 5% threshold required for parliamentary representation"],
+            "expected_dominant": "Social media tactical voting campaigns, riding-level websites, and progressive influencer calls to prevent a Conservative government",
+            "expected_rationale": "As Liberals became competitive against Conservatives, progressive NDP voters engaged in spontaneous strategic vote switching organized through social media, tactical voting websites (VoteTogether.ca), and influencer campaigns — collapsing NDP support from ~18% to ~10% while boosting Liberals in key swing ridings."
+          },
+          {
+            "id": "T8_q3_carney_identity",
+            "question": "How does the campaign narrative position Mark Carney's identity as a key social signal for voters choosing between the two main parties?",
+            "options": ["As a technocratic former central banker — reassuring but uninspiring", "As the 'defender of Canadian sovereignty' against Trump — transforming an economic policy race into an identity and values contest", "As a Quebec-aligned candidate — essential for winning swing seats in Eastern Canada", "As a political outsider — appealing to voters disillusioned with career politicians"],
+            "expected_dominant": "As the 'defender of Canadian sovereignty' against Trump — transforming an economic policy race into an identity and values contest",
+            "expected_rationale": "Carney's explicit 'Never the 51st State' messaging reframed the election from conventional party-platform choice into a referendum on national identity. His former Bank of Canada/Bank of England roles gave him unparalleled credibility to project economic competence while embodying the nationalist resistance frame."
+          }
+        ]
+      },
+      {
+        "id": "T9",
+        "question": "Will OpenAI announce it has achieved AGI in 2025?",
+        "market_type": "binary",
+        "options": ["YES", "NO"],
+        "opened": "2025-01",
+        "resolved": "2025-12-31",
+        "outcome": "NO",
+        "url": "https://polymarket.com/event/openai-announces-it-has-achieved-agi-in-2025",
+        "information_type": "Technical/Economic",
+        "horizon": "medium",
+        "micro_questions": [
+          {
+            "id": "T9_q1_charter_clause",
+            "question": "What is the primary commercial trigger if OpenAI formally announces AGI?",
+            "options": ["IPO launch", "Dissolution of non-profit", "Release of Microsoft license", "Sam Altman's resignation"],
+            "expected_dominant": "Release of Microsoft license",
+            "expected_rationale": "OpenAI's charter states that its commercial partnership with Microsoft ends once AGI is achieved."
+          },
+          {
+            "id": "T9_q2_capability_levels",
+            "question": "Where did OpenAI's internal 5-level roadmap place 'o1' models in 2024?",
+            "options": ["Level 1: Chatbots", "Level 2: Reasoners", "Level 3: Agents", "Level 5: Organizations"],
+            "expected_dominant": "Level 2: Reasoners",
+            "expected_rationale": "Sam Altman described o1 as reaching Level 2 ('Reasoners') on the path to Level 5 ('Organizations'/AGI)."
+          },
+          {
+            "id": "T9_q3_market_prob",
+            "question": "What was the initial Polymarket probability for a 2025 AGI announcement?",
+            "options": ["<5%", "15-20%", "40-50%", ">75%"],
+            "expected_dominant": "<5%",
+            "expected_rationale": "Markets and experts assigned very low (<5%) probability due to technical gaps and strategic disincentives."
+          }
+        ]
+      },
+      {
+        "id": "C9",
+        "question": "Which countries will the US agree trade deals with before July 2025?",
+        "market_type": "categorical",
+        "options": ["UK", "India", "Japan", "Vietnam", "South Korea", "EU", "Canada", "Mexico", "Other / None"],
+        "opened": "2025-04-14",
+        "resolved": "2025-06-30",
+        "outcome": "UK",
+        "url": "https://polymarket.com/event/which-countries-will-the-us-agree-to-trade-deals-with-before-july",
+        "information_type": "Technical/Economic",
+        "horizon": "medium",
+        "note": "$6.7M volume; only UK resolved YES",
+        "micro_questions": [
+          {
+            "id": "C9_q1_liberation_day",
+            "question": "What was the baseline universal tariff announced on 'Liberation Day' (April 2, 2025)?",
+            "options": ["2%", "5%", "10%", "25%"],
+            "expected_dominant": "10%",
+            "expected_rationale": "In the Trump 2.0 scenario outlined in the seed context, a 10% baseline universal tariff was announced on April 2, 2025."
+          },
+          {
+            "id": "C9_q2_uk_advantage",
+            "question": "Why was the UK considered the most likely candidate for a deal by July?",
+            "options": ["Post-Brexit groundwork", "NATO membership", "Lack of manufacturing", "EU mediation"],
+            "expected_dominant": "Post-Brexit groundwork",
+            "expected_rationale": "The UK had the longest track record of post-Brexit trade discussions and a favorable rapport between Starmer and Trump."
+          },
+          {
+            "id": "C9_q3_eu_timeline",
+            "question": "Why was a formal deal with the EU considered unlikely within 3 months?",
+            "options": ["Language barriers", "High retaliation", "Multinational consensus speed", "US refusal to talk"],
+            "expected_dominant": "Multinational consensus speed",
+            "expected_rationale": "The EU's institutional structure requires collective negotiation, making framework deals within weeks nearly impossible."
+          }
+        ]
+      }
+    ]
+  },
+  "supplementary_events": {
+    "note": "10 additional purely categorical multi-outcome resolved markets.",
+    "events": [
+      {
+        "id": "C1",
+        "question": "Which party will win the 2024 US Presidential Election?",
+        "market_type": "categorical",
+        "options": ["Republican", "Democrat", "Other"],
+        "opened": "2024-01",
+        "resolved": "2024-11-05",
+        "outcome": "Republican",
+        "url": "https://polymarket.com/event/which-party-will-win-the-2024-united-states-presidential-election",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Highest-volume categorical market in Polymarket history (~$3.3B)",
+        "micro_questions": [
+          {
+            "id": "C1_q1_pa_tipping",
+            "question": "Which state was widely considered the 'tipping point' for both candidates?",
+            "options": ["Georgia", "Michigan", "Pennsylvania", "Arizona"],
+            "expected_dominant": "Pennsylvania",
+            "expected_rationale": "With 19 electoral votes and a dead-heat poll, Pennsylvania was the most crucial state for reaching 270."
+          },
+          {
+            "id": "C1_q2_poll_error",
+            "question": "In which direction did 2020 systemic polling errors favor?",
+            "options": ["Favoring Republicans", "Favoring Democrats", "No error", "Randomly distributed"],
+            "expected_dominant": "Favoring Democrats",
+            "expected_rationale": "In 2020, national polls overestimated Democrats by ~3.5 points, leading to 2024 caution regarding Trump's support."
+          },
+          {
+            "id": "C1_q3_rfk_endorsement",
+            "question": "Which third-party candidate withdrew and endorsed Trump in August 2024?",
+            "options": ["Chase Oliver", "Jill Stein", "Robert F. Kennedy Jr.", "Cornel West"],
+            "expected_dominant": "Robert F. Kennedy Jr.",
+            "expected_rationale": "RFK Jr. withdrew and endorsed Trump in August, though he remained on some state ballots."
+          }
+        ]
+      },
+      {
+        "id": "C4",
+        "question": "Which party will win the most seats in the 2024 UK general election?",
+        "market_type": "categorical",
+        "options": ["Labour", "Conservative", "Reform UK", "Other"],
+        "opened": "2024-05",
+        "resolved": "2024-07-05",
+        "outcome": "Labour",
+        "url": "https://polymarket.com/event/2024-uk-general-election-winner",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Labour priced >90% through most of the run",
+        "micro_questions": [
+          {
+            "id": "C4_q1_labour_polling",
+            "question": "What was Labour's polling lead in the final week of the campaign?",
+            "options": ["5-8 points", "10-12 points", "18-20 points", "30+ points"],
+            "expected_dominant": "18-20 points",
+            "expected_rationale": "Labour maintained a massive lead of roughly 18-20 points in final polls from YouGov and Ipsos."
+          },
+          {
+            "id": "C4_q2_reform_impact",
+            "question": "What was Reform UK's polling share in the final week?",
+            "options": ["<5%", "5-10%", "15-17%", ">25%"],
+            "expected_dominant": "15-17%",
+            "expected_rationale": "Nigel Farage's Reform UK polled around 15-17%, primarily drawing votes away from the Conservatives."
+          },
+          {
+            "id": "C4_q3_seat_projection",
+            "question": "How many seats were projected for Labour in landslide scenarios?",
+            "options": ["326-350", "360-380", "400-450", "500+"],
+            "expected_dominant": "400-450",
+            "expected_rationale": "Major seat projections from Electoral Calculus and YouGov pointed to a Labour landslide of 400-450 seats."
+          }
+        ]
+      },
+      {
+        "id": "C7",
+        "question": "Which country will win the 2024 UEFA European Championship?",
+        "market_type": "categorical",
+        "options": ["Spain", "England", "France", "Germany", "Portugal", "Other"],
+        "opened": "2024-05",
+        "resolved": "2024-07-14",
+        "outcome": "Spain",
+        "url": "https://polymarket.com/event/2024-uefa-euro-winner",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Well-distributed priors across top teams",
+        "micro_questions": [
+          {
+            "id": "C7_q1_pre_odds",
+            "question": "Which two teams were the co-favorites in betting markets before the tournament?",
+            "options": ["Germany and Spain", "France and England", "Italy and Portugal", "France and Spain"],
+            "expected_dominant": "France and England",
+            "expected_rationale": "Betting odds in June placed France and England as co-favorites at roughly 11/2 to 13/2."
+          },
+          {
+            "id": "C7_q2_spain_form",
+            "question": "How did Spain perform in the group stage?",
+            "options": ["Struggled to qualify", "Won all group games", "Lost once", "Drew twice"],
+            "expected_dominant": "Won all group games",
+            "expected_rationale": "Spain was one of the most dominant teams in the group stage, winning all three matches."
+          },
+          {
+            "id": "C7_q3_host_outcome",
+            "question": "Which stage did the host nation Germany reach?",
+            "options": ["Round of 16", "Quarter-finals", "Semi-finals", "Final"],
+            "expected_dominant": "Quarter-finals",
+            "expected_rationale": "The host nation Germany performed well but was eliminated in the quarter-finals."
+          }
+        ]
+      },
+      {
+        "id": "C8",
+        "question": "Which AI company will first release a model scoring >90% on MMLU?",
+        "market_type": "categorical",
+        "options": ["OpenAI", "Google DeepMind", "Anthropic", "Meta", "Other"],
+        "opened": "2024-06",
+        "resolved": "2024-12",
+        "outcome": "OpenAI",
+        "url": "https://polymarket.com/event/which-ai-company-will-first-score-90-on-mmlu",
+        "information_type": "Technical/Economic",
+        "horizon": "medium",
+        "micro_questions": [
+          {
+            "id": "C8_q1_claude_score",
+            "question": "What was the reported MMLU score for Claude 3.5 Sonnet in June 2024?",
+            "options": ["84.5%", "86.8%", "88.7%", "91.2%"],
+            "expected_dominant": "88.7%",
+            "expected_rationale": "Anthropic reported that Claude 3.5 Sonnet achieved an 88.7% MMLU score, the closest to 90% at the time."
+          },
+          {
+            "id": "C8_q2_gpt4_baseline",
+            "question": "What was the approximate MMLU score for GPT-4 at its 2023 release?",
+            "options": ["80.2%", "86.4%", "90.1%", "95.5%"],
+            "expected_dominant": "86.4%",
+            "expected_rationale": "The baseline GPT-4 model scored approximately 86.4% on the MMLU benchmark."
+          },
+          {
+            "id": "C8_q3_mmlu_subjects",
+            "question": "How many subjects are covered in the MMLU benchmark?",
+            "options": ["10 subjects", "57 subjects", "100 subjects", "1,000 subjects"],
+            "expected_dominant": "57 subjects",
+            "expected_rationale": "MMLU covers 57 subjects across STEM, humanities, and the social sciences."
+          }
+        ]
+      },
+      {
+        "id": "C10",
+        "question": "Who will be the next UK Prime Minister after the 2024 election?",
+        "market_type": "categorical",
+        "options": ["Keir Starmer", "Rishi Sunak", "Nigel Farage", "Other Conservative", "Other"],
+        "opened": "2024-05",
+        "resolved": "2024-07-05",
+        "outcome": "Keir Starmer",
+        "url": "https://polymarket.com/event/who-will-be-the-next-uk-prime-minister",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Starmer priced ~85–90% in final weeks",
+        "micro_questions": [
+          {
+            "id": "C10_q1_selection_rule",
+            "question": "How is the UK Prime Minister formally selected?",
+            "options": ["Direct popular vote", "Leader of majority party", "Appointed by UN", "House of Lords vote"],
+            "expected_dominant": "Leader of majority party",
+            "expected_rationale": "The PM is the leader of the party that commands a majority of seats in the House of Commons."
+          },
+          {
+            "id": "C10_q2_starmer_odds",
+            "question": "What was the Polymarket implied probability for Starmer to become PM in late June?",
+            "options": ["~50%", "~65%", "~85%", ">95%"],
+            "expected_dominant": "~85%",
+            "expected_rationale": "Given Labour's massive polling lead, Starmer was priced at 85-90% to become the next PM."
+          },
+          {
+            "id": "C10_q3_incumbent",
+            "question": "Who was the incumbent Prime Minister heading into the 2024 election?",
+            "options": ["Boris Johnson", "Liz Truss", "Rishi Sunak", "Theresa May"],
+            "expected_dominant": "Rishi Sunak",
+            "expected_rationale": "Rishi Sunak had been Prime Minister since October 2022 and called the election in May 2024."
+          }
+        ]
+      },
+      {
+        "id": "C11",
+        "question": "Who will win the 2024 Nobel Peace Prize?",
+        "market_type": "categorical",
+        "options": ["Nihon Hidankyo", "Pope Francis", "UN Agency", "Individual Activist", "Other"],
+        "opened": "2024-09",
+        "resolved": "2024-10-11",
+        "outcome": "Nihon Hidankyo",
+        "url": "https://polymarket.com/event/who-will-win-the-2024-nobel-peace-prize",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "Low-confidence market; surprise outcome drove large probability movement",
+        "micro_questions": [
+          {
+            "id": "C11_q1_nomination",
+            "question": "For how many years are Nobel Peace Prize nominations kept secret?",
+            "options": ["10 years", "25 years", "50 years", "Indefinitely"],
+            "expected_dominant": "50 years",
+            "expected_rationale": "The Norwegian Nobel Committee maintains strict secrecy, revealing nominations only after 50 years."
+          },
+          {
+            "id": "C11_q2_nihon_mission",
+            "question": "What is the primary advocacy mission of Nihon Hidankyo?",
+            "options": ["Climate change", "Nuclear disarmament", "Refugee rights", "Global health"],
+            "expected_dominant": "Nuclear disarmament",
+            "expected_rationale": "Nihon Hidankyo is an organization of atomic bomb survivors (Hibakusha) advocating for the total abolition of nuclear weapons."
+          },
+          {
+            "id": "C11_q3_prediction_conf",
+            "question": "What is the typical confidence level in Peace Prize prediction markets?",
+            "options": ["Extremely high (>90%)", "Moderate (~50%)", "Very low (<20%)", "Determined by polls"],
+            "expected_dominant": "Very low (<20%)",
+            "expected_rationale": "Due to the secret nomination process and the Committee's tendency for surprises, market confidence is historically very low."
+          }
+        ]
+      },
+      {
+        "id": "C12",
+        "question": "Which team will win the 2024 NBA Championship?",
+        "market_type": "categorical",
+        "options": ["Boston Celtics", "Oklahoma City Thunder", "Denver Nuggets", "Minnesota Timberwolves", "Other"],
+        "opened": "2024-04",
+        "resolved": "2024-06-17",
+        "outcome": "Boston Celtics",
+        "url": "https://polymarket.com/event/2024-nba-championship-winner",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Celtics were favourites throughout; useful calibration test for high-confidence categoricals",
+        "micro_questions": [
+          {
+            "id": "C12_q1_regular_season",
+            "question": "What was the Boston Celtics' regular season record in 2023-24?",
+            "options": ["50-32", "58-24", "64-18", "73-9"],
+            "expected_dominant": "64-18",
+            "expected_rationale": "The Celtics finished with the best record in the NBA at 64-18."
+          },
+          {
+            "id": "C12_q2_mavericks_seed",
+            "question": "Who was the Celtics' opponent in the 2024 NBA Finals?",
+            "options": ["Denver Nuggets", "Dallas Mavericks", "Phoenix Suns", "Golden State Warriors"],
+            "expected_dominant": "Dallas Mavericks",
+            "expected_rationale": "The Western Conference champion Dallas Mavericks, led by Luka Dončić, faced Boston in the Finals."
+          },
+          {
+            "id": "C12_q3_banners",
+            "question": "How many total NBA championships were the Celtics seeking to reach a new record?",
+            "options": ["10", "15", "18", "20"],
+            "expected_dominant": "18",
+            "expected_rationale": "The Celtics were seeking their 18th NBA title, which would set the all-time record."
+          }
+        ]
+      },
+      {
+        "id": "C13",
+        "question": "Who will win the 2025 Oscar for Best Picture?",
+        "market_type": "categorical",
+        "options": ["Anora", "The Brutalist", "Conclave", "Emilia Pérez", "Wicked", "Other"],
+        "opened": "2025-01",
+        "resolved": "2025-03-02",
+        "outcome": "Anora",
+        "url": "https://polymarket.com/event/2025-oscars-best-picture",
+        "information_type": "Social/Behavioral",
+        "horizon": "medium",
+        "note": "Anora overtook The Brutalist as favourite in final weeks; late probability shift",
+        "micro_questions": [
+          {
+            "id": "C13_q1_pga_signal",
+            "question": "Which major guild award did 'Anora' win on February 8, 2025?",
+            "options": ["Directors Guild (DGA)", "Producers Guild (PGA)", "Writers Guild (WGA)", "No guild wins"],
+            "expected_dominant": "Producers Guild (PGA)",
+            "expected_rationale": "Anora's win at the PGA is a historically accurate predictor for Best Picture at the Oscars."
+          },
+          {
+            "id": "C13_q2_brutalist_director",
+            "question": "Which guild award did Brady Corbet win for 'The Brutalist'?",
+            "options": ["Producers Guild (PGA)", "Directors Guild (DGA)", "SAG Ensemble", "BAFTA Best Film"],
+            "expected_dominant": "Directors Guild (DGA)",
+            "expected_rationale": "Corbet won the DGA, keeping the Best Picture race competitive until the final SAG results."
+          },
+          {
+            "id": "C13_q3_sag_ensemble",
+            "question": "Winning the SAG Ensemble award represents support from which largest voting bloc?",
+            "options": ["Directors", "Producers", "Actors", "Technical crew"],
+            "expected_dominant": "Actors",
+            "expected_rationale": "Actors are the largest voting bloc in the Academy, making the SAG Ensemble win a crucial signal."
+          }
+        ]
+      },
+      {
+        "id": "C14",
+        "question": "Which party will form the next government after the 2025 German federal election?",
+        "market_type": "categorical",
+        "options": ["CDU/CSU-led coalition", "SPD-led coalition", "AfD-led coalition", "Other / Hung parliament"],
+        "opened": "2025-01",
+        "resolved": "2025-02-23",
+        "outcome": "CDU/CSU-led coalition",
+        "url": "https://polymarket.com/event/2025-german-federal-election-winner",
+        "information_type": "Social/Behavioral",
+        "horizon": "short",
+        "note": "CDU/CSU heavily favoured; AfD second in vote share but coalition-blocked",
+        "micro_questions": [
+          {
+            "id": "C14_q1_merz_polling",
+            "question": "What was the CDU/CSU's average polling lead in early 2025?",
+            "options": ["5-10 points", "15-20 points", "25-30 points", "Over 40 points"],
+            "expected_dominant": "15-20 points",
+            "expected_rationale": "CDU/CSU polled around 31% while the next closest non-AfD party (SPD) was around 15%, a lead of roughly 16 points."
+          },
+          {
+            "id": "C14_q2_cordon_sanitaire",
+            "question": "Which party is subject to a 'cordon sanitaire' blocking it from all coalitions?",
+            "options": ["SPD", "Greens", "AfD", "BSW"],
+            "expected_dominant": "AfD",
+            "expected_rationale": "All other major parties pledged to never form a coalition with the far-right AfD."
+          },
+          {
+            "id": "C14_q3_groko_fallback",
+            "question": "What was the most likely 'fallback' coalition identified by analysts?",
+            "options": ["CDU + Greens", "CDU + SPD (Grand Coalition)", "SPD + Greens + FDP", "CDU + AfD"],
+            "expected_dominant": "CDU + SPD (Grand Coalition)",
+            "expected_rationale": "The 'Grand Coalition' between CDU/CSU and SPD was seen as the most stable and likely governing path."
+          }
+        ]
+      },
+      {
+        "id": "C15",
+        "question": "How many total rate cuts will the Fed deliver in 2024?",
+        "market_type": "categorical",
+        "options": ["0", "1", "2", "3", "4", "5+"],
+        "opened": "2024-03",
+        "resolved": "2024-12-18",
+        "outcome": "3",
+        "url": "https://polymarket.com/event/how-many-fed-rate-cuts-this-year",
+        "information_type": "Technical/Economic",
+        "horizon": "medium",
+        "note": "Market shifted from pricing 5–6 cuts in Jan 2024 down to 2–3 by mid-year; rich probability time-series",
+        "micro_questions": [
+          {
+            "id": "C15_q1_pce_trend",
+            "question": "What was the year-over-year headline PCE in September 2024?",
+            "options": ["2.1%", "2.5%", "3.0%", "4.0%"],
+            "expected_dominant": "2.1%",
+            "expected_rationale": "PCE fell to 2.1% in September, providing the Fed 'greater confidence' to continue cutting."
+          },
+          {
+            "id": "C15_q2_unemployment",
+            "question": "What was the US unemployment rate in November 2024?",
+            "options": ["3.5%", "4.2%", "5.0%", "6.5%"],
+            "expected_dominant": "4.2%",
+            "expected_rationale": "The labor market showed softening with unemployment rising to 4.2% by late 2024."
+          },
+          {
+            "id": "C15_q3_dec_meeting",
+            "question": "What was the market implied probability of a third 2024 cut on December 17?",
+            "options": ["~10%", "~50%", "~95%", "~100%"],
+            "expected_dominant": "~95%",
+            "expected_rationale": "The CME FedWatch tool showed a ~95% probability of a 25bp cut for the December 18 meeting."
+          }
+        ]
+      }
+    ]
+  }
+}

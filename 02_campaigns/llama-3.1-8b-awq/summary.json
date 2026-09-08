@@ -1,0 +1,280 @@
+{
+  "condition_mean_brier": {
+    "A": 0.384612,
+    "B": 0.684983,
+    "C": 0.563271
+  },
+  "lift": {
+    "A_to_B": -0.300371,
+    "A_to_C": -0.178659,
+    "B_to_C": 0.121712
+  },
+  "rubric": {
+    "rubric_completed_count": 90,
+    "rubric_missing_count": 0,
+    "validated_scale_keys": [
+      "convergence_score",
+      "deliberation_quality_score",
+      "herd_effect_score",
+      "information_diversity_score",
+      "polarization_score",
+      "prediction_accuracy_score",
+      "susceptibility_score",
+      "weighted_rubric_score"
+    ]
+  },
+  "directional_accuracy": {
+    "overall": 0.577778,
+    "by_condition": {
+      "A": 0.733333,
+      "B": 0.466667,
+      "C": 0.533333
+    },
+    "delta": {
+      "A_to_B": -0.266666,
+      "A_to_C": -0.2,
+      "B_to_C": 0.066666
+    }
+  },
+  "weighted_rubric_score": {
+    "overall": 0.51238,
+    "by_condition": {
+      "A": 0.561042,
+      "B": 0.491194,
+      "C": 0.484903
+    },
+    "delta": {
+      "A_to_B": -0.069848,
+      "A_to_C": -0.076139,
+      "B_to_C": -0.006291
+    }
+  },
+  "evaluator_reliability": {
+    "kappa_by_dimension": {
+      "convergence": 0.488285,
+      "deliberation_quality": 0.506849,
+      "herd_effect": 0.47027,
+      "information_diversity": 0.295053,
+      "polarization": 0.483304,
+      "prediction_accuracy": 0.58457,
+      "susceptibility": 0.564151
+    },
+    "evaluator_noisy": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "dropped_dimensions_count": 7,
+    "evaluator_unstable": true,
+    "kappa_cutoff": 0.8
+  },
+  "composite_score": {
+    "composite_score": null,
+    "renormalized_weights": {},
+    "excluded_dimensions": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "included_dimensions": []
+  },
+  "content_susceptibility": {
+    "mean_yes_probability": {
+      "overall": 0.475926,
+      "by_condition": {
+        "A": 0.544444,
+        "B": 0.444444,
+        "C": 0.438889
+      }
+    },
+    "delta": {
+      "B_minus_C": 0.005555
+    }
+  },
+  "evaluator_fallback": {
+    "fallback_used_count": 0,
+    "completed_count": 90,
+    "fallback_used_ratio": 0.0,
+    "by_condition": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "by_reason": {},
+    "by_source": {}
+  },
+  "signed_susceptibility": {
+    "mean_signed_delta": 0.0,
+    "directional_accuracy": 0.0,
+    "belief_update_failure_count": 0,
+    "belief_update_failure_rate": 0.0,
+    "analyzed_pair_count": 0,
+    "direction_mismatch_count": 0
+  },
+  "rps": {
+    "overall": 0.569554,
+    "by_condition": {
+      "A": 0.314526,
+      "B": 0.805595,
+      "C": 0.588543
+    }
+  },
+  "calibration": {
+    "overall": {
+      "0-0.25": {
+        "count": 2,
+        "hits": 2,
+        "mean_predicted": 0.183333,
+        "empirical_rate": 1.0
+      },
+      "0.25-0.5": {
+        "count": 25,
+        "hits": 16,
+        "mean_predicted": 0.3564,
+        "empirical_rate": 0.64
+      },
+      "0.5-0.75": {
+        "count": 43,
+        "hits": 25,
+        "mean_predicted": 0.595525,
+        "empirical_rate": 0.581395
+      },
+      "0.75-1": {
+        "count": 20,
+        "hits": 19,
+        "mean_predicted": 0.86901,
+        "empirical_rate": 0.95
+      }
+    },
+    "by_condition": {
+      "A": {
+        "0-0.25": {
+          "count": 0,
+          "hits": 0,
+          "mean_predicted": 0.0,
+          "empirical_rate": 0.0
+        },
+        "0.25-0.5": {
+          "count": 8,
+          "hits": 5,
+          "mean_predicted": 0.4025,
+          "empirical_rate": 0.625
+        },
+        "0.5-0.75": {
+          "count": 11,
+          "hits": 8,
+          "mean_predicted": 0.61281,
+          "empirical_rate": 0.727273
+        },
+        "0.75-1": {
+          "count": 11,
+          "hits": 10,
+          "mean_predicted": 0.889109,
+          "empirical_rate": 0.909091
+        }
+      },
+      "B": {
+        "0-0.25": {
+          "count": 1,
+          "hits": 1,
+          "mean_predicted": 0.2,
+          "empirical_rate": 1.0
+        },
+        "0.25-0.5": {
+          "count": 8,
+          "hits": 6,
+          "mean_predicted": 0.3175,
+          "empirical_rate": 0.75
+        },
+        "0.5-0.75": {
+          "count": 17,
+          "hits": 7,
+          "mean_predicted": 0.603922,
+          "empirical_rate": 0.411765
+        },
+        "0.75-1": {
+          "count": 4,
+          "hits": 4,
+          "mean_predicted": 0.8625,
+          "empirical_rate": 1.0
+        }
+      },
+      "C": {
+        "0-0.25": {
+          "count": 1,
+          "hits": 1,
+          "mean_predicted": 0.166667,
+          "empirical_rate": 1.0
+        },
+        "0.25-0.5": {
+          "count": 9,
+          "hits": 5,
+          "mean_predicted": 0.35,
+          "empirical_rate": 0.555556
+        },
+        "0.5-0.75": {
+          "count": 15,
+          "hits": 10,
+          "mean_predicted": 0.573333,
+          "empirical_rate": 0.666667
+        },
+        "0.75-1": {
+          "count": 5,
+          "hits": 5,
+          "mean_predicted": 0.83,
+          "empirical_rate": 1.0
+        }
+      }
+    },
+    "plot_path": "completed_benches\\llama-3.1-8b-awq\\ecnbench_20260714T173650169846Z\\calibration_curve.png"
+  },
+  "delta_conformity": {
+    "overall": null,
+    "by_condition": {},
+    "count": 0,
+    "condition_c_overall": null
+  },
+  "effect_size": {
+    "cohens_d": -0.750994,
+    "ci_lower": -1.267835,
+    "ci_upper": -0.234153,
+    "confidence": 0.95,
+    "mean_difference": -0.300371,
+    "pooled_std": 0.399964,
+    "n_a": 30.0,
+    "n_b": 30.0,
+    "metric": "brier",
+    "error": null
+  },
+  "power_analysis": {
+    "required_n_for_target_power": 92,
+    "actual_n": 30,
+    "apriori_power": 0.354797,
+    "achieved_power": 0.076357
+  },
+  "convergence": {
+    "mean_round_jsd": 0.636622,
+    "monotonic_count": 0
+  },
+  "strict_contract": {
+    "strict_contract_completed_count": 42,
+    "legacy_contract_completed_count": 0,
+    "unknown_contract_completed_count": 48,
+    "strict_contract_ratio": 0.466667
+  },
+  "total_rows": 90,
+  "full_simulation_completed_count": 90,
+  "full_simulation_failed_count": 0,
+  "simulation_success_count": 90,
+  "simulation_failure_count": 0,
+  "evaluation_success_count": 90,
+  "evaluation_failure_count": 0
+}

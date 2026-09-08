@@ -1,0 +1,308 @@
+[
+  {
+    "event_id": "S7",
+    "unit_id": "S7_A_r1",
+    "condition": "A",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.7,
+      "NO": 0.3
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.55,
+        "very_high": 0.25
+      },
+      "polarization": {
+        "very_low": 0.25,
+        "low": 0.4,
+        "high": 0.25,
+        "very_high": 0.1
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.25,
+        "high": 0.45,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.55,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.05
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.55,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.05
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.666667,
+        "polarization_score": 0.4,
+        "herd_effect_score": 0.583333,
+        "deliberation_quality_score": 0.216667,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.6,
+        "information_diversity_score": 0.216667,
+        "weighted_rubric_score": 0.49375
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.18000000000000002,
+    "rps": 0.09,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.7,
+    "calibration_bracket": "0.5-0.75",
+    "weighted_rubric_score": 0.49375,
+    "yes_probability": 0.7,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  },
+  {
+    "event_id": "S7",
+    "unit_id": "S7_B_r1",
+    "condition": "B",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.55,
+      "NO": 0.45
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.35000000000000003,
+        "low": 0.35000000000000003,
+        "high": 0.20000000000000004,
+        "very_high": 0.10000000000000002
+      },
+      "polarization": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.15,
+        "very_high": 0.05
+      },
+      "herd_effect": {
+        "very_low": 0.45,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.05
+      },
+      "deliberation_quality": {
+        "very_low": 0.7000000000000001,
+        "low": 0.20000000000000004,
+        "high": 0.08000000000000002,
+        "very_high": 0.020000000000000004
+      },
+      "susceptibility": {
+        "very_low": 0.15,
+        "low": 0.25,
+        "high": 0.4,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.4000000000000001,
+        "low": 0.30000000000000004,
+        "high": 0.22000000000000003,
+        "very_high": 0.08000000000000002
+      },
+      "information_diversity": {
+        "very_low": 0.75,
+        "low": 0.18,
+        "high": 0.06,
+        "very_high": 0.01
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.35,
+        "polarization_score": 0.25,
+        "herd_effect_score": 0.283333,
+        "deliberation_quality_score": 0.14,
+        "susceptibility_score": 0.55,
+        "convergence_score": 0.326667,
+        "information_diversity_score": 0.11,
+        "weighted_rubric_score": 0.295
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.40499999999999997,
+    "rps": 0.2025,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.55,
+    "calibration_bracket": "0.5-0.75",
+    "weighted_rubric_score": 0.295,
+    "yes_probability": 0.55,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  },
+  {
+    "event_id": "S7",
+    "unit_id": "S7_C_r1",
+    "condition": "C",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.55,
+      "NO": 0.45
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.35000000000000003,
+        "low": 0.35000000000000003,
+        "high": 0.20000000000000004,
+        "very_high": 0.10000000000000002
+      },
+      "polarization": {
+        "very_low": 0.45,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.05
+      },
+      "herd_effect": {
+        "very_low": 0.7000000000000001,
+        "low": 0.20000000000000004,
+        "high": 0.08000000000000002,
+        "very_high": 0.020000000000000004
+      },
+      "deliberation_quality": {
+        "very_low": 0.8,
+        "low": 0.15,
+        "high": 0.04,
+        "very_high": 0.01
+      },
+      "susceptibility": {
+        "very_low": 0.25000000000000006,
+        "low": 0.35000000000000003,
+        "high": 0.30000000000000004,
+        "very_high": 0.10000000000000002
+      },
+      "convergence": {
+        "very_low": 0.55,
+        "low": 0.3,
+        "high": 0.12,
+        "very_high": 0.03
+      },
+      "information_diversity": {
+        "very_low": 0.85,
+        "low": 0.1,
+        "high": 0.04,
+        "very_high": 0.01
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.35,
+        "polarization_score": 0.283333,
+        "herd_effect_score": 0.14,
+        "deliberation_quality_score": 0.086667,
+        "susceptibility_score": 0.416667,
+        "convergence_score": 0.21,
+        "information_diversity_score": 0.07,
+        "weighted_rubric_score": 0.238333
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "N/A",
+        "short_rationale": "No rationale provided"
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.40499999999999997,
+    "rps": 0.2025,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.55,
+    "calibration_bracket": "0.5-0.75",
+    "weighted_rubric_score": 0.238333,
+    "yes_probability": 0.55,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  }
+]

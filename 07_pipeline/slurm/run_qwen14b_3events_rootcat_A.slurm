@@ -1,0 +1,182 @@
+#!/bin/bash
+#SBATCH --job-name=ecn-qwen14b-3ev-A
+#SBATCH --account=gem
+#SBATCH -p gpu
+#SBATCH --qos=medium
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:2
+#SBATCH --constraint=gpu_a100
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=08:00:00
+#SBATCH --output=/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/logs/qwen14b_3events_rootcat_A_%j.log
+#SBATCH --error=/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/logs/qwen14b_3events_rootcat_A_%j.log
+
+# =============================================================================
+# ECN-BENCH: 6 Missing/Excluded Events Fix for Qwen2.5-14B (T3, T4, T5, T6, C6, T8)
+# CORRECTED 2026-08-21: the 2026-08-20 run (run_qwen14b_6events_fix_gpu.slurm)
+# reproduced the original stale-catalogue bug -- it passed
+# --events-raw ../../data/events_raw.json, which resolves (cwd is
+# ECN-HPC-DEPLOY/MiroFish-Offline/backend) to ECN-HPC-DEPLOY/data/events_raw.json,
+# the SAME wrong-topic catalogue that got these 6 events excluded in the first
+# place (verified: T3 simulated as "Bitcoin $80k/$100k" instead of the correct
+# "2024 Taiwanese presidential election"). This script instead points at
+# ecnbench_workspace/fix7_rootcat/data/ -- the authoritative catalogue + seeds
+# already staged there during the 2026-08-16 Llama repair for the same class of
+# bug. The injection bank is intentionally left as the SAME stale-aligned file
+# used by every other campaign for these ids (see ecnbench-llama-outage-repair
+# memory: re-authoring it would give this campaign better stimuli than the
+# others, which is not a fair comparison).
+# Target Model: qwen2.5:14b | Evaluator: deepseek-r1-14b
+# Agents: 300 | Rounds: 60 | Repeats: 1
+# =============================================================================
+
+source /etc/profile.d/modules.sh 2>/dev/null || true
+module load apptainer 2>/dev/null || true
+USER_ID=$(whoami)
+PROJECT_ROOT="/scratch/waves/users/$USER_ID/ECN-HPC-DEPLOY"
+SCRATCH_DIR="/scratch/nautilus/users/$USER_ID/ecnbench"
+WAVES_SCRATCH="/scratch/waves/users/$USER_ID/ecnbench_workspace"
+ROOTCAT_DIR="$WAVES_SCRATCH/fix7_rootcat/data"
+SIF_PATH="$SCRATCH_DIR/vllm_v0.6.3.sif"
+export PATH="$HOME/ecnbench/bin:$PATH"
+export HF_HOME="$SCRATCH_DIR/hf_cache"
+export HF_HUB_OFFLINE=1
+
+mkdir -p "$PROJECT_ROOT/logs"
+mkdir -p "$WAVES_SCRATCH/simulation_logs"
+OUTLINES_JOB_CACHE="$WAVES_SCRATCH/outlines_qwen14b_3ev_A_rootcat_${SLURM_JOB_ID}"
+
+# 6 Target Events
+AGENT_COUNT=300
+ROUNDS=60
+EVENT_IDS="T3,T4,T5"
+EVAL_MODEL_ID="/scratch/waves/users/$USER_ID/ecnbench/hf_cache/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-14B/snapshots/1df8507178afcc1bef68cd8c393f61a886323761"
+
+echo "=================================================="
+echo "STARTING 3 EXCLUDED EVENTS RE-RUN (SPLIT A) FOR QWEN2.5-14B (ROOT CATALOGUE)"
+echo "Events: $EVENT_IDS"
+echo "Agents: $AGENT_COUNT | Rounds: $ROUNDS"
+echo "events-raw: $ROOTCAT_DIR/events_raw.json"
+echo "seeds-dir: $ROOTCAT_DIR/seeds"
+echo "=================================================="
+
+# 1. Boot Isolated Neo4j
+echo "--- Starting Isolated Neo4j ---"
+export JAVA_HOME="$SCRATCH_DIR/java17/jdk-17.0.11+9"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+BOLT_PORT=$((10000 + RANDOM % 10000))
+HTTP_PORT=$((20000 + RANDOM % 10000))
+VLLM_EVAL_PORT=$((50000 + RANDOM % 10000))
+OLLAMA_PORT=$((30000 + RANDOM % 10000))
+export NEO4J_URI="bolt://localhost:$BOLT_PORT"
+
+JOB_NEO4J_DIR="/scratch/waves/users/$USER_ID/ecnbench_workspace/neo4j_qwen14b_3ev_A_rootcat_${SLURM_JOB_ID}"
+mkdir -p "$JOB_NEO4J_DIR/conf" "$JOB_NEO4J_DIR/data"
+cp "$SCRATCH_DIR/neo4j-community-5.15.0/conf/neo4j.conf" "$JOB_NEO4J_DIR/conf/neo4j.conf"
+{
+  echo "server.directories.data=$JOB_NEO4J_DIR/data"
+  echo "server.directories.run=$JOB_NEO4J_DIR"
+  echo "server.bolt.listen_address=0.0.0.0:$BOLT_PORT"
+  echo "server.http.listen_address=127.0.0.1:$HTTP_PORT"
+  echo "dbms.security.auth_enabled=false"
+} >> "$JOB_NEO4J_DIR/conf/neo4j.conf"
+export NEO4J_CONF="$JOB_NEO4J_DIR/conf"
+$SCRATCH_DIR/neo4j-community-5.15.0/bin/neo4j start
+sleep 20
+
+# 2. Ollama on GPU 0
+echo "--- Starting Ollama Server on GPU 0 ---"
+export OLLAMA_MODELS="$SCRATCH_DIR/ollama_storage"
+export OLLAMA_NUM_PARALLEL=2
+export OLLAMA_CONTEXT_LENGTH=8192
+export OLLAMA_NUM_CTX=8192
+export OLLAMA_HOST="127.0.0.1:$OLLAMA_PORT"
+CUDA_VISIBLE_DEVICES=0 $HOME/ecnbench/bin/ollama serve > "$PROJECT_ROOT/logs/ollama_qwen14b_3ev_A_rootcat_${SLURM_JOB_ID}.log" 2>&1 &
+OLLAMA_PID=$!
+sleep 15
+
+# 3. vLLM Evaluator Server on GPU 1 (DeepSeek-R1-14B)
+echo "--- Starting vLLM Evaluator Server on GPU 1 (Port $VLLM_EVAL_PORT) ---"
+CUDA_VISIBLE_DEVICES=1 apptainer run --nv \
+  -B /scratch:/scratch \
+  --env OUTLINES_CACHE_DIR="${OUTLINES_JOB_CACHE}_eval" \
+  --env HF_HOME="$HF_HOME" \
+  --env HF_HUB_OFFLINE=1 \
+  --env VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 \
+  "$SIF_PATH" \
+  --model "$EVAL_MODEL_ID" \
+  --served-model-name "deepseek-r1-14b" \
+  --tensor-parallel-size 1 \
+  --port $VLLM_EVAL_PORT \
+  --gpu-memory-utilization 0.85 \
+  --max-model-len 8192 \
+  --enforce-eager \
+  --trust-remote-code > "$PROJECT_ROOT/logs/vllm_eval_qwen14b_3ev_A_rootcat_${SLURM_JOB_ID}.log" 2>&1 &
+VLLM_PID=$!
+
+echo "Waiting for servers to start..."
+MAX_WAIT=600; WAIT_TIME=0
+check_port() {
+  python3 -c "import socket; s=socket.socket(); s.settimeout(3); s.connect(('127.0.0.1',$1)); s.close()" 2>/dev/null
+}
+while ! (check_port $OLLAMA_PORT && check_port $VLLM_EVAL_PORT); do
+  sleep 10; WAIT_TIME=$((WAIT_TIME + 10))
+  if [ $WAIT_TIME -ge $MAX_WAIT ]; then echo "TIMEOUT: servers failed to start"; exit 1; fi
+  echo "Still waiting ($WAIT_TIME/$MAX_WAIT)..."
+done
+echo "Both Ollama & vLLM Servers Ready!"
+
+# 4. Execute Simulation Protocol for 6 Events -- ROOT CATALOGUE, ABSOLUTE PATHS
+cd "$PROJECT_ROOT/MiroFish-Offline/backend"
+source /scratch/waves/users/$USER_ID/project_backup/MiroFish-Offline/backend/venv/bin/activate
+
+export LLM_BASE_URL="http://localhost:$OLLAMA_PORT/v1"
+export OPENROUTER_BASE_URL="http://localhost:$OLLAMA_PORT/v1"
+export GRAPH_LLM_BASE_URL="http://localhost:$OLLAMA_PORT/v1"
+export EVALUATOR_LLM_BASE_URL="http://localhost:$VLLM_EVAL_PORT/v1"
+export BENCHMARK_LLM_BASE_URL="http://localhost:$OLLAMA_PORT/v1"
+export OPENROUTER_BENCHMARK_MODEL="qwen2.5:14b"
+export OPENROUTER_GRAPH_MODEL="qwen2.5:14b"
+export OPENROUTER_EVALUATOR_MODEL="deepseek-r1-14b"
+export LLM_MODEL_NAME="qwen2.5:14b"
+export BENCHMARK_MODE='true'
+export DEV_MINIMAL_MODE='true'
+export DEV_MINIMAL_SKIP_A_EVALUATION='False'
+export LLM_TIMEOUT_SECONDS='1800'
+export TIKTOKEN_CACHE_DIR="/scratch/nautilus/users/$USER_ID/ecnbench/tiktoken_cache"
+export DEV_MINIMAL_AGENT_COUNT="$AGENT_COUNT"
+export DEV_MINIMAL_MAX_STEPS="$ROUNDS"
+export DEV_MINIMAL_INJECTION_STEP=$((ROUNDS / 2))
+export LLM_API_KEY='dummy'
+export EMBEDDING_BASE_URL="http://localhost:$OLLAMA_PORT"
+export LLM_USE_JSON_SCHEMA='False'
+export BUST_PERSONA_CHECKPOINT='true'
+export DISABLE_TOOL_USE='false'
+export ENABLE_FJ_ANCHORING='True'
+export ENABLE_MEAN_FIELD_AGGREGATION='True'
+
+OUTPUT_DIR="$WAVES_SCRATCH/simulation_logs/qwen2.5-14b-awq/ecnbench_20260727_qwen14b_complete"
+mkdir -p "$OUTPUT_DIR"
+
+echo "Executing scripts/run_ecnbench_protocol.py for events: $EVENT_IDS"
+date +"start %Y-%m-%dT%H:%M:%S"
+
+python scripts/run_ecnbench_protocol.py \
+  --seeds-dir "$ROOTCAT_DIR/seeds" \
+  --events-raw "$ROOTCAT_DIR/events_raw.json" \
+  --injection-bank "$ROOTCAT_DIR/injections/step30_injection_bank.json" \
+  --output-dir "$OUTPUT_DIR" \
+  --event-ids "$EVENT_IDS" \
+  --repeats 1
+
+date +"end %Y-%m-%dT%H:%M:%S"
+echo "3-EVENTS (SPLIT A) ROOT-CATALOGUE FIX COMPLETED SUCCESSFULLY!"
+
+# 5. Cleanup -- kill only THIS job's own server PIDs, never a node-wide
+# pkill, since a second 2-GPU job from the same 6-event split can land on the
+# same 4-GPU A100 node and would otherwise have its still-running servers killed.
+kill "$VLLM_PID" "$OLLAMA_PID" 2>/dev/null
+NEO4J_CONF="$JOB_NEO4J_DIR/conf" $SCRATCH_DIR/neo4j-community-5.15.0/bin/neo4j stop
+rm -rf "$JOB_NEO4J_DIR" "$OUTLINES_JOB_CACHE"*

@@ -1,0 +1,743 @@
+\ifdefined\ECNConferenceVersion
+\documentclass[10pt,conference]{IEEEtran}
+\else
+\documentclass[11pt,journal,onecolumn]{IEEEtran}
+\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,graphicx,array}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{etoolbox}
+\appto\ttfamily{\hyphenchar\font=45}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={The Evaluator Is Part of the Forecast: A Forensic Audit of ECN-BENCH}}
+\input{paper_tables.tex}
+\title{The Evaluator Is Part of the Forecast:\\A Forensic Audit of ECN-BENCH}
+\author{Minh Hien Nguyen%
+\thanks{Independent research using university high-performance computing infrastructure.
+Revised September 6, 2026. This revision reanalyses existing records; it adds no
+simulation runs or evaluator calls.}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+An LLM that converts a multi-agent transcript into a probability distribution
+is part of the forecasting system, rather than a neutral scoring function.
+We study this measurement boundary through a retrospective audit of ECN-BENCH,
+a social-simulation testbed with four model campaigns over 30 resolved events.
+On 132 simulated units with identical stored evidence, questions and options,
+near-uniform forecasts occur in 31 readings by the original extractor and one
+reading by a replacement. Repeated readings by the replacement also vary:
+the mean within-unit Brier range is 0.208--0.375 across campaigns.
+These observations establish sensitivity to the deployed extraction configuration;
+they do not identify a uniquely correct reading of the swarm.
+A source audit documents schema bypass and silent failure handling, but changing
+the evaluator also changes other configuration details. An existing truncation
+and enforcement experiment on a proxy model does not establish either factor
+as the cause of the original near-uniform outputs.
+Exploratory forecasting results are evaluated separately. On 20 events resolving
+after the campaign models' release dates, the Brier contrast between the two
+simulation conditions is $\PooledBrier$ under averaged replacement-evaluator
+readings and $\EvaluatorCBrier$ under another evaluator, with event-cluster
+95\% bootstrap intervals. The latter includes zero. This subset is not protected
+against evaluator knowledge leakage; some injections target the wrong event,
+and the null payloads are not length-matched. An existing single-agent baseline
+does not establish a simulation advantage. The contribution is an auditable
+case study of extraction sensitivity, with explicit boundaries on what the
+available data can say about forecasting and deliberation.
+\end{abstract}
+\begin{IEEEkeywords}
+LLM evaluation, probability extraction, multi-agent simulation, forecasting,
+measurement reliability, reproducibility, benchmark audit.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:intro}
+A social-simulation forecast involves at least two distinct transformations:
+agents turn an event dossier into a discussion, and an extractor turns that
+discussion into a probability vector. When the extractor is itself an LLM,
+its model, prompt, serving environment and post-processing can affect the
+reported forecast. A change in forecasting score can consequently reflect a
+change in the discussion, a change in its interpretation, or both.
+
+ECN-BENCH was originally built to investigate whether social simulation improves
+forecasting relative to direct elicitation. Auditing its execution records exposed
+a more immediate question: how stable is the measurement used to evaluate that
+claim? Near-uniform probability vectors appeared frequently in the original
+extraction pass. Substituting the deployed extractor substantially changed those
+vectors on fixed evidence. The audit also uncovered a shared reference condition,
+failed simulations, catalogue collisions and incomplete telemetry.
+
+This paper reports the resulting measurement study. Its primary observation is
+a comparison on fixed stored evidence; its secondary observations describe
+repeat variability and existing follow-up experiments. Forecasting contrasts
+are retained as exploratory measurements of the complete pipeline. They are
+not evidence that a swarm has acquired knowledge unavailable to its members,
+nor that 300-agent deliberation improves on a single model call.
+
+The contributions are:
+\begin{enumerate}
+\item An artifact-verifiable comparison of two extraction configurations on
+132 simulated units, with the evidence, question, options and outcome metadata
+checked for equality before pairing.
+\item A reanalysis of repeated extraction, a proxy truncation/enforcement grid
+and a single-agent baseline, with failures and unequal measurement budgets
+made explicit.
+\item A reproducible account of how execution defects, statistical dependence
+and retrospective knowledge exposure constrain a forecasting benchmark's claims.
+\end{enumerate}
+All analyses in this revision use existing artifacts. This is a retrospective
+case study, not a preregistered confirmatory experiment. The aim is to describe
+a consequential measurement failure mode without assigning an unsupported
+mechanism to it.
+
+\section{Related Work}
+LLM-as-a-judge research already treats evaluators as imperfect measurement
+devices. Zheng et al.~\cite{zheng2023} document biases in LLM judgments;
+Haldar and Hockenmaier~\cite{haldar2025} directly investigate inconsistency across
+repeated judgments. We do not claim that repeated-judge instability is new.
+Our narrower contribution concerns the extraction of categorical probabilities
+from social-simulation evidence and the associated source-code and data-provenance
+audit.
+
+Proper scoring rules provide a framework for evaluating probabilistic forecasts.
+Gneiting and Raftery~\cite{gneiting2007} distinguish calibration from sharpness:
+sharpness concerns the concentration of the predictive distribution and does not
+depend on which outcome is eventually observed. A higher Brier score alone cannot
+locate an error in either the agents' reasoning or the extractor's interpretation.
+Likewise, a sharp distribution is not necessarily a faithful or accurate one.
+
+OASIS~\cite{yang2024} supports large-scale LLM social simulations. ECN-BENCH uses
+the MiroFish-Offline pipeline built on that framework; the simulation infrastructure
+is the testbed for this audit, rather than a new simulation algorithm.
+ForecastBench~\cite{karger2024} evaluates questions whose answers are unknown when
+forecasts are submitted. That prospective design addresses a limitation our
+retrospective release-date filter cannot resolve: every LLM component capable
+of generating a forecast must be considered when evaluating knowledge leakage.
+
+\section{Testbed and Evidence Provenance}
+\label{sec:design}
+\subsection{Events and conditions}
+The analysed catalogue contains 30 resolved events curated from Polymarket,
+with categorical outcome sets of size $K=2$--$9$. We retain the catalogue's
+identifiers: 15 C events, seven S events and eight T events. These labels are
+record identifiers; we do not treat their historical topical grouping as a
+validated taxonomy. The catalogue's descriptive header contains superseded
+counts, so the executable analysis validates the observed campaign units.
+
+Each campaign contains 30 records for each of three conditions:
+\begin{itemize}
+\item \textbf{Condition A: shared direct reference.} The stored reference evidence
+is reused across campaigns. It is not a separately executed baseline for each
+campaign model.
+\item \textbf{Condition B: nominally relevant injection.} A configured
+300-agent, 60-round simulation receives an event-specific update at round 30.
+\item \textbf{Condition C: null injection.} The same configured workflow receives
+an unrelated administrative update at round 30.
+\end{itemize}
+A unit is a campaign--event--condition record. Thus 360 unit records exist,
+but neither the four copies of the shared reference nor repeated evaluator
+readings constitute independent simulation replications. Agent count is a
+configuration parameter, not the number of independent human-like observations
+or a guarantee that every agent contributed substantive discussion.
+
+The intended B/C manipulation was relevant versus unrelated information.
+The released inputs implement a less controlled comparison. Seven injection
+identifiers are aligned to a stale catalogue. Among the 20 post-release events
+used later, C6 concerns a papal conclave but receives a Fed update, T6 concerns
+the Irish election but receives a GPT-5 update, and T8 concerns the Canadian
+election but receives a Bitcoin update. Repairs corrected simulation questions
+while retaining this injection bank. Consequently B is described throughout
+as \emph{nominally} relevant.
+
+The bank also fails the intended length match: relevant-update bodies contain
+1.51--2.37 times as many characters as null bodies (median 2.04), and all null
+bodies use the same text. This is a measurement of the released input bank,
+not an estimate of the subsequent discussion length. Relevance, wording,
+length and stimulus diversity are therefore not separated by this design.
+
+\subsection{Campaign identity and recovery}
+The four campaign labels are Llama-3.1-8B, Mistral-7B,
+Qwen2.5-7B and Qwen2.5-14B. The Llama campaign originally used an AWQ-INT4
+checkpoint under local vLLM; its recovery used a hosted Llama endpoint.
+Mistral used the v0.1 instruct model with local full-precision serving;
+Qwen2.5-7B used a local Ollama/GGUF deployment. The Qwen2.5-14B artifacts
+span original and recovery executions, and their names and serving descriptions
+are not consistent enough to establish one numerical-precision setting for
+the whole campaign. We retain the label without treating it as a controlled
+size or quantization comparison. Release generation, serving and precision
+are confounded across campaigns.
+
+The Llama backend outage affected 23 events; catalogue correction brought the
+recovery set to 24 events. An initial recovery incorrectly constructed empty
+evaluator evidence and was superseded. The final stored recovery records contain
+rebuilt evidence and replacement scoring. Only the six unaffected events
+(C3, S2--S6) can enter the comparison with the original July extractor.
+
+
+The full question-level audit additionally finds Qwen2.5-14B T1 still asks
+about a Fed decision rather than the UAW question carried by the other
+campaigns. Its options and outcome happen to match, so vector validation
+does not detect the topic collision. T1 is outside the primary 20-event
+subset; it is excluded across all campaigns in the extended 29-event
+question-aligned summaries, while its stored rows remain visible.
+
+Qwen2.5-14B required six wrong-topic events to be re-simulated before the present
+revision. A separate unit, C9 in Condition C, retains an outage-like telemetry
+signature. Its scored probabilities survive, but its simulation integrity is
+uncertain. We report full-set descriptive results and a sensitivity analysis
+excluding the entire C9 event across campaigns, alongside the wrong-injection
+events, to keep a balanced comparison.
+
+\subsection{Extractor identities and read budgets}
+\label{sec:evaluators}
+The archive separates evaluator files:
+\begin{itemize}
+\item \textbf{Evaluator J}: the original local DeepSeek-R1-Distill-Qwen-14B
+deployment, identified in the pipeline as \texttt{deepseek-r1-14b}.
+\item \textbf{Evaluator A}: the recorded hosted identifier
+\texttt{deepseek/deepseek-v4-flash-0731}. Three campaigns have an initial
+pass and three additional reads. Qwen2.5-14B has three reads only.
+\item \textbf{Evaluator C}: the recorded hosted identifier
+\texttt{openai/gpt-5.6-luna-pro}, with one read per unit.
+\end{itemize}
+These hosted names are execution identifiers from the archive, not evidence
+that the same backend or weights remain available. Provider routing and
+backend determinism were not independently verified.
+
+The file \texttt{event\_results.json} is not uniformly Evaluator J data:
+Llama recovery rows and 18 Qwen2.5-14B recovery rows use a replacement
+\texttt{deepseek/deepseek-r1} evaluator. The fixed-evidence J/A comparison
+excludes these substituted readings and excludes Qwen2.5-14B entirely.
+
+Four known failed rereads survive as stale copies of previous values:
+Qwen2.5-7B's T3/C, C9/A and C13/C in repeat 3, and Qwen2.5-14B's T1/C
+in repeat 2. The analysis excludes exactly these file--unit pairs.
+All 2,070 stored campaign probability vectors pass finite-value, range,
+normalization and option/outcome consistency checks. This validates
+record structure; it does not certify execution integrity or independently
+verify the historical event outcomes.
+
+\section{Measurement and Analysis}
+\label{sec:methods}
+\subsection{Estimand and scoring}
+Let $T_{mec}$ denote the stored evidence for campaign $m$, event $e$ and
+condition $c$. An extraction configuration $j$ produces
+$\widehat{\mathbf p}_{mecj}=g_j(T_{mec},q_e,\mathcal O_e)$, where $q_e$ is the
+question and $\mathcal O_e$ the outcome list. The extraction function includes
+the model, prompt, generation settings, retries, serving and post-processing.
+The final forecast is an output of this composite system.
+
+We use the unnormalised multicategory Brier score:
+\begin{equation}
+ BS(\mathbf p,y)=\sum_{o\in\mathcal O}
+       (p_o-\mathbf 1\{o=y\})^2,\qquad 0\leq BS\leq 2.
+\end{equation}
+For a uniform vector this equals $1-1/K$. A uniform vector is a legitimate
+probabilistic forecast; it is not automatically an error or a missing answer.
+The term \emph{near-uniform} is an operational output diagnostic:
+\begin{equation}
+ F(\mathbf p)=\mathbf 1\left\{\max_o |p_o-1/K|<0.005\right\}.
+\end{equation}
+We also report sensitivity to this tolerance. Near-uniform units remain in all
+forecasting score summaries. Excluding them because they are uninformative
+would change the estimand and could selectively remove difficult cases.
+
+Directional accuracy credits a tie among $h$ maximal-probability options by
+$1/h$ if the outcome belongs to that tie, and zero otherwise. The mean
+$1/K$ is reported as a descriptive uniform-choice reference, not a competitive
+forecasting baseline and not a null model for substantive event predictability.
+
+\subsection{Repeated readings and aggregation}
+For Evaluator A, the principal descriptive forecast uses the per-unit mean
+of all available probability vectors. Brier is then computed on that mean.
+A sensitivity analysis instead averages the Brier scores of individual reads.
+These are different quantities:
+\begin{equation}
+ \frac{1}{J}\sum_j BS(\mathbf p_j,y)
+ =BS(\overline{\mathbf p},y)
+ +\frac{1}{J}\sum_j\|\mathbf p_j-\overline{\mathbf p}\|^2.
+\end{equation}
+Averaging vectors therefore changes the forecast and can improve its score
+through ensembling. It does not simply reveal an otherwise hidden true
+swarm forecast. Evaluator C has only one read, so comparisons against the
+Evaluator A ensemble also differ in measurement budget.
+
+Within-unit Brier range and exact vector agreement describe repeatability.
+Exact agreement is a strict diagnostic; disagreement can be numerically small,
+and range tends to increase with the number of reads. These quantities should
+not be used as calibrated thresholds for which population effects are measurable.
+Nor does inter-evaluator correlation establish agreement or validity.
+
+\subsection{Dependence and uncertainty}
+\label{sec:inference}
+The four campaigns answer the same events. We first form each event's mean
+paired contrast across the four fixed campaigns, then resample events with
+replacement. All observations belonging to a sampled event are kept together.
+We use 100,000 percentile bootstrap replicates, NumPy's generator with seed 7,
+and 2.5th/97.5th percentiles. The estimand is the equal-event average over these
+four campaigns, not an average over a population of independently sampled models.
+Intervals condition on the observed simulations and evaluator readings.
+
+The 20-event subset retains the prior analysis's event selection to permit
+comparison. The selection predates this revision but is not preregistered.
+We call it the \emph{post-release subset}, never contamination-clean:
+its outcomes resolve after the stated campaign-model release dates, but no
+corresponding protection exists for the later evaluator deployments or for
+retrospectively authored inputs.
+
+Event bootstrap still assumes independent event clusters. C1, C5 and S2--S5
+share the 2024 US election. We therefore additionally group these six events
+into one cluster (15 clusters for 20 events), and separately omit them
+(14 events). Grouped resampling preserves all events in a selected cluster
+and computes their event-weighted mean. These sensitivity choices are
+retrospective and do not exhaust every possible dependency in the catalogue.
+
+We do not report the previous pooled Poisson-binomial $p$-value. It treated
+repeated model--event records as independent and rounded a fractional tie-credit
+total to an integer threshold. Neither operation supplies the exact sampling
+distribution of the reported accuracy statistic. More generally, no analysis
+in this paper is offered as a multiplicity-adjusted confirmatory test.
+Intervals across models, evaluators, variants and exclusions describe
+sensitivity rather than a search for one significant result.
+
+\section{Fixed-Evidence Extraction Sensitivity}
+\label{sec:paired}
+Table~\ref{tab:paired} reports the primary audit. Mistral and Qwen2.5-7B each
+contribute all 60 simulated B/C units. Llama contributes 12 units from its
+six unaffected events. The analysis verifies equality of stored evidence text,
+question, option list and ground truth for each pair, and aborts on mismatch.
+
+\begin{table}[!htbp]
+\centering
+\caption{Near-uniform readings on matched simulated evidence.
+Counts refer to the same units within each row.}
+\label{tab:paired}
+\begin{tabular}{lrrr}
+\toprule
+Campaign & Units & Evaluator J & Evaluator A\\
+\midrule
+\AuditRows
+\midrule
+Total & 132 & 31 & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The change from 31/132 to 1/132 establishes that the reported probability
+vectors are not invariant to extraction configuration. In the unaffected
+Llama subset all 12 original readings are near-uniform and none of their
+replacements are. This subset was selected by execution integrity, not
+randomly; it establishes that a large difference can occur, not its prevalence
+in arbitrary simulations.
+
+The counts are unchanged using numerical exact-uniformity (maximum deviation
+at most $10^{-12}$) or tolerance 0.01; at tolerance 0.02 the J count becomes
+32 while the A count stays one. The contrast is therefore not generated by
+the particular 0.005 threshold in this paired material.
+
+This is a fixed-\emph{evidence} comparison, not a byte-identical HTTP-request
+experiment. Model, serving, generation budget, schema handling and possibly
+prompt/validation details differ across the historical configurations.
+The event-specific micro-question catalogue also underwent correction.
+The comparison locates sensitivity in the extraction stage as deployed;
+it does not isolate evaluator architecture from those other factors.
+
+Most importantly, a non-uniform replacement is not automatically a more
+faithful reading. No human-labelled reference distribution or known-consensus
+synthetic transcript set was used to decide which extractor represents the
+discussion correctly. The replacement may recover information omitted by
+the first extractor, import outside knowledge, or become overconfident.
+The present records cannot distinguish these explanations.
+
+\begin{figure*}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{fig_paper_audit.png}
+\caption{Left: fixed-evidence near-uniform counts expressed as fractions
+(Table~\ref{tab:paired}). Right: exploratory Brier contrasts under alternative
+extraction and clustering choices (Table~\ref{tab:sensitivity}). Bars on the
+left are observed fractions, not independent-agent estimates. Intervals on the
+right account for repeated campaigns within events; the grouped row additionally
+joins six US-election events.}
+\label{fig:audit}
+\end{figure*}
+
+\subsection{Repeatability within the replacement evaluator}
+\begin{table}[!htbp]
+\centering
+\caption{Evaluator A repeatability across 90 units per campaign.
+Reads are available files; four stale file--unit readings are excluded.
+Exact agreement concerns probability vectors, not rounded Brier values.}
+\label{tab:noise}
+\begin{tabular}{lrrr}
+\toprule
+Campaign & Reads & Exact & Mean BS range\\
+\midrule
+\NoiseRows
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:noise} shows substantial variability in repeated extraction.
+Mean within-unit Brier ranges are 0.208--0.375. Repeated reads here are repeated
+requests through the recorded deployment, not independent evaluators and not
+new simulations. The archive does not establish whether stochastic decoding,
+retries, backend nondeterminism or provider routing generated each difference.
+Because some requests failed and their stale copies are excluded, read counts
+are not perfectly balanced even within a campaign. The ranges support reporting
+repeatability alongside forecast quality; they do not provide a universal
+noise floor or an optimal number of required reads.
+
+\section{Source Audit and Existing Mechanism Probes}
+\label{sec:mechanism}
+\subsection{What the code establishes}
+The archived client includes a keyword-based bypass for model identifiers
+containing strings such as \texttt{r1} or \texttt{reasoning}, and a separate
+local-quantization bypass. The identifier \texttt{deepseek-r1-14b} matches
+the reasoning filter. This documents a path that disables constraints for the
+configured name. Complete historical request logs are unavailable, so actual
+constraint status cannot be independently verified for every July request.
+
+Schema enforcement and semantic correctness are different properties.
+JSON-object mode guarantees neither the nested schema nor meaningful probabilities.
+A schema-valid vector can be uniform, incorrect or unrelated to the transcript.
+Evaluator A used JSON-object handling; Evaluator C's strict-schema requests were
+documented as falling back after schema rejection. Neither is a verified,
+uniformly strict schema-enforced reference instrument.
+
+Silent defaults complicate diagnosis. Historical validation could accept
+incomplete micro-question mappings and fill them with missing-value labels.
+A deployed normalization path could also replace non-positive matched mass
+with a uniform vector. The final probabilities do not consistently preserve
+the raw completion and retry history needed to assign the origin of every
+uniform vector. The observations cannot establish that uniformity was a
+deliberate hedge by the model.
+
+\subsection{Cross-evaluator transfer}
+An existing follow-up sent Mistral's 60 simulated evidence records to five
+additional unconstrained deployments. The stored experiment reports 8 near-uniform
+outputs among 58 parsed Qwen3-14B responses; six of these eight occur among the
+19 units that Evaluator J flattened. Other deployments report zero near-uniform
+outputs among 56 DeepSeek-R1, 54 DeepSeek-R1-Distill-Llama-70B, 57 Qwen3-32B
+and 60 Ministral-14B responses.
+
+These are counts among usable responses, not success rates over all attempted
+calls. Missing responses cannot be assumed missing at random. The simplified
+transfer prompt differs from the production rubric; an additional DeepSeek-R1
+production-prompt control reports zero near-uniform outputs among 60 scored units.
+This control does not make every cross-model comparison configuration-matched.
+The overlap identifies inputs on which two deployments return the same diagnostic
+pattern. It does not establish a model-size boundary: size, training and serving
+are not independently varied.
+
+\subsection{Truncation and requested enforcement}
+The existing grid varies four evidence lengths and whether output constraints
+are requested for a hosted Qwen3-14B proxy. Truncation retains parts of the log
+and subsamples representative actions; it changes content and speaker coverage
+together with character count. The original Evaluator J deployment was not
+available for this experiment.
+
+\begin{table}[!htbp]
+\centering
+\caption{Qwen3-14B grid: near-uniform/usable readings out of 60 attempted units
+per cell. On denotes requested enforcement; actual strict-schema acceptance
+is not verified for every response.}
+\label{tab:truncation}
+\begin{tabular}{lrr}
+\toprule
+Length target & Off & On\\
+\midrule
+\TruncationRows
+\bottomrule
+\end{tabular}
+\end{table}
+
+The unconstrained shortest arm has 7/59 near-uniform readings and the full arm
+1/60. Pairing the 59 units with both responses yields six short-only near-uniform
+outcomes and zero full-only outcomes. Shortening did not reduce near-uniformity
+in this proxy experiment. A descriptive association between longer evidence and
+near-uniformity in the original Mistral/J observations cannot be promoted to
+a demonstrated length mechanism.
+
+Across all lengths there are 238 matched off/on pairs because missing units
+differ between arms. We average paired indicator differences within each event
+and resample the 30 events, preserving conditions and length levels. The
+equal-event off-minus-on estimate is approximately $+0.005$, with interval
+$[-0.029,+0.042]$. The marginal totals, 12/239 and 11/239, should not be treated
+as independent binomial samples. This experiment does not detect a clear effect
+of requesting enforcement; it neither proves equivalence nor establishes that
+enforcement has no effect in the original deployment.
+
+These probes bound candidate explanations without identifying the cause of
+Evaluator J's outputs. The extraction-sensitivity observation does not require
+either a length mechanism or a schema mechanism to be true.
+
+\section{Exploratory Forecasting Results}
+\label{sec:forecast}
+\subsection{Post-release subset}
+The 20 selected events yield 80 campaign--event records per simulation condition.
+Under Evaluator A's averaged vector, B accuracy is \PooledAccuracy\%, comprising
+65 outright correct modal outcomes and one two-way tie credited by one half.
+The mean uniform-choice reference is 32.6\%. These are descriptive statistics
+of retrospective pipeline outputs.
+
+\begin{table}[!htbp]
+\centering
+\caption{Post-release subset, 20 events per campaign. Accuracy uses tie credit;
+Brier uses Evaluator A's averaged vector. Labels do not imply matched serving.}
+\label{tab:forecast}
+\begin{tabular}{lrrrr}
+\toprule
+Campaign & Acc.\ B & Acc.\ C & BS B & BS C\\
+\midrule
+\ForecastRows
+\bottomrule
+\end{tabular}
+\end{table}
+
+The contrast $BS_C-BS_B$ is positive when B scores better.
+Table~\ref{tab:sensitivity} presents all sensitivity summaries selected for this
+retrospective reanalysis; none is a preregistered hypothesis test.
+
+\begin{table*}[!htbp]
+\centering
+\caption{Exploratory sensitivity of $BS_C-BS_B$. Intervals resample events,
+except the US-election-grouped row (15 clusters over 20 events). Input/gap
+exclusion removes C6, T6, T8 and C9 from all campaigns. Exclusions were chosen
+after inspection of the audit trail; intervals do not correct for this selection.}
+\label{tab:sensitivity}
+\begin{tabular}{lrl}
+\toprule
+Analysis & Events & Mean [95\% interval]\\
+\midrule
+\SensitivityRows
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The averaged-vector and mean-read-score summaries under A are similar here,
+so the B/C estimate is not solely a vector-ensembling artifact. Excluding the
+input/gap events retains a positive estimate. Grouping or omitting six
+US-election events also retains a positive estimate under A. These checks
+do not remove every shared cause of event outcomes.
+
+Evaluator C gives $\EvaluatorCBrier$, whose interval includes zero. Its
+single-read budget differs from A's repeated-read budget. This is limited
+robustness across the available measurement choices, not a clean test that
+one evaluator detects an effect and another does not. A statistical difference
+between the two effects is not established.
+
+\subsection{What the contrast cannot identify}
+\label{sec:leakage}
+The post-release filter concerns the campaign models, not all LLMs in the
+pipeline. Evaluators deployed in 2026 may know the outcomes of events from
+2024--2025. The probability prompt exposes identifiable questions, and
+instructions to use only the discussion do not demonstrate compliance.
+Dossiers and perturbations were assembled retrospectively; timestamps, source
+fidelity and freedom from hindsight were not independently established for
+every claim. Stripping URLs or softening deterministic language cannot remove
+knowledge already encoded in a model.
+
+The accuracy figures therefore do not establish leakage-free forecasting.
+They may reflect genuine evidence use, pre-existing model knowledge, evaluator
+knowledge, retrospective input construction, or a combination. Ground-truth
+labels are used as recorded; this study does not independently adjudicate
+every market resolution or the mutual exclusivity of every curated option set.
+
+The B/C contrast describes sensitivity of the complete simulated-and-extracted
+pipeline to its input conditions. It cannot attribute that sensitivity specifically
+to agent-to-agent deliberation. A direct call, an extractor reacting to a changed
+transcript, or different injected wording may also produce a B/C difference.
+Relevance is not isolated from length, and C6/T6/T8 do not implement the intended
+relevance manipulation.
+
+\section{Existing Single-Agent Baseline}
+\label{sec:cot}
+The post-campaign baseline contains 240 calls: 20 events, four hosted model arms
+and three calls per event/arm. Each receives the seed dossier and nominal B
+update, not the simulation transcript. The first call uses temperature zero,
+the other two temperature 0.7; these are not identically distributed replicates.
+
+The principal summary averages individual-call Brier scores. It estimates
+the mean score of the observed three-setting mixture, not a fixed-temperature
+single-call policy. The script also reports the first call alone and the score
+of the three-vector ensemble. No added retrieval step was executed: the dossier
+and injection were supplied directly in the prompt.
+
+Only Llama-3.1-8B and Qwen2.5-7B have nominal model identities matching their
+campaigns; identical served weights are not independently verified, and
+serving and precision are not fully matched. Ministral-8B and Qwen3-14B differ
+from the Mistral-7B and Qwen2.5-14B campaigns and are secondary comparisons.
+
+\begin{table*}[!htbp]
+\centering
+\caption{Existing CoT baseline. Positive $BS_{\rm CoT}-BS_{\rm swarm}$ favours
+the swarm. Identity matching does not imply serving/precision matching.
+Per-arm intervals are exploratory event bootstraps.}
+\label{tab:cot}
+\begin{tabular}{lcrl}
+\toprule
+CoT arm & Identity matched? & Accuracy & Brier difference [95\% interval]\\
+\midrule
+\CotRows
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Pooling the identity-matched arms by event gives
+$BS_{\rm CoT}-BS_{\rm swarm}=\MatchedCotBrier$. The point estimate favours CoT
+and the interval includes zero. This is no demonstrated swarm advantage in
+the available comparison, not proof of equivalence or non-inferiority.
+Some individual or ensemble variants exclude zero in CoT's favour; these
+are exploratory and do not change that scope.
+
+Across all four, partly unmatched arms, individual-call accuracy is
+\CotAccuracy\%, compared with \PooledAccuracy\% for the swarm under A's
+averaged vectors. This does not establish equal capability: model identity,
+serving and aggregation are unbalanced. There is no single-agent C arm.
+A factorial comparison of single-agent versus simulation crossed with the
+same B/C inputs would be needed to estimate additional content sensitivity
+from deliberation. The present data do not identify that interaction.
+
+\section{Implications and Limits}
+\label{sec:limitations}
+\subsection{A practical measurement protocol}
+A reproducible evaluation should preserve the event question, ordered options,
+evidence bytes, full prompt, model identifier, serving revision when available,
+generation parameters, requested and accepted output format, raw completion,
+retry history and probability post-processing. A final vector and an error
+flag are insufficient to diagnose the defects found here.
+
+Repeated extraction and a second evaluator are useful diagnostics, not substitutes
+for external validity. Read counts should follow a precision/cost analysis;
+this study does not justify a universal minimum of three reads. A labelled
+synthetic transcript or blinded human reference can test extraction fidelity.
+A question-only baseline can measure what a later evaluator knows without
+the simulation. These are recommendations, not experiments executed in this
+revision. Repairing a schema bypass is sound engineering even when its effect
+on near-uniformity is unknown. Valid JSON, a non-uniform forecast and a faithful
+interpretation are separate requirements.
+
+\subsection{Limits of the evidence}
+The primary comparison is conditional on a selected artifact set and a historical
+deployment. The original endpoint's disappearance prevents exact intervention
+on that deployment. An open-weight model identifier exists, but restoring
+weights under a new stack would be a new experiment, not a proven replay.
+
+Repeated reads condition on one realised simulation per condition and cannot
+estimate simulation-run variability. Nominally 300 agents sharing a model do
+not supply 300 independent replications. The 30-event convenience catalogue
+supports limited generalization to other events, languages, forecasting horizons
+and deployments.
+
+The seven-dimension rubric, convergence telemetry and persona/action audits
+remain execution diagnostics, not validated measures of psychological or
+collective-reasoning constructs. Incomplete telemetry, placeholders and serving
+failures prevent the original convergence and optimal-configuration claims
+from being retained as results. Isolated failures of small deployments do not
+establish a general parameter-count exclusion rule.
+
+No causal mechanism is rescued by an insignificant comparison, and an inability
+to reject a null is not proof of equality. The main finding is sensitivity of
+measured probabilities to extraction configuration; forecasting comparisons
+make its consequences and limits visible.
+
+\section{Conclusion}
+On 132 matched simulated evidence records, the original and replacement
+extraction configurations produce 31 and one near-uniform forecasts. Repeated
+reads of the replacement also vary substantially. These observations warrant
+treating an LLM extractor as part of the forecasting system.
+
+The source audit and proxy experiments do not identify why the original
+configuration produced these vectors or which reading is faithful to the
+swarm. Forecasting contrasts remain retrospective, evaluator-dependent and
+affected by imperfect inputs. An existing single-agent baseline does not
+demonstrate a deliberation benefit. The contribution is a reproducible audit
+of extraction sensitivity and the design boundaries it exposes, rather than
+a validated advantage or failure of collective reasoning.
+
+\appendices
+\section{Reproduction and Artifact Contract}
+\label{sec:reproduce}
+The accompanying archive contains the benchmark definition in
+\texttt{01\_benchmark}, scored records in \texttt{02\_campaigns}, available
+traces in \texttt{03\_traces}, existing follow-up observations in
+\texttt{04\_experiments}, revised analysis in \texttt{05\_analysis},
+historical execution code in \texttt{07\_pipeline} and superseded artifacts
+in \texttt{09\_audit}. From the archive root:
+\begin{quote}\small\ttfamily\raggedright
+python 05\_analysis/scripts/paper\_analysis.py
+--data-root . --output-dir 08\_paper
+\end{quote}
+The script reads frozen observations and generates \texttt{paper\_results.json},
+\texttt{paper\_tables.tex} and \texttt{fig\_paper\_audit.png}, without network
+calls. The JSON records settings and SHA-256 input hashes; tables consume
+generated values directly. A numerical validation suite checks estimands
+and data-contract failure cases.
+
+The paired comparison validates evidence/question/options equality, not
+complete historical request equality. Four stale rereads are excluded by
+file--unit keys. Forecast metrics are recomputed from vectors rather than
+inherited fields. Historical scripts and reports are retained for provenance;
+they are not authoritative for current paper tables.
+
+\section{Correction Record}
+The prior manuscript is retained under
+\texttt{09\_audit/manuscript\_20260826.tex} and is superseded.
+This revision replaces a demonstrated-mechanism claim with a fixed-evidence
+configuration observation; replaces contamination-clean language with
+post-release subset; withdraws the independent-unit pooled accuracy test;
+uses event-cluster intervals; adds evaluator, aggregation, input and dependency
+sensitivities; corrects the B/C description; retains uniform vectors in scoring;
+and removes unvalidated convergence, size-threshold and optimal-configuration
+claims. No new model observations were collected. The defects remain
+available to audit and remain explicit limits on inference.
+
+\section*{Data Availability}
+The replication package accompanies this manuscript and supports offline
+reanalysis. A permanent repository identifier has not yet been assigned in
+this working release; no public deposition or reviewer access is asserted.
+Scored records and evidence fields survive even where raw simulation traces
+were lost. Qwen2.5-14B's original raw traces are unavailable for 21 events
+following scratch-storage deletion; recovery traces and the surviving original
+fragment are retained. The original evaluator deployment cannot be replayed
+exactly from the recorded artifacts. Reproducing the reported analysis and
+rerunning the historical system are distinct capabilities.
+
+\section*{Research Scope}
+Inputs concern public events and were assembled for retrospective computational
+study. No new human-participant data were collected by the reanalysis.
+Synthetic personas and behaviours are not validated models of real populations.
+Results should not be interpreted as operational forecasting performance
+or as evidence about the beliefs of actual people.
+
+\begin{thebibliography}{9}
+\bibitem{gneiting2007}
+T.~Gneiting and A.~E.~Raftery, \emph{Strictly proper scoring rules, prediction,
+and estimation}, Journal of the American Statistical Association, vol.~102,
+no.~477, pp.~359--378, 2007, doi:10.1198/016214506000001437.
+\bibitem{zheng2023}
+L.~Zheng et al., \emph{Judging LLM-as-a-judge with MT-Bench and Chatbot Arena},
+Advances in Neural Information Processing Systems, 2023.
+\url{https://arxiv.org/abs/2306.05685}.
+\bibitem{haldar2025}
+R.~Haldar and J.~Hockenmaier, \emph{Rating roulette: Self-inconsistency in
+LLM-as-a-judge frameworks}, Findings of EMNLP, pp.~24986--25004, 2025,
+doi:10.18653/v1/2025.findings-emnlp.1361.
+\bibitem{yang2024}
+Z.~Yang et al., \emph{OASIS: Open agent social interaction simulations with
+one million agents}, arXiv:2411.11581, 2024.
+\url{https://arxiv.org/abs/2411.11581}.
+\bibitem{karger2024}
+E.~Karger et al., \emph{ForecastBench: A dynamic benchmark of AI forecasting
+capabilities}, arXiv:2409.19839, 2024.
+\url{https://arxiv.org/abs/2409.19839}.
+\end{thebibliography}
+\end{document}
+
+

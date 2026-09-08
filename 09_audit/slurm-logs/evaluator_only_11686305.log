@@ -1,0 +1,14 @@
+==================================================
+STARTING DEDICATED EVALUATOR JOB (DeepSeek-R1-14B)
+Port: 41431
+==================================================
+Waiting for vLLM server at http://127.0.0.1:41431/v1/models...
+vLLM is READY! Served model name: 'deepseek-r1-14b'
+Traceback (most recent call last):
+  File "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/run_hpc_evaluator_standalone.py", line 250, in <module>
+    main()
+  File "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/run_hpc_evaluator_standalone.py", line 105, in main
+    router = BenchmarkRoleRouter(
+             ^^^^^^^^^^^^^^^^^^^^
+TypeError: BenchmarkRoleRouter.__init__() got an unexpected keyword argument 'evaluator_base_url'
+EVALUATOR JOB FINISHED SUCCESSFULLY!

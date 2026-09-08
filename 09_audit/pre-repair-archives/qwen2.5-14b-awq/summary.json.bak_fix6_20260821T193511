@@ -1,0 +1,290 @@
+{
+  "condition_mean_brier": {
+    "A": 0.371676,
+    "B": 0.310278,
+    "C": 0.523257
+  },
+  "lift": {
+    "A_to_B": 0.061398,
+    "A_to_C": -0.151581,
+    "B_to_C": -0.212979
+  },
+  "rubric": {
+    "rubric_completed_count": 72,
+    "rubric_missing_count": 0,
+    "validated_scale_keys": [
+      "convergence_score",
+      "deliberation_quality_score",
+      "herd_effect_score",
+      "information_diversity_score",
+      "polarization_score",
+      "prediction_accuracy_score",
+      "susceptibility_score",
+      "weighted_rubric_score"
+    ]
+  },
+  "directional_accuracy": {
+    "overall": 0.75,
+    "by_condition": {
+      "A": 0.75,
+      "B": 0.895833,
+      "C": 0.604167
+    },
+    "delta": {
+      "A_to_B": 0.145833,
+      "A_to_C": -0.145833,
+      "B_to_C": -0.291666
+    }
+  },
+  "weighted_rubric_score": {
+    "overall": 0.541713,
+    "by_condition": {
+      "A": 0.553273,
+      "B": 0.565598,
+      "C": 0.506267
+    },
+    "delta": {
+      "A_to_B": 0.012325,
+      "A_to_C": -0.047006,
+      "B_to_C": -0.059331
+    }
+  },
+  "evaluator_reliability": {
+    "kappa_by_dimension": {
+      "convergence": 0.0,
+      "deliberation_quality": 0.0,
+      "herd_effect": 0.033628,
+      "information_diversity": 0.0,
+      "polarization": -0.074803,
+      "prediction_accuracy": -0.055072,
+      "susceptibility": 0.0
+    },
+    "evaluator_noisy": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "dropped_dimensions_count": 7,
+    "evaluator_unstable": true,
+    "kappa_cutoff": 0.8
+  },
+  "composite_score": {
+    "composite_score": null,
+    "renormalized_weights": {},
+    "excluded_dimensions": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "included_dimensions": []
+  },
+  "content_susceptibility": {
+    "mean_yes_probability": {
+      "overall": 0.564375,
+      "by_condition": {
+        "A": 0.543125,
+        "B": 0.54375,
+        "C": 0.60625
+      }
+    },
+    "delta": {
+      "B_minus_C": -0.0625
+    }
+  },
+  "evaluator_fallback": {
+    "fallback_used_count": 0,
+    "completed_count": 72,
+    "fallback_used_ratio": 0.0,
+    "by_condition": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "by_reason": {},
+    "by_source": {}
+  },
+  "signed_susceptibility": {
+    "mean_signed_delta": 0.0,
+    "directional_accuracy": 0.0,
+    "belief_update_failure_count": 0,
+    "belief_update_failure_rate": 0.0,
+    "analyzed_pair_count": 0,
+    "direction_mismatch_count": 0
+  },
+  "rps": {
+    "overall": 0.370672,
+    "by_condition": {
+      "A": 0.319221,
+      "B": 0.284819,
+      "C": 0.507976
+    }
+  },
+  "calibration": {
+    "overall": {
+      "0-0.25": {
+        "count": 1,
+        "hits": 1,
+        "mean_predicted": 0.233645,
+        "empirical_rate": 1.0
+      },
+      "0.25-0.5": {
+        "count": 23,
+        "hits": 16,
+        "mean_predicted": 0.369975,
+        "empirical_rate": 0.695652
+      },
+      "0.5-0.75": {
+        "count": 31,
+        "hits": 23,
+        "mean_predicted": 0.609062,
+        "empirical_rate": 0.741935
+      },
+      "0.75-1.0": {
+        "count": 17,
+        "hits": 16,
+        "mean_predicted": 0.846188,
+        "empirical_rate": 0.941176
+      }
+    },
+    "by_condition": {
+      "A": {
+        "0-0.25": {
+          "count": 0,
+          "hits": 0,
+          "mean_predicted": 0.0,
+          "empirical_rate": 0.0
+        },
+        "0.25-0.5": {
+          "count": 5,
+          "hits": 4,
+          "mean_predicted": 0.406,
+          "empirical_rate": 0.8
+        },
+        "0.5-0.75": {
+          "count": 9,
+          "hits": 6,
+          "mean_predicted": 0.593434,
+          "empirical_rate": 0.666667
+        },
+        "0.75-1.0": {
+          "count": 10,
+          "hits": 9,
+          "mean_predicted": 0.90352,
+          "empirical_rate": 0.9
+        }
+      },
+      "B": {
+        "0-0.25": {
+          "count": 1,
+          "hits": 1,
+          "mean_predicted": 0.233645,
+          "empirical_rate": 1.0
+        },
+        "0.25-0.5": {
+          "count": 5,
+          "hits": 5,
+          "mean_predicted": 0.36,
+          "empirical_rate": 1.0
+        },
+        "0.5-0.75": {
+          "count": 14,
+          "hits": 12,
+          "mean_predicted": 0.632857,
+          "empirical_rate": 0.857143
+        },
+        "0.75-1.0": {
+          "count": 4,
+          "hits": 4,
+          "mean_predicted": 0.775,
+          "empirical_rate": 1.0
+        }
+      },
+      "C": {
+        "0-0.25": {
+          "count": 0,
+          "hits": 0,
+          "mean_predicted": 0.0,
+          "empirical_rate": 0.0
+        },
+        "0.25-0.5": {
+          "count": 13,
+          "hits": 7,
+          "mean_predicted": 0.359956,
+          "empirical_rate": 0.538462
+        },
+        "0.5-0.75": {
+          "count": 8,
+          "hits": 5,
+          "mean_predicted": 0.585,
+          "empirical_rate": 0.625
+        },
+        "0.75-1.0": {
+          "count": 3,
+          "hits": 3,
+          "mean_predicted": 0.75,
+          "empirical_rate": 1.0
+        }
+      }
+    }
+  },
+  "delta_conformity": {
+    "overall": null,
+    "by_condition": {},
+    "count": 0,
+    "condition_c_overall": null
+  },
+  "effect_size": {
+    "cohens_d": 0.197798,
+    "ci_lower": -0.383275,
+    "ci_upper": 0.778871,
+    "confidence": 0.95,
+    "mean_difference": 0.061397,
+    "pooled_std": 0.310403,
+    "n_a": 24.0,
+    "n_b": 24.0,
+    "metric": "brier",
+    "error": null
+  },
+  "power_analysis": {
+    "required_n_for_target_power": 92,
+    "actual_n": 24,
+    "apriori_power": 0.292677,
+    "achieved_power": 0.084849
+  },
+  "convergence": {
+    "mean_round_jsd": 0.646404,
+    "monotonic_count": 1
+  },
+  "strict_contract": {
+    "strict_contract_completed_count": 72,
+    "legacy_contract_completed_count": 0,
+    "unknown_contract_completed_count": 0,
+    "strict_contract_ratio": 1.0
+  },
+  "total_rows": 72,
+  "full_simulation_completed_count": 72,
+  "full_simulation_failed_count": 0,
+  "simulation_success_count": 72,
+  "simulation_failure_count": 0,
+  "evaluation_success_count": 72,
+  "evaluation_failure_count": 0,
+  "_exclusion_note": "6 of the original 30 events (T3, T4, T5, T6, C6, T8) were excluded from this campaign: they were simulated and scored against the WRONG event topic due to the stale ECN-HPC-DEPLOY/data/events_raw.json catalogue (same class of bug documented in the paper's evaluator-replication section for the other 3 models, but here it affected the simulation dossier itself, not just micro-questions, so the affected units cannot be recovered by rescoring). This campaign therefore reflects 24/30 events (72/90 units), not the full 30-event benchmark. See audit notes for the excluded event IDs and what was actually simulated instead.",
+  "_excluded_events": [
+    "C6",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T8"
+  ],
+  "_total_rows_before_exclusion": 90,
+  "_total_rows_after_exclusion": 72
+}

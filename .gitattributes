@@ -1,0 +1,6 @@
+# Preserve released bytes and SHA-256 hashes across Windows/Linux checkouts.
+* -text
+*.pdf binary
+*.png binary
+*.db binary
+*.sqlite binary

@@ -1,0 +1,45 @@
+==================================================
+STARTING 6 EXCLUDED EVENTS RE-RUN FOR QWEN2.5-14B
+Events: T3,T4,T5,T6,C6,T8
+Agents: 300 | Rounds: 60
+==================================================
+--- Starting Isolated Neo4j ---
+Validating Neo4j configuration: /scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/neo4j_qwen14b_6events_11647946/conf/neo4j.conf
+1 issue found.
+Warning: Use of deprecated setting 'dbms.connector.bolt.listen_address'. It is replaced by 'server.bolt.listen_address'.
+
+Validating user Log4j configuration: /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/conf/user-logs.xml
+No issues found.
+
+Validating server Log4j configuration: /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/conf/server-logs.xml
+No issues found.
+
+Configuration file validation successful (with warnings).
+Directories in use:
+home:         /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0
+config:       /scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/neo4j_qwen14b_6events_11647946/conf
+logs:         /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/logs
+plugins:      /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/plugins
+import:       /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/import
+data:         /scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/neo4j_qwen14b_6events_11647946/data
+certificates: /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/certificates
+licenses:     /scratch/nautilus/users/mhnguyn2025@ec-nantes.fr/ecnbench/neo4j-community-5.15.0/licenses
+run:          /scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/neo4j_qwen14b_6events_11647946
+Starting Neo4j.
+Started neo4j (pid:313746). It is available at http://127.0.0.1:29326
+There may be a short delay until the server is ready.
+--- Starting Ollama Server on GPU 0 ---
+--- Starting vLLM Evaluator Server on GPU 1 (Port 58734) ---
+Waiting for servers to start...
+Still waiting (10/600)...
+Still waiting (20/600)...
+Still waiting (30/600)...
+Still waiting (40/600)...
+Still waiting (50/600)...
+Both Ollama & vLLM Servers Ready!
+Executing run_ecnbench_protocol_hpc.py for events: T3,T4,T5,T6,C6,T8
+start 2026-08-19T20:11:55
+python: can't open file '/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/run_ecnbench_protocol_hpc.py': [Errno 2] No such file or directory
+end 2026-08-19T20:11:56
+6-EVENTS FIX COMPLETED SUCCESSFULLY!
+Stopping Neo4j....... stopped.

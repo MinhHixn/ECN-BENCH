@@ -1,0 +1,118 @@
+{
+  "model": "Qwen2.5-7B",
+  "generated_at_utc": "2026-08-21T17:31:53.116514+00:00",
+  "source_files": {
+    "deepseek_v4_flash_0731_reads": [
+      "event_results_evaluatorB_openrouter.json",
+      "event_results_evaluatorA_repeat1.json",
+      "event_results_evaluatorA_repeat2.json",
+      "event_results_evaluatorA_repeat3.json"
+    ],
+    "gpt_5_6_luna_pro_read": "event_results_evaluatorC_gptlunapro.json"
+  },
+  "known_permanent_gaps": {
+    "event_results_evaluatorA_repeat3.json": [
+      "T3_C_r1",
+      "C9_A_r1",
+      "C13_C_r1"
+    ]
+  },
+  "instrument_spread": {
+    "n_units_with_2plus_reads": 90,
+    "mean_spread_brier": 0.2798,
+    "median_spread_brier": 0.1481,
+    "max_spread_brier": 1.1,
+    "pct_units_reproducing_within_0.01": 0.0889
+  },
+  "cross_evaluator_agreement": {
+    "n_units": 90,
+    "pearson_r_deepseek_mean_vs_gpt_lunapro": 0.701
+  },
+  "all_available_events": {
+    "n_events": 30,
+    "by_condition": {
+      "A": {
+        "n_units": 30,
+        "deepseek_robust_mean_brier": 0.3043,
+        "directional_accuracy": 0.8667,
+        "gpt_lunapro_mean_brier": 0.2601,
+        "deepseek_flat_read_rate": 0.0168
+      },
+      "B": {
+        "n_units": 30,
+        "deepseek_robust_mean_brier": 0.3173,
+        "directional_accuracy": 0.8667,
+        "gpt_lunapro_mean_brier": 0.1647,
+        "deepseek_flat_read_rate": 0.0167
+      },
+      "C": {
+        "n_units": 30,
+        "deepseek_robust_mean_brier": 0.4691,
+        "directional_accuracy": 0.6667,
+        "gpt_lunapro_mean_brier": 0.3097,
+        "deepseek_flat_read_rate": 0.0169
+      }
+    },
+    "lift_A_to_B": -0.013,
+    "susceptibility_C_minus_B": 0.1518,
+    "gpt_lunapro_flat_rate_all_conditions": 0.0
+  },
+  "clean_20_events_where_available": {
+    "n_events": 20,
+    "by_condition": {
+      "A": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.3748,
+        "directional_accuracy": 0.85,
+        "gpt_lunapro_mean_brier": 0.3267,
+        "deepseek_flat_read_rate": 0.0253
+      },
+      "B": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.3712,
+        "directional_accuracy": 0.85,
+        "gpt_lunapro_mean_brier": 0.2123,
+        "deepseek_flat_read_rate": 0.025
+      },
+      "C": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.5437,
+        "directional_accuracy": 0.55,
+        "gpt_lunapro_mean_brier": 0.4208,
+        "deepseek_flat_read_rate": 0.0253
+      }
+    },
+    "lift_A_to_B": 0.0036,
+    "susceptibility_C_minus_B": 0.1725,
+    "gpt_lunapro_flat_rate_all_conditions": 0.0
+  },
+  "clean_20_events_common_to_all_4_models": {
+    "n_events": 20,
+    "by_condition": {
+      "A": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.3748,
+        "directional_accuracy": 0.85,
+        "gpt_lunapro_mean_brier": 0.3267,
+        "deepseek_flat_read_rate": 0.0253
+      },
+      "B": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.3712,
+        "directional_accuracy": 0.85,
+        "gpt_lunapro_mean_brier": 0.2123,
+        "deepseek_flat_read_rate": 0.025
+      },
+      "C": {
+        "n_units": 20,
+        "deepseek_robust_mean_brier": 0.5437,
+        "directional_accuracy": 0.55,
+        "gpt_lunapro_mean_brier": 0.4208,
+        "deepseek_flat_read_rate": 0.0253
+      }
+    },
+    "lift_A_to_B": 0.0036,
+    "susceptibility_C_minus_B": 0.1725,
+    "gpt_lunapro_flat_rate_all_conditions": 0.0
+  }
+}

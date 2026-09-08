@@ -1,0 +1,280 @@
+{
+  "condition_mean_brier": {
+    "A": 0.341381,
+    "B": 0.407933,
+    "C": 0.298127
+  },
+  "lift": {
+    "A_to_B": -0.066552,
+    "A_to_C": 0.043254,
+    "B_to_C": 0.109806
+  },
+  "rubric": {
+    "rubric_completed_count": 90,
+    "rubric_missing_count": 0,
+    "validated_scale_keys": [
+      "convergence_score",
+      "deliberation_quality_score",
+      "herd_effect_score",
+      "information_diversity_score",
+      "polarization_score",
+      "prediction_accuracy_score",
+      "susceptibility_score",
+      "weighted_rubric_score"
+    ]
+  },
+  "directional_accuracy": {
+    "overall": 0.772222,
+    "by_condition": {
+      "A": 0.783333,
+      "B": 0.716667,
+      "C": 0.816667
+    },
+    "delta": {
+      "A_to_B": -0.066666,
+      "A_to_C": 0.033334,
+      "B_to_C": 0.1
+    }
+  },
+  "weighted_rubric_score": {
+    "overall": 0.546997,
+    "by_condition": {
+      "A": 0.550298,
+      "B": 0.522889,
+      "C": 0.567805
+    },
+    "delta": {
+      "A_to_B": -0.027409,
+      "A_to_C": 0.017507,
+      "B_to_C": 0.044916
+    }
+  },
+  "evaluator_reliability": {
+    "kappa_by_dimension": {
+      "convergence": 0.244727,
+      "deliberation_quality": 0.209471,
+      "herd_effect": 0.205776,
+      "information_diversity": 0.228384,
+      "polarization": 0.241089,
+      "prediction_accuracy": 0.320974,
+      "susceptibility": 0.321566
+    },
+    "evaluator_noisy": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "dropped_dimensions_count": 7,
+    "evaluator_unstable": true,
+    "kappa_cutoff": 0.8
+  },
+  "composite_score": {
+    "composite_score": null,
+    "renormalized_weights": {},
+    "excluded_dimensions": [
+      "convergence",
+      "dqi",
+      "herd_effect",
+      "info_diversity",
+      "polarization",
+      "prediction_accuracy",
+      "susceptibility"
+    ],
+    "included_dimensions": []
+  },
+  "content_susceptibility": {
+    "mean_yes_probability": {
+      "overall": 0.480556,
+      "by_condition": {
+        "A": 0.445,
+        "B": 0.455,
+        "C": 0.541667
+      }
+    },
+    "delta": {
+      "B_minus_C": -0.086667
+    }
+  },
+  "evaluator_fallback": {
+    "fallback_used_count": 0,
+    "completed_count": 90,
+    "fallback_used_ratio": 0.0,
+    "by_condition": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "by_reason": {},
+    "by_source": {}
+  },
+  "signed_susceptibility": {
+    "mean_signed_delta": 0.0,
+    "directional_accuracy": 0.0,
+    "belief_update_failure_count": 0,
+    "belief_update_failure_rate": 0.0,
+    "analyzed_pair_count": 0,
+    "direction_mismatch_count": 0
+  },
+  "rps": {
+    "overall": 0.274886,
+    "by_condition": {
+      "A": 0.313068,
+      "B": 0.28349,
+      "C": 0.2281
+    }
+  },
+  "calibration": {
+    "overall": {
+      "0-0.25": {
+        "count": 2,
+        "hits": 2,
+        "mean_predicted": 0.155556,
+        "empirical_rate": 1.0
+      },
+      "0.25-0.5": {
+        "count": 18,
+        "hits": 13,
+        "mean_predicted": 0.332222,
+        "empirical_rate": 0.722222
+      },
+      "0.5-0.75": {
+        "count": 38,
+        "hits": 33,
+        "mean_predicted": 0.592105,
+        "empirical_rate": 0.868421
+      },
+      "0.75-1": {
+        "count": 32,
+        "hits": 31,
+        "mean_predicted": 0.866875,
+        "empirical_rate": 0.96875
+      }
+    },
+    "by_condition": {
+      "A": {
+        "0-0.25": {
+          "count": 2,
+          "hits": 2,
+          "mean_predicted": 0.155556,
+          "empirical_rate": 1.0
+        },
+        "0.25-0.5": {
+          "count": 4,
+          "hits": 2,
+          "mean_predicted": 0.35,
+          "empirical_rate": 0.5
+        },
+        "0.5-0.75": {
+          "count": 12,
+          "hits": 9,
+          "mean_predicted": 0.613333,
+          "empirical_rate": 0.75
+        },
+        "0.75-1": {
+          "count": 12,
+          "hits": 12,
+          "mean_predicted": 0.860833,
+          "empirical_rate": 1.0
+        }
+      },
+      "B": {
+        "0-0.25": {
+          "count": 0,
+          "hits": 0,
+          "mean_predicted": 0.0,
+          "empirical_rate": 0.0
+        },
+        "0.25-0.5": {
+          "count": 8,
+          "hits": 6,
+          "mean_predicted": 0.325,
+          "empirical_rate": 0.75
+        },
+        "0.5-0.75": {
+          "count": 13,
+          "hits": 12,
+          "mean_predicted": 0.572308,
+          "empirical_rate": 0.923077
+        },
+        "0.75-1": {
+          "count": 9,
+          "hits": 8,
+          "mean_predicted": 0.867778,
+          "empirical_rate": 0.888889
+        }
+      },
+      "C": {
+        "0-0.25": {
+          "count": 0,
+          "hits": 0,
+          "mean_predicted": 0.0,
+          "empirical_rate": 0.0
+        },
+        "0.25-0.5": {
+          "count": 6,
+          "hits": 5,
+          "mean_predicted": 0.33,
+          "empirical_rate": 0.833333
+        },
+        "0.5-0.75": {
+          "count": 13,
+          "hits": 12,
+          "mean_predicted": 0.592308,
+          "empirical_rate": 0.923077
+        },
+        "0.75-1": {
+          "count": 11,
+          "hits": 11,
+          "mean_predicted": 0.872727,
+          "empirical_rate": 1.0
+        }
+      }
+    },
+    "plot_path": "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/completed_benches/llama-3.1-8b-awq/ecnbench_20260714T173650169846Z/calibration_curve.png"
+  },
+  "delta_conformity": {
+    "overall": null,
+    "by_condition": {},
+    "count": 0,
+    "condition_c_overall": null
+  },
+  "effect_size": {
+    "cohens_d": -0.199465,
+    "ci_lower": -0.716306,
+    "ci_upper": 0.317376,
+    "confidence": 0.95,
+    "mean_difference": -0.066552,
+    "pooled_std": 0.333653,
+    "n_a": 30.0,
+    "n_b": 30.0,
+    "metric": "brier",
+    "error": null
+  },
+  "power_analysis": {
+    "required_n_for_target_power": 92,
+    "actual_n": 30,
+    "apriori_power": 0.354797,
+    "achieved_power": 0.088087
+  },
+  "convergence": {
+    "mean_round_jsd": 0.636622,
+    "monotonic_count": 0
+  },
+  "strict_contract": {
+    "strict_contract_completed_count": 18,
+    "legacy_contract_completed_count": 0,
+    "unknown_contract_completed_count": 72,
+    "strict_contract_ratio": 0.2
+  },
+  "total_rows": 90,
+  "full_simulation_completed_count": 90,
+  "full_simulation_failed_count": 0,
+  "simulation_success_count": 90,
+  "simulation_failure_count": 0,
+  "evaluation_success_count": 90,
+  "evaluation_failure_count": 0
+}

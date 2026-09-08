@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: >-
+  If you use this archive, please cite both the technical report and the
+  archive itself.
+title: >-
+  ECN-BENCH replication archive: campaign records, simulation transcripts,
+  post-campaign experiments and audit trail
+abstract: >-
+  Frozen observations and offline reanalysis for a retrospective audit of
+  LLM probability extraction from multi-agent simulations. Four campaigns
+  cover 30 events and three recorded conditions, including a shared reference.
+  On 132 matched simulated evidence records, near-uniform counts differ
+  between two extraction configurations. Forecasting comparisons remain
+  exploratory: evaluator knowledge leakage, imperfect injection controls,
+  serving differences and incomplete raw traces limit interpretation.
+  The September revision adds no simulation or evaluator calls.
+type: dataset
+version: "1.2.1"
+
+# ---------------------------------------------------------------------------
+# Author/affiliation metadata is inherited from the research archive.
+# See 00_docs/GITHUB_PUBLISH.md for final metadata review and deposition.
+# Add repository-code / doi only after real identifiers have been assigned.
+# ---------------------------------------------------------------------------
+authors:
+  - given-names: Minh Hien
+    family-names: Nguyen
+    email: nguyenminhhienthd1@gmail.com
+    affiliation: École Centrale de Nantes
+
+
+keywords:
+  - multi-agent systems
+  - large language models
+  - forecasting
+  - probabilistic calibration
+  - benchmark
+  - LLM-as-a-judge
+  - evaluator reliability
+  - social simulation
+  - reproducibility
+
+license: CC-BY-4.0
+
+references:
+  - type: report
+    title: >-
+      ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-Agent Forecasting
+    authors:
+      - given-names: Minh Hien
+        family-names: Nguyen
+        affiliation: École Centrale de Nantes
+    year: 2026
+    notes: >-
+      The technical report this archive accompanies; included in the archive at
+      08_paper/ecn_bench_paper.pdf. Replace with the published venue, volume and
+      DOI once available.
+
+  - type: software
+    title: MiroFish-Offline
+    notes: >-
+      The multi-agent social-simulation engine underlying the benchmark;
+      the app package is included at 07_pipeline/backend/. Its own license
+      terms apply to that directory.

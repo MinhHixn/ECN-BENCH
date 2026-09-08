@@ -1,0 +1,45 @@
+{
+  "models": {
+    "Llama-3.1-8B": {
+      "cot_directional_accuracy": 0.7059,
+      "cot_brier": 0.3458,
+      "cot_poisson_p": 0.0015116022055041158,
+      "swarm_directional_accuracy": 0.6765,
+      "swarm_brier": 0.5486,
+      "swarm_lift_over_cot_brier": -0.2028
+    },
+    "Mistral-8B": {
+      "cot_directional_accuracy": 1.0,
+      "cot_brier": 0.2309,
+      "cot_poisson_p": 0.2,
+      "swarm_directional_accuracy": 0.8824,
+      "swarm_brier": 0.3428,
+      "swarm_lift_over_cot_brier": -0.1119
+    },
+    "Qwen2.5-7B": {
+      "cot_directional_accuracy": 0.8235,
+      "cot_brier": 0.256,
+      "cot_poisson_p": 2.643751607510288e-05,
+      "swarm_directional_accuracy": 0.8235,
+      "swarm_brier": 0.3303,
+      "swarm_lift_over_cot_brier": -0.0743
+    },
+    "Qwen3-14B": {
+      "cot_directional_accuracy": 0.8235,
+      "cot_brier": 0.2634,
+      "cot_poisson_p": 2.643751607510288e-05,
+      "swarm_directional_accuracy": 0.9412,
+      "swarm_brier": 0.2231,
+      "swarm_lift_over_cot_brier": 0.0403
+    }
+  },
+  "pooled": {
+    "n_units": 52,
+    "pooled_cot_directional_accuracy": 0.7885,
+    "pooled_cot_brier": 0.2873,
+    "pooled_cot_poisson_p": 3.879333135931235e-12,
+    "pooled_swarm_directional_accuracy": 0.8309,
+    "pooled_swarm_brier": 0.3612,
+    "pooled_swarm_lift_over_cot_brier": -0.0739
+  }
+}

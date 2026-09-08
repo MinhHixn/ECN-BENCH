@@ -1,0 +1,330 @@
+{
+  "summary": {
+    "qwen/qwen3-14b": {
+      "n": 6,
+      "parsed": 6,
+      "flat": 1
+    },
+    "deepseek/deepseek-r1-distill-llama-70b": {
+      "n": 6,
+      "parsed": 6,
+      "flat": 0
+    },
+    "qwen/qwen3-32b": {
+      "n": 6,
+      "parsed": 6,
+      "flat": 1
+    },
+    "mistralai/ministral-14b-2512": {
+      "n": 6,
+      "parsed": 6,
+      "flat": 0
+    }
+  },
+  "detail": [
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S9_C_r1",
+      "chars": 14486,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.2,
+        "NO": 0.8
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S3_C_r1",
+      "chars": 13906,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "flat": true,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S4_C_r1",
+      "chars": 10446,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.8,
+        "NO": 0.2
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S2_C_r1",
+      "chars": 13011,
+      "finish": "stop",
+      "probs": {
+        "Republican": 0.6,
+        "Democrat": 0.4
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S6_B_r1",
+      "chars": 15557,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.25,
+        "\u00d6VP": 0.35,
+        "SP\u00d6": 0.3,
+        "Other": 0.1
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S6_C_r1",
+      "chars": 15071,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.3,
+        "\u00d6VP": 0.4,
+        "SP\u00d6": 0.2,
+        "Other": 0.1
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S3_C_r1",
+      "chars": 13906,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.45,
+        "NO": 0.55
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S4_C_r1",
+      "chars": 10446,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S2_C_r1",
+      "chars": 13011,
+      "finish": "stop",
+      "probs": {
+        "Republican": 0.55,
+        "Democrat": 0.45
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S3_C_r1",
+      "chars": 13906,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S4_C_r1",
+      "chars": 10446,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S6_B_r1",
+      "chars": 15557,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.2,
+        "SP\u00d6": 0.55,
+        "Other": 0.1
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S9_C_r1",
+      "chars": 14486,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S6_C_r1",
+      "chars": 15071,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.2,
+        "\u00d6VP": 0.5,
+        "SP\u00d6": 0.15,
+        "Other": 0.15
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit": "S2_C_r1",
+      "chars": 13011,
+      "finish": "stop",
+      "probs": {
+        "Republican": 0.75,
+        "Democrat": 0.25
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit": "S6_C_r1",
+      "chars": 15071,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.1,
+        "\u00d6VP": 0.55,
+        "SP\u00d6": 0.2,
+        "Other": 0.15
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S3_C_r1",
+      "chars": 13906,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S9_C_r1",
+      "chars": 14486,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "flat": true,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S9_C_r1",
+      "chars": 14486,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S6_C_r1",
+      "chars": 15071,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.7,
+        "SP\u00d6": 0.1,
+        "Other": 0.05
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S6_B_r1",
+      "chars": 15557,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.09,
+        "SP\u00d6": 0.75,
+        "Other": 0.01
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S4_C_r1",
+      "chars": 10446,
+      "finish": "stop",
+      "probs": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit": "S6_B_r1",
+      "chars": 15557,
+      "finish": "stop",
+      "probs": {
+        "FP\u00d6": 0.3,
+        "\u00d6VP": 0.2,
+        "SP\u00d6": 0.45,
+        "Other": 0.05
+      },
+      "flat": false,
+      "parsed": true
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit": "S2_C_r1",
+      "chars": 13011,
+      "finish": "stop",
+      "probs": {
+        "Republican": 0.75,
+        "Democrat": 0.25
+      },
+      "flat": false,
+      "parsed": true
+    }
+  ]
+}

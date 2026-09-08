@@ -1,0 +1,473 @@
+% ---------------------------------------------------------------------------
+% SUPERSEDED: ECN-BENCH, historical conference version.
+%
+% This is a condensation of ecn_bench_paper.tex (the full technical report) to a
+% ~9-page body. It carries the same claims and the same numbers; everything it
+% drops is either an audit log, a per-event lookup table, or a withdrawn result
+% whose history matters for the record but not for the argument. Section numbers
+% in \S-references below point at THIS document; the long report is cited as
+% \cite{techreport} wherever a reader needs the full derivation.
+%
+% Format note: IEEEtran is used because it resolves offline in this build
+% environment. Retarget the documentclass before submission; nothing in the body
+% depends on it except the \confoundnote box.
+% ---------------------------------------------------------------------------
+\documentclass[10pt,conference]{IEEEtran}
+
+% --- Font encoding: REQUIRED, do not remove ---------------------------------
+% Without T1 + lmodern, XeTeX silently falls back to the regular face for every
+% bold, italic and small-caps request: the document compiles clean while all of
+% its emphasis disappears. Verified 2026-08-26.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{etoolbox}
+
+\appto\ttfamily{\hyphenchar\font=`\-}
+\setlength{\emergencystretch}{3em}
+
+% --- Bold headings ----------------------------------------------------------
+% Same treatment as the technical report: IEEEtran's spacing, numbering and
+% run-in behaviour are preserved verbatim; only the font changes.
+%   section        bold, centred      subsubsection  bold italic, run-in
+%   subsection     bold, flush left   paragraph      italic, run-in
+% section is not \bfseries\scshape: Latin Modern has no bold small-caps shape.
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {3.0ex plus 1.5ex minus 1.5ex}{0.7ex plus 1ex minus 0ex}%
+  {\normalfont\normalsize\centering\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {3.5ex plus 1.5ex minus 1.5ex}{0.7ex plus .5ex minus 0ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\parindent}%
+  {0ex plus 0.1ex minus 0.1ex}{0ex}%
+  {\normalfont\normalsize\bfseries\itshape}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{2\parindent}%
+  {0ex plus 0.1ex minus 0.1ex}{0ex}%
+  {\normalfont\normalsize\itshape}}
+\makeatother
+
+\newcommand{\confoundnote}[1]{%
+  \par\addvspace{0.5\baselineskip}%
+  \noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{%
+    \footnotesize\textbf{Cross-model comparison warning.} #1}}%
+  \par\addvspace{0.5\baselineskip}}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=cyan}
+
+\begin{document}
+
+% \bfseries applies inside the title group only.
+\title{\bfseries The Evaluator Is the Instrument:\\
+Degenerate Consensus in Multi-Agent LLM Forecasting\\
+Is a Property of the Measurement}
+
+\author{\IEEEauthorblockN{Nguyen Minh Hien}
+\IEEEauthorblockA{Ecole Centrale de Nantes\\
+nguyenminhhienthd1@gmail.com}}
+
+\maketitle
+
+\begin{abstract}
+Multi-agent LLM social simulations are increasingly proposed for synthesizing calibrated probabilistic forecasts from a swarm of interacting personas. We report a forensic audit of one such benchmark and relocate its central finding from the swarm to the instrument that measures it. ECN-BENCH elicits forecasts for $E=30$ resolved Polymarket events under direct elicitation and under full social simulation ($N=300$ agents, $R=60$ rounds) across three open-weight models. Under simulation, $20.6\%$ of units return an exactly uniform probability vector against $3.3\%$ without it, and mean modal probability falls from $0.66$ to $0.54$--$0.56$ among the remainder. A proper scoring rule charges both effects as miscalibration while directional accuracy is unchanged, so this loss of sharpness alone explains the worse simulated scores---which would otherwise read as evidence that deliberation degrades reasoning. A source-code audit traces the degeneracy to the extraction instrument: a keyword filter on the evaluator's model identifier silently disabled structured-output enforcement for every unit of every campaign. Re-scoring the same transcripts under a schema-enforced evaluator cuts the flat-forecast rate from $31/132$ to $1/132$ and the cross-model pattern the original analysis set out to explain disappears. Within the one campaign where evidence length varies cleanly, degeneracy rises from $5\%$ to $65\%$ across terciles of transcript length. Re-running five further evaluators in the identical unconstrained condition on the same transcripts localises the failure: four return nothing uniform, but a small reasoning model returns $8/58$, and $6$ of its $8$ failures fall on the very transcripts the original instrument failed on ($2.6$ expected by chance, $p = 0.012$). A $2\times4$ grid then assigns length and enforcement experimentally, and neither survives: shortening the transcript mildly \emph{increases} degeneracy ($7/59$ against $1/60$, $p = 0.032$) and enforcement pooled over lengths changes nothing ($12/239$ against $11/239$, $p = 1.000$). Which model reads the transcript is what decides. Neither evaluator pass is a reference measurement---three re-reads of byte-identical input at temperature $0$ reproduce only $4/30$ units. We conclude that any benchmark extracting probabilities with an LLM must calibrate that extractor as an instrument, give a seven-item checklist for doing so, and report the one finding that survives our own audit: on the $20$ events resolving after every model's release date, the swarm's modal forecast is the realised outcome in $81.9\%$ of $80$ (model, event) pairs against a $32.6\%$ chance baseline (exact $p = 3.7\times10^{-22}$), and replacing the injected evidence with topically unrelated material costs $0.112$ Brier $[+0.042, +0.182]$. A single-agent chain-of-thought baseline on the same evidence, added after the audit, bounds what the machinery buys: it matches that directional accuracy ($0.834$) and no arm shows a swarm advantage distinguishable from zero.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Benchmark forensics, instrument calibration, LLM-as-judge reliability, structured-output enforcement, multi-agent systems, proper scoring rules.
+\end{IEEEkeywords}
+
+% ===========================================================================
+\section{Introduction}
+\label{sec:intro}
+
+A multi-agent LLM simulation does not produce a probability. It produces a transcript, and something else turns that transcript into a probability. In every benchmark of this kind we are aware of, that something else is another LLM, prompted to read the deliberation and emit a distribution over outcomes. The benchmark's score is then a property of two systems composed---the swarm and the extractor---but is reported, and read, as a property of the first alone.
+
+This paper is what happened when we took that composition seriously. ECN-BENCH was built to test three hypotheses about deliberation: that simulation improves calibration over direct elicitation (\emph{lift}), that opinion distributions converge over rounds (\emph{convergence}), and that the swarm is sensitive to the content rather than the mere presence of injected evidence (\emph{susceptibility}). Its first full campaign returned a clean, striking, and entirely wrong headline: simulation made forecasts \emph{worse}, by a margin large enough to write about.
+
+The mechanism turned out to be that $20.6\%$ of simulated units returned an exactly uniform probability vector---a \emph{flat forecast}---against $3.3\%$ of the non-simulated controls. A proper scoring rule charges a uniform forecast the full uniform loss, so flat units drag the simulated conditions' mean Brier score up mechanically, with no claim about reasoning required. We initially read this as degenerate consensus: deliberation driving the swarm to a state from which no informative posterior could be recovered. A source-code audit then found that the evaluator's structured-output enforcement had been disabled for every unit of every campaign by a keyword match on its model identifier, and re-scoring the identical transcripts under an enforced evaluator removed almost all of the degeneracy. The phenomenon is real and reproducible; it is not about the swarm.
+
+\textbf{Contributions.}
+\begin{itemize}
+  \item \textbf{A phenomenon and its mechanism.} We document \emph{degenerate consensus}---long multi-agent transcripts that an unconstrained LLM evaluator reduces to a uniform distribution---and localise it to the interaction of two factors: enforcement disabled at the request layer, and input volume. Section~\ref{sec:audit} gives the source-level defect; Section~\ref{sec:volume} runs the controlled tests, which localise the failure to the extracting model and \emph{fail} to support either of the two mechanisms we had credited it to.
+  \item \textbf{A methodology: treat the extractor as an instrument.} We measure the evaluator's own reproducibility on byte-identical input ($4/30$ exact agreement, maximum Brier spread $0.715$) and its agreement with a second evaluator ($r = +0.552$ over $198$ units; the two disagree on the modal outcome for $80/198$). We distil this into a seven-item checklist (Table~\ref{tab:checklist}), each item paired with the specific failure in this work it would have caught.
+  \item \textbf{An experimental result that survives the audit.} On the $20$ events resolving after every model's release date---so no campaign could have memorised the outcome---the swarm's modal forecast is the realised outcome in $81.9\%$ of $80$ (model, event) pairs against a $32.6\%$ chance level ($p = 3.7\times10^{-22}$), and it tracks the \emph{content} of what it deliberates over: replacing relevant injected evidence with topically unrelated material of identical structure costs $0.112$ Brier $[+0.042, +0.182]$.
+\end{itemize}
+
+We are explicit about what this paper does not establish. Three campaigns at $E=30$ events give $\leq 9\%$ power against the effect sizes of interest; the three models differ simultaneously in release generation, numerical precision and serving stack; and the No-Sim baseline was run once and shared across campaigns rather than re-run per model. The full audit, including twenty-four withdrawn or restricted claims and the per-event tables, is in the accompanying technical report~\cite{techreport}.
+
+% ===========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\textbf{Multi-agent simulation as a forecasting mechanism.} Generative-agent societies~\cite{park2023generative} and their scaled successors~\cite{oasis2024,mirofish2024} are increasingly proposed as instruments for eliciting aggregate belief, an operationalisation of the wisdom-of-crowds argument~\cite{surowiecki2005}. Multi-agent debate is reported to improve factuality and reasoning~\cite{du2023debate}, though the same interaction channel also propagates sycophancy~\cite{sharma2023sycophancy}. Our result is orthogonal to that literature and prior to it: before asking whether deliberation helps, one must establish that the quantity being compared is a measurement of the deliberation.
+
+\textbf{Forecasting benchmarks and scoring.} We score with strictly proper rules~\cite{gneiting2007}, following ForecastBench~\cite{karger2024forecastbench} and the LLM-forecasting line of work~\cite{halawi2024approaching}, and we control temporal contamination by stratifying on resolution date against model release date---a concern sharpened by work on detecting test-set exposure~\cite{oren2024proving}. Our contamination control is the same idea applied to a shared baseline condition rather than to a training corpus.
+
+\textbf{LLM-as-a-judge.} Judge reliability is usually reported as agreement with human preference on a single pass~\cite{zheng2023judging}. Two things differ here. First, the output is a continuous probability vector rather than a preference, so degeneracy has a specific and detectable form---exact uniformity---that a preference judgment does not. Second, we measure \emph{pass-versus-pass} variance on byte-identical input at temperature $0$, which to our knowledge has not been reported for probability extraction: the same judge reading the same text three times reproduces its own answer for $4$ of $30$ inputs.
+
+\textbf{Constrained decoding.} The defect we document is the absence of grammar-constrained generation, and the repair is its presence. Guided decoding restricts sampling to a grammar or JSON schema~\cite{vllm_guided,vllm}, and the theoretical reason it matters here is specific: asked to compress a long, multi-sided, partly contradictory transcript into a distribution, an unconstrained model may express its uncertainty in prose and then emit a hedge---the uniform vector is the risk-averse point under a symmetric loss it is not actually being scored by. Enforcement does not make the model better informed; it forecloses the hedge. Our contribution is to show that the difference between those two regimes is large enough, on this task, to invert a benchmark's headline conclusion.
+
+% ===========================================================================
+\section{Benchmark and Campaign}
+\label{sec:design}
+
+\confoundnote{No two campaigns share a serving stack \emph{and} a release generation: Llama-3.1-8B is AWQ-INT4 under vLLM, Mistral-7B is FP16 under vLLM, Qwen2.5-7B and Qwen2.5-14B are GGUF under Ollama. Every between-model statement in this paper is confounded, and we report them as descriptions of campaigns rather than of architectures.}
+
+ECN-BENCH covers $E=30$ resolved Polymarket events spanning social/electoral, technical/economic and senate/binary questions, with $K$ ranging from $2$ to $9$ options. Each event is run in three conditions:
+
+\begin{itemize}
+  \item \textbf{A (No-Sim)}: direct elicitation from a seed dossier, no simulation. Executed once and shared byte-for-byte across campaigns.
+  \item \textbf{B (With-Sim)}: $N=300$ personas over $R=60$ rounds on simulated Twitter and Reddit, with a topically relevant evidence payload injected at round $30$.
+  \item \textbf{C (Null Control)}: identical machinery and an identical injection checkpoint, but the payload is structurally matched and topically \emph{unrelated}.
+\end{itemize}
+
+Condition C is the design's most useful element and the one that carries our surviving result. Because B and C differ only in the content of the injected payload, their contrast never touches the shared Condition A record, and is therefore immune to the confound that disqualifies the aggregate lift.
+
+Each scored unit stores the verbatim text the evaluator was given, in an \texttt{evidence\_text} field: a tail of the simulation log followed by a block of representative social actions. That the record is verbatim is what makes everything below possible---it lets us re-run only the evaluator, holding the entire simulation fixed, and later to manipulate the input directly.
+
+We denote the two evaluator passes used throughout:
+\begin{itemize}
+  \item \textbf{Evaluator J} (July): DeepSeek-R1-14B served locally, structured-output enforcement disabled by the defect of Section~\ref{sec:audit}.
+  \item \textbf{Evaluator A} (August): \texttt{deepseek-v4-flash-0731} via OpenRouter, JSON-object enforcement active, temperature $0$ and seed pinned.
+\end{itemize}
+
+% ===========================================================================
+\section{The Phenomenon and Its Source}
+\label{sec:audit}
+
+\subsection{Flat forecasts, and what they do to the score}
+
+We call a unit \emph{flat} when every option receives probability within $0.005$ of $1/K$. Across the simulated conditions of the three July campaigns, $37$ of $180$ units ($20.6\%$) are flat, against $3$ of $90$ ($3.3\%$) in the non-simulated Condition A. A flat unit is not a forecast---it is an extraction failure, or a swarm that reached no usable consensus---but the Brier score charges it the full uniform loss, $1 - 1/K$. Throughout, $BS = \sum_{k=1}^{K}(f_k - o_k)^2$ is the \emph{unnormalised} multi-category Brier score, bounded in $[0,2]$ rather than $[0,1]$; readers comparing against the $\frac{1}{2}$-scaled variant usual in the binary literature should halve every value we report. The reference $1 - 1/K$ is the expected score of a uniform forecast under this same convention, so the skill scores are internally consistent. Because flat units are concentrated in the simulated conditions and nearly absent from the control, they push $BS_B$ and $BS_C$ up relative to $BS_A$ by construction. A milder version of the same effect operates on the units that are not flat: mean modal probability is $0.66$ under Condition A and $0.54$--$0.56$ under Condition B. Together these account for the negative aggregate lift without any claim about reasoning.
+
+\subsection{The defect}
+
+The \texttt{probabilities} field is produced by the fixed evaluator, not by the swarm model under test. In the pipeline's LLM client, the request builder contains
+
+\begin{quote}\ttfamily\footnotesize
+is\_reasoning\_model = any(kw in model.lower()\\
+\hspace*{2em}for kw in ("r1", "reasoning", "deepseek-r1"))
+\end{quote}
+
+and, when that predicate holds, drops the structured-output request. The evaluator's model identifier contains \texttt{r1}. The predicate was therefore true for every unit of every campaign, and the JSON schema---the mechanism that would have forced a well-formed distribution---was never in force. Nothing in the logs or in the result records recorded this: every unit reports \texttt{strict\_contract: true} and \texttt{evaluator\_reliability\_status: "complete"}.
+
+This is worth stating as a general hazard rather than as an anecdote. The bypass was introduced deliberately, for a real reason (schema-guided decoding was crashing on quantised local models), and it was scoped by a substring match on a model name. A substring match is not a capability check. The failure is silent by construction, because the fallback path produces output that is usually parseable.
+
+\subsection{Re-scoring the same transcripts}
+
+Because \texttt{evidence\_text} is stored verbatim, the evaluator can be re-run over the fixed artifacts, varying nothing but the instrument. The comparison is only an instrument comparison where both passes read byte-identical text; for Llama-3.1-8B that holds only on the six events a serving-backend outage never touched~\cite{techreport}, so we restrict to the $198$ units that satisfy it: all $30$ events of Mistral-7B and Qwen2.5-7B, and six of Llama-3.1-8B.
+
+On that material the flat-forecast rate over simulated units falls from $31/132$ under Evaluator J to $1/132$ under Evaluator A, and the cross-model pattern the original analysis set out to explain does not survive: Condition B counts of $6/6$, $7/30$ and $0/30$ across the three models all become zero. The single surviving flat unit is in Condition C---the null-injection arm, where a uniform posterior is the \emph{correct} answer to evidence carrying no information. Not one Condition B unit anywhere, including the re-simulated events not shown here, returns a uniform vector under the enforced instrument.
+
+Figure~\ref{fig:replication} shows the distribution by condition. We restate the paper's central finding accordingly, as a finding about instrumentation: \emph{iterative multi-agent deliberation produces transcripts that an unconstrained LLM evaluator frequently fails to reduce to an informative distribution, and that failure is indistinguishable, in the aggregate Brier score, from the swarm having reached no consensus.}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figR1_evaluator_replication.png}
+\caption{Left: flat-forecast counts by condition on the $198$ units both evaluators read byte-identically. The unconstrained July instrument returns uniform vectors for $13/66$ Condition B units---the arm where real information was injected---against $0/66$ for the enforced instrument. Right: the per-event susceptibility margin on the re-simulated recovery scope, shown for completeness; see \S\ref{sec:signal} and~\cite{techreport}. The two panels are on different scopes by construction and should not be read across.}
+\label{fig:replication}
+\end{figure}
+
+% ===========================================================================
+\section{Localising the Mechanism}
+\label{sec:volume}
+
+Enforcement being off is necessary but not sufficient: the same unconstrained instrument returns sharp distributions for many units. Two candidate modifiers remain---how much text the evaluator is asked to compress, and which evaluator is doing the compressing---and we test both.
+
+\subsection{Volume predicts degeneracy within a campaign}
+
+Mistral-7B is the clean case: its campaign suffered no serving failure, so all $60$ simulated units carry a genuine multi-speaker transcript and evidence length varies without varying whether deliberation occurred. Splitting those units into terciles by evidence length gives flat rates of $1/20$, $5/20$ and $13/20$ from shortest to longest, over a range of only $10{,}192$ to $15{,}557$ characters. A $50\%$ increase in input length moves the degeneracy rate by a factor of thirteen. This is a strong signal, but an observational one: longer transcripts might differ in kind as well as in size.
+
+\subsection{The failure is specific to small evaluators, and reproduces on one}
+\label{sec:transfer}
+
+The sharper question is whether \emph{any} unconstrained evaluator would collapse on this material, or only this one. Every comparison pass available from the campaigns has enforcement switched on, so those passes cannot separate the two. We ran the missing arm: all $60$ of Mistral-7B's simulated units, re-scored by five further evaluators, each called with no \texttt{response\_format} field at all---the identical unconstrained condition---on byte-identical transcripts.
+
+Neither extreme holds. Four of the five return \emph{no} flat units: \texttt{deepseek-r1} $0/56$ (mean modal $0.667$), \texttt{deepseek-r1-distill-llama-70b} $0/54$ ($0.675$), \texttt{qwen3-32b} $0/57$ ($0.577$), \texttt{ministral-14b-2512} $0/60$ ($0.557$). The fifth does: \texttt{qwen3-14b} returns a uniform vector for $8/58$ ($13.8\%$), against Evaluator J's $19/60$ ($31.7\%$). Two controls: running \texttt{deepseek-r1} through the production evaluator class with its full rubric prompt verbatim, enforcement still off, gives $0/60$, so prompt simplicity is not the explanation; and \texttt{ministral-14b-2512} is the same parameter count as the model that fails and does not fail, so size alone is not either. The two instruments that degenerate are both small \emph{reasoning} models, and the within-family contrast is clean---Qwen3-14B $8/58$ against Qwen3-32B $0/57$. With one model per cell that is a pattern, not an established mechanism.
+
+\textbf{The two failing instruments fail on the same transcripts.} Of Qwen3-14B's $8$ flat units, $6$ fall inside the $19$-unit set Evaluator J flattened, where chance would put $2.6$ (one-sided Fisher $p = 0.012$), and its flat units carry more evidence than its sharp ones (median $13{,}817$ against $12{,}760$ characters) in the same direction as Evaluator J's own split ($13{,}906$ against $12{,}074$). Two independently trained models from different families agree above chance about which transcripts cannot be reduced to an informative distribution, and agree that the harder ones are longer. That is hard to explain as one deployment's idiosyncrasy and easy to explain as input interacting with limited extraction capacity.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figK_degeneracy_transfer.png}
+\caption{All rows score the same $60$ transcripts with no \texttt{response\_format}. Left: flat rate, $95\%$ Wilson intervals. Right: the same restricted to the $19$ units Evaluator J flattened, where Qwen3-14B's failures concentrate. The \emph{pipeline rubric prompt} row uses the production evaluator and prompt verbatim.}
+\label{fig:transfer}
+\end{figure}
+
+\subsection{Assigning length and enforcement: a null on both}
+\label{sec:grid}
+
+Everything above is observational in the variable that matters, so we ran the manipulation: a $2 \times 4$ grid crossing structured-output enforcement against four assigned evidence lengths over all $60$ units, with the evaluator, prompt, temperature and transcript fixed within each arm. Truncation keeps both sections of the record at every level---the log's final lines and a uniform subsample of the action lines---so the levels differ in how much of each section is shown, not in which exist. The evaluator is \texttt{qwen3-14b}, the only accessible model that degenerates at all; \texttt{deepseek-r1} is a negative control.
+
+\textbf{Assigned length does not increase degeneracy; the sign reverses.} With enforcement off, the flat rate is $7/59$ at $\approx\!1.8$k characters, $4/60$ at $\approx\!4.8$k, $0/60$ at $\approx\!7.8$k and $1/60$ untruncated. The shortest condition is the worst, and the extremes differ significantly in the direction opposite to the hypothesis (two-sided Fisher $p = 0.032$). Excess sharpness---modal probability minus $1/K$, comparable across the mixed-$K$ catalogue---is flat: $+0.171$, $+0.190$, $+0.203$, $+0.185$, intervals overlapping throughout. The control sits at $\approx\!+0.32$ at every length.
+
+\textbf{Enforcement, isolated within one model, does nothing.} Pooled over the four lengths, \texttt{qwen3-14b} gives $12/239$ flat with enforcement off and $11/239$ with it on ($p = 1.000$), at excess sharpness $+0.187$ and $+0.208$. This is the only test here that varies enforcement alone; every earlier comparison, including the re-scoring of Section~\ref{sec:audit}, changed the model and the setting together and so could attribute the effect to neither.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figL_truncation.png}
+\caption{The $2\times4$ grid. Left: flat rate with $95\%$ Wilson intervals; assigning a shorter transcript does not help. Right: excess sharpness, flat in length for both evaluators, with a gap between evaluators larger at every level than anything either manipulation produces.}
+\label{fig:grid}
+\end{figure}
+
+\textbf{We report this as the negative result it is.} The tercile dose-response is real as an association inside Evaluator J and does not reproduce as an effect when length is assigned; the enforcement account fares no better under isolation. Two readings remain and our data do not separate them: the volume relationship may be specific to Evaluator J, which we cannot re-run, or the tercile pattern may always have been driven by something co-varying with length across units---the alternative this experiment was built to exclude, and does not. What survives, and is strengthened, is the claim in this paper's title: which model reads the transcript dominates. The evaluator gap in excess sharpness is $\approx\!0.13$ at every length, larger than either manipulation, and it is the same axis along which Evaluator J differs from the evaluators that do not degenerate.
+
+The practical recommendation changes shape accordingly. Verifying enforcement at runtime remains sound engineering---a pipeline should know what it sent---but we cannot promise that switching it on prevents degenerate extraction, and a benchmark that does so and declares the problem solved would be relying on something we tested and could not confirm. The check that discriminates is the one we recommend for an independent reason: score with a second, stronger evaluator and compare.
+
+\section{Neither Pass Is a Reference Measurement}
+\label{sec:noise}
+
+It would be a mistake to read Section~\ref{sec:audit} as showing that the enforced evaluator is correct and the unconstrained one was broken. The enforced evaluator is itself an unstable instrument, and the design contains a clean way to demonstrate it.
+
+Condition A carries no simulation: its \texttt{evidence\_text} is the seed dossier, byte-identical across all three campaigns for all $30$ events. Because the re-evaluation was launched separately per campaign, Evaluator A read each of those $30$ inputs three independent times, at temperature $0$ with the seed pinned. A reproducible instrument would return three identical answers. It returns three identical answers for $4$ of $30$ events. The mean Brier spread across the three re-reads is $0.129$ and the maximum is $0.715$---a range exceeding the entire between-condition effect the benchmark was built to detect.
+
+Agreement between the two instruments is likewise only moderate and, importantly, uniform across campaigns: $r(BS_J, BS_A) = +0.552$ over the $198$ paired units, with per-model values of $+0.589$, $+0.587$ and $+0.549$. Mean Brier moves by $0.07$ to $0.13$ depending on which evaluator reads the transcripts, and not reliably in one direction. Counting a tie as a disagreement, the two instruments name the same modal outcome for $118$ of $198$ units: on four units in ten they do not even agree on which outcome is most likely.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figR2_instrument_noise.png}
+\caption{Left: per-unit Brier under the two evaluators on the $198$ byte-identical units; agreement is moderate ($r = +0.552$) and the scatter is not concentrated on the identity line. Right: Condition A's seed dossier is byte-identical across campaigns, so the enforced evaluator read each of the $30$ inputs three times at temperature $0$. Only $4$ reproduce exactly; the largest spread across three re-reads of the same text is $0.715$ Brier.}
+\label{fig:noise}
+\end{figure}
+
+The consequence for this benchmark is severe and we state it plainly. At $E=30$ the design already has $\leq 9\%$ power against the effects of interest; $E \geq 92$ would be required for $80\%$ power at $d = 0.5$. Instrument noise of this magnitude is a second, independent obstacle: switching evaluator on fixed transcripts reverses the sign of one model's lift and moves the set of models whose susceptibility interval excludes zero to a disjoint set. None of the benchmark's three original hypotheses is identifiable at this noise level, and we withdraw any reading that treats the sign of a single-pass lift as evidence about deliberation.
+
+% ===========================================================================
+\section{What Survives: Content Sensitivity on Clean Events}
+\label{sec:signal}
+
+One substantive claim does survive, and it is the one the benchmark was built to test in its most defensible form. We evaluate it on the $20$ events that resolve after every model's public release date---so no campaign could have memorised the outcome---using the per-unit mean over all available enforced-evaluator reads rather than a single pass, across four campaigns.
+
+\begin{table}[!t]
+\centering
+\caption{Predictive signal on the $20$ contamination-clean events common to all four campaigns. Chance is $1/K$ per event, averaged; $K$ ranges from $2$ to $9$, so the null is a Poisson binomial and $p$ is exact and one-sided. $\Delta$ columns are Condition B minus Condition C with $95\%$ percentile bootstrap intervals ($B=20{,}000$); positive means relevant evidence beats topically unrelated evidence.}
+\label{tab:signal}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Acc.\ B} & \textbf{Acc.\ C} & \textbf{Exact $p$} & \textbf{$\Delta$ acc.} & \textbf{$\Delta$ Brier} \\
+\midrule
+Llama-3.1-8B & $0.675$ & $0.500$ & $3.5\times10^{-4}$ & $+0.175$ & $+0.069$ \\
+Mistral-7B   & $0.850$ & $0.650$ & $5.3\times10^{-7}$ & $+0.200$ & $+0.064$ \\
+Qwen2.5-7B   & $0.850$ & $0.550$ & $5.3\times10^{-7}$ & $+0.300$ & $\mathbf{+0.173}$ \\
+Qwen2.5-14B  & $\mathbf{0.900}$ & $0.800$ & $3.1\times10^{-8}$ & $+0.100$ & $\mathbf{+0.143}$ \\
+\midrule
+\textbf{Pooled} & $\mathbf{0.819}$ & $0.625$ & $\mathbf{3.7\times10^{-22}}$ & $\mathbf{+0.194}$ & $\mathbf{+0.112}$ \\
+ & & & & $[+0.075,$ & $[+0.042,$ \\
+ & & & & $+0.313]$ & $+0.182]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{The forecasts identify realised outcomes far above chance.} The swarm's modal option is the outcome that actually occurred in $65$ of $80$ (model, event) pairs outright, with one further unit a two-way tie containing the outcome; credited at $1/k$ that is $65.5/80 = 81.9\%$, against a chance level of $32.6\%$. Evaluated exactly against the Poisson-binomial null, $p = 3.7\times10^{-22}$ pooled and below $4\times10^{-4}$ for every individual campaign. Ten of the twenty events are called correctly by all four models and \emph{no} event is called wrongly by all four.
+
+\textbf{And the swarm responds to the content of its evidence, not merely to its presence.} Directional accuracy alone cannot separate a swarm that reasons from one inheriting a good prior from its base model. Condition C is the control that can: identical machinery, identical injection checkpoint, payload topically unrelated. Replacing relevant with irrelevant evidence costs $0.112$ Brier $[+0.042, +0.182]$ and $19.4$ points of directional accuracy $[+7.5, +31.3]$ pooled---both intervals excluding zero, though only two of four per-model Brier intervals exclude zero individually. Because this is a contrast between two simulated conditions it never touches the shared Condition A record, and it survives knowledge-cutoff stratification unchanged.
+
+We claim no more than this. The effect is measured on a contamination-clean subset with a calibrated multi-read protocol, and it is the only quantity in the benchmark that both survives the audit and has an interval excluding zero.
+
+\subsection{But a single agent matches it}
+\label{sec:cot_baseline}
+
+An earlier version of this paper listed the missing single-agent control as its own next experiment. We have since run it. For each clean event and four models we issue one retrieval-augmented chain-of-thought call carrying the same seed dossier and the same round-$30$ injection the swarm received, with enforcement on and three replicates per cell ($240$ calls, all parsed). Table~\ref{tab:cot} compares it with Condition B.
+
+\begin{table}[!t]
+\centering
+\caption{Single-agent RAG+CoT against Condition B on the $20$ clean events. $\Delta$ Brier is $BS_\mathrm{CoT} - BS_\mathrm{swarm}$, so positive favours the swarm; the CoT column is the mean of three per-replicate scores, i.e.\ one call's expected cost. Pooled intervals are a cluster bootstrap over events and pooled $p$ a cluster-robust $t$ ($\mathrm{df}=19$), because the same events recur across arms.}
+\label{tab:cot}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Brier}} & & \\
+\cmidrule(lr){2-3}
+\textbf{Arm} & \textbf{swarm} & \textbf{1 call} & \textbf{$\Delta$ Brier [95\% CI]} & \textbf{$p$} \\
+\midrule
+\multicolumn{5}{l}{\emph{Identity-matched}} \\
+Llama-3.1-8B  & $0.545$ & $\mathbf{0.364}$ & $-0.181$ $[-0.366, -0.020]$ & $0.065$ \\
+Qwen2.5-7B    & $0.348$ & $\mathbf{0.318}$ & $-0.030$ $[-0.134, +0.081]$ & $0.613$ \\
+\textbf{Pooled} & $0.446$ & $\mathbf{0.341}$ & $\mathbf{-0.106}$ $[-0.226, +0.009]$ & $0.109$ \\
+\midrule
+\multicolumn{5}{l}{\emph{Cross-model\textsuperscript{$\ast$}}} \\
+Ministral-8B\textsuperscript{$\ast$}  & $0.378$ & $\mathbf{0.208}$ & $-0.170$ $[-0.369, +0.012]$ & $0.115$ \\
+Qwen3-14B\textsuperscript{$\ast$}     & $0.289$ & $\mathbf{0.280}$ & $-0.008$ $[-0.116, +0.093]$ & $0.881$ \\
+\textbf{Pooled all}\textsuperscript{$\ast$} & $0.390$ & $\mathbf{0.292}$ & $-0.097$ $[-0.199, -0.000]$ & $0.083$ \\
+\bottomrule
+\end{tabular}
+\smallskip\\
+\raggedright\footnotesize\textsuperscript{$\ast$}The CoT model is a different checkpoint from the campaign it faces, so these are not within-model contrasts.
+\end{table}
+
+\textbf{The result is non-superiority, not inferiority.} On both arms where the single agent and the campaign use the same checkpoint, one call has the lower Brier ($0.364$ against $0.545$ for Llama-3.1-8B, $0.318$ against $0.348$ for Qwen2.5-7B); directional accuracy splits, favouring the single call on the first arm ($0.778$ against $0.675$) and the swarm on the second ($0.790$ against $0.850$). The pooled matched gap is $0.106$ Brier in the single call's favour---but the interval covers zero ($d_z = 0.39$, achieved power $37\%$; $55$ events would be needed for $80\%$). What the data do support is that \emph{no} arm shows a swarm advantage separable from zero. Pooled over all four arms the single call reaches $0.834$ directional accuracy against the swarm's $0.819$, so the above-chance accuracy of Table~\ref{tab:signal} is reproduced without any deliberation at all, and only the B-versus-C contrast---which has no single-agent analogue---remains specifically attributable to the simulation.
+
+Three choices decide this analysis, and getting all three wrong turns it into a spurious $p = 0.045$ against the swarm, as our first pass did. Two of the four CoT runs use a different checkpoint from the campaign they face and are not paired comparisons; averaging the three replicates into one vector hands the single agent an ensembling advantage the swarm's four \emph{re-reads of one simulation} do not confer; and the $20$ events recur across arms, so an unclustered test at $\mathrm{df}=79$ is anticonservative ($p = 0.016$ naive against $0.083$ clustered on the four-arm pool). We report the matched arms, per-replicate scoring, and event-clustered inference. The point estimate stays between $-0.14$ and $-0.09$ across every combination, and both primary estimates remain non-significant once clustered ($p = 0.109$ matched, $p = 0.083$ four-arm). Only the three-replicate ensemble---a $3\times$-cost arm we report as an upper bound, not as the comparison---reaches $p = 0.034$ and $p = 0.032$, and it does so in the direction that favours the single call.
+
+% ===========================================================================
+\section{A Checklist for LLM-Extracted Benchmarks}
+\label{sec:checklist}
+
+A benchmark that extracts probabilities with an LLM must treat that extractor as an instrument requiring calibration, not as an oracle. Table~\ref{tab:checklist} states this operationally: four gates we would now block a campaign on, and three quantities we would refuse to interpret a score without. Each row is paired with the specific failure in this work it would have caught, because every one is a lesson we paid for.
+
+\begin{table*}[!t]
+\centering
+\caption{Checklist for benchmarks that extract probabilities with an LLM. Each row pairs a check with the failure in this work it would have caught.}
+\label{tab:checklist}
+\footnotesize
+\begin{tabular}{p{0.04\textwidth}p{0.27\textwidth}p{0.45\textwidth}p{0.14\textwidth}}
+\toprule
+& \textbf{Check} & \textbf{What it would have caught here} & \textbf{Cost} \\
+\midrule
+\multicolumn{4}{l}{\emph{Blocking gates --- before any number leaves the pipeline}} \\
+\midrule
+G1 & Verify structured-output enforcement at runtime, asserting on the request actually sent. & A keyword filter matching \texttt{"r1"} in the evaluator's model id dropped \texttt{response\_format} for every unit of every campaign (\S\ref{sec:audit}); no log or record showed it. & One assertion per request. \\
+G2 & Derive completion flags from the artifacts, never from the orchestrator; require a minimum count of successful telemetry probes before scoring. & $69$ units recorded \texttt{status: completed}, \texttt{error: null} while their serving backend had been dead for $23$ events~\cite{techreport}. & One count per unit. \\
+G3 & Assert that the record's question and options match the catalogue entry by \emph{value}, not by id. & Seven event ids denote different events in two catalogue copies; two collisions share option set and ground truth, passing every id-level check while simulating an unrelated question. & One string comparison per unit. \\
+G4 & Assert the evidence field is non-empty and of plausible length before scoring; log its length with the score. & A repair script read two keys a config file does not contain, scoring $72$ units on an empty evidence string---the three conditions differing by one character---and produced two publishable-looking findings. & One length check per unit. \\
+\midrule
+\multicolumn{4}{l}{\emph{Reporting requirements --- before any number is interpreted}} \\
+\midrule
+R1 & Report the flat-unit rate per condition alongside the aggregate score. & The single diagnostic that made the artifact legible as an artifact rather than as a null effect (\S\ref{sec:audit}). & Free. \\
+R2 & Run the evaluator $k \geq 3$ times per unit; report the between-run spread. & Three re-reads of byte-identical input at temperature $0$ reproduce $4$ of $30$ units, maximum spread $0.715$ Brier (\S\ref{sec:noise}). & $k\times$ evaluator cost. \\
+R3 & Score with $\geq 2$ independent evaluators; treat any finding not surviving both as a property of the instrument. & Switching evaluator reverses one model's lift sign and moves the set of models with a susceptibility interval excluding zero to a disjoint set (\S\ref{sec:audit}). & $2\times$ evaluator cost. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ===========================================================================
+\section{Limitations}
+\label{sec:limitations}
+
+\textbf{Power.} $E = 30$ events gives $\leq 9\%$ achieved power against the effects of interest. The surviving result of Section~\ref{sec:signal} rests on $68$ (model, event) pairs and is significant by a wide margin, but the lift and convergence hypotheses are simply not testable at this $E$.
+
+\textbf{Provenance confound.} The campaigns differ simultaneously in release generation, numerical precision and serving stack. Every between-model statement here is a statement about campaigns.
+
+\textbf{Shared baseline.} Condition A was executed once and shared. This makes the B-versus-C contrast clean and the A-versus-B contrast unsafe: resolution-date stratification shows part of the aggregate lift is memorisation in the shared reference rather than damage from simulation.
+
+\textbf{Run integrity.} One campaign's serving backend failed silently partway through and its affected events were re-simulated on a different serving stack; those events are excluded from every instrument comparison in this paper and marked wherever they enter a benchmark number. The full account is in~\cite{techreport}.
+
+\textbf{The single-agent baseline is underpowered and partly cross-model.} Section~\ref{sec:cot_baseline} answers the comparison this paper previously listed as missing, but only two of its four arms use the campaign's own checkpoint, those two run at FP16 through a hosted API against local quantised serving, and at $20$ events the design has $37\%$ power against the effect it observes. It establishes that the machinery is not measurably better than one call; it does not establish that the two are equivalent, and it is not a substitute for a per-model Condition A re-run.
+
+% ===========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+The finding we set out to report---that multi-agent deliberation degrades forecast calibration---was a property of the instrument that measured it. What makes this worth publishing is not that a pipeline had a bug, but that the bug was invisible at every layer a consumer of the benchmark would check: the request looked well-formed, the output parsed, the records reported success, and the resulting numbers told a coherent and interesting story. The only thing that exposed it was measuring the extractor as an instrument---its reproducibility on identical input, its agreement with a second instrument, and its degeneracy rate as a function of input volume.
+
+We recommend that any benchmark composing a generative system with an LLM extractor report the flat-unit rate, the between-run spread, and a second evaluator's reading, as a matter of course. On this benchmark those three quantities cost almost nothing and were the difference between a false headline and a true one.
+
+\section*{Data and Code Availability}
+The four campaigns' per-unit records, all evaluator passes including the truncation grid, the analysis scripts that produce every number and figure in this paper, and the full technical report are released together~\cite{techreport}.
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{20}
+
+\bibitem{techreport}
+N.~M. Hien, ``ECN-BENCH: a forensic audit of degenerate consensus in multi-agent LLM forecasting,'' technical report, 2026. Full version of this paper, including the complete errata, run-integrity audit and per-event tables.
+
+\bibitem{mmlu}
+Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt.
+\newblock Measuring massive multitask language understanding.
+\newblock {\em arXiv preprint arXiv:2009.03300}, 2020.
+
+\bibitem{swebench}
+Carlos~E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kaiming Zhang, and Karthik Narasimhan.
+\newblock SWE-bench: Can language models resolve real-world GitHub issues?
+\newblock {\em arXiv preprint arXiv:2310.06770}, 2023.
+
+\bibitem{surowiecki2005}
+James Surowiecki.
+\newblock {\em The Wisdom of Crowds}.
+\newblock Anchor Books, 2005.
+
+\bibitem{gneiting2007}
+Tilmann Gneiting and Adrian~E. Raftery.
+\newblock Strictly proper scoring rules, prediction, and estimation.
+\newblock {\em Journal of the American Statistical Association}, 102(477):359--378, 2007.
+
+\bibitem{du2023debate}
+Yilun Du, Shuang Li, Antonio Torralba, Joshua~B. Tenenbaum, and Igor Mordatch.
+\newblock Improving factuality and reasoning in language models through multiagent debate.
+\newblock {\em arXiv preprint arXiv:2305.14325}, 2023.
+
+\bibitem{sharma2023sycophancy}
+Mrinank Sharma, Meg Tong, Tomasz Korbak, David Duvenaud, Amanda Askell, Samuel~R. Bowman, et~al.
+\newblock Towards understanding sycophancy in language models.
+\newblock {\em arXiv preprint arXiv:2310.13548}, 2023.
+
+\bibitem{hle2024}
+Scale~AI and Center for AI Safety.
+\newblock Humanity's Last Exam: A benchmark for expert-level AI alignment and knowledge.
+\newblock {\em Technical Report}, 2024.
+
+\bibitem{webarena2023}
+Shuyan Zhou, Frank~F. Xu, Hao Zhu, Zhoujun Cheng, Jiayi Chen, and Graham Neubig.
+\newblock WebArena: A realistic web environment for building autonomous agents.
+\newblock {\em arXiv preprint arXiv:2307.13854}, 2023.
+
+\bibitem{park2023generative}
+Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris, Percy Liang, and Michael~S. Bernstein.
+\newblock Generative agents: Interactive simulacra of human behavior.
+\newblock In {\em Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology}, 2023.
+
+\bibitem{oasis2024}
+CAMEL-AI Community.
+\newblock OASIS: Open Agent Social Interaction Simulations with One Million Agents.
+\newblock {\em arXiv preprint arXiv:2411.11581}, 2024.
+
+\bibitem{mirofish2024}
+666ghj.
+\newblock MiroFish: Social simulation pipeline for LLM prediction.
+\newblock {\em GitHub Repository: https://github.com/666ghj/MiroFish}, 2024.
+
+\bibitem{graphrag2024}
+Darren Edge, Ha Trinh, Cheng Cheng, Joshua Bradley, Alex Chao, Apurv Mody, Chris Porteous, and Jonathan Larson.
+\newblock From local to global: A Graph RAG approach to query-focused summarization.
+\newblock {\em arXiv preprint arXiv:2404.16130}, 2024.
+
+\bibitem{graphiti2024}
+Zep AI.
+\newblock Graphiti: An open-source temporal context graph engine for agent memory.
+\newblock {\em GitHub Repository: https://github.com/zep-ai/graphiti}, 2024.
+
+\bibitem{vllm}
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Sheng Shen, Ion Stoica, and Joseph~E. Gonzalez.
+\newblock Efficient memory management for large language model serving with PagedAttention.
+\newblock In {\em Proceedings of the 29th Symposium on Operating Systems Principles}, 2023.
+
+\bibitem{vllm_guided}
+vLLM Contributors.
+\newblock Structured outputs: Guided decoding via outlines and xgrammar backends.
+\newblock {\em vLLM Documentation}, 2024. \url{https://docs.vllm.ai/en/stable/usage/structured_outputs.html}
+
+
+\bibitem{zheng2023judging}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang, Joseph~E. Gonzalez, and Ion Stoica.
+\newblock Judging LLM-as-a-judge with MT-Bench and Chatbot Arena.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track}, 2023.
+
+\bibitem{oren2024proving}
+Yonatan Oren, Nicole Meister, Niladri Chatterji, Faisal Ladhak, and Tatsunori~B. Hashimoto.
+\newblock Proving test set contamination in black-box language models.
+\newblock In {\em International Conference on Learning Representations (ICLR)}, 2024.
+
+\bibitem{karger2024forecastbench}
+Ezra Karger, Houtan Bastani, Chen Yueh-Han, Zachary Jacobs, Danny Halawi, Fred Zhang, and Philip~E. Tetlock.
+\newblock ForecastBench: A dynamic benchmark of AI forecasting capabilities.
+\newblock {\em arXiv preprint arXiv:2409.19839}, 2024.
+
+\bibitem{halawi2024approaching}
+Danny Halawi, Fred Zhang, Chen Yueh-Han, and Jacob Steinhardt.
+\newblock Approaching human-level forecasting with language models.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}, 2024.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,5338 @@
+{
+  "units": "all",
+  "n_units": 60,
+  "summary": {
+    "deepseek/deepseek-r1": {
+      "n": 60,
+      "parsed": 56,
+      "flat": 0,
+      "flat_rate": 0.0,
+      "mean_modal": 0.6674964285714287
+    },
+    "deepseek/deepseek-r1-distill-llama-70b": {
+      "n": 60,
+      "parsed": 54,
+      "flat": 0,
+      "flat_rate": 0.0,
+      "mean_modal": 0.6748148148148148
+    },
+    "qwen/qwen3-14b": {
+      "n": 60,
+      "parsed": 58,
+      "flat": 8,
+      "flat_rate": 0.13793103448275862,
+      "mean_modal": 0.5606021879246017
+    },
+    "qwen/qwen3-32b": {
+      "n": 60,
+      "parsed": 57,
+      "flat": 0,
+      "flat_rate": 0.0,
+      "mean_modal": 0.5767685881370092
+    },
+    "mistralai/ministral-14b-2512": {
+      "n": 60,
+      "parsed": 60,
+      "flat": 0,
+      "flat_rate": 0.0,
+      "mean_modal": 0.5566666666666666
+    }
+  },
+  "detail": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S7_B_r1",
+      "event_id": "S7",
+      "condition": "B",
+      "chars": 12777,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.95,
+        "NO": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S9_C_r1",
+      "event_id": "S9",
+      "condition": "C",
+      "chars": 14486,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S9_B_r1",
+      "event_id": "S9",
+      "condition": "B",
+      "chars": 13881,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S6_C_r1",
+      "event_id": "S6",
+      "condition": "C",
+      "chars": 15071,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.1,
+        "\u00d6VP": 0.7,
+        "SP\u00d6": 0.2,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S5_B_r1",
+      "event_id": "S5",
+      "condition": "B",
+      "chars": 12467,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.95,
+        "NO": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S6_B_r1",
+      "event_id": "S6",
+      "condition": "B",
+      "chars": 15557,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.12,
+        "\u00d6VP": 0.03,
+        "SP\u00d6": 0.84,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.84
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S3_B_r1",
+      "event_id": "S3",
+      "condition": "B",
+      "chars": 13222,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S4_C_r1",
+      "event_id": "S4",
+      "condition": "C",
+      "chars": 10446,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S5_C_r1",
+      "event_id": "S5",
+      "condition": "C",
+      "chars": 13318,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.68,
+        "NO": 0.32
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.68
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S2_B_r1",
+      "event_id": "S2",
+      "condition": "B",
+      "chars": 11148,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.85,
+        "Democrat": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S3_C_r1",
+      "event_id": "S3",
+      "condition": "C",
+      "chars": 13906,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S7_C_r1",
+      "event_id": "S7",
+      "condition": "C",
+      "chars": 14013,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C3_B_r1",
+      "event_id": "C3",
+      "condition": "B",
+      "chars": 12984,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.15,
+        "Nouveau Front Populaire": 0.45,
+        "Ensemble": 0.4,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T1_B_r1",
+      "event_id": "T1",
+      "condition": "B",
+      "chars": 15348,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C3_C_r1",
+      "event_id": "C3",
+      "condition": "C",
+      "chars": 12907,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.65,
+        "Nouveau Front Populaire": 0.2,
+        "Ensemble": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T2_B_r1",
+      "event_id": "T2",
+      "condition": "B",
+      "chars": 13129,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.15,
+        "NO": 0.85
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S4_B_r1",
+      "event_id": "S4",
+      "condition": "B",
+      "chars": 11794,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "S2_C_r1",
+      "event_id": "S2",
+      "condition": "C",
+      "chars": 13011,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.71,
+        "Democrat": 0.29
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.71
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T5_B_r1",
+      "event_id": "T5",
+      "condition": "B",
+      "chars": 13728,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C2_C_r1",
+      "event_id": "C2",
+      "condition": "C",
+      "chars": 12953,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.25,
+        "Harris": 0.6,
+        "Newsom": 0.03,
+        "Michelle Obama": 0.02,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T3_C_r1",
+      "event_id": "T3",
+      "condition": "C",
+      "chars": 12606,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.85,
+        "KMT": 0.1,
+        "TPP": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C2_B_r1",
+      "event_id": "C2",
+      "condition": "B",
+      "chars": 12089,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.1,
+        "Harris": 0.85,
+        "Newsom": 0.01,
+        "Michelle Obama": 0.01,
+        "Other": 0.03
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T2_C_r1",
+      "event_id": "T2",
+      "condition": "C",
+      "chars": 14496,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C5_B_r1",
+      "event_id": "C5",
+      "condition": "B",
+      "chars": 12996,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.03,
+        "Republican President + Split Congress": 0.02,
+        "Democratic President + Democratic Congress": 0.5,
+        "Democratic President + Split Congress": 0.45,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T5_C_r1",
+      "event_id": "T5",
+      "condition": "C",
+      "chars": 12074,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T6_B_r1",
+      "event_id": "T6",
+      "condition": "B",
+      "chars": 13692,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.1,
+        "Sinn F\u00e9in": 0.1,
+        "Fine Gael": 0.05,
+        "Other": 0.75
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T4_B_r1",
+      "event_id": "T4",
+      "condition": "B",
+      "chars": 11629,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.1,
+        "Jim Jordan": 0.2,
+        "Tom Emmer": 0.1,
+        "Steve Scalise": 0.4,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C6_C_r1",
+      "event_id": "C6",
+      "condition": "C",
+      "chars": 12771,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.3,
+        "Latin American Cardinal": 0.15,
+        "African Cardinal": 0.4,
+        "North American Cardinal": 0.1,
+        "Asian or Other Cardinal": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T1_C_r1",
+      "event_id": "T1",
+      "condition": "C",
+      "chars": 15253,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T9_C_r1",
+      "event_id": "T9",
+      "condition": "C",
+      "chars": 13388,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.1,
+        "NO": 0.9
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T6_C_r1",
+      "event_id": "T6",
+      "condition": "C",
+      "chars": 12750,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.5,
+        "Sinn F\u00e9in": 0.15,
+        "Fine Gael": 0.3,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T8_B_r1",
+      "event_id": "T8",
+      "condition": "B",
+      "chars": 13081,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.65,
+        "Conservative": 0.25,
+        "NDP": 0.05,
+        "Bloc Qu\u00e9b\u00e9cois": 0.04,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T4_C_r1",
+      "event_id": "T4",
+      "condition": "C",
+      "chars": 11978,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.5,
+        "Jim Jordan": 0.0,
+        "Tom Emmer": 0.0,
+        "Steve Scalise": 0.3,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C6_B_r1",
+      "event_id": "C6",
+      "condition": "B",
+      "chars": 12042,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.1,
+        "Latin American Cardinal": 0.5,
+        "African Cardinal": 0.05,
+        "North American Cardinal": 0.3,
+        "Asian or Other Cardinal": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T9_B_r1",
+      "event_id": "T9",
+      "condition": "B",
+      "chars": 11980,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.15,
+        "NO": 0.85
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T8_C_r1",
+      "event_id": "T8",
+      "condition": "C",
+      "chars": 13041,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.75,
+        "Conservative": 0.2,
+        "NDP": 0.03,
+        "Bloc Qu\u00e9b\u00e9cois": 0.01,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "T3_B_r1",
+      "event_id": "T3",
+      "condition": "B",
+      "chars": 11433,
+      "july_flat": false,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C9_B_r1",
+      "event_id": "C9",
+      "condition": "B",
+      "chars": 13517,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.05,
+        "India": 0.05,
+        "Japan": 0.05,
+        "Vietnam": 0.05,
+        "South Korea": 0.05,
+        "EU": 0.05,
+        "Canada": 0.05,
+        "Mexico": 0.05,
+        "Other / None": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C4_B_r1",
+      "event_id": "C4",
+      "condition": "B",
+      "chars": 12007,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.65,
+        "Conservative": 0.3,
+        "Reform UK": 0.04,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C11_B_r1",
+      "event_id": "C11",
+      "condition": "B",
+      "chars": 11728,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.65,
+        "Pope Francis": 0.05,
+        "UN Agency": 0.15,
+        "Individual Activist": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C8_B_r1",
+      "event_id": "C8",
+      "condition": "B",
+      "chars": 12178,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.15,
+        "Google DeepMind": 0.1,
+        "Anthropic": 0.5,
+        "Meta": 0.05,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C1_B_r1",
+      "event_id": "C1",
+      "condition": "B",
+      "chars": 14719,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.6,
+        "Democrat": 0.25,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C8_C_r1",
+      "event_id": "C8",
+      "condition": "C",
+      "chars": 13942,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.1,
+        "Google DeepMind": 0.3,
+        "Anthropic": 0.5,
+        "Meta": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C11_C_r1",
+      "event_id": "C11",
+      "condition": "C",
+      "chars": 13236,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.05,
+        "Pope Francis": 0.1,
+        "UN Agency": 0.4,
+        "Individual Activist": 0.4,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C10_C_r1",
+      "event_id": "C10",
+      "condition": "C",
+      "chars": 12194,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.45,
+        "Rishi Sunak": 0.3,
+        "Nigel Farage": 0.05,
+        "Other Conservative": 0.15,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C9_C_r1",
+      "event_id": "C9",
+      "condition": "C",
+      "chars": 11572,
+      "july_flat": false,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C1_C_r1",
+      "event_id": "C1",
+      "condition": "C",
+      "chars": 12814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.4167,
+        "Democrat": 0.5833,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5833
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C10_B_r1",
+      "event_id": "C10",
+      "condition": "B",
+      "chars": 14241,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.96,
+        "Rishi Sunak": 0.01,
+        "Nigel Farage": 0.01,
+        "Other Conservative": 0.01,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.96
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C4_C_r1",
+      "event_id": "C4",
+      "condition": "C",
+      "chars": 11974,
+      "july_flat": false,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C15_C_r1",
+      "event_id": "C15",
+      "condition": "C",
+      "chars": 11380,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.05,
+        "2": 0.1,
+        "3": 0.6,
+        "4": 0.15,
+        "5+": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C7_C_r1",
+      "event_id": "C7",
+      "condition": "C",
+      "chars": 10192,
+      "july_flat": false,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C12_C_r1",
+      "event_id": "C12",
+      "condition": "C",
+      "chars": 10930,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.04,
+        "Oklahoma City Thunder": 0.02,
+        "Denver Nuggets": 0.02,
+        "Minnesota Timberwolves": 0.02,
+        "Other": 0.9
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C14_B_r1",
+      "event_id": "C14",
+      "condition": "B",
+      "chars": 12785,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.7,
+        "SPD-led coalition": 0.25,
+        "AfD-led coalition": 0.01,
+        "Other / Hung parliament": 0.04
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C5_C_r1",
+      "event_id": "C5",
+      "condition": "C",
+      "chars": 13064,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.25,
+        "Republican President + Split Congress": 0.25,
+        "Democratic President + Democratic Congress": 0.0,
+        "Democratic President + Split Congress": 0.25,
+        "Other": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.25
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C14_C_r1",
+      "event_id": "C14",
+      "condition": "C",
+      "chars": 11634,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.65,
+        "SPD-led coalition": 0.15,
+        "AfD-led coalition": 0.05,
+        "Other / Hung parliament": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C15_B_r1",
+      "event_id": "C15",
+      "condition": "B",
+      "chars": 11070,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.02,
+        "3": 0.9,
+        "4": 0.03,
+        "5+": 0.03
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C13_B_r1",
+      "event_id": "C13",
+      "condition": "B",
+      "chars": 10203,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.0,
+        "The Brutalist": 0.0,
+        "Conclave": 0.0,
+        "Emilia P\u00e9rez": 0.85,
+        "Wicked": 0.0,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S4_C_r1",
+      "event_id": "S4",
+      "condition": "C",
+      "chars": 10446,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S2_B_r1",
+      "event_id": "S2",
+      "condition": "B",
+      "chars": 11148,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.85,
+        "Democrat": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C7_B_r1",
+      "event_id": "C7",
+      "condition": "B",
+      "chars": 11566,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.15,
+        "England": 0.0,
+        "France": 0.6,
+        "Germany": 0.1,
+        "Portugal": 0.0,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S5_C_r1",
+      "event_id": "S5",
+      "condition": "C",
+      "chars": 13318,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S3_B_r1",
+      "event_id": "S3",
+      "condition": "B",
+      "chars": 13222,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S2_C_r1",
+      "event_id": "S2",
+      "condition": "C",
+      "chars": 13011,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C13_C_r1",
+      "event_id": "C13",
+      "condition": "C",
+      "chars": 10814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.35,
+        "The Brutalist": 0.05,
+        "Conclave": 0.05,
+        "Emilia P\u00e9rez": 0.45,
+        "Wicked": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S3_C_r1",
+      "event_id": "S3",
+      "condition": "C",
+      "chars": 13906,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.55,
+        "NO": 0.45
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C3_C_r1",
+      "event_id": "C3",
+      "condition": "C",
+      "chars": 12907,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.65,
+        "Nouveau Front Populaire": 0.2,
+        "Ensemble": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C3_B_r1",
+      "event_id": "C3",
+      "condition": "B",
+      "chars": 12984,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.05,
+        "Nouveau Front Populaire": 0.7,
+        "Ensemble": 0.24,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S9_B_r1",
+      "event_id": "S9",
+      "condition": "B",
+      "chars": 13881,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T1_B_r1",
+      "event_id": "T1",
+      "condition": "B",
+      "chars": 15348,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S6_B_r1",
+      "event_id": "S6",
+      "condition": "B",
+      "chars": 15557,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.1,
+        "SP\u00d6": 0.7,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S6_C_r1",
+      "event_id": "S6",
+      "condition": "C",
+      "chars": 15071,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.75,
+        "SP\u00d6": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "unit_id": "C12_B_r1",
+      "event_id": "C12",
+      "condition": "B",
+      "chars": 11711,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.0435,
+        "Oklahoma City Thunder": 0.0,
+        "Denver Nuggets": 0.0,
+        "Minnesota Timberwolves": 0.0,
+        "Other": 0.9565
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9565
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S5_B_r1",
+      "event_id": "S5",
+      "condition": "B",
+      "chars": 12467,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.8,
+        "NO": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C2_C_r1",
+      "event_id": "C2",
+      "condition": "C",
+      "chars": 12953,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.2,
+        "Harris": 0.65,
+        "Newsom": 0.05,
+        "Michelle Obama": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S9_C_r1",
+      "event_id": "S9",
+      "condition": "C",
+      "chars": 14486,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T1_C_r1",
+      "event_id": "T1",
+      "condition": "C",
+      "chars": 15253,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S7_B_r1",
+      "event_id": "S7",
+      "condition": "B",
+      "chars": 12777,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S4_B_r1",
+      "event_id": "S4",
+      "condition": "B",
+      "chars": 11794,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T2_B_r1",
+      "event_id": "T2",
+      "condition": "B",
+      "chars": 13129,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.05,
+        "NO": 0.95
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T3_C_r1",
+      "event_id": "T3",
+      "condition": "C",
+      "chars": 12606,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.75,
+        "KMT": 0.15,
+        "TPP": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "S7_C_r1",
+      "event_id": "S7",
+      "condition": "C",
+      "chars": 14013,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.45,
+        "NO": 0.55
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C2_B_r1",
+      "event_id": "C2",
+      "condition": "B",
+      "chars": 12089,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T5_B_r1",
+      "event_id": "T5",
+      "condition": "B",
+      "chars": 13728,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T5_C_r1",
+      "event_id": "T5",
+      "condition": "C",
+      "chars": 12074,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C6_C_r1",
+      "event_id": "C6",
+      "condition": "C",
+      "chars": 12771,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.35,
+        "Latin American Cardinal": 0.15,
+        "African Cardinal": 0.4,
+        "North American Cardinal": 0.05,
+        "Asian or Other Cardinal": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T9_C_r1",
+      "event_id": "T9",
+      "condition": "C",
+      "chars": 13388,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.05,
+        "NO": 0.95
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T4_C_r1",
+      "event_id": "T4",
+      "condition": "C",
+      "chars": 11978,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.6,
+        "Steve Scalise": 0.25,
+        "Jim Jordan": 0.05,
+        "Tom Emmer": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T2_C_r1",
+      "event_id": "T2",
+      "condition": "C",
+      "chars": 14496,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T3_B_r1",
+      "event_id": "T3",
+      "condition": "B",
+      "chars": 11433,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.0,
+        "KMT": 0.36,
+        "TPP": 0.64
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.64
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T4_B_r1",
+      "event_id": "T4",
+      "condition": "B",
+      "chars": 11629,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.1,
+        "Jim Jordan": 0.2,
+        "Tom Emmer": 0.1,
+        "Steve Scalise": 0.4,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T6_B_r1",
+      "event_id": "T6",
+      "condition": "B",
+      "chars": 13692,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.0,
+        "Sinn F\u00e9in": 0.0,
+        "Fine Gael": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T8_B_r1",
+      "event_id": "T8",
+      "condition": "B",
+      "chars": 13081,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.7,
+        "Conservative": 0.2,
+        "NDP": 0.05,
+        "Bloc Qu\u00e9b\u00e9cois": 0.03,
+        "Other": 0.02
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T6_C_r1",
+      "event_id": "T6",
+      "condition": "C",
+      "chars": 12750,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.4,
+        "Sinn F\u00e9in": 0.2,
+        "Fine Gael": 0.3,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C6_B_r1",
+      "event_id": "C6",
+      "condition": "B",
+      "chars": 12042,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.15,
+        "Latin American Cardinal": 0.45,
+        "African Cardinal": 0.03,
+        "North American Cardinal": 0.35,
+        "Asian or Other Cardinal": 0.02
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C5_B_r1",
+      "event_id": "C5",
+      "condition": "B",
+      "chars": 12996,
+      "july_flat": true,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C5_C_r1",
+      "event_id": "C5",
+      "condition": "C",
+      "chars": 13064,
+      "july_flat": true,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T9_B_r1",
+      "event_id": "T9",
+      "condition": "B",
+      "chars": 11980,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.01,
+        "NO": 0.99
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.99
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C9_B_r1",
+      "event_id": "C9",
+      "condition": "B",
+      "chars": 13517,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.0,
+        "India": 0.0,
+        "Japan": 0.0,
+        "Vietnam": 0.0,
+        "South Korea": 0.0,
+        "EU": 0.0,
+        "Canada": 0.0,
+        "Mexico": 0.0,
+        "Other / None": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "T8_C_r1",
+      "event_id": "T8",
+      "condition": "C",
+      "chars": 13041,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.7,
+        "Conservative": 0.3,
+        "NDP": 0.0,
+        "Bloc Qu\u00e9b\u00e9cois": 0.0,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C11_B_r1",
+      "event_id": "C11",
+      "condition": "B",
+      "chars": 11728,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.65,
+        "Pope Francis": 0.05,
+        "UN Agency": 0.15,
+        "Individual Activist": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C1_B_r1",
+      "event_id": "C1",
+      "condition": "B",
+      "chars": 14719,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.55,
+        "Democrat": 0.35,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C4_C_r1",
+      "event_id": "C4",
+      "condition": "C",
+      "chars": 11974,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.05,
+        "Conservative": 0.25,
+        "Reform UK": 0.05,
+        "Other": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C12_B_r1",
+      "event_id": "C12",
+      "condition": "B",
+      "chars": 11711,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.35,
+        "Oklahoma City Thunder": 0.02,
+        "Denver Nuggets": 0.02,
+        "Minnesota Timberwolves": 0.01,
+        "Other": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C10_B_r1",
+      "event_id": "C10",
+      "condition": "B",
+      "chars": 14241,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.99,
+        "Rishi Sunak": 0.0025,
+        "Nigel Farage": 0.0025,
+        "Other Conservative": 0.0025,
+        "Other": 0.0025
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.99
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C10_C_r1",
+      "event_id": "C10",
+      "condition": "C",
+      "chars": 12194,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.25,
+        "Rishi Sunak": 0.45,
+        "Nigel Farage": 0.04,
+        "Other Conservative": 0.25,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C4_B_r1",
+      "event_id": "C4",
+      "condition": "B",
+      "chars": 12007,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.5,
+        "Conservative": 0.4,
+        "Reform UK": 0.09,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C11_C_r1",
+      "event_id": "C11",
+      "condition": "C",
+      "chars": 13236,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.15,
+        "Pope Francis": 0.1,
+        "UN Agency": 0.2,
+        "Individual Activist": 0.5,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C13_B_r1",
+      "event_id": "C13",
+      "condition": "B",
+      "chars": 10203,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.03,
+        "The Brutalist": 0.03,
+        "Conclave": 0.03,
+        "Emilia P\u00e9rez": 0.85,
+        "Wicked": 0.03,
+        "Other": 0.03
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C8_C_r1",
+      "event_id": "C8",
+      "condition": "C",
+      "chars": 13942,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.2,
+        "Google DeepMind": 0.3,
+        "Anthropic": 0.35,
+        "Meta": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C12_C_r1",
+      "event_id": "C12",
+      "condition": "C",
+      "chars": 10930,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.01,
+        "Oklahoma City Thunder": 0.01,
+        "Denver Nuggets": 0.01,
+        "Minnesota Timberwolves": 0.01,
+        "Other": 0.96
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.96
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C8_B_r1",
+      "event_id": "C8",
+      "condition": "B",
+      "chars": 12178,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.05,
+        "Google DeepMind": 0.05,
+        "Anthropic": 0.6,
+        "Meta": 0.05,
+        "Other": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S3_C_r1",
+      "event_id": "S3",
+      "condition": "C",
+      "chars": 13906,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C14_B_r1",
+      "event_id": "C14",
+      "condition": "B",
+      "chars": 12785,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.4,
+        "SPD-led coalition": 0.55,
+        "AfD-led coalition": 0.0,
+        "Other / Hung parliament": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S3_B_r1",
+      "event_id": "S3",
+      "condition": "B",
+      "chars": 13222,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C9_C_r1",
+      "event_id": "C9",
+      "condition": "C",
+      "chars": 11572,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.05,
+        "India": 0.05,
+        "Japan": 0.25,
+        "Vietnam": 0.05,
+        "South Korea": 0.2,
+        "EU": 0.1,
+        "Canada": 0.15,
+        "Mexico": 0.15,
+        "Other / None": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.25
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S2_B_r1",
+      "event_id": "S2",
+      "condition": "B",
+      "chars": 11148,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.6,
+        "Democrat": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S5_C_r1",
+      "event_id": "S5",
+      "condition": "C",
+      "chars": 13318,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S5_B_r1",
+      "event_id": "S5",
+      "condition": "B",
+      "chars": 12467,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.85,
+        "NO": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C7_B_r1",
+      "event_id": "C7",
+      "condition": "B",
+      "chars": 11566,
+      "july_flat": false,
+      "finish_reason": "length",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S4_C_r1",
+      "event_id": "S4",
+      "condition": "C",
+      "chars": 10446,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C3_B_r1",
+      "event_id": "C3",
+      "condition": "B",
+      "chars": 12984,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.3,
+        "Nouveau Front Populaire": 0.25,
+        "Ensemble": 0.25,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C7_C_r1",
+      "event_id": "C7",
+      "condition": "C",
+      "chars": 10192,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.08,
+        "England": 0.0,
+        "France": 0.88,
+        "Germany": 0.0,
+        "Portugal": 0.0,
+        "Other": 0.04
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.88
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C15_B_r1",
+      "event_id": "C15",
+      "condition": "B",
+      "chars": 11070,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.02,
+        "3": 0.94,
+        "4": 0.01,
+        "5+": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.94
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C14_C_r1",
+      "event_id": "C14",
+      "condition": "C",
+      "chars": 11634,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.75,
+        "SPD-led coalition": 0.15,
+        "AfD-led coalition": 0.01,
+        "Other / Hung parliament": 0.09
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C3_C_r1",
+      "event_id": "C3",
+      "condition": "C",
+      "chars": 12907,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.3,
+        "Nouveau Front Populaire": 0.2,
+        "Ensemble": 0.2,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C1_C_r1",
+      "event_id": "C1",
+      "condition": "C",
+      "chars": 12814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.36,
+        "Democrat": 0.64,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.64
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S7_B_r1",
+      "event_id": "S7",
+      "condition": "B",
+      "chars": 12777,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S9_C_r1",
+      "event_id": "S9",
+      "condition": "C",
+      "chars": 14486,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S2_C_r1",
+      "event_id": "S2",
+      "condition": "C",
+      "chars": 13011,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.6667,
+        "Democrat": 0.3333
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6667
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S6_B_r1",
+      "event_id": "S6",
+      "condition": "B",
+      "chars": 15557,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.2,
+        "\u00d6VP": 0.3,
+        "SP\u00d6": 0.45,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S9_B_r1",
+      "event_id": "S9",
+      "condition": "B",
+      "chars": 13881,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S6_C_r1",
+      "event_id": "S6",
+      "condition": "C",
+      "chars": 15071,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.3,
+        "\u00d6VP": 0.5,
+        "SP\u00d6": 0.1,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T1_C_r1",
+      "event_id": "T1",
+      "condition": "C",
+      "chars": 15253,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T1_B_r1",
+      "event_id": "T1",
+      "condition": "B",
+      "chars": 15348,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C5_C_r1",
+      "event_id": "C5",
+      "condition": "C",
+      "chars": 13064,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.2,
+        "Republican President + Split Congress": 0.2,
+        "Democratic President + Democratic Congress": 0.2,
+        "Democratic President + Split Congress": 0.2,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.2
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T2_B_r1",
+      "event_id": "T2",
+      "condition": "B",
+      "chars": 13129,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.2,
+        "NO": 0.8
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T2_C_r1",
+      "event_id": "T2",
+      "condition": "C",
+      "chars": 14496,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C2_B_r1",
+      "event_id": "C2",
+      "condition": "B",
+      "chars": 12089,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.7,
+        "Harris": 0.15,
+        "Newsom": 0.0,
+        "Michelle Obama": 0.0,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T3_B_r1",
+      "event_id": "T3",
+      "condition": "B",
+      "chars": 11433,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C15_C_r1",
+      "event_id": "C15",
+      "condition": "C",
+      "chars": 11380,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.65,
+        "4": 0.25,
+        "5+": 0.07
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S4_B_r1",
+      "event_id": "S4",
+      "condition": "B",
+      "chars": 11794,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.47,
+        "NO": 0.53
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.53
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C5_B_r1",
+      "event_id": "C5",
+      "condition": "B",
+      "chars": 12996,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.2,
+        "Republican President + Split Congress": 0.15,
+        "Democratic President + Democratic Congress": 0.35,
+        "Democratic President + Split Congress": 0.2,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T5_C_r1",
+      "event_id": "T5",
+      "condition": "C",
+      "chars": 12074,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "S7_C_r1",
+      "event_id": "S7",
+      "condition": "C",
+      "chars": 14013,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T9_B_r1",
+      "event_id": "T9",
+      "condition": "B",
+      "chars": 11980,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.15,
+        "NO": 0.85
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T4_B_r1",
+      "event_id": "T4",
+      "condition": "B",
+      "chars": 11629,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.0,
+        "Jim Jordan": 0.0,
+        "Tom Emmer": 0.0,
+        "Steve Scalise": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T5_B_r1",
+      "event_id": "T5",
+      "condition": "B",
+      "chars": 13728,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.5,
+        "NO": 0.5
+      },
+      "parsed": true,
+      "flat": true,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T6_C_r1",
+      "event_id": "T6",
+      "condition": "C",
+      "chars": 12750,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.4,
+        "Sinn F\u00e9in": 0.2,
+        "Fine Gael": 0.35,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T6_B_r1",
+      "event_id": "T6",
+      "condition": "B",
+      "chars": 13692,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.25,
+        "Sinn F\u00e9in": 0.2,
+        "Fine Gael": 0.25,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T9_C_r1",
+      "event_id": "T9",
+      "condition": "C",
+      "chars": 13388,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.1,
+        "NO": 0.9
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9
+    },
+    {
+      "model": "deepseek/deepseek-r1-distill-llama-70b",
+      "unit_id": "C13_C_r1",
+      "event_id": "C13",
+      "condition": "C",
+      "chars": 10814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.0,
+        "The Brutalist": 0.0,
+        "Conclave": 0.0,
+        "Emilia P\u00e9rez": 0.4,
+        "Wicked": 0.0,
+        "Other": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T4_C_r1",
+      "event_id": "T4",
+      "condition": "C",
+      "chars": 11978,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.4,
+        "Jim Jordan": 0.1,
+        "Tom Emmer": 0.1,
+        "Steve Scalise": 0.3,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T3_C_r1",
+      "event_id": "T3",
+      "condition": "C",
+      "chars": 12606,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.5,
+        "KMT": 0.3,
+        "TPP": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C9_C_r1",
+      "event_id": "C9",
+      "condition": "C",
+      "chars": 11572,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.045454545454545456,
+        "India": 0.045454545454545456,
+        "Japan": 0.22727272727272727,
+        "Vietnam": 0.045454545454545456,
+        "South Korea": 0.18181818181818182,
+        "EU": 0.13636363636363635,
+        "Canada": 0.13636363636363635,
+        "Mexico": 0.09090909090909091,
+        "Other / None": 0.09090909090909091
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.22727272727272727
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C2_C_r1",
+      "event_id": "C2",
+      "condition": "C",
+      "chars": 12953,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.25,
+        "Harris": 0.5,
+        "Newsom": 0.0,
+        "Michelle Obama": 0.0,
+        "Other": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T8_B_r1",
+      "event_id": "T8",
+      "condition": "B",
+      "chars": 13081,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.35,
+        "Conservative": 0.25,
+        "NDP": 0.15,
+        "Bloc Qu\u00e9b\u00e9cois": 0.1,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C9_B_r1",
+      "event_id": "C9",
+      "condition": "B",
+      "chars": 13517,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.0,
+        "India": 0.0,
+        "Japan": 0.0,
+        "Vietnam": 0.0,
+        "South Korea": 0.0,
+        "EU": 0.0,
+        "Canada": 0.0,
+        "Mexico": 0.0,
+        "Other / None": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C10_C_r1",
+      "event_id": "C10",
+      "condition": "C",
+      "chars": 12194,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.4,
+        "Rishi Sunak": 0.3,
+        "Nigel Farage": 0.1,
+        "Other Conservative": 0.1,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C11_B_r1",
+      "event_id": "C11",
+      "condition": "B",
+      "chars": 11728,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.3,
+        "Pope Francis": 0.1,
+        "UN Agency": 0.2,
+        "Individual Activist": 0.1,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C8_B_r1",
+      "event_id": "C8",
+      "condition": "B",
+      "chars": 12178,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.15151515151515152,
+        "Google DeepMind": 0.15151515151515152,
+        "Anthropic": 0.35353535353535354,
+        "Meta": 0.15151515151515152,
+        "Other": 0.19191919191919193
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35353535353535354
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C6_C_r1",
+      "event_id": "C6",
+      "condition": "C",
+      "chars": 12771,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.2,
+        "Latin American Cardinal": 0.25,
+        "African Cardinal": 0.35,
+        "North American Cardinal": 0.1,
+        "Asian or Other Cardinal": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C10_B_r1",
+      "event_id": "C10",
+      "condition": "B",
+      "chars": 14241,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.6,
+        "Rishi Sunak": 0.1,
+        "Nigel Farage": 0.15,
+        "Other Conservative": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C1_B_r1",
+      "event_id": "C1",
+      "condition": "B",
+      "chars": 14719,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.4,
+        "Democrat": 0.4,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C6_B_r1",
+      "event_id": "C6",
+      "condition": "B",
+      "chars": 12042,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.2,
+        "Latin American Cardinal": 0.3,
+        "African Cardinal": 0.1,
+        "North American Cardinal": 0.4,
+        "Asian or Other Cardinal": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C12_C_r1",
+      "event_id": "C12",
+      "condition": "C",
+      "chars": 10930,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.0,
+        "Oklahoma City Thunder": 0.0,
+        "Denver Nuggets": 0.0,
+        "Minnesota Timberwolves": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C14_B_r1",
+      "event_id": "C14",
+      "condition": "B",
+      "chars": 12785,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.45,
+        "SPD-led coalition": 0.35,
+        "AfD-led coalition": 0.1,
+        "Other / Hung parliament": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C4_C_r1",
+      "event_id": "C4",
+      "condition": "C",
+      "chars": 11974,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.0476,
+        "Conservative": 0.1905,
+        "Reform UK": 0.0,
+        "Other": 0.7619
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7619
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C13_C_r1",
+      "event_id": "C13",
+      "condition": "C",
+      "chars": 10814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.0,
+        "The Brutalist": 0.0,
+        "Conclave": 0.0,
+        "Emilia P\u00e9rez": 0.0,
+        "Wicked": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "T8_C_r1",
+      "event_id": "T8",
+      "condition": "C",
+      "chars": 13041,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.75,
+        "Conservative": 0.2,
+        "NDP": 0.03,
+        "Bloc Qu\u00e9b\u00e9cois": 0.01,
+        "Other": 0.01
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C8_C_r1",
+      "event_id": "C8",
+      "condition": "C",
+      "chars": 13942,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.2,
+        "Google DeepMind": 0.25,
+        "Anthropic": 0.25,
+        "Meta": 0.15,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.25
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C11_C_r1",
+      "event_id": "C11",
+      "condition": "C",
+      "chars": 13236,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.05,
+        "Pope Francis": 0.1,
+        "UN Agency": 0.2,
+        "Individual Activist": 0.35,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C4_B_r1",
+      "event_id": "C4",
+      "condition": "B",
+      "chars": 12007,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.1,
+        "Conservative": 0.6,
+        "Reform UK": 0.2,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C12_B_r1",
+      "event_id": "C12",
+      "condition": "B",
+      "chars": 11711,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.0,
+        "Oklahoma City Thunder": 0.0,
+        "Denver Nuggets": 0.0,
+        "Minnesota Timberwolves": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C14_C_r1",
+      "event_id": "C14",
+      "condition": "C",
+      "chars": 11634,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.5,
+        "SPD-led coalition": 0.3,
+        "AfD-led coalition": 0.05,
+        "Other / Hung parliament": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C1_C_r1",
+      "event_id": "C1",
+      "condition": "C",
+      "chars": 12814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.36,
+        "Democrat": 0.64,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.64
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S5_C_r1",
+      "event_id": "S5",
+      "condition": "C",
+      "chars": 13318,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C3_B_r1",
+      "event_id": "C3",
+      "condition": "B",
+      "chars": 12984,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.2,
+        "Nouveau Front Populaire": 0.4,
+        "Ensemble": 0.3,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C15_C_r1",
+      "event_id": "C15",
+      "condition": "C",
+      "chars": 11380,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.05,
+        "1": 0.05,
+        "2": 0.1,
+        "3": 0.4,
+        "4": 0.25,
+        "5+": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S5_B_r1",
+      "event_id": "S5",
+      "condition": "B",
+      "chars": 12467,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S4_C_r1",
+      "event_id": "S4",
+      "condition": "C",
+      "chars": 10446,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C15_B_r1",
+      "event_id": "C15",
+      "condition": "B",
+      "chars": 11070,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.5,
+        "4": 0.0,
+        "5+": 0.5
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C7_C_r1",
+      "event_id": "C7",
+      "condition": "C",
+      "chars": 10192,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.13613613613613615,
+        "England": 0.0,
+        "France": 0.8188188188188188,
+        "Germany": 0.0,
+        "Portugal": 0.0,
+        "Other": 0.04504504504504504
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8188188188188188
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S3_C_r1",
+      "event_id": "S3",
+      "condition": "C",
+      "chars": 13906,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.55,
+        "NO": 0.45
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S9_B_r1",
+      "event_id": "S9",
+      "condition": "B",
+      "chars": 13881,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S2_B_r1",
+      "event_id": "S2",
+      "condition": "B",
+      "chars": 11148,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.4,
+        "Democrat": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S9_C_r1",
+      "event_id": "S9",
+      "condition": "C",
+      "chars": 14486,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.3,
+        "NO": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S6_C_r1",
+      "event_id": "S6",
+      "condition": "C",
+      "chars": 15071,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.35,
+        "\u00d6VP": 0.4,
+        "SP\u00d6": 0.15,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S4_B_r1",
+      "event_id": "S4",
+      "condition": "B",
+      "chars": 11794,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.55,
+        "NO": 0.45
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C5_C_r1",
+      "event_id": "C5",
+      "condition": "C",
+      "chars": 13064,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.15,
+        "Republican President + Split Congress": 0.25,
+        "Democratic President + Democratic Congress": 0.15,
+        "Democratic President + Split Congress": 0.35,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S7_B_r1",
+      "event_id": "S7",
+      "condition": "B",
+      "chars": 12777,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.85,
+        "NO": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C7_B_r1",
+      "event_id": "C7",
+      "condition": "B",
+      "chars": 11566,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.0303,
+        "England": 0.0,
+        "France": 0.6667,
+        "Germany": 0.1515,
+        "Portugal": 0.0,
+        "Other": 0.1515
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6667
+    },
+    {
+      "model": "qwen/qwen3-14b",
+      "unit_id": "C13_B_r1",
+      "event_id": "C13",
+      "condition": "B",
+      "chars": 10203,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C5_B_r1",
+      "event_id": "C5",
+      "condition": "B",
+      "chars": 12996,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.1,
+        "Republican President + Split Congress": 0.2,
+        "Democratic President + Democratic Congress": 0.3,
+        "Democratic President + Split Congress": 0.35,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S3_B_r1",
+      "event_id": "S3",
+      "condition": "B",
+      "chars": 13222,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S6_B_r1",
+      "event_id": "S6",
+      "condition": "B",
+      "chars": 15557,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.2,
+        "\u00d6VP": 0.3,
+        "SP\u00d6": 0.4,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T2_B_r1",
+      "event_id": "T2",
+      "condition": "B",
+      "chars": 13129,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.2,
+        "NO": 0.8
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S2_C_r1",
+      "event_id": "S2",
+      "condition": "C",
+      "chars": 13011,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.6,
+        "Democrat": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T3_B_r1",
+      "event_id": "T3",
+      "condition": "B",
+      "chars": 11433,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.2,
+        "KMT": 0.7,
+        "TPP": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T4_C_r1",
+      "event_id": "T4",
+      "condition": "C",
+      "chars": 11978,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.6,
+        "Jim Jordan": 0.15,
+        "Tom Emmer": 0.1,
+        "Steve Scalise": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T1_C_r1",
+      "event_id": "T1",
+      "condition": "C",
+      "chars": 15253,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T1_B_r1",
+      "event_id": "T1",
+      "condition": "B",
+      "chars": 15348,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T3_C_r1",
+      "event_id": "T3",
+      "condition": "C",
+      "chars": 12606,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.5,
+        "KMT": 0.3,
+        "TPP": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C2_B_r1",
+      "event_id": "C2",
+      "condition": "B",
+      "chars": 12089,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.7,
+        "Harris": 0.15,
+        "Newsom": 0.05,
+        "Michelle Obama": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T9_B_r1",
+      "event_id": "T9",
+      "condition": "B",
+      "chars": 11980,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.2,
+        "NO": 0.8
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C6_C_r1",
+      "event_id": "C6",
+      "condition": "C",
+      "chars": 12771,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.4,
+        "Latin American Cardinal": 0.3,
+        "African Cardinal": 0.2,
+        "North American Cardinal": 0.05,
+        "Asian or Other Cardinal": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C3_C_r1",
+      "event_id": "C3",
+      "condition": "C",
+      "chars": 12907,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.5,
+        "Nouveau Front Populaire": 0.2,
+        "Ensemble": 0.1,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T5_C_r1",
+      "event_id": "T5",
+      "condition": "C",
+      "chars": 12074,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.7,
+        "NO": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T8_B_r1",
+      "event_id": "T8",
+      "condition": "B",
+      "chars": 13081,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.4,
+        "Conservative": 0.3,
+        "NDP": 0.15,
+        "Bloc Qu\u00e9b\u00e9cois": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T8_C_r1",
+      "event_id": "T8",
+      "condition": "C",
+      "chars": 13041,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.55,
+        "Conservative": 0.25,
+        "NDP": 0.1,
+        "Bloc Qu\u00e9b\u00e9cois": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T4_B_r1",
+      "event_id": "T4",
+      "condition": "B",
+      "chars": 11629,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.0,
+        "Jim Jordan": 0.3,
+        "Tom Emmer": 0.0,
+        "Steve Scalise": 0.4,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C9_B_r1",
+      "event_id": "C9",
+      "condition": "B",
+      "chars": 13517,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.047619047619047616,
+        "India": 0.047619047619047616,
+        "Japan": 0.047619047619047616,
+        "Vietnam": 0.047619047619047616,
+        "South Korea": 0.047619047619047616,
+        "EU": 0.14285714285714285,
+        "Canada": 0.047619047619047616,
+        "Mexico": 0.047619047619047616,
+        "Other / None": 0.5238095238095238
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5238095238095238
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C6_B_r1",
+      "event_id": "C6",
+      "condition": "B",
+      "chars": 12042,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.1,
+        "Latin American Cardinal": 0.5,
+        "African Cardinal": 0.1,
+        "North American Cardinal": 0.2,
+        "Asian or Other Cardinal": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T5_B_r1",
+      "event_id": "T5",
+      "condition": "B",
+      "chars": 13728,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.4,
+        "NO": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "S7_C_r1",
+      "event_id": "S7",
+      "condition": "C",
+      "chars": 14013,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.6,
+        "NO": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T9_C_r1",
+      "event_id": "T9",
+      "condition": "C",
+      "chars": 13388,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.2,
+        "NO": 0.8
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T6_C_r1",
+      "event_id": "T6",
+      "condition": "C",
+      "chars": 12750,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.35,
+        "Sinn F\u00e9in": 0.15,
+        "Fine Gael": 0.3,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T2_C_r1",
+      "event_id": "T2",
+      "condition": "C",
+      "chars": 14496,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.23,
+        "NO": 0.77
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.77
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C2_C_r1",
+      "event_id": "C2",
+      "condition": "C",
+      "chars": 12953,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.2,
+        "Harris": 0.6,
+        "Newsom": 0.0,
+        "Michelle Obama": 0.0,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "T6_B_r1",
+      "event_id": "T6",
+      "condition": "B",
+      "chars": 13692,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.2,
+        "Sinn F\u00e9in": 0.2,
+        "Fine Gael": 0.2,
+        "Other": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C11_B_r1",
+      "event_id": "C11",
+      "condition": "B",
+      "chars": 11728,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.4,
+        "Pope Francis": 0.1,
+        "UN Agency": 0.2,
+        "Individual Activist": 0.15,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C8_C_r1",
+      "event_id": "C8",
+      "condition": "C",
+      "chars": 13942,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.2,
+        "Google DeepMind": 0.25,
+        "Anthropic": 0.3,
+        "Meta": 0.1,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C1_B_r1",
+      "event_id": "C1",
+      "condition": "B",
+      "chars": 14719,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.35,
+        "Democrat": 0.45,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C9_C_r1",
+      "event_id": "C9",
+      "condition": "C",
+      "chars": 11572,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.05,
+        "India": 0.03,
+        "Japan": 0.2,
+        "Vietnam": 0.02,
+        "South Korea": 0.2,
+        "EU": 0.15,
+        "Canada": 0.1,
+        "Mexico": 0.1,
+        "Other / None": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.2
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C14_B_r1",
+      "event_id": "C14",
+      "condition": "B",
+      "chars": 12785,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C4_B_r1",
+      "event_id": "C4",
+      "condition": "B",
+      "chars": 12007,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C7_B_r1",
+      "event_id": "C7",
+      "condition": "B",
+      "chars": 11566,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.118,
+        "England": 0.0,
+        "France": 0.647,
+        "Germany": 0.118,
+        "Portugal": 0.0,
+        "Other": 0.117
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.647
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S2_B_r1",
+      "event_id": "S2",
+      "condition": "B",
+      "chars": 11148,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.55,
+        "Democrat": 0.45
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S2_C_r1",
+      "event_id": "S2",
+      "condition": "C",
+      "chars": 13011,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.55,
+        "Democrat": 0.45
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C4_C_r1",
+      "event_id": "C4",
+      "condition": "C",
+      "chars": 11974,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.12,
+        "Conservative": 0.4,
+        "Reform UK": 0.0,
+        "Other": 0.48
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.48
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S3_B_r1",
+      "event_id": "S3",
+      "condition": "B",
+      "chars": 13222,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S3_C_r1",
+      "event_id": "S3",
+      "condition": "C",
+      "chars": 13906,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C14_C_r1",
+      "event_id": "C14",
+      "condition": "C",
+      "chars": 11634,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.4,
+        "SPD-led coalition": 0.2,
+        "AfD-led coalition": 0.1,
+        "Other / Hung parliament": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C12_C_r1",
+      "event_id": "C12",
+      "condition": "C",
+      "chars": 10930,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.0,
+        "Oklahoma City Thunder": 0.0,
+        "Denver Nuggets": 0.0,
+        "Minnesota Timberwolves": 0.0,
+        "Other": 1.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 1.0
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S4_B_r1",
+      "event_id": "S4",
+      "condition": "B",
+      "chars": 11794,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C13_C_r1",
+      "event_id": "C13",
+      "condition": "C",
+      "chars": 10814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.1,
+        "The Brutalist": 0.1,
+        "Conclave": 0.1,
+        "Emilia P\u00e9rez": 0.1,
+        "Wicked": 0.1,
+        "Other": 0.5
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C11_C_r1",
+      "event_id": "C11",
+      "condition": "C",
+      "chars": 13236,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.0,
+        "Pope Francis": 0.0,
+        "UN Agency": 0.05,
+        "Individual Activist": 0.05,
+        "Other": 0.9
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.9
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S4_C_r1",
+      "event_id": "S4",
+      "condition": "C",
+      "chars": 10446,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S5_B_r1",
+      "event_id": "S5",
+      "condition": "B",
+      "chars": 12467,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.92,
+        "NO": 0.08
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.92
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C12_B_r1",
+      "event_id": "C12",
+      "condition": "B",
+      "chars": 11711,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.2,
+        "Oklahoma City Thunder": 0.0,
+        "Denver Nuggets": 0.0,
+        "Minnesota Timberwolves": 0.0,
+        "Other": 0.8
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.8
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S5_C_r1",
+      "event_id": "S5",
+      "condition": "C",
+      "chars": 13318,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S7_C_r1",
+      "event_id": "S7",
+      "condition": "C",
+      "chars": 14013,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S9_B_r1",
+      "event_id": "S9",
+      "condition": "B",
+      "chars": 13881,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S6_B_r1",
+      "event_id": "S6",
+      "condition": "B",
+      "chars": 15557,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.2,
+        "SP\u00d6": 0.55,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C3_C_r1",
+      "event_id": "C3",
+      "condition": "C",
+      "chars": 12907,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.45,
+        "Nouveau Front Populaire": 0.3,
+        "Ensemble": 0.15,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S9_C_r1",
+      "event_id": "S9",
+      "condition": "C",
+      "chars": 14486,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.65,
+        "NO": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T1_B_r1",
+      "event_id": "T1",
+      "condition": "B",
+      "chars": 15348,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C2_B_r1",
+      "event_id": "C2",
+      "condition": "B",
+      "chars": 12089,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.65,
+        "Harris": 0.1,
+        "Newsom": 0.02,
+        "Michelle Obama": 0.01,
+        "Other": 0.22
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C2_C_r1",
+      "event_id": "C2",
+      "condition": "C",
+      "chars": 12953,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Biden": 0.25,
+        "Harris": 0.45,
+        "Newsom": 0.05,
+        "Michelle Obama": 0.05,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C7_C_r1",
+      "event_id": "C7",
+      "condition": "C",
+      "chars": 10192,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.08,
+        "England": 0.0,
+        "France": 0.88,
+        "Germany": 0.0,
+        "Portugal": 0.0,
+        "Other": 0.04
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.88
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T2_B_r1",
+      "event_id": "T2",
+      "condition": "B",
+      "chars": 13129,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.05,
+        "NO": 0.95
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C10_B_r1",
+      "event_id": "C10",
+      "condition": "B",
+      "chars": 14241,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.6,
+        "Rishi Sunak": 0.1,
+        "Nigel Farage": 0.2,
+        "Other Conservative": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T2_C_r1",
+      "event_id": "T2",
+      "condition": "C",
+      "chars": 14496,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T3_B_r1",
+      "event_id": "T3",
+      "condition": "B",
+      "chars": 11433,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.2,
+        "KMT": 0.55,
+        "TPP": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T3_C_r1",
+      "event_id": "T3",
+      "condition": "C",
+      "chars": 12606,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "DPP": 0.55,
+        "KMT": 0.3,
+        "TPP": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C15_C_r1",
+      "event_id": "C15",
+      "condition": "C",
+      "chars": 11380,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": null,
+      "parsed": false,
+      "flat": false,
+      "modal": null
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C15_B_r1",
+      "event_id": "C15",
+      "condition": "B",
+      "chars": 11070,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.025,
+        "1": 0.025,
+        "2": 0.025,
+        "3": 0.6,
+        "4": 0.025,
+        "5+": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T5_B_r1",
+      "event_id": "T5",
+      "condition": "B",
+      "chars": 13728,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T5_C_r1",
+      "event_id": "T5",
+      "condition": "C",
+      "chars": 12074,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.75,
+        "NO": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T6_C_r1",
+      "event_id": "T6",
+      "condition": "C",
+      "chars": 12750,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.35,
+        "Sinn F\u00e9in": 0.25,
+        "Fine Gael": 0.3,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C8_B_r1",
+      "event_id": "C8",
+      "condition": "B",
+      "chars": 12178,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.2,
+        "Google DeepMind": 0.2,
+        "Anthropic": 0.4,
+        "Meta": 0.1,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C10_C_r1",
+      "event_id": "C10",
+      "condition": "C",
+      "chars": 12194,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.3,
+        "Rishi Sunak": 0.0,
+        "Nigel Farage": 0.0,
+        "Other Conservative": 0.4,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C6_B_r1",
+      "event_id": "C6",
+      "condition": "B",
+      "chars": 12042,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.1,
+        "Latin American Cardinal": 0.55,
+        "African Cardinal": 0.1,
+        "North American Cardinal": 0.2,
+        "Asian or Other Cardinal": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T9_B_r1",
+      "event_id": "T9",
+      "condition": "B",
+      "chars": 11980,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.25,
+        "NO": 0.75
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T9_C_r1",
+      "event_id": "T9",
+      "condition": "C",
+      "chars": 13388,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.25,
+        "NO": 0.75
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.75
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S6_C_r1",
+      "event_id": "S6",
+      "condition": "C",
+      "chars": 15071,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "FP\u00d6": 0.15,
+        "\u00d6VP": 0.45,
+        "SP\u00d6": 0.2,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T8_C_r1",
+      "event_id": "T8",
+      "condition": "C",
+      "chars": 13041,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.55,
+        "Conservative": 0.3,
+        "NDP": 0.05,
+        "Bloc Qu\u00e9b\u00e9cois": 0.05,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "S7_B_r1",
+      "event_id": "S7",
+      "condition": "B",
+      "chars": 12777,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.85,
+        "NO": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C1_C_r1",
+      "event_id": "C1",
+      "condition": "C",
+      "chars": 12814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.375,
+        "Democrat": 0.625,
+        "Other": 0.0
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.625
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C1_C_r1",
+      "event_id": "C1",
+      "condition": "C",
+      "chars": 12814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.42,
+        "Democrat": 0.48,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.48
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C5_C_r1",
+      "event_id": "C5",
+      "condition": "C",
+      "chars": 13064,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.05,
+        "Republican President + Split Congress": 0.2,
+        "Democratic President + Democratic Congress": 0.35,
+        "Democratic President + Split Congress": 0.35,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C4_B_r1",
+      "event_id": "C4",
+      "condition": "B",
+      "chars": 12007,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.35,
+        "Conservative": 0.5,
+        "Reform UK": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C5_B_r1",
+      "event_id": "C5",
+      "condition": "B",
+      "chars": 12996,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican President + Republican Congress": 0.1,
+        "Republican President + Split Congress": 0.15,
+        "Democratic President + Democratic Congress": 0.35,
+        "Democratic President + Split Congress": 0.35,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T4_B_r1",
+      "event_id": "T4",
+      "condition": "B",
+      "chars": 11629,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.25,
+        "Jim Jordan": 0.2,
+        "Tom Emmer": 0.05,
+        "Steve Scalise": 0.3,
+        "Other": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T8_B_r1",
+      "event_id": "T8",
+      "condition": "B",
+      "chars": 13081,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Liberal": 0.35,
+        "Conservative": 0.3,
+        "NDP": 0.2,
+        "Bloc Qu\u00e9b\u00e9cois": 0.1,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C7_B_r1",
+      "event_id": "C7",
+      "condition": "B",
+      "chars": 11566,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.35,
+        "England": 0.05,
+        "France": 0.45,
+        "Germany": 0.1,
+        "Portugal": 0.02,
+        "Other": 0.03
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C7_C_r1",
+      "event_id": "C7",
+      "condition": "C",
+      "chars": 10192,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Spain": 0.2,
+        "England": 0.05,
+        "France": 0.65,
+        "Germany": 0.05,
+        "Portugal": 0.03,
+        "Other": 0.02
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T4_C_r1",
+      "event_id": "T4",
+      "condition": "C",
+      "chars": 11978,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Mike Johnson": 0.35,
+        "Jim Jordan": 0.25,
+        "Tom Emmer": 0.05,
+        "Steve Scalise": 0.2,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C4_C_r1",
+      "event_id": "C4",
+      "condition": "C",
+      "chars": 11974,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Labour": 0.05,
+        "Conservative": 0.3,
+        "Reform UK": 0.05,
+        "Other": 0.6
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C1_B_r1",
+      "event_id": "C1",
+      "condition": "B",
+      "chars": 14719,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Republican": 0.35,
+        "Democrat": 0.5,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C3_B_r1",
+      "event_id": "C3",
+      "condition": "B",
+      "chars": 12984,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Rassemblement National": 0.45,
+        "Nouveau Front Populaire": 0.35,
+        "Ensemble": 0.15,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T1_C_r1",
+      "event_id": "T1",
+      "condition": "C",
+      "chars": 15253,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "YES": 0.35,
+        "NO": 0.65
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.65
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "T6_B_r1",
+      "event_id": "T6",
+      "condition": "B",
+      "chars": 13692,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Fianna F\u00e1il": 0.15,
+        "Sinn F\u00e9in": 0.2,
+        "Fine Gael": 0.25,
+        "Other": 0.4
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C12_C_r1",
+      "event_id": "C12",
+      "condition": "C",
+      "chars": 10930,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.02,
+        "Oklahoma City Thunder": 0.01,
+        "Denver Nuggets": 0.01,
+        "Minnesota Timberwolves": 0.01,
+        "Other": 0.95
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.95
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C15_B_r1",
+      "event_id": "C15",
+      "condition": "B",
+      "chars": 11070,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.02,
+        "2": 0.1,
+        "3": 0.5,
+        "4": 0.3,
+        "5+": 0.07
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.5
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C9_C_r1",
+      "event_id": "C9",
+      "condition": "C",
+      "chars": 11572,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.02,
+        "India": 0.05,
+        "Japan": 0.2,
+        "Vietnam": 0.03,
+        "South Korea": 0.18,
+        "EU": 0.25,
+        "Canada": 0.15,
+        "Mexico": 0.1,
+        "Other / None": 0.02
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.25
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C9_B_r1",
+      "event_id": "C9",
+      "condition": "B",
+      "chars": 13517,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "UK": 0.25,
+        "India": 0.1,
+        "Japan": 0.2,
+        "Vietnam": 0.05,
+        "South Korea": 0.15,
+        "EU": 0.15,
+        "Canada": 0.03,
+        "Mexico": 0.02,
+        "Other / None": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.25
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C6_C_r1",
+      "event_id": "C6",
+      "condition": "C",
+      "chars": 12771,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Italian / European Cardinal": 0.2,
+        "Latin American Cardinal": 0.15,
+        "African Cardinal": 0.45,
+        "North American Cardinal": 0.1,
+        "Asian or Other Cardinal": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C14_C_r1",
+      "event_id": "C14",
+      "condition": "C",
+      "chars": 11634,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.45,
+        "SPD-led coalition": 0.15,
+        "AfD-led coalition": 0.05,
+        "Other / Hung parliament": 0.35
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C8_B_r1",
+      "event_id": "C8",
+      "condition": "B",
+      "chars": 12178,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.15,
+        "Google DeepMind": 0.05,
+        "Anthropic": 0.6,
+        "Meta": 0.1,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C12_B_r1",
+      "event_id": "C12",
+      "condition": "B",
+      "chars": 11711,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Boston Celtics": 0.25,
+        "Oklahoma City Thunder": 0.02,
+        "Denver Nuggets": 0.02,
+        "Minnesota Timberwolves": 0.01,
+        "Other": 0.7
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C11_C_r1",
+      "event_id": "C11",
+      "condition": "C",
+      "chars": 13236,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.01,
+        "Pope Francis": 0.05,
+        "UN Agency": 0.1,
+        "Individual Activist": 0.7,
+        "Other": 0.14
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.7
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C13_C_r1",
+      "event_id": "C13",
+      "condition": "C",
+      "chars": 10814,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.05,
+        "The Brutalist": 0.1,
+        "Conclave": 0.05,
+        "Emilia P\u00e9rez": 0.2,
+        "Wicked": 0.3,
+        "Other": 0.3
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.3
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C8_C_r1",
+      "event_id": "C8",
+      "condition": "C",
+      "chars": 13942,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "OpenAI": 0.35,
+        "Google DeepMind": 0.25,
+        "Anthropic": 0.2,
+        "Meta": 0.1,
+        "Other": 0.1
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.35
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C10_C_r1",
+      "event_id": "C10",
+      "condition": "C",
+      "chars": 12194,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.45,
+        "Rishi Sunak": 0.2,
+        "Nigel Farage": 0.05,
+        "Other Conservative": 0.25,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C11_B_r1",
+      "event_id": "C11",
+      "condition": "B",
+      "chars": 11728,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Nihon Hidankyo": 0.45,
+        "Pope Francis": 0.05,
+        "UN Agency": 0.3,
+        "Individual Activist": 0.15,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C10_B_r1",
+      "event_id": "C10",
+      "condition": "B",
+      "chars": 14241,
+      "july_flat": true,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Keir Starmer": 0.55,
+        "Rishi Sunak": 0.05,
+        "Nigel Farage": 0.05,
+        "Other Conservative": 0.1,
+        "Other": 0.25
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.55
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C13_B_r1",
+      "event_id": "C13",
+      "condition": "B",
+      "chars": 10203,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.05,
+        "The Brutalist": 0.1,
+        "Conclave": 0.05,
+        "Emilia P\u00e9rez": 0.6,
+        "Wicked": 0.15,
+        "Other": 0.05
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.6
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C15_C_r1",
+      "event_id": "C15",
+      "condition": "C",
+      "chars": 11380,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.05,
+        "2": 0.15,
+        "3": 0.45,
+        "4": 0.25,
+        "5+": 0.09
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.45
+    },
+    {
+      "model": "mistralai/ministral-14b-2512",
+      "unit_id": "C14_B_r1",
+      "event_id": "C14",
+      "condition": "B",
+      "chars": 12785,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "CDU/CSU-led coalition": 0.4,
+        "SPD-led coalition": 0.35,
+        "AfD-led coalition": 0.05,
+        "Other / Hung parliament": 0.2
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.4
+    },
+    {
+      "model": "qwen/qwen3-32b",
+      "unit_id": "C13_B_r1",
+      "event_id": "C13",
+      "condition": "B",
+      "chars": 10203,
+      "july_flat": false,
+      "finish_reason": "stop",
+      "probabilities": {
+        "Anora": 0.0,
+        "The Brutalist": 0.0,
+        "Conclave": 0.0,
+        "Emilia P\u00e9rez": 0.85,
+        "Wicked": 0.0,
+        "Other": 0.15
+      },
+      "parsed": true,
+      "flat": false,
+      "modal": 0.85
+    }
+  ]
+}

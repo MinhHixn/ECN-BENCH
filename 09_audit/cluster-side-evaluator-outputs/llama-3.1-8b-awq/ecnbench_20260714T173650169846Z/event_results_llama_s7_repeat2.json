@@ -1,0 +1,308 @@
+[
+  {
+    "event_id": "S7",
+    "unit_id": "S7_A_r1",
+    "condition": "A",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.8,
+      "NO": 0.2
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "polarization": {
+        "very_low": 0.19999999999999996,
+        "low": 0.3999999999999999,
+        "high": 0.29999999999999993,
+        "very_high": 0.09999999999999998
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "susceptibility": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.4,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.633333,
+        "polarization_score": 0.433333,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.633333,
+        "susceptibility_score": 0.5,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.566667,
+        "weighted_rubric_score": 0.583333
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "Public Benefit Corporation (PBC)",
+        "short_rationale": "The swarm's discussion of OpenAI's restructuring focuses on a PBC as the target corporate structure, aligning with the reported plan to convert to a for-profit PBC."
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "Thrive Capital",
+        "short_rationale": "The swarm identifies Thrive Capital as the firm that made restructuring a condition of the $6.6B funding round, based on the evidence provided."
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "California",
+        "short_rationale": "The swarm highlights California's Attorney General as most active in monitoring OpenAI's fair-value negotiations, given the state's regulatory focus on nonprofit conversions."
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.07999999999999999,
+    "rps": 0.04000000000000001,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.8,
+    "calibration_bracket": "0.75-1.0",
+    "weighted_rubric_score": 0.583333,
+    "yes_probability": 0.8,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  },
+  {
+    "event_id": "S7",
+    "unit_id": "S7_B_r1",
+    "condition": "B",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.85,
+      "NO": 0.15
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.55,
+        "very_high": 0.3
+      },
+      "polarization": {
+        "very_low": 0.30000000000000004,
+        "low": 0.4000000000000001,
+        "high": 0.20000000000000004,
+        "very_high": 0.10000000000000002
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.4000000000000001,
+        "low": 0.30000000000000004,
+        "high": 0.20000000000000004,
+        "very_high": 0.10000000000000002
+      },
+      "susceptibility": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.3,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.7,
+        "polarization_score": 0.366667,
+        "herd_effect_score": 0.6,
+        "deliberation_quality_score": 0.333333,
+        "susceptibility_score": 0.5,
+        "convergence_score": 0.6,
+        "information_diversity_score": 0.433333,
+        "weighted_rubric_score": 0.529167
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "Public Benefit Corporation (PBC)",
+        "short_rationale": "OpenAI's restructuring plans have centered on converting to a Public Benefit Corporation to balance profit and mission."
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "Thrive Capital",
+        "short_rationale": "Thrive Capital led the $6.6B round and reportedly included conditions requiring restructuring to a for-profit structure."
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "California",
+        "short_rationale": "California's Attorney General has been most active in scrutinizing OpenAI's valuation and nonprofit asset transfers."
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.045000000000000005,
+    "rps": 0.0225,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.85,
+    "calibration_bracket": "0.75-1.0",
+    "weighted_rubric_score": 0.529167,
+    "yes_probability": 0.85,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  },
+  {
+    "event_id": "S7",
+    "unit_id": "S7_C_r1",
+    "condition": "C",
+    "repeat": 1,
+    "question": "",
+    "options": [],
+    "evidence_text": "",
+    "ground_truth": "YES",
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": "pending_fresh_read",
+    "evaluator_fallback_source": null,
+    "probabilities": {
+      "YES": 0.85,
+      "NO": 0.15
+    },
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.3
+      },
+      "polarization": {
+        "very_low": 0.19999999999999996,
+        "low": 0.3999999999999999,
+        "high": 0.29999999999999993,
+        "very_high": 0.09999999999999998
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.4,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.4,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.4,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.683333,
+        "polarization_score": 0.433333,
+        "herd_effect_score": 0.6,
+        "deliberation_quality_score": 0.566667,
+        "susceptibility_score": 0.566667,
+        "convergence_score": 0.683333,
+        "information_diversity_score": 0.566667,
+        "weighted_rubric_score": 0.597917
+      }
+    },
+    "micro_epistemic_mapping": {
+      "S7_q1_pbc_structure": {
+        "dominant_tag": "Public Benefit Corporation (PBC)",
+        "short_rationale": "The swarm's discussion centered on OpenAI's restructuring to a PBC, which is a for-profit entity with a public benefit mission."
+      },
+      "S7_q2_funding_condition": {
+        "dominant_tag": "Thrive Capital",
+        "short_rationale": "Thrive Capital was identified as the firm that made restructuring a condition of the $6.6B funding round."
+      },
+      "S7_q3_ag_scrutiny": {
+        "dominant_tag": "California",
+        "short_rationale": "California's Attorney General was most active in monitoring the fair-value negotiations, reflecting the state's regulatory interest."
+      }
+    },
+    "evaluation_status": "completed",
+    "brier": 0.045000000000000005,
+    "rps": 0.0225,
+    "directional_correct": 1,
+    "directional_accuracy": 1.0,
+    "calibration_hit": 1,
+    "calibration_predicted_probability": 0.85,
+    "calibration_bracket": "0.75-1.0",
+    "weighted_rubric_score": 0.597917,
+    "yes_probability": 0.85,
+    "evaluator_dimension_labels": null,
+    "evaluator_dimension_label_basis": null,
+    "evaluator_reliability_status": null,
+    "evaluator_noisy_dimensions": null
+  }
+]

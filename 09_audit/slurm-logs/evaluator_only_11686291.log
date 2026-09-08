@@ -1,0 +1,9 @@
+==================================================
+STARTING DEDICATED EVALUATOR JOB (DeepSeek-R1-14B)
+Port: 53319
+==================================================
+Traceback (most recent call last):
+  File "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ECN-HPC-DEPLOY/run_hpc_evaluator_standalone.py", line 25, in <module>
+    from app.benchmarks.scoring import (
+ImportError: cannot import name 'ranked_probability_score' from 'app.benchmarks.scoring' (/scratch/waves/users/mhnguyn2025@ec-nantes.fr/project_backup/MiroFish-Offline/backend/app/benchmarks/scoring.py)
+EVALUATOR JOB FINISHED SUCCESSFULLY!

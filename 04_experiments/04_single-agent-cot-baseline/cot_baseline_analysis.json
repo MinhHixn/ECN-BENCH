@@ -1,0 +1,143 @@
+{
+  "analysis_version": "2026-09-06",
+  "inference": {
+    "bootstrap_draws": 100000,
+    "seed": 7,
+    "unit": "event; all model readings retained together",
+    "estimand": "equal-weight mean over events and the four fixed campaigns",
+    "p_values": "not reported; no independent-unit or fractional-hit exact test",
+    "limitations": "Exploratory percentile intervals; event dependence, selection, and evaluator knowledge leakage remain unresolved."
+  },
+  "n_records": 240,
+  "arms": {
+    "Llama-3.1-8B": {
+      "identity_matched": true,
+      "swarm_model": "Llama-3.1-8B",
+      "single_accuracy": 0.7777777777777778,
+      "variants": {
+        "single": {
+          "mean": -0.1813056188160525,
+          "low": -0.36560149675764114,
+          "high": -0.019925125740276144,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "ensemble3": {
+          "mean": -0.20580769887922598,
+          "low": -0.38770354942560387,
+          "high": -0.04601498184665296,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "temperature0": {
+          "mean": -0.21522472636974324,
+          "low": -0.4116610248192574,
+          "high": -0.0426554222079486,
+          "n_events": 20,
+          "n_clusters": 20
+        }
+      }
+    },
+    "Qwen2.5-7B": {
+      "identity_matched": true,
+      "swarm_model": "Qwen2.5-7B",
+      "single_accuracy": 0.79,
+      "variants": {
+        "single": {
+          "mean": -0.029877906114768992,
+          "low": -0.1344847456901777,
+          "high": 0.08172413168394962,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "ensemble3": {
+          "mean": -0.06337582311321865,
+          "low": -0.15402291568225587,
+          "high": 0.02664784111521773,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "temperature0": {
+          "mean": -0.013325715237138602,
+          "low": -0.12353618581863043,
+          "high": 0.10537987274407143,
+          "n_events": 20,
+          "n_clusters": 20
+        }
+      }
+    },
+    "Mistral-8B": {
+      "identity_matched": false,
+      "swarm_model": "Mistral-7B",
+      "single_accuracy": 0.9116666666666666,
+      "variants": {
+        "single": {
+          "mean": -0.17007460061260932,
+          "low": -0.37092492664855825,
+          "high": 0.009951003714301796,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "ensemble3": {
+          "mean": -0.18783159858804235,
+          "low": -0.38378835032415337,
+          "high": -0.014731265913217533,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "temperature0": {
+          "mean": -0.16870120528197058,
+          "low": -0.37931763950704916,
+          "high": 0.03333626458598004,
+          "n_events": 20,
+          "n_clusters": 20
+        }
+      }
+    },
+    "Qwen3-14B": {
+      "identity_matched": false,
+      "swarm_model": "Qwen2.5-14B",
+      "single_accuracy": 0.8583333333333333,
+      "variants": {
+        "single": {
+          "mean": -0.008419480535097426,
+          "low": -0.11433816326842951,
+          "high": 0.09236822029782985,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "ensemble3": {
+          "mean": -0.01320264550785114,
+          "low": -0.11895398252091625,
+          "high": 0.08697006821096967,
+          "n_events": 20,
+          "n_clusters": 20
+        },
+        "temperature0": {
+          "mean": 0.017473055555555537,
+          "low": -0.08566806944444448,
+          "high": 0.10873010416666663,
+          "n_events": 20,
+          "n_clusters": 20
+        }
+      }
+    }
+  },
+  "pooled": {
+    "identity_matched": {
+      "mean": -0.10559176246541077,
+      "low": -0.22619624916882458,
+      "high": 0.00795064493419544,
+      "n_events": 20,
+      "n_clusters": 20
+    },
+    "all_four": {
+      "mean": -0.09741940151963208,
+      "low": -0.1986145963812913,
+      "high": -0.0006993500613541709,
+      "n_events": 20,
+      "n_clusters": 20
+    }
+  },
+  "all_four_single_accuracy": 0.8344444444444444
+}

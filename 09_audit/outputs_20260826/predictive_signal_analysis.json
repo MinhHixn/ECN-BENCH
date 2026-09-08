@@ -1,0 +1,136 @@
+{
+  "description": "Predictive-signal analysis for ECN-BENCH Section sec:predictive_signal.",
+  "clean_events": [
+    "C1",
+    "C5",
+    "C6",
+    "C8",
+    "C9",
+    "C11",
+    "C13",
+    "C14",
+    "C15",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S9",
+    "T2",
+    "T6",
+    "T8",
+    "T9"
+  ],
+  "models": {
+    "Llama-3.1-8B": {
+      "n_events": 20,
+      "dir_acc_B": 0.675,
+      "dir_acc_C": 0.5,
+      "dir_acc_A": 0.65,
+      "chance": 0.3264,
+      "exact_poisson_binomial_p_B_vs_chance": 0.0003461139242541153,
+      "brier_B": 0.5449,
+      "brier_C": 0.6133,
+      "delta_brier_C_minus_B": [
+        0.0685,
+        -0.0578,
+        0.208
+      ],
+      "delta_dir_acc_B_minus_C": [
+        0.175,
+        -0.025,
+        0.4
+      ]
+    },
+    "Mistral-7B": {
+      "n_events": 20,
+      "dir_acc_B": 0.85,
+      "dir_acc_C": 0.65,
+      "dir_acc_A": 0.9,
+      "chance": 0.3264,
+      "exact_poisson_binomial_p_B_vs_chance": 5.261381172839507e-07,
+      "brier_B": 0.3778,
+      "brier_C": 0.4413,
+      "delta_brier_C_minus_B": [
+        0.0635,
+        -0.1419,
+        0.2608
+      ],
+      "delta_dir_acc_B_minus_C": [
+        0.2,
+        -0.05,
+        0.45
+      ]
+    },
+    "Qwen2.5-7B": {
+      "n_events": 20,
+      "dir_acc_B": 0.85,
+      "dir_acc_C": 0.55,
+      "dir_acc_A": 0.85,
+      "chance": 0.3264,
+      "exact_poisson_binomial_p_B_vs_chance": 5.261381172839507e-07,
+      "brier_B": 0.3475,
+      "brier_C": 0.5203,
+      "delta_brier_C_minus_B": [
+        0.1728,
+        0.0732,
+        0.2706
+      ],
+      "delta_dir_acc_B_minus_C": [
+        0.3,
+        0.05,
+        0.55
+      ]
+    },
+    "Qwen2.5-14B": {
+      "n_events": 20,
+      "dir_acc_B": 0.9,
+      "dir_acc_C": 0.8,
+      "dir_acc_A": 0.85,
+      "chance": 0.3264,
+      "exact_poisson_binomial_p_B_vs_chance": 3.146701388888889e-08,
+      "brier_B": 0.2888,
+      "brier_C": 0.4317,
+      "delta_brier_C_minus_B": [
+        0.1429,
+        0.0598,
+        0.2337
+      ],
+      "delta_dir_acc_B_minus_C": [
+        0.1,
+        -0.1,
+        0.3
+      ]
+    }
+  },
+  "pooled": {
+    "n_units": 80,
+    "dir_acc_B": 0.8187,
+    "chance": 0.3264,
+    "exact_poisson_binomial_p": 3.746367492808367e-22,
+    "delta_brier_C_minus_B": [
+      0.1119,
+      0.0422,
+      0.1817
+    ],
+    "delta_dir_acc_B_minus_C": [
+      0.1938,
+      0.075,
+      0.3125
+    ],
+    "events_all_four_models_correct": [
+      "C1",
+      "C9",
+      "C11",
+      "C13",
+      "C15",
+      "S2",
+      "S7",
+      "T2",
+      "T8",
+      "T9"
+    ],
+    "events_all_four_models_wrong": []
+  }
+}

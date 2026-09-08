@@ -1,0 +1,67 @@
+{
+  "july_instrument": {
+    "label": "DeepSeek-R1-14B, local (Evaluator J)",
+    "n": 60,
+    "flat": 19,
+    "sub_n": 19,
+    "sub_flat": 19,
+    "modal": 0.456,
+    "p_overlap": null
+  },
+  "comparison": [
+    {
+      "label": "deepseek/deepseek-r1",
+      "n": 56,
+      "flat": 0,
+      "sub_n": 19,
+      "sub_flat": 0,
+      "modal": 0.6674964285714285,
+      "p_overlap": null
+    },
+    {
+      "label": "deepseek/deepseek-r1-distill-llama-70b",
+      "n": 54,
+      "flat": 0,
+      "sub_n": 15,
+      "sub_flat": 0,
+      "modal": 0.6748148148148148,
+      "p_overlap": null
+    },
+    {
+      "label": "mistralai/ministral-14b-2512",
+      "n": 60,
+      "flat": 0,
+      "sub_n": 19,
+      "sub_flat": 0,
+      "modal": 0.5566666666666666,
+      "p_overlap": null
+    },
+    {
+      "label": "qwen/qwen3-14b",
+      "n": 58,
+      "flat": 8,
+      "sub_n": 19,
+      "sub_flat": 6,
+      "modal": 0.5606021879246017,
+      "p_overlap": 0.01155339997239853
+    },
+    {
+      "label": "qwen/qwen3-32b",
+      "n": 57,
+      "flat": 0,
+      "sub_n": 19,
+      "sub_flat": 0,
+      "modal": 0.5767685881370092,
+      "p_overlap": null
+    },
+    {
+      "label": "deepseek/deepseek-r1 (pipeline rubric prompt)",
+      "n": 60,
+      "flat": 0,
+      "sub_n": 19,
+      "sub_flat": 0,
+      "modal": 0.6348333333333334,
+      "p_overlap": null
+    }
+  ]
+}

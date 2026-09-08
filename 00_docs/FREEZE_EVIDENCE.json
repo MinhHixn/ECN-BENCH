@@ -1,0 +1,104 @@
+{
+  "review_date": "2026-09-08",
+  "package_version": "1.2.1",
+  "numerical_checks": {
+    "python": "3.14.2",
+    "integrity": "passed",
+    "secret_scan": "passed",
+    "reanalysis": "passed: both JSON outputs and both TeX tables match both released copies",
+    "analysis_input_hashes": "passed",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "tests_passed": 12,
+    "figure_byte_identity": true
+  },
+  "pdf_builds": [
+    {
+      "paper": "ecn_bench_paper",
+      "pages": 78,
+      "blank_pages": [],
+      "same_extracted_text_as_previous_pdf": true,
+      "unresolved_references": [],
+      "font_warnings": [
+        "LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined",
+        "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+      ],
+      "overfull_boxes": 0,
+      "underfull_boxes": 3
+    },
+    {
+      "paper": "ecn_bench_paper_short",
+      "pages": 10,
+      "blank_pages": [],
+      "same_extracted_text_as_previous_pdf": true,
+      "unresolved_references": [],
+      "font_warnings": [
+        "LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined",
+        "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+      ],
+      "overfull_boxes": 0,
+      "underfull_boxes": 1
+    },
+    {
+      "paper": "ecn_bench_paper_conf",
+      "pages": 8,
+      "blank_pages": [],
+      "same_extracted_text_as_previous_pdf": true,
+      "unresolved_references": [],
+      "font_warnings": [
+        "LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined",
+        "LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined",
+        "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+      ],
+      "overfull_boxes": 0,
+      "underfull_boxes": 25
+    }
+  ],
+  "source_comparison": {
+    "byte_identical_retained_files": 630,
+    "changed_paths": [
+      "03_traces/README.md",
+      "07_pipeline/hpc/_add_run2_for_kappa.py",
+      "07_pipeline/repair/build_dataset_and_run_phase2.py",
+      "07_pipeline/repair/run_23_events_direct_openrouter.py",
+      "07_pipeline/slurm/run_23_events_waves_openrouter.slurm",
+      "07_pipeline/slurm/run_6_events_qwen14b_fix.slurm",
+      "08_paper/ecn_bench_paper.pdf",
+      "08_paper/ecn_bench_paper_conf.pdf",
+      "08_paper/ecn_bench_paper_short.pdf",
+      "checksums.sha256",
+      "CITATION.cff",
+      "LICENSE.txt",
+      "MANIFEST.md",
+      "README.md"
+    ],
+    "scientific_inputs_outputs_figures_and_analysis_sources": "byte-identical"
+  },
+  "trace_archive": {
+    "archive": "ECN-BENCH-traces-2026-09-08.zip",
+    "archive_sha256": "b6dfc6dd3c6a545723632de557f538ba16768535438dc8f1634f5fd9251c7b7f",
+    "archive_bytes": 147767778,
+    "public_url": null,
+    "status": "prepared locally; not deposited",
+    "file_count": 1861,
+    "uncompressed_bytes": 2384631883,
+    "verification": "Every ZIP member streamed and SHA-256 compared with its source file."
+  },
+  "current_document_links": "passed",
+  "citation_yaml_and_basic_fields": "passed; not a full external CFF schema validation",
+  "publication": "prepared locally; owner metadata/rights review and actual deposition remain",
+  "limits": [
+    "No live credential validation",
+    "No independent adjudication of all real-world outcomes",
+    "No full online bibliography review",
+    "Hosted GitHub Actions has not run yet"
+  ]
+}

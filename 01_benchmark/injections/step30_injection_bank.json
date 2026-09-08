@@ -1,0 +1,437 @@
+{
+  "version": "1.0",
+  "use_at_step": 30,
+  "conditions": {
+    "B_with_sim": "inject relevant_update for the matched event_id",
+    "C_null_injection": "inject null_update for the matched event_id"
+  },
+  "format_notes": {
+    "intent": "pre-authored event-specific perturbation text bank",
+    "rule_relevant": "breaking-news style, directly related to that event question",
+    "rule_null": "structurally identical style but unrelated content"
+  },
+  "events": [
+    {
+      "event_id": "C1",
+      "question": "Which party will win the 2024 US Presidential Election?",
+      "relevant_update": {
+        "headline": "Late voter-modeling shows historic surge in rural participation rates",
+        "body": "Aggregate data from early-voting returns in key 'Blue Wall' counties indicates a 12% increase in participation among non-college-educated voters versus 2020 baselines. This shift in demographic composition suggests a potential erosion of the traditional urban firewall required for an incumbent-party path.",
+        "signals": ["rural turnout surge", "demographic participation shift", "urban firewall erosion"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no election relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C2",
+      "question": "Who will be the 2024 Democratic presidential nominee?",
+      "relevant_update": {
+        "headline": "DNC Rules Committee approves immediate transfer of primary campaign assets",
+        "body": "A new procedural directive has authorized the full consolidation of existing campaign funds and donor databases for the sitting Vice President. Legal analysts note that this removal of financial and organizational friction logically positions the VP as the single viable successor following recent leadership segments.",
+        "signals": ["asset transferability", "succession friction removal", "organizational consolidation"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no nomination relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C3",
+      "question": "Which party wins the most seats in the 2024 French snap legislative election?",
+      "relevant_update": {
+        "headline": "Tactical withdrawals for 'Republican Front' reach critical threshold",
+        "body": "Official candidate filings for the second round confirm that over 210 centrist and left-wing candidates have exited three-way races. This unprecedented coordination effectively creates 1:1 matchups against the leading party, mathematically favoring a distribution where the anti-incumbent coalition maximizes seat conversion.",
+        "signals": ["coordinated withdrawals", "seat conversion math", "anti-RN front consolidation"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no French-election relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C4",
+      "question": "Which party will win the most seats in the 2024 UK general election?",
+      "relevant_update": {
+        "headline": "MRP modeling shows Conservative vote-share collapse in suburban bellwethers",
+        "body": "Constituency-level analysis indicates that Conservative-to-Reform UK vote leakage has exceeded 15% in high-priority seats. This fragmentation of the right-wing base implies a historically efficient seat-win ratio for the primary opposition, aligning with 1997-style landslide trajectories.",
+        "signals": ["right-wing base fragmentation", "Reform UK vote leakage", "incumbent-party swing inefficiency"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no UK-election relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C5",
+      "question": "What will be the balance of power after the 2024 US election?",
+      "relevant_update": {
+        "headline": "Cross-ballot correlation reaches multi-decade high in battleground states",
+        "body": "Late-cycle state polling across OH, MT, and PA reveals a 0.94 correlation between presidential preference and down-ballot choices. This near-total disappearance of ticket-splitting implies that a top-of-ticket lead mathematically favors a uniform partisan transition across both the executive and legislative branches.",
+        "signals": ["vanishing ticket-splitting", "high partisan correlation", "unified coattail effect"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no balance-of-power relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C6",
+      "question": "How many Fed rate cuts in 2025?",
+      "relevant_update": {
+        "headline": "Core PCE inflation components show sticky 3-month horizontal trend",
+        "body": "The latest Personal Consumption Expenditures (PCE) report highlights persistent price increases in the core services and shelter sectors. Analysts suggest this lack of disinflationary momentum favors a 'higher-for-longer' policy path, where the FOMC remains constrained to a minimal adjustment cycle.",
+        "signals": ["sticky service inflation", "shelter cost persistence", "hawkish policy constraints"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Fed-policy relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C7",
+      "question": "Which country will win the 2024 UEFA European Championship?",
+      "relevant_update": {
+        "headline": "Spain enters final with statistically dominant expected-goals (xG) profile",
+        "body": "Opta tracking metrics confirm that the Spanish side has posted a tournament-leading +2.1 xG differential per match. Having already navigated a path through the highest-ranked historical opponents with an unbeaten win record, Spain's tactical conversion rate logically points toward a title-winning efficiency.",
+        "signals": ["xG differential dominance", "unbeaten opponent path", "tactical conversion efficiency"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no football relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C8",
+      "question": "Which AI company will first release a model scoring >90% on MMLU?",
+      "relevant_update": {
+        "headline": "OpenAI technical paper unveils 'System 2' inference-time scaling breakthrough",
+        "body": "The newly detailed 'Strawberry' architecture demonstrates a logarithmic correlation between test-time compute and multi-step reasoning accuracy. Industry analysts note that this scaling pattern has historically preceded benchmark breakthroughs in 4 of 5 prior model generations in high-level knowledge evaluations.",
+        "signals": ["inference-time compute gains", "logic-over-scale shift", "reasoning-layer optimization"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no AI-benchmark relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C9",
+      "question": "Which countries will the US agree trade deals with before July 2025?",
+      "scenario_note": "Hypothetical policy timeline per seed context",
+      "source_hint": "Based on USTR-UK joint technical statement, Q1 2025",
+      "relevant_update": {
+        "headline": "USTR and UK Department for Business & Trade finalize 'Atlantic Declaration' annexes",
+        "body": "The latest joint technical statement confirms full regulatory alignment on digital services and critical minerals data points. Analysts note that this mirrors the exact fast-track legislative window required for bilateral working groups to finalize technical trade annexes by early 2025.",
+        "signals": ["regulatory alignment data", "UK-US bilateral momentum", "fast-track window synchronization"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no trade-deal relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C10",
+      "question": "Who will be the next UK Prime Minister after the 2024 election?",
+      "relevant_update": {
+        "headline": "Exit poll methodology suggests high 'efficient' vote distribution for opposition",
+        "body": "Early analysis of seat-level declaration indicators indicates a significant collapse in the incumbent party's share in suburban 'bellwether' districts. This specific fragmentation of the governing base mathematically favors a seat-count distribution that aligns with a Starmer-led transition.",
+        "signals": ["efficient vote distribution", "incumbent bellwether collapse", "opposition seat-win math"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no UK-PM relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C11",
+      "question": "Who will win the 2024 Nobel Peace Prize?",
+      "relevant_update": {
+        "headline": "Nobel Committee signals prioritization of 80th anniversary nuclear legacy indicators",
+        "body": "International observers have noted an unusual thematic focus from Oslo on the legacy of atomic-bomb survivor advocacy and the increasing risk of nuclear escalation in global security frameworks. This prioritization suggests a logically stronger probability for Hidankyo-aligned organizations in the current cycle.",
+        "signals": ["nuclear taboo anniversary", "survivor-advocacy theme segments", "Oslo security-risk focus"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Nobel relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C12",
+      "question": "Which team will win the 2024 NBA Championship?",
+      "relevant_update": {
+        "headline": "Boston Celtics post highest regular-season net rating in franchise history",
+        "body": "Advanced tracking data shows the Celtics entering the postseason with a league-leading +11.7 point differential and an offensive rating that significantly outpaces all potential Western Conference finalists. Historical correlation suggests this level of regular-season efficiency strongly favors a title-winning outcome.",
+        "signals": ["historic net rating", "offensive efficiency lead", "postseason path dominance"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no NBA relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C13",
+      "question": "Who will win the 2025 Oscar for Best Picture?",
+      "relevant_update": {
+        "headline": "'Anora' sweeps major guild awards with SAG and PGA momentum",
+        "body": "The latest results from the Producers Guild and Screen Actors Guild awards have converged on a single front-runner. Historical Academy data confirms that a simultaneous win at both guilds implies an 85% probability for the final Best Picture ceremony.",
+        "signals": ["PGA/SAG consensus", "guild-award correlation", "Palme d'Or winner momentum"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Oscars relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C14",
+      "question": "Which party will form the next government after the 2025 German federal election?",
+      "relevant_update": {
+        "headline": "FDP and Green coalition friction reaches breaking point over debt-brake",
+        "body": "Internal government deadlock regarding the 2025 fiscal budget has triggered a 12-point polling surge for the main opposition Union bloc. Voters in key industrial regions have signaled a priority shift toward economic stability, which traditionally favors a CDU/CSU governing framework.",
+        "signals": ["coalition base fragmentation", "debt-brake deadlock", "opposition polling surge"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no German-coalition relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "C15",
+      "question": "How many total rate cuts will the Fed deliver in 2024?",
+      "relevant_update": {
+        "headline": "PCE inflation trends toward 2.2% as labor demand shows visible cooling",
+        "body": "The latest Personal Consumption Expenditures (PCE) indicators indicate that inflation is aligning with the Fed's target faster than prior projections. Coupled with a cooling Non-Farm Payrolls trend, this macro data logically suggests a three-cut adjustment cycle by year-end.",
+        "signals": ["PCE target convergence", "labor market normalization", "easing-cycle data-support"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no 2024 Fed-cut relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S2",
+      "question": "Which party will control the US Senate after the 2024 election?",
+      "relevant_update": {
+        "headline": "West Virginia and Montana seat-modeling data points show incumbent collapse",
+        "body": "Late-cycle generic ballot data in deep-red states indicates that the current majority party has no viable path to retain seats in WV or MT. Mathematically, this lack of offset seats implies a 51-seat flip probability for the primary opposition.",
+        "signals": ["red-state incumbent lag", "majority seat-math shift", "WV/MT flip probability"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Senate-control relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S3",
+      "question": "Will Republicans achieve a red sweep in 2024 (Presidency + House + Senate)?",
+      "relevant_update": {
+        "headline": "National swing favorability reaches +4.5 across 'toss-up' districts",
+        "body": "A final cross-tab analysis of presidential swing-state leads and the generic congressional ballot shows a uniform national shift. This high correlation suggests that a top-of-ticket lead is likely to carry over 90% of marginal down-ballot races.",
+        "signals": ["uniform national swing", "generic ballot shift", "down-ballot correlation"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no red-sweep relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S4",
+      "question": "Will total 2024 presidential election turnout fall in the 155–160 million bracket?",
+      "relevant_update": {
+        "headline": "National voter registration reaches 212 million as early participation stabilizes",
+        "body": "Aggregate data from state election boards confirms that while registration has peaked, the effective participation rate is trending at 74.5% of active files, aligning with the mid-tier projection bracket rather than record-shattering or recessive scenarios.",
+        "signals": ["participation rate stabilization", "registration-to-turnout ratio", "mid-bracket convergence"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no turnout relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S5",
+      "question": "Will the GOP popular vote margin of victory be less than 1.5%?",
+      "relevant_update": {
+        "headline": "Democratic underperformance in California and New York shifts national spread",
+        "body": "Certified results from high-population coastal strongholds indicate that the Democratic candidate's margin compressed by 6% compared to 2020, significantly reducing the standard popular-vote 'firewall' traditionally held by the party.",
+        "signals": ["coastal margin compression", "popular vote firewall erosion", "national spread narrowing"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no vote-margin relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S6",
+      "question": "Which party wins the most seats in the 2024 Austrian legislative election?",
+      "relevant_update": {
+        "headline": "Inflation and migration emerge as primary drivers in final Austrian exit interviews",
+        "body": "Sociological tracking of the final week of the campaign shows that 'security and cost-of-living' has surpassed all other voter concerns, a thematic priority that historically correlates with high seat-conversion for the primary opposition platform.",
+        "signals": ["thematic voter priority", "opposition platform resonance", "seat conversion correlation"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Austrian-election relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S7",
+      "question": "Will OpenAI become a for-profit company in 2025?",
+      "relevant_update": {
+        "headline": "OpenAI board reviews governance restructuring draft ahead of Series B round",
+        "body": "Per media reports citing leaked internal documents, the organization is finalizing a 'commercial conversion' roadmap to simplify its corporate hierarchy. Industry analysts note that such a structural transition is typically a prerequisite for the multi-billion dollar equity segments required for their 2025 compute scaling targets.",
+        "signals": ["equity issuance data", "governance simplification", "commercial roadmap priority"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no OpenAI-structure relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "S9",
+      "question": "Will there be a US government shutdown in early 2025?",
+      "relevant_update": {
+        "headline": "House Freedom Caucus issues list of non-negotiable border-security riders",
+        "body": "A block of 20 lawmakers has signaled they will withhold support for any Continuing Resolution segments that lack specific policy amendments. Given the narrowest majority in modern history, this legislative friction logically implies an elevated short-term risk for a funding lapse at the January deadline.",
+        "signals": ["legislative deadlock indicators", "rider disagreement friction", "majority-leverage dynamics"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no shutdown relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T1",
+      "question": "Will the Fed cut rates by 25bps at its November 2024 meeting?",
+      "relevant_update": {
+        "headline": "BLS report shows 12k NFP print as hurricane noise clouds employment data",
+        "body": "The October Non-Farm Payrolls significantly missed consensus expectations. While distorted by temporary events, the cooling trend in 'quit rates' and wage growth data points has provided the FOMC with the necessary coverage for a standard normalization move.",
+        "signals": ["NFP headline miss", "wage growth cooling signals", "policy adjustment coverage"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no Nov-Fed relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T2",
+      "question": "Will there be a US government shutdown before January 1 2025?",
+      "relevant_update": {
+        "headline": "Senate reaches bipartisan agreement on CR extension segments through March",
+        "body": "Legislative leaders have confirmed a procedural deal to advance a funding resolution with a significant majority. This neutralization of fringe-block influence logically suggests that the probability of a funding lapse has resolved toward zero for the remainder of the calendar year.",
+        "signals": ["procedural deal segments", "CR passage probability", "funding-lapse risk resolution"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no pre-2025 shutdown relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T3",
+      "question": "Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)",
+      "relevant_update": {
+        "headline": "MicroStrategy confirms record-breaking $5.4B BTC purchase segment",
+        "body": "Unprecedented institutional buy-side pressure has exhausted sell-side liquidity on major exchanges. With spot ETF daily inflows surpassing $1.2B, current volume indicators suggest a high-velocity momentum shift toward psychological multi-year resistance levels.",
+        "signals": ["institutional buy-side data", "sell-side liquidity exhaustion", "short-squeeze dynamics"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no BTC-threshold relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T4",
+      "question": "Will the October 2024 CPI print below 2.5% year-over-year?",
+      "relevant_update": {
+        "headline": "Rent and insurance premiums maintain high sticky-floors in CPI model",
+        "body": "While energy prices have provided a modest drag, the core services component—driven by shelter cost realizations—suggests that headline inflation segments will resist a sub-2.5% convergence in the upcoming print.",
+        "signals": ["shelter cost lag indicators", "core services stickiness", "CPI floor resistance"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no CPI relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T5",
+      "question": "Will Ethereum spot ETFs see positive net inflows in their first week of trading?",
+      "relevant_update": {
+        "headline": "BlackRock iShares Ethereum Trust (ETHA) signals strong day-one seed segments",
+        "body": "Initial subscription data for the newly launched spot products indicates that institutional 'day-zero' demand is sufficient to offset the anticipated outflows from legacy high-fee vehicles. This net-positive demand signal logically supports a week-one inflow trajectory.",
+        "signals": ["seed demand signals", "legacy outflow offset", "institutional adoption momentum"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no ETH-ETF relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T6",
+      "question": "Will OpenAI release GPT-5 in 2024?",
+      "relevant_update": {
+        "headline": "OpenAI confirms rollout of 'Strawberry' o1 phases as reasoning focus",
+        "body": "Product messaging from the lab has shifted toward a reasoning-centric family of models (o1). Internal sources confirm that the next major frontier generational jump is not part of the Q4 release segments, prioritizing logical depth over model scale for the current cycle.",
+        "signals": ["o1-priority focus data", "reasoning-vs-scale shift", "frontier-release timeline lag"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no GPT-5 relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T8",
+      "question": "Will Bitcoin hit $110k in 2025?",
+      "relevant_update": {
+        "headline": "Post-election shifts in SEC/CFTC leadership + spot ETF approval framework drive institutional re-allocation signals",
+        "body": "Regulatory changes and new leadership have led major investment banks to re-evaluate their 2025 price targets. Analysts cite a structural transition phase from 'speculative asset' to 'reserve-grade digital commodity,' logically favoring a test of the $110,000 threshold.",
+        "signals": ["oversight framework change", "commodity-status signals", "price-target re-evaluation"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no BTC-110k relevance", "administrative rollout only"]
+      }
+    },
+    {
+      "event_id": "T9",
+      "question": "Will OpenAI announce it has achieved AGI in 2025?",
+      "relevant_update": {
+        "headline": "New internal benchmarks focus on 'System 2' reasoning segments",
+        "body": "Research goals for 2025 emphasize the perfection of multi-step logical verification phases. While achieving superhuman performance in specific domains, the technical threshold for a unified 'General' declaration remains a long-term research objective rather than a current product milestone.",
+        "signals": ["domain-specific superhumanity", "reasoning perfection indicators", "declarative-gap persistence"]
+      },
+      "null_update": {
+        "headline": "Regional water utility announces billing software migration",
+        "body": "A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.",
+        "signals": ["operations notice", "no AGI-claim relevance", "administrative rollout only"]
+      }
+    }
+  ]
+}

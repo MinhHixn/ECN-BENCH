@@ -1,0 +1,2760 @@
+[
+  {
+    "event_id": "T3",
+    "unit_id": "T3_A_r1",
+    "question": "Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)",
+    "ground_truth": "$100k first",
+    "options": [
+      "$80k first",
+      "$100k first"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T3/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "$80k first": 0.95,
+      "$100k first": 0.05
+    },
+    "brier": 1.805,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.483333,
+    "yes_probability": null,
+    "rps": 0.9025,
+    "calibration_bracket": "0.75-1",
+    "calibration_predicted_probability": 0.95,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.7,
+        "very_high": 0.15
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.1,
+        "high": 0.1,
+        "very_high": 0.6
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "susceptibility": {
+        "very_low": 0.6,
+        "low": 0.3,
+        "high": 0.09999999999999999,
+        "very_high": 0.0
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "information_diversity": {
+        "very_low": 1.0,
+        "low": 0.0,
+        "high": 0.0,
+        "very_high": 0.0
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.65,
+        "polarization_score": 0.7,
+        "herd_effect_score": 0.566667,
+        "deliberation_quality_score": 0.566667,
+        "susceptibility_score": 0.166667,
+        "convergence_score": 0.566667,
+        "information_diversity_score": 0.0,
+        "weighted_rubric_score": 0.483333
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T3_q1_halving_lag": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q2_institutional": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q3_psychology": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# Bitcoin $80k vs $100k: Pre-Resolution Intelligence Dossier\n\n**Question:** Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)  \n**Market Opened:** November 2025  \n**Information Cutoff:** December 31, 2025\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** Entering the final two months of 2025, Bitcoin was consolidating below $80,000 following a highly volatile post-halving cycle. This market presents a directional probability test: assuming a breakout occurs, will the asset respect traditional order-book resistance ($80k), or will a structural market anomaly propel it instantly to the ultimate psychological barrier ($100k)?\n\n**Resolution Contract:** The market resolves \"80k first\" if, at any point between the market open and the resolution date, the spot price of Bitcoin reaches or exceeds $80,000.00 before it reaches $100,000.00. It resolves \"100k first\" if the price touches $100,000.00 without having previously touched $80,000.00 within the market window. \n- *Measurement Standard:* Resolution is strictly based on the spot price recorded on a designated, high-liquidity consensus exchange (e.g., Coinbase or a blend of top-tier indices as specified by the market creator). Fleeting, localized \"flash spikes\" on illiquid, secondary exchanges do not trigger resolution.\n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: Cryptocurrency volatility allows for extreme price discovery, but the mechanics of order book liquidity strongly dictate sequential price action.*\n- **Current Price Baseline (Early Nov 2025):** Trading in the $70,000 to $78,000 range.\n- **Distance to $80k Threshold:** A relatively standard ~3% to 14% price movement.\n- **Distance to $100k Threshold:** A massive ~28% to 42% continuous, parabolic surge.\n- **Market Implied Probability:** Overwhelmingly favors \"$80k first\" (>95%), reflecting the physical reality of market trading mechanics.\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **April 2024:** The Bitcoin Halving occurs, cutting the block reward by 50%. Historically, peak cycle euphoria occurs 12 to 18 months post-halving (landing exactly in the late-2025 window).\n- **January 2025:** The approval of US Spot ETFs from major asset managers (BlackRock, Fidelity) fundamentally alters market structure, introducing massive, continuous, and relatively stable institutional bid pressure.\n- **Summer 2025:** Corporate treasury adoption accelerates (the \"MicroStrategy effect\"), with multiple public companies issuing debt to acquire BTC, establishing a high structural price floor in the $60k-$70k range.\n- **November 2025:** Bitcoin consolidates just below its previous all-time highs, with macro liquidity conditions (Fed rate cuts) providing a supportive environment for a breakout.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The Physics of the Order Book:**\nFor Bitcoin to hit $100,000 *before* hitting $80,000, it must experience a \"gap up\"—a scenario where the price jumps instantly from $79,999 to $100,000 without a single trade executing in between.\n- In traditional equities (which close overnight), a stock can gap up at the morning bell due to overnight news. \n- Bitcoin trades 24/7/365. For a gap of $20,000 to occur in a continuous market, the entire ask side (sell orders) of the global order book between $80k and $100k would have to be instantaneously vaporized by a single, monolithic market buy order. \n\n**The Institutional Dampener:**\nPrior to 2024, the crypto market was illiquid and prone to massive flash rallies. The introduction of Spot ETFs and high-frequency market makers has drastically deepened liquidity. This makes massive, instantaneous price gaps mathematically nearly impossible under normal trading conditions.\n\n## 5.0 Market Sentiment & Psychological Barriers\n\n**The Gravity of Round Numbers:**\n- **$80,000:** A logical, near-term technical resistance level. Option market data shows significant open interest clustering around $75k-$80k.\n- **$100,000:** The ul"
+  },
+  {
+    "event_id": "T3",
+    "unit_id": "T3_B_r1",
+    "question": "Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)",
+    "ground_truth": "$100k first",
+    "options": [
+      "$80k first",
+      "$100k first"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T3/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "$80k first": 0.6,
+      "$100k first": 0.4
+    },
+    "brier": 0.72,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.633333,
+    "yes_probability": null,
+    "rps": 0.36,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.6,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.3
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "information_diversity": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.3
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.666667,
+        "polarization_score": 0.533333,
+        "herd_effect_score": 0.666667,
+        "deliberation_quality_score": 0.666667,
+        "susceptibility_score": 0.666667,
+        "convergence_score": 0.666667,
+        "information_diversity_score": 0.533333,
+        "weighted_rubric_score": 0.633333
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.45122358221969405,
+      0.7582766571931678,
+      0.46135211284822797,
+      0.46135211284822797,
+      0.47076098625977714,
+      0.47076098625977714,
+      0.46113038228963377,
+      0.46113038228963377,
+      0.48442312171718244
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T3_q1_halving_lag": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q2_institutional": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q3_psychology": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\npost strictly in English only.', 'mbti': 'ESTJ', 'gender': 'male', 'age': 50, 'country': 'Sweden'}\n{'user_profile': '- Worldview: Objective observer...\\n- Motivation: Inform the public...\\n- Style: Inquisitive...\\n- Biases: Triggered by sensationalism.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 35, 'country': 'South Korea'}\n{'user_profile': '- Worldview: Pragmatic capitalism...\\n- Motivation: Maximize shareholder value...\\n- Style: Strategic...\\n- Biases: Triggered by regulatory burdens.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 48, 'country': 'Germany'}\n{'user_profile': '- Worldview: Future-oriented innovator...\\n- Motivation: Disrupt traditional finance...\\n- Style: Visionary...\\n- Biases: Triggered by outdated systems.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFP', 'gender': 'female', 'age': 30, 'country': 'China'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T3_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 159.1seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 172.4seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R0][reddit] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R9][twitter] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R9][reddit] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R12][twitter] Emily Davis #213: Belief check: YES Probability = 0.58\n[R12][twitter] Sophia Nguyen #38: Belief check: YES Probability = 0.45\n[R12][twitter] Megan Carter #195: Belief check: YES Probability = 0.45\n[R12][twitter] Sara Kim #188: Belief check: YES Probability = 0.45\n[R12][twitter] David Lee #95: Belief check: YES Probability = 0.45\n[R12][twitter] John Doe #279: Belief check: YES Probability = 0.45\n[R12][twitter] John Lee #226: Belief check: YES Probability = 0.45\n[R12][twitter] Lisa Ng #103: Belief check: YES Probability = 0.75\n[R12][twitter] Jordan Smith #100: Belief check: YES Probability = 0.75\n[R12][twitter] John Doe #150: Belief check: YES Probability = 0.58\n[R12][twitter] Hanna Mikkelsen #115: Belief check: YES Probability = 0.35\n[R12][twitter] Emily Carter #229: Belief check: YES Probability = 0.45\n[R12][twitter] Robert Lee #99: Belief check: YES Probability = 0.35\n[R12][twitter] John Doe #90: Belief check: YES Probability = 0.45\n[R12][twitter] Mark Pennington #198: Belief check: YES Probability = 0.45\n[R12][twitter] The Federal Trade Commission #27: Belief check: YES Probability = 0.45\n[R12][twitter] Elena Vasiljeva #282: Belief check: YES Probability = 0.45\n[R12][twitter] Eve Davis #6: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Chen #160: Belief check: YES Probability = 0.65\n[R12][twitter] Dawn Lee #128: Belief check: YES Probability = 0.45\n[R12][twitter] Luca Rossi #88: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #154: Belief check: YES Probability = 0.75\n[R12][twitter] Rajesh Singh #219: Belief check: YES Probability = 0.45\n[R12][twitter] David Lee #275: Belief check: YES Probability = 0.75\n[R12][twitter] Jane Doe #61: Belief check: YES Probability = 0.58\n[R12][twitter] Dr. Chen Wei #82: Belief check: YES Probability = 0.45\n[R12][twitter] Emily Chen #169: Belief check: YES Probability = 0.45\n[R12][twitter] The Bank of England #26: Belief check: YES Probability = 0.45\n[R12][twitter] Felicity Moore #79: Belief check: YES Probability = 0.45\n[R12][twitter] Rachel Zhao #142: Belief check: YES Probability = 0.75\n[R12][twitter] Alice Johnson #2: Belief check: YES Probability = 0.45\n[R12][twitter] Emily Jones #135: Belief check: YES Probability = 0.45\n[R12][twitter] Lisa Chen #66: Belief check: YES Probability = 0.75\n[R12][twitter] Karen Johnson #165: Belief check: YES Probability = 0.45\n[R12][twitter] Erik Hansson #238: Belief check: YES Probability = 0.35\n[R12][twitter] Stanford University #20: Belief check: YES Probability = 0.45\n[R12][twitter] Ahmed Hassan #193: Belief check: YES Probability = 0.45\n[R12][twitter] Linda Chen #130: Belief check: YES Probability = 0.45\n[R12][twitter] Samir Khan #263: Belief check: YES Probability = 0.45\n[R12][twitter] Elias Kim #78: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Martinez #251: Belief check: YES Probability = 0.45\n[R12][twitter] Michael Kim #37: Belief check: YES Probability = 0.75\n[R12][twitter] David Clark #244: Belief check: YES Probability = 0.58\n[R12][twitter] Fidelity Investments #17: Belief check: YES Probability = 0.35\n[R12][twitter] Carlos Rodriguez #47: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Johnson #56: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #40: Belief check: YES Probability = 0.75\n[R12][twitter] Sara Patel #162: Belief check: YES Probability = 0.45\n[R12][twitter] The International Monetary Fund #23: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Ramirez #201: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Amanda Carter #290: Belief check: YES Probability = 0.45\n[R12][twitter] Rajiv Patel #133: Belief check: YES Probability = 0.45\n[R12][twitter] Michael Lee #106: Belief check: YES Probability = 0.45\n[R12][twitter] Professor Lee Park #291: Belief check: YES Probability = 0.45\n[R15][twitter] John Doe #0: Unprecedented institutional buy-side pressure has exhausted sell-side liquidity on major exchanges. With spot ETF daily inflows surpassing $1.2B, current volume indicators suggest a high-velocity momentum shift toward psychological multi-year resistance levels.\n[R15][reddit] John Doe #0: Unprecedented institutional buy-side pressure has exhausted sell-side liquidity on major exchanges. With spot ETF daily inflows surpassing $1.2B, current volume indicators suggest a high-velocity momentum shift toward psychological multi-year resistance levels."
+  },
+  {
+    "event_id": "T3",
+    "unit_id": "T3_C_r1",
+    "question": "Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)",
+    "ground_truth": "$100k first",
+    "options": [
+      "$80k first",
+      "$100k first"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T3/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "$80k first": 0.6,
+      "$100k first": 0.4
+    },
+    "brier": 0.72,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.548611,
+    "yes_probability": null,
+    "rps": 0.36,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.6,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "polarization": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.5,
+        "very_high": 0.1
+      },
+      "polarization": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.4,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.3333333333333333,
+        "low": 0.6666666666666666,
+        "high": 0.0,
+        "very_high": 0.0
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.533333,
+        "polarization_score": 0.566667,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.633333,
+        "susceptibility_score": 0.633333,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.222222,
+        "weighted_rubric_score": 0.548611
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.4341923447577578,
+      0.7582766571931678,
+      0.45966946939742537,
+      0.45966946939742537,
+      0.4616249732515525,
+      0.4616249732515525,
+      0.45729242778340384,
+      0.45729242778340384,
+      0.472279445218936
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "$80k first": 0.5,
+          "$100k first": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T3_q1_halving_lag": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q2_institutional": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T3_q3_psychology": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\npost strictly in English only.', 'mbti': 'ESTJ', 'gender': 'male', 'age': 50, 'country': 'Sweden'}\n{'user_profile': '- Worldview: Objective observer...\\n- Motivation: Inform the public...\\n- Style: Inquisitive...\\n- Biases: Triggered by sensationalism.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 35, 'country': 'South Korea'}\n{'user_profile': '- Worldview: Pragmatic capitalism...\\n- Motivation: Maximize shareholder value...\\n- Style: Strategic...\\n- Biases: Triggered by regulatory burdens.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 48, 'country': 'Germany'}\n{'user_profile': '- Worldview: Future-oriented innovator...\\n- Motivation: Disrupt traditional finance...\\n- Style: Visionary...\\n- Biases: Triggered by outdated systems.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFP', 'gender': 'female', 'age': 30, 'country': 'China'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T3_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 157.4seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 166.4seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R0][reddit] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R9][twitter] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R9][reddit] John Doe #0: Will Bitcoin hit $80k or $100k first? (Nov–Dec 2025 window)\n[R12][twitter] Carlos Rodriguez #171: Belief check: YES Probability = 0.45\n[R12][twitter] Richard Black #34: Belief check: YES Probability = 0.45\n[R12][twitter] Jane Smith #121: Belief check: YES Probability = 0.45\n[R12][twitter] Emily Jones #135: Belief check: YES Probability = 0.45\n[R12][twitter] David Jr. #127: Belief check: YES Probability = 0.75\n[R12][twitter] Antonio Martinez #55: Belief check: YES Probability = 0.45\n[R12][twitter] The Securities and Exchange Commission #24: Belief check: YES Probability = 0.45\n[R12][twitter] Marina Petrova #177: Belief check: YES Probability = 0.45\n[R12][twitter] Robert Lee #214: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #5: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Nguyen #224: Belief check: YES Probability = 0.45\n[R12][twitter] Elena Martinez #85: Belief check: YES Probability = 0.45\n[R12][twitter] Michael Jackson #45: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Oliveira #163: Belief check: YES Probability = 0.45\n[R12][twitter] Lana Kim #197: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Martinez #228: Belief check: YES Probability = 0.45\n[R12][twitter] Nina Andersson #179: Belief check: YES Probability = 0.45\n[R12][twitter] Samantha Kim #107: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Martinez #131: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #0: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #245: Belief check: YES Probability = 0.45\n[R12][twitter] John Doe #150: Belief check: YES Probability = 0.58\n[R12][twitter] Jonathan Doe #231: Belief check: YES Probability = 0.35\n[R12][twitter] Rajiv Patel #133: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Kim #297: Belief check: YES Probability = 0.45\n[R12][twitter] Finn O'Connor #268: Belief check: YES Probability = 0.75\n[R12][twitter] Michael Kim #37: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Chen #83: Belief check: YES Probability = 0.75\n[R12][twitter] Hanna Mikkelsen #115: Belief check: YES Probability = 0.35\n[R12][twitter] Diana Liu #252: Belief check: YES Probability = 0.75\n[R12][twitter] Aiden Thompson #53: Belief check: YES Probability = 0.75\n[R12][twitter] Sarah Williams #211: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #51: Belief check: YES Probability = 0.45\n[R12][twitter] Fidelity Investments #17: Belief check: YES Probability = 0.35\n[R12][twitter] IBM #10: Belief check: YES Probability = 0.75\n[R12][twitter] Sara Lee #192: Belief check: YES Probability = 0.45\n[R12][twitter] Hannah Lee #287: Belief check: YES Probability = 0.45\n[R12][twitter] Ahmed Hassan #193: Belief check: YES Probability = 0.45\n[R12][twitter] Elena Mendoza #175: Belief check: YES Probability = 0.35\n[R12][twitter] Sven Peterson #296: Belief check: YES Probability = 0.45\n[R12][twitter] Mr. Richard Chen #293: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Rodriguez #47: Belief check: YES Probability = 0.75\n[R12][twitter] Sarah Lee #123: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Nguyen #87: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Lee #167: Belief check: YES Probability = 0.75\n[R12][twitter] Michael Brown #152: Belief check: YES Probability = 0.58\n[R12][twitter] Dr. Melissa Thompson #110: Belief check: YES Probability = 0.45\n[R12][twitter] Maximilian Kowalski #86: Belief check: YES Probability = 0.45\n[R12][twitter] Zoe Johnson #227: Belief check: YES Probability = 0.45\n[R12][twitter] Daniel Lee #157: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Chen Wei #82: Belief check: YES Probability = 0.45\n[R12][twitter] David Lee #155: Belief check: YES Probability = 0.45\n[R12][twitter] Ethan Kim #111: Belief check: YES Probability = 0.75\n[R12][twitter] Emily White #241: Belief check: YES Probability = 0.45\n[R15][twitter] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  },
+  {
+    "event_id": "T4",
+    "unit_id": "T4_A_r1",
+    "question": "Will the October 2024 CPI print below 2.5% year-over-year?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T4/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "YES": 0.5,
+      "NO": 0.5
+    },
+    "brier": 0.5,
+    "directional_accuracy": 0.5,
+    "directional_correct": null,
+    "weighted_rubric_score": 0.516667,
+    "yes_probability": 0.5,
+    "rps": 0.25,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.5,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.3,
+        "low": 0.39999999999999997,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "deliberation_quality": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.3,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.5,
+        "herd_effect_score": 0.366667,
+        "deliberation_quality_score": 0.5,
+        "susceptibility_score": 0.633333,
+        "convergence_score": 0.433333,
+        "information_diversity_score": 0.5,
+        "weighted_rubric_score": 0.516667
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T4_q1_sept_print": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q2_shelter_weight": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q3_consensus": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# October 2024 CPI Threshold: Pre-Resolution Intelligence Dossier\n\n**Question:** Will the October 2024 CPI print below 2.5% year-over-year?  \n**Market Opened:** October 2024  \n**Information Cutoff:** November 12, 2024 (Eve of BLS Report Release)\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** The October 2024 Consumer Price Index (CPI) report acts as a critical referendum on the Federal Reserve's inflation-fighting strategy. With headline inflation hovering agonizingly close to the 2.5% threshold, predicting the precise print requires granular component analysis (energy vs. shelter).\n\n**Resolution Contract:** This market resolves \"YES\" if the headline Consumer Price Index for All Urban Consumers (CPI-U), unadjusted year-over-year percentage change for the month of October 2024, as officially reported by the US Bureau of Labor Statistics (BLS), is strictly less than 2.5% (i.e., 2.4% or lower). It resolves \"NO\" if the reported figure is 2.5% or greater. \n- *Measurement Standard:* Resolution depends entirely on the initial official BLS press release. Subsequent revisions in later months are irrelevant.\n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: Inflation metrics at this threshold are highly sensitive to single-component volatility.*\n- **September 2024 Headline CPI:** 2.4% y/y (Slightly below the threshold).\n- **September 2024 Core CPI:** 3.3% y/y (Significantly above the threshold; indicating sticky underlying inflation).\n- **Wall Street Consensus (Median Forecast):** 2.4% y/y (Just below the threshold).\n- **Market Implied Probability:** ~50% to 55% (Priced as a near-perfect coin flip due to the razor-thin margin).\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **Mid-2022:** Headline CPI peaks at 9.1%, triggering aggressive Fed rate hikes.\n- **Mid-2024:** Disinflation stalls. Core inflation remains sticky above 3%, driven by housing and services.\n- **September 2024:** The Fed executes a 50bp rate cut, expressing confidence that inflation is sustainably moving toward the 2% target.\n- **October 10, 2024:** The September CPI report prints at 2.4% headline, but 3.3% core. The hot core reading spooks markets, erasing expectations for another jumbo rate cut.\n- **November 12, 2024:** On the eve of the October CPI release, forecasters weigh the deflationary drag of energy against the inflationary pressure of shelter.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The Math of the Threshold:**\nBecause September's print was 2.4%, remaining below the 2.5% threshold for October requires the month-over-month (m/m) increase to remain extremely modest (around +0.2%).\n- Year-over-year numbers are subject to \"Base Effects.\" October 2023 saw relatively low inflation. Dropping a low month out of the 12-month rolling window makes it mathematically harder to lower the y/y aggregate.\n- If the October 2024 m/m print spikes to +0.3% or +0.4% due to a random fluctuation in airfares or auto insurance, the y/y calculation will instantly round up to 2.5% or 2.6%, triggering a \"NO\" resolution.\n\n## 5.0 Component Divergence (The Tug-of-War)\n\n**The Deflationary Anchor (Energy & Goods):**\nGlobal crude oil prices (WTI) remained subdued throughout October, and national average gasoline prices declined steadily. Concurrently, supply chain healing meant physical goods (like used cars and household furnishings) continued to see outright deflation.\n\n**The Inflationary Engine (Shelter & Services):**\nHousing costs comprise roughly one-third of the entire CPI basket. The BLS uses a delayed methodology for calculating shelter (Owners' Equivalent Rent), meaning actual cooling in the rental market takes 12 to 18 months to show up in the CPI report. This structural lag keeps CPI artificially elevated. Additionally, service costs (car insurance, medical care) remained severely sticky due to rising wages.\n\n## 6.0 Key Unknowns & Catalyst Triggers\n\nForecasters attempting to predict the exact tenth of a percentage point must we"
+  },
+  {
+    "event_id": "T4",
+    "unit_id": "T4_B_r1",
+    "question": "Will the October 2024 CPI print below 2.5% year-over-year?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T4/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.45,
+      "NO": 0.55
+    },
+    "brier": 0.405,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.520833,
+    "yes_probability": 0.45,
+    "rps": 0.2025,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.55,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "polarization": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "very_low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.3,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.1
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.466667,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.633333,
+        "susceptibility_score": 0.333333,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.266667,
+        "weighted_rubric_score": 0.520833
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5135142984325868,
+      0.7582766571931678,
+      0.5224270111903142,
+      0.5224270111903142,
+      0.507886132302472,
+      0.507886132302472,
+      0.47935779845848475,
+      0.47935779845848475,
+      0.48411824043321133
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T4_q1_sept_print": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q2_shelter_weight": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q3_consensus": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\n', 'mbti': 'ENFJ', 'gender': 'female', 'age': 36, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological optimism...\\n- Motivation: Innovate in decentralized finance...\\n- Style: Entrepreneurial...\\n- Biases: Triggered by regulatory delays.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 38, 'country': 'USA'}\n{'user_profile': '- Worldview: Pragmatic realism...\\n- Motivation: Secure financial futures...\\n- Style: Advisory...\\n- Biases: Triggered by poor investment advice.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ESFJ', 'gender': 'female', 'age': 40, 'country': 'USA'}\n{'user_profile': '- Worldview: Historical analysis...\\n- Motivation: Educate on economic history...\\n- Style: Academic...\\n- Biases: Triggered by oversimplification of complex economic issues.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T4_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 147.4seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 166.1seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R0][reddit] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R9][twitter] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R9][reddit] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R12][twitter] John Williams #270: Belief check: YES Probability = 0.45\n[R12][twitter] Linus Chen #162: Belief check: YES Probability = 0.45\n[R12][twitter] Mark Wilson #67: Belief check: YES Probability = 0.45\n[R12][twitter] Ella Thompson #105: Belief check: YES Probability = 0.58\n[R12][twitter] Daniel Park #36: Belief check: YES Probability = 0.58\n[R12][twitter] Ahmed Mohamed #253: Belief check: YES Probability = 0.58\n[R12][twitter] The Federal Reserve Bank of Chicago #27: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Nguyen #57: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #184: Belief check: YES Probability = 0.45\n[R12][twitter] Samantha Carter #197: Belief check: YES Probability = 0.58\n[R12][twitter] Harold Kim #96: Belief check: YES Probability = 0.45\n[R12][twitter] Samantha Lee #255: Belief check: YES Probability = 0.58\n[R12][twitter] David Brown #198: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Chang #122: Belief check: YES Probability = 0.58\n[R12][twitter] Nancy Pelosi #6: Belief check: YES Probability = 0.58\n[R12][twitter] Jane Williams #151: Belief check: YES Probability = 0.58\n[R12][twitter] Sophie Lee #123: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #265: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #260: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #200: Belief check: YES Probability = 0.45\n[R12][twitter] Chuck Schumer #7: Belief check: YES Probability = 0.7\n[R12][twitter] Samantha Lee #146: Belief check: YES Probability = 0.58\n[R12][twitter] Ella Carter #215: Belief check: YES Probability = 0.58\n[R12][twitter] Sophia Kim #42: Belief check: YES Probability = 0.58\n[R12][twitter] John Williams #30: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Kim #134: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #34: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #216: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Chang #110: Belief check: YES Probability = 0.58\n[R12][twitter] Jane Williams #241: Belief check: YES Probability = 0.58\n[R12][twitter] Bernie Sanders #8: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Gomez #256: Belief check: YES Probability = 0.58\n[R12][twitter] Linda Tran #203: Belief check: YES Probability = 0.45\n[R12][twitter] Liam O'Shaughnessy #259: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Williams #212: Belief check: YES Probability = 0.58\n[R12][twitter] John Howard #88: Belief check: YES Probability = 0.58\n[R12][twitter] The Federal Reserve Bank of New York #20: Belief check: YES Probability = 0.75\n[R12][twitter] Eva Martinez #205: Belief check: YES Probability = 0.58\n[R12][twitter] Sophia Chen #37: Belief check: YES Probability = 0.58\n[R12][twitter] Sara Patel #187: Belief check: YES Probability = 0.58\n[R12][twitter] John Williams #150: Belief check: YES Probability = 0.58\n[R12][twitter] Jordan Smith #100: Belief check: YES Probability = 0.45\n[R12][twitter] David Kim #83: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Martinez #142: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #166: Belief check: YES Probability = 0.58\n[R12][twitter] David Chang #206: Belief check: YES Probability = 0.58\n[R12][twitter] Jordan Smith #130: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Lopez #282: Belief check: YES Probability = 0.58\n[R12][twitter] Michaela Hart #40: Belief check: YES Probability = 0.58\n[R12][twitter] Maria Rodriguez #235: Belief check: YES Probability = 0.58\n[R12][twitter] Laura Zhang #39: Belief check: YES Probability = 0.58\n[R12][twitter] David Petrov #174: Belief check: YES Probability = 0.45\n[R12][twitter] Melissa Johnson #195: Belief check: YES Probability = 0.58\n[R12][twitter] Laura Rodriguez #52: Belief check: YES Probability = 0.58\n[R15][twitter] John Williams #0: While energy prices have provided a modest drag, the core services component—driven by shelter cost realizations—suggests that headline inflation segments will resist a sub-2.5% convergence in the upcoming print.\n[R15][reddit] John Williams #0: While energy prices have provided a modest drag, the core services component—driven by shelter cost realizations—suggests that headline inflation segments will resist a sub-2.5% convergence in the upcoming print."
+  },
+  {
+    "event_id": "T4",
+    "unit_id": "T4_C_r1",
+    "question": "Will the October 2024 CPI print below 2.5% year-over-year?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T4/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.58,
+      "NO": 0.42
+    },
+    "brier": 0.6728,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.5875,
+    "yes_probability": 0.58,
+    "rps": 0.3364,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.58,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.3
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "deliberation_quality": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.3
+      },
+      "susceptibility": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "information_diversity": {
+        "very_low": 0.3,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.666667,
+        "polarization_score": 0.533333,
+        "herd_effect_score": 0.666667,
+        "deliberation_quality_score": 0.533333,
+        "susceptibility_score": 0.533333,
+        "convergence_score": 0.666667,
+        "information_diversity_score": 0.433333,
+        "weighted_rubric_score": 0.5875
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5221249307752207,
+      0.7582766571931678,
+      0.5427995909576862,
+      0.5427995909576862,
+      0.4841045465356193,
+      0.4841045465356193,
+      0.47996626359939565,
+      0.47996626359939565,
+      0.5103601456526823
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T4_q1_sept_print": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q2_shelter_weight": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T4_q3_consensus": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\n', 'mbti': 'ENFJ', 'gender': 'female', 'age': 36, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological optimism...\\n- Motivation: Innovate in decentralized finance...\\n- Style: Entrepreneurial...\\n- Biases: Triggered by regulatory delays.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 38, 'country': 'USA'}\n{'user_profile': '- Worldview: Pragmatic realism...\\n- Motivation: Secure financial futures...\\n- Style: Advisory...\\n- Biases: Triggered by poor investment advice.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ESFJ', 'gender': 'female', 'age': 40, 'country': 'USA'}\n{'user_profile': '- Worldview: Historical analysis...\\n- Motivation: Educate on economic history...\\n- Style: Academic...\\n- Biases: Triggered by oversimplification of complex economic issues.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T4_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 149.0seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 154.9seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R0][reddit] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R9][twitter] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R9][reddit] John Williams #0: Will the October 2024 CPI print below 2.5% year-over-year?\n[R12][twitter] Sophia Chen #37: Belief check: YES Probability = 0.58\n[R12][twitter] Sara Patel #187: Belief check: YES Probability = 0.58\n[R12][twitter] Laura Smith #279: Belief check: YES Probability = 0.58\n[R12][twitter] The Federal Reserve Bank of Chicago #27: Belief check: YES Probability = 0.75\n[R12][twitter] Sophie Lee #123: Belief check: YES Probability = 0.45\n[R12][twitter] Linus Chen #162: Belief check: YES Probability = 0.45\n[R12][twitter] Nancy Pelosi #6: Belief check: YES Probability = 0.58\n[R12][twitter] Samantha Lee #255: Belief check: YES Probability = 0.58\n[R12][twitter] David Brown #198: Belief check: YES Probability = 0.58\n[R12][twitter] Sophia Nguyen #57: Belief check: YES Probability = 0.58\n[R12][twitter] Ella Carter #215: Belief check: YES Probability = 0.58\n[R12][twitter] John Williams #270: Belief check: YES Probability = 0.45\n[R12][twitter] Ahmed Mohamed #253: Belief check: YES Probability = 0.58\n[R12][twitter] Daniel Park #36: Belief check: YES Probability = 0.58\n[R12][twitter] Samantha Carter #197: Belief check: YES Probability = 0.58\n[R12][twitter] Jane Williams #241: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Chang #122: Belief check: YES Probability = 0.58\n[R12][twitter] John Howard #88: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #184: Belief check: YES Probability = 0.45\n[R12][twitter] Mark Wilson #67: Belief check: YES Probability = 0.45\n[R12][twitter] Chuck Schumer #7: Belief check: YES Probability = 0.7\n[R12][twitter] John Williams #30: Belief check: YES Probability = 0.58\n[R12][twitter] Bernie Sanders #8: Belief check: YES Probability = 0.45\n[R12][twitter] Samantha Lee #146: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Martinez #142: Belief check: YES Probability = 0.58\n[R12][twitter] Jordan Smith #265: Belief check: YES Probability = 0.45\n[R12][twitter] Eva Martinez #205: Belief check: YES Probability = 0.58\n[R12][twitter] Liam O'Shaughnessy #259: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #216: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Gomez #256: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Ramirez #158: Belief check: YES Probability = 0.58\n[R12][twitter] Michaela Hart #40: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Chang #110: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #34: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Kim #134: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #78: Belief check: YES Probability = 0.58\n[R12][twitter] Michael Williams #212: Belief check: YES Probability = 0.58\n[R12][twitter] Linda Tran #203: Belief check: YES Probability = 0.45\n[R12][twitter] The Federal Reserve Bank of New York #20: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Kim #42: Belief check: YES Probability = 0.58\n[R12][twitter] David Martinez #104: Belief check: YES Probability = 0.58\n[R12][twitter] The Federal Reserve Bank of Dallas #22: Belief check: YES Probability = 0.7\n[R12][twitter] Sarah Miller #111: Belief check: YES Probability = 0.65\n[R12][twitter] Maria Hernandez #79: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #186: Belief check: YES Probability = 0.45\n[R12][twitter] Kevin Wright #178: Belief check: YES Probability = 0.58\n[R12][twitter] Emily Carter #61: Belief check: YES Probability = 0.58\n[R12][twitter] Jane Smith #116: Belief check: YES Probability = 0.58\n[R12][twitter] Maria Hernandez #252: Belief check: YES Probability = 0.58\n[R12][twitter] Jennifer Smith #33: Belief check: YES Probability = 0.45\n[R12][twitter] Muhammad Khan #258: Belief check: YES Probability = 0.58\n[R12][twitter] Ahmed Hassan #236: Belief check: YES Probability = 0.58\n[R12][twitter] Dr. Emily Chen #167: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #267: Belief check: YES Probability = 0.58\n[R15][twitter] John Williams #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] John Williams #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  },
+  {
+    "event_id": "T5",
+    "unit_id": "T5_A_r1",
+    "question": "Will Ethereum spot ETFs see positive net inflows in their first week of trading?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T5/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "YES": 0.2,
+      "NO": 0.8
+    },
+    "brier": 1.28,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.558333,
+    "yes_probability": 0.2,
+    "rps": 0.6400000000000001,
+    "calibration_bracket": "0.75-1",
+    "calibration_predicted_probability": 0.8,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "very_high"
+      },
+      "polarization": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "very_low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.3,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.3,
+        "low": 0.3,
+        "high": 0.2,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.6,
+        "herd_effect_score": 0.6,
+        "deliberation_quality_score": 0.433333,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.6,
+        "information_diversity_score": 0.433333,
+        "weighted_rubric_score": 0.558333
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T5_q1_ethe_fee": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q2_staking": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q3_blackrock": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# Ethereum Spot ETF Net Inflows: Pre-Resolution Intelligence Dossier\n\n**Question:** Will Ethereum spot ETFs see positive net inflows in their first week of trading?  \n**Market Opened:** July 2024  \n**Information Cutoff:** August 5, 2024 (End of First Trading Week)\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** The launch of nine US Spot Ethereum ETFs marked a major milestone for institutional crypto adoption. However, forecasting the aggregate capital flow for the inaugural week requires calculating whether the explosive inflows into new, low-fee products can outpace the massive, structural outflows from a legacy, high-fee conversion trust.\n\n**Resolution Contract:** This market resolves \"YES\" if the cumulative, aggregate net flow of capital (measured in USD) across all nine SEC-approved US Spot Ethereum ETFs is strictly greater than zero for the first five trading days (July 23, 2024, through July 29, 2024). It resolves \"NO\" if the aggregate net flow is zero or negative. \n- *Measurement Standard:* Resolution relies on aggregated flow data reported by authoritative financial data providers (e.g., Bloomberg ETF terminal data, Farside Investors).\n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: Daily flow data is tracked obsessively by market participants, but final settlement figures can lag by 24 hours.*\n- **Grayscale ETHE Outflows (Days 1-4):** >$1.5 billion exiting the high-fee trust.\n- **Newborn ETF Inflows (Days 1-4):** ~$1.1 billion entering low-fee products (BlackRock, Fidelity, Bitwise).\n- **Running Aggregate Net Flow (Entering Day 5):** Negative ~$400 million.\n- **Market Implied Probability:** Heavily favored \"NO\" (Negative Flows) as the Grayscale bleed accelerated mid-week.\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **January 2024:** Spot Bitcoin ETFs launch to historic success. The \"Newborn\" ETFs attract billions, overpowering outflows from the Grayscale Bitcoin Trust (GBTC), resulting in massive net positive flows.\n- **May 2024:** The SEC makes a surprise regulatory pivot, approving 19b-4 filings for Ethereum ETFs.\n- **July 23, 2024:** Nine Ethereum ETFs officially begin trading. Grayscale maintains a 2.50% fee on its $10B legacy trust (ETHE), while competitors launch with fees near 0.00% to 0.25%.\n- **July 23 (Day 1):** Inflows barely edge out ETHE outflows, resulting in a net positive Day 1 (~$106 million).\n- **July 24-26 (Days 2-4):** The \"Grayscale Bleed\" accelerates to >$300 million daily, while new inflows drop below $100 million daily, dragging the aggregate net flow deep into the red.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The \"Grayscale Bleed\" Mathematics:**\nPrior to ETF approval, ETHE traded as a closed-end trust, often at a steep discount to Net Asset Value (NAV). \n- Conversion to an ETF instantly closed this discount, allowing trapped investors (including bankruptcy estates like Genesis) to exit at par value.\n- Furthermore, Grayscale's refusal to lower the 2.50% fee heavily incentivized an exodus of rational capital to cheaper alternatives like BlackRock's 0.12% offering.\n\n**The \"No Staking\" Penalty:**\nA critical regulatory vulnerability suppressed demand for the new Ethereum ETFs. The Ethereum network is Proof-of-Stake; holding raw ETH allows an investor to earn a ~3-5% yield. The SEC explicitly forbade the ETFs from staking. For institutional investors, buying the ETF meant accepting a 0% yield, creating a massive opportunity cost that drove savvy allocators to hold spot ETH directly rather than buying the ETF wrapper.\n\n## 5.0 Demographic & Strategic Divergence\n\n**The Bitcoin vs. Ethereum Institutional Narrative:**\nBitcoin successfully marketed itself to traditional finance (TradFi) as \"Digital Gold\"—a simple, pristine reserve asset. Ethereum, conversely, is a complex technological platform (\"Digital Oil\" or the \"World Computer\"). \n- TradFi allocators (wealth managers, pension funds) eagerly bought Bitcoin ETFs as an inflation hedge.\n- These s"
+  },
+  {
+    "event_id": "T5",
+    "unit_id": "T5_B_r1",
+    "question": "Will Ethereum spot ETFs see positive net inflows in their first week of trading?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T5/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.51,
+      "NO": 0.49
+    },
+    "brier": 0.4802,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.395833,
+    "yes_probability": 0.51,
+    "rps": 0.24009999999999998,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.51,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "low",
+        "run2": "high"
+      },
+      "polarization": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "low",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "low",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "very_low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.3,
+        "low": 0.39999999999999997,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "polarization": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "herd_effect": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.1
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.6,
+        "low": 0.2,
+        "high": 0.1,
+        "very_high": 0.1
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.366667,
+        "polarization_score": 0.333333,
+        "herd_effect_score": 0.5,
+        "deliberation_quality_score": 0.266667,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.5,
+        "information_diversity_score": 0.233333,
+        "weighted_rubric_score": 0.395833
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.6037588058608985,
+      0.7582766571931678,
+      0.6192426187105076,
+      0.6192426187105076,
+      0.6008876012265215,
+      0.6008876012265215,
+      0.6138461508046024,
+      0.6138461508046024,
+      0.597307552666661
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T5_q1_ethe_fee": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q2_staking": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q3_blackrock": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\nstrictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 55, 'country': 'Italy'}\n{'user_profile': '- Worldview: Social Awareness\\n- Motivation: Educating the public on financial matters\\n- Style: Communicative\\n- Biases: Triggered by unethical practices\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 38, 'country': 'Spain'}\n{'user_profile': '- Worldview: Technological Optimism\\n- Motivation: Advancing technology in finance\\n- Style: Innovative\\n- Biases: Triggered by outdated regulations\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 40, 'country': 'Japan'}\n{'user_profile': '- Worldview: Libertarian principles...\\n- Motivation: Promote free market...\\n- Style: Analytical...\\n- Biases: Triggered by government intervention.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'female', 'age': 32, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T5_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 135.4seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 157.8seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R0][reddit] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R9][twitter] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R9][reddit] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R12][twitter] Jade Yellow #255: Belief check: YES Probability = 0.7\n[R12][twitter] Daphne Lee #187: Belief check: YES Probability = 0.55\n[R12][twitter] Hannah Kim #241: Belief check: YES Probability = 0.55\n[R12][twitter] Lisa Blackstone #279: Belief check: YES Probability = 0.75\n[R12][twitter] Judy Lee #67: Belief check: YES Probability = 0.58\n[R12][twitter] David Park #36: Belief check: YES Probability = 0.58\n[R12][twitter] Anil Patel #57: Belief check: YES Probability = 0.58\n[R12][twitter] Lisa Nguyen #123: Belief check: YES Probability = 0.55\n[R12][twitter] Jasmine Blackmon #253: Belief check: YES Probability = 0.65\n[R12][twitter] Mark Bronze #198: Belief check: YES Probability = 0.55\n[R12][twitter] David Kim #184: Belief check: YES Probability = 0.58\n[R12][twitter] William White #8: Belief check: YES Probability = 0.75\n[R12][twitter] Lisa Kim #215: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #122: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #88: Belief check: YES Probability = 0.58\n[R12][twitter] Robert Brown #6: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Platinum #197: Belief check: YES Probability = 0.58\n[R12][twitter] Rachel Kim #37: Belief check: YES Probability = 0.75\n[R12][twitter] Jessica Brown #270: Belief check: YES Probability = 0.55\n[R12][twitter] Mark Richardson #162: Belief check: YES Probability = 0.58\n[R12][twitter] David Lee #34: Belief check: YES Probability = 0.58\n[R12][twitter] Jackson Yellow #256: Belief check: YES Probability = 0.58\n[R12][twitter] John Doe #30: Belief check: YES Probability = 0.58\n[R12][twitter] James Blue #20: Belief check: YES Probability = 0.58\n[R12][twitter] Karen Grey #259: Belief check: YES Probability = 0.58\n[R12][twitter] Sam White #134: Belief check: YES Probability = 0.58\n[R12][twitter] Mark Brown #78: Belief check: YES Probability = 0.55\n[R12][twitter] Maria Rodriguez #146: Belief check: YES Probability = 0.58\n[R12][twitter] Laura Green #7: Belief check: YES Probability = 0.58\n[R12][twitter] Marcus Red #104: Belief check: YES Probability = 0.58\n[R12][twitter] Emily Grey #203: Belief check: YES Probability = 0.58\n[R12][twitter] John Brown #142: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Lopez #205: Belief check: YES Probability = 0.75\n[R12][twitter] Tommy Lee #158: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #212: Belief check: YES Probability = 0.55\n[R12][twitter] James Blue #110: Belief check: YES Probability = 0.75\n[R12][twitter] Mark Red #40: Belief check: YES Probability = 0.58\n[R12][twitter] Mark Kim #216: Belief check: YES Probability = 0.58\n[R12][twitter] Liam Black #42: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Rodriguez #266: Belief check: YES Probability = 0.58\n[R12][twitter] Linda Brown #79: Belief check: YES Probability = 0.55\n[R12][twitter] David Chen #236: Belief check: YES Probability = 0.75\n[R12][twitter] James Yellow #14: Belief check: YES Probability = 0.75\n[R12][twitter] David Kim #244: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Rodriguez #178: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Grey #200: Belief check: YES Probability = 0.58\n[R12][twitter] Daniel Cho #186: Belief check: YES Probability = 0.55\n[R12][twitter] Jane Smith #61: Belief check: YES Probability = 0.58\n[R12][twitter] Rajiv Patel #268: Belief check: YES Probability = 0.58\n[R12][twitter] Sarah Williams #33: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #62: Belief check: YES Probability = 0.58\n[R12][twitter] Cato Institute #29: Belief check: YES Probability = 0.55\n[R12][twitter] Hiroshi Tanaka #298: Belief check: YES Probability = 0.75\n[R12][twitter] Jane Doe #111: Belief check: YES Probability = 0.75\n[R15][twitter] John Doe #0: Initial subscription data for the newly launched spot products indicates that institutional 'day-zero' demand is sufficient to offset the anticipated outflows from legacy high-fee vehicles. This net-positive demand signal logically supports a week-one inflow trajectory.\n[R15][reddit] John Doe #0: Initial subscription data for the newly launched spot products indicates that institutional 'day-zero' demand is sufficient to offset the anticipated outflows from legacy high-fee vehicles. This net-positive demand signal logically supports a week-one inflow trajectory."
+  },
+  {
+    "event_id": "T5",
+    "unit_id": "T5_C_r1",
+    "question": "Will Ethereum spot ETFs see positive net inflows in their first week of trading?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T5/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.6,
+      "NO": 0.4
+    },
+    "brier": 0.32,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.479167,
+    "yes_probability": 0.6,
+    "rps": 0.16000000000000003,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.6,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.3,
+        "low": 0.39999999999999997,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "deliberation_quality": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "susceptibility": {
+        "very_low": 0.2,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.1
+      },
+      "convergence": {
+        "very_low": 0.2,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.1
+      },
+      "information_diversity": {
+        "very_low": 0.3,
+        "low": 0.39999999999999997,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.366667,
+        "herd_effect_score": 0.566667,
+        "deliberation_quality_score": 0.333333,
+        "susceptibility_score": 0.5,
+        "convergence_score": 0.5,
+        "information_diversity_score": 0.366667,
+        "weighted_rubric_score": 0.479167
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5941361869209739,
+      0.7582766571931678,
+      0.6008876012265215,
+      0.6008876012265215,
+      0.5897620452477713,
+      0.5897620452477713,
+      0.6033012169446195,
+      0.6033012169446195,
+      0.5917474524539231
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T5_q1_ethe_fee": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q2_staking": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T5_q3_blackrock": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\nstrictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 55, 'country': 'Italy'}\n{'user_profile': '- Worldview: Social Awareness\\n- Motivation: Educating the public on financial matters\\n- Style: Communicative\\n- Biases: Triggered by unethical practices\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 38, 'country': 'Spain'}\n{'user_profile': '- Worldview: Technological Optimism\\n- Motivation: Advancing technology in finance\\n- Style: Innovative\\n- Biases: Triggered by outdated regulations\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 40, 'country': 'Japan'}\n{'user_profile': '- Worldview: Libertarian principles...\\n- Motivation: Promote free market...\\n- Style: Analytical...\\n- Biases: Triggered by government intervention.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'female', 'age': 32, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T5_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 146.2seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 155.1seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R0][reddit] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R9][twitter] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R9][reddit] John Doe #0: Will Ethereum spot ETFs see positive net inflows in their first week of trading?\n[R12][twitter] Jade Yellow #255: Belief check: YES Probability = 0.7\n[R12][twitter] Jordan White #193: Belief check: YES Probability = 0.75\n[R12][twitter] Rachel Kim #37: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Chen #35: Belief check: YES Probability = 0.58\n[R12][twitter] Carlos Lopez #205: Belief check: YES Probability = 0.75\n[R12][twitter] Karen Grey #259: Belief check: YES Probability = 0.58\n[R12][twitter] David Kim #184: Belief check: YES Probability = 0.58\n[R12][twitter] Sarah Lee #71: Belief check: YES Probability = 0.55\n[R12][twitter] Lisa Nguyen #123: Belief check: YES Probability = 0.55\n[R12][twitter] Karen Grey #229: Belief check: YES Probability = 0.58\n[R12][twitter] Emily Chen #155: Belief check: YES Probability = 0.58\n[R12][twitter] Leo Kim #273: Belief check: YES Probability = 0.75\n[R12][twitter] Mark Kim #216: Belief check: YES Probability = 0.58\n[R12][twitter] Mina Patel #129: Belief check: YES Probability = 0.58\n[R12][twitter] Tom Orange #18: Belief check: YES Probability = 0.75\n[R12][twitter] Emma Johnson #209: Belief check: YES Probability = 0.58\n[R12][twitter] Dmitri Kim #278: Belief check: YES Probability = 0.75\n[R12][twitter] Diana Kim #245: Belief check: YES Probability = 0.55\n[R12][twitter] David Kim #214: Belief check: YES Probability = 0.58\n[R12][twitter] Mark Brown #78: Belief check: YES Probability = 0.55\n[R12][twitter] David Kim #274: Belief check: YES Probability = 0.58\n[R12][twitter] Sophia Wong #127: Belief check: YES Probability = 0.58\n[R12][twitter] James Green #50: Belief check: YES Probability = 0.75\n[R12][twitter] Chris Blue #54: Belief check: YES Probability = 0.65\n[R12][twitter] Victoria Nguyen #204: Belief check: YES Probability = 0.58\n[R12][twitter] John Blue #132: Belief check: YES Probability = 0.58\n[R12][twitter] Emily Chen #5: Belief check: YES Probability = 0.55\n[R12][twitter] WSJ #22: Belief check: YES Probability = 0.58\n[R12][twitter] Fatima Ali #181: Belief check: YES Probability = 0.55\n[R12][twitter] Tom Yellow #228: Belief check: YES Probability = 0.55\n[R12][twitter] Sara Lee #265: Belief check: YES Probability = 0.75\n[R12][twitter] Jonathan Brown #113: Belief check: YES Probability = 0.75\n[R12][twitter] Alice Grey #261: Belief check: YES Probability = 0.55\n[R12][twitter] Liam Black #220: Belief check: YES Probability = 0.75\n[R12][twitter] Karen Grey #169: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Grey #200: Belief check: YES Probability = 0.58\n[R12][twitter] Claire Green #191: Belief check: YES Probability = 0.75\n[R12][twitter] Elena Martinez #85: Belief check: YES Probability = 0.58\n[R12][twitter] Emma Grey #43: Belief check: YES Probability = 0.75\n[R12][twitter] Alex Johnson #55: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Jones #237: Belief check: YES Probability = 0.58\n[R12][twitter] Laura Brown #77: Belief check: YES Probability = 0.58\n[R12][twitter] Bloomberg Terminal #21: Belief check: YES Probability = 0.58\n[R12][twitter] Lucas Black #106: Belief check: YES Probability = 0.58\n[R12][twitter] David Park #36: Belief check: YES Probability = 0.58\n[R12][twitter] Daniel Cho #186: Belief check: YES Probability = 0.55\n[R12][twitter] Maria Lopez #235: Belief check: YES Probability = 0.58\n[R12][twitter] Lisa Brown #75: Belief check: YES Probability = 0.58\n[R12][twitter] Damon Kim #246: Belief check: YES Probability = 0.58\n[R12][twitter] Tom Grey #12: Belief check: YES Probability = 0.75\n[R12][twitter] Jordan Smith #294: Belief check: YES Probability = 0.75\n[R12][twitter] Fidelity Investments #26: Belief check: YES Probability = 0.58\n[R12][twitter] David Miller #240: Belief check: YES Probability = 0.55\n[R12][twitter] Mark Johnson #176: Belief check: YES Probability = 0.75\n[R15][twitter] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  },
+  {
+    "event_id": "T6",
+    "unit_id": "T6_A_r1",
+    "question": "Will OpenAI release GPT-5 in 2024?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "YES": 0.05,
+      "NO": 0.95
+    },
+    "brier": 0.005,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.55,
+    "yes_probability": 0.05,
+    "rps": 0.0025000000000000005,
+    "calibration_bracket": "0.75-1",
+    "calibration_predicted_probability": 0.95,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "very_low",
+        "run2": "low"
+      },
+      "polarization": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "very_low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.4,
+        "low": 0.1,
+        "high": 0.1,
+        "very_high": 0.4
+      },
+      "polarization": {
+        "very_low": 0.25,
+        "low": 0.25,
+        "high": 0.25,
+        "very_high": 0.25
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.4,
+        "low": 0.1,
+        "high": 0.1,
+        "very_high": 0.4
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "information_diversity": {
+        "very_low": 0.4,
+        "low": 0.1,
+        "high": 0.1,
+        "very_high": 0.4
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.5,
+        "polarization_score": 0.5,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.633333,
+        "susceptibility_score": 0.5,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.5,
+        "weighted_rubric_score": 0.55
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T6_q1_o1_shift": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q2_altman_signal": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q3_lead_time": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# OpenAI GPT-5 Release: Pre-Resolution Intelligence Dossier\n\n**Question:** Will OpenAI release GPT-5 in 2024?  \n**Market Opened:** June 2024  \n**Information Cutoff:** December 31, 2024\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** Since the launch of ChatGPT in 2022, OpenAI’s generational model upgrades (GPT-3, GPT-4) have defined the frontier of artificial intelligence. Throughout 2024, the tech industry relentlessly speculated on whether OpenAI would release its next true generational leap, universally presumed to be \"GPT-5,\" before year-end.\n\n**Resolution Contract:** This market resolves \"YES\" if OpenAI officially releases, deploys, or announces general public/API access to a flagship multimodal language model explicitly named \"GPT-5\" on or before 11:59:59 PM PT on December 31, 2024. It resolves \"NO\" if no such model is released.\n- *Edge Cases:* Releases of iterative models (e.g., GPT-4o, GPT-4.5) or parallel reasoning models (e.g., the o1 series) do strictly NOT trigger a YES resolution unless explicitly branded by OpenAI as the generational GPT-5 successor.\n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: AI release schedules are driven by closed-door safety testing and compute bottlenecks, making public predictions highly reliant on leadership rhetoric and infrastructure leaks.*\n- **Time Remaining in 2024:** < 14 days (Entering the holiday dead-zone).\n- **Previous Generational Gap:** ~21 months between GPT-3 (June 2020) and GPT-4 (March 2023).\n- **Market Implied Probability (Polymarket):** Modeled at <5% probability of a 2024 release.\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **March 2023:** OpenAI releases GPT-4, establishing absolute dominance in the LLM sector.\n- **May 2024:** OpenAI releases GPT-4o (Omni), a highly optimized, natively multimodal iteration of the GPT-4 architecture, but explicitly not a generational leap.\n- **June 2024:** Competitor Anthropic releases Claude 3.5 Sonnet, matching or beating GPT-4o on major benchmarks, increasing pressure on OpenAI to respond.\n- **September 2024:** OpenAI pivots, releasing the \"o1\" (Strawberry) series. These are \"inference-time compute\" models focused on deep reasoning, not broad general capability. Leadership explicitly states o1 is a parallel track, not GPT-5.\n- **December 2024:** The year draws to a close with no formal announcement, developer previews, or red-teaming leaks regarding a GPT-5 deployment.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The Physics of Compute and Safety:**\nTraining a frontier model an order of magnitude larger than GPT-4 is bounded by physical reality. \n- *The Compute Bottleneck:* Assembling the required 100,000+ H100 GPU clusters, solving networking failures, and securing massive power resources delayed training runs across the industry.\n- *The Safety Lag:* Once a model finishes training, it requires months of reinforcement learning from human feedback (RLHF), safety red-teaming, and alignment. GPT-4 sat in post-training for 8 months before release.\n- *The Vulnerability:* Given escalating regulatory scrutiny (the EU AI Act, US executive orders), OpenAI cannot afford to rush a GPT-5 release. A catastrophic safety failure would trigger devastating legal and regulatory backlash.\n\n## 5.0 Strategic & Enterprise Divergence\n\n**The \"Cost vs. Capability\" Pivot:**\nIn 2024, OpenAI's strategy visibly diverged from pure capability scaling toward enterprise commercialization. \n- Releasing GPT-4o drove inference costs down by 50% while vastly increasing speed, catering to enterprise clients building scalable applications.\n- Releasing a massive, computationally expensive GPT-5 in 2024 would have cannibalized their own enterprise API margins, as running a 10-trillion parameter model is financially unviable for mass-market consumer applications.\n\n**The Enterprise Calendar:**\nB2B software companies absolutely loathe releasing paradigm-shifting infrastructure updates in the last two weeks of December."
+  },
+  {
+    "event_id": "T6",
+    "unit_id": "T6_B_r1",
+    "question": "Will OpenAI release GPT-5 in 2024?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.3,
+      "NO": 0.7
+    },
+    "brier": 0.18,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.475,
+    "yes_probability": 0.3,
+    "rps": 0.09,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.7,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.4,
+        "low": 0.2,
+        "high": 0.2,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "information_diversity": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.1
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.5,
+        "polarization_score": 0.4,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.333333,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.566667,
+        "information_diversity_score": 0.266667,
+        "weighted_rubric_score": 0.475
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5884375944847452,
+      0.7582766571931676,
+      0.6043405294315423,
+      0.6043405294315423,
+      0.6246718034354412,
+      0.6246718034354412,
+      0.5919138271801416,
+      0.5919138271801416,
+      0.6044964089168008
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T6_q1_o1_shift": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q2_altman_signal": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q3_lead_time": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\nP', 'gender': 'female', 'age': 28, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological determinism...\\n- Motivation: Innovate responsibly...\\n- Style: Strategic and visionary...\\n- Biases: Triggered by unsustainable practices.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 42, 'country': 'Spain'}\n{'user_profile': '- Worldview: Social constructivism...\\n- Motivation: Educate and empower...\\n- Style: Collaborative and inclusive...\\n- Biases: Triggered by online misinformation.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ISFJ', 'gender': 'female', 'age': 35, 'country': 'India'}\n{'user_profile': '- Worldview: Technological optimism...\\n- Motivation: Advance AI capabilities...\\n- Style: Analytical and innovative...\\n- Biases: Triggered by AI ethics issues.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'male', 'age': 29, 'country': 'Serbia'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T6_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 133.6seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 164.2seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R0][reddit] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R9][twitter] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R9][reddit] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R12][twitter] Google #19: Belief check: YES Probability = 0.75\n[R12][twitter] Sarah Altman #271: Belief check: YES Probability = 0.75\n[R12][twitter] Alex Johnson #45: Belief check: YES Probability = 0.75\n[R12][twitter] Linda Nguyen #294: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #206: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Ramirez #191: Belief check: YES Probability = 0.75\n[R12][twitter] Nathan Lee #97: Belief check: YES Probability = 0.58\n[R12][twitter] Andrew Ng #2: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Gutierrez #222: Belief check: YES Probability = 0.75\n[R12][twitter] Mustafa Suleyman #9: Belief check: YES Probability = 0.75\n[R12][twitter] Linda Chen #164: Belief check: YES Probability = 0.75\n[R12][twitter] Carla Thielson #66: Belief check: YES Probability = 0.75\n[R12][twitter] Charlie Zheng #81: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Kim #102: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Altman #273: Belief check: YES Probability = 0.75\n[R12][twitter] Hugo Martinez #219: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Gonzalez #196: Belief check: YES Probability = 0.58\n[R12][twitter] Alexa Thompson #250: Belief check: YES Probability = 0.75\n[R12][twitter] Samuel Williams #244: Belief check: YES Probability = 0.75\n[R12][twitter] Fei-Fei Li #7: Belief check: YES Probability = 0.75\n[R12][twitter] Linda Kim #289: Belief check: YES Probability = 0.5\n[R12][twitter] Emily Liu #85: Belief check: YES Probability = 0.75\n[R12][twitter] Jordan Smith #295: Belief check: YES Probability = 0.75\n[R12][twitter] Ahmed Khalil #148: Belief check: YES Probability = 0.75\n[R12][twitter] Dr. Anika Patel #257: Belief check: YES Probability = 0.58\n[R12][twitter] Sophie Patel #172: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Gomez #176: Belief check: YES Probability = 0.75\n[R12][twitter] Alicia Chen #156: Belief check: YES Probability = 0.58\n[R12][twitter] Tesla #23: Belief check: YES Probability = 0.75\n[R12][twitter] Elena Ramirez #159: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #52: Belief check: YES Probability = 0.75\n[R12][twitter] Samuel Andrews #33: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Chen #233: Belief check: YES Probability = 0.75\n[R12][twitter] James Wilson #127: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Lee #296: Belief check: YES Probability = 0.58\n[R12][twitter] Jane Doe #290: Belief check: YES Probability = 0.75\n[R12][twitter] Emma Johnson #175: Belief check: YES Probability = 0.75\n[R12][twitter] Maria Rodriguez #115: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Altman #152: Belief check: YES Probability = 0.75\n[R12][twitter] Grace Thielson #68: Belief check: YES Probability = 0.75\n[R12][twitter] Fatima Patel #298: Belief check: YES Probability = 0.75\n[R12][twitter] Elon Musk #4: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Hernandez #187: Belief check: YES Probability = 0.75\n[R12][twitter] Peter Thiel #5: Belief check: YES Probability = 0.75\n[R12][twitter] John Doe #58: Belief check: YES Probability = 0.58\n[R12][twitter] David Wilson #93: Belief check: YES Probability = 0.75\n[R12][twitter] Olivia Martinez #96: Belief check: YES Probability = 0.75\n[R12][twitter] Hector Ramirez #43: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Patel #182: Belief check: YES Probability = 0.75\n[R12][twitter] Grace Lee #84: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Lee #186: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Chen #57: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Anderson #31: Belief check: YES Probability = 0.75\n[R12][twitter] Mohammed Ali #268: Belief check: YES Probability = 0.75\n[R15][twitter] Sam Altman #0: Product messaging from the lab has shifted toward a reasoning-centric family of models (o1). Internal sources confirm that the next major frontier generational jump is not part of the Q4 release segments, prioritizing logical depth over model scale for the current cycle.\n[R15][reddit] Sam Altman #0: Product messaging from the lab has shifted toward a reasoning-centric family of models (o1). Internal sources confirm that the next major frontier generational jump is not part of the Q4 release segments, prioritizing logical depth over model scale for the current cycle."
+  },
+  {
+    "event_id": "T6",
+    "unit_id": "T6_C_r1",
+    "question": "Will OpenAI release GPT-5 in 2024?",
+    "ground_truth": "NO",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.85,
+      "NO": 0.15
+    },
+    "brier": 1.445,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.65625,
+    "yes_probability": 0.85,
+    "rps": 0.7224999999999999,
+    "calibration_bracket": "0.75-1",
+    "calibration_predicted_probability": 0.85,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "polarization": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.25
+      },
+      "herd_effect": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "deliberation_quality": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.25
+      },
+      "convergence": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "information_diversity": {
+        "very_low": 0.2,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.3
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.683333,
+        "polarization_score": 0.633333,
+        "herd_effect_score": 0.683333,
+        "deliberation_quality_score": 0.683333,
+        "susceptibility_score": 0.633333,
+        "convergence_score": 0.683333,
+        "information_diversity_score": 0.566667,
+        "weighted_rubric_score": 0.65625
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5848789142866625,
+      0.7582766571931678,
+      0.5989584620153813,
+      0.5989584620153813,
+      0.5738867183475738,
+      0.5738867183475738,
+      0.6276495535668696,
+      0.6276495535668696,
+      0.6144688998775554
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T6_q1_o1_shift": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q2_altman_signal": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T6_q3_lead_time": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\nP', 'gender': 'female', 'age': 28, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological determinism...\\n- Motivation: Innovate responsibly...\\n- Style: Strategic and visionary...\\n- Biases: Triggered by unsustainable practices.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 42, 'country': 'Spain'}\n{'user_profile': '- Worldview: Social constructivism...\\n- Motivation: Educate and empower...\\n- Style: Collaborative and inclusive...\\n- Biases: Triggered by online misinformation.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ISFJ', 'gender': 'female', 'age': 35, 'country': 'India'}\n{'user_profile': '- Worldview: Technological optimism...\\n- Motivation: Advance AI capabilities...\\n- Style: Analytical and innovative...\\n- Biases: Triggered by AI ethics issues.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'male', 'age': 29, 'country': 'Serbia'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T6_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 144.9seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 158.5seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R0][reddit] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R9][twitter] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R9][reddit] Sam Altman #0: Will OpenAI release GPT-5 in 2024?\n[R12][twitter] Faisal Khan #253: Belief check: YES Probability = 0.75\n[R12][twitter] David Chen #215: Belief check: YES Probability = 0.75\n[R12][twitter] Sam Altman #270: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Kim #122: Belief check: YES Probability = 0.75\n[R12][twitter] Lara Cheng #36: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Chen #57: Belief check: YES Probability = 0.58\n[R12][twitter] Yoshua Bengio #6: Belief check: YES Probability = 0.75\n[R12][twitter] Victoria Thiel #279: Belief check: YES Probability = 0.75\n[R12][twitter] Alexei Petrov #123: Belief check: YES Probability = 0.75\n[R12][twitter] James Kim #88: Belief check: YES Probability = 0.75\n[R12][twitter] Ethan Thielson #67: Belief check: YES Probability = 0.75\n[R12][twitter] Ethan Kim #198: Belief check: YES Probability = 0.75\n[R12][twitter] GitHub #27: Belief check: YES Probability = 0.58\n[R12][twitter] Dr. Elena Martinez #255: Belief check: YES Probability = 0.75\n[R12][twitter] Sarah Altman #241: Belief check: YES Probability = 0.75\n[R12][twitter] Dr. Sophia Patel #197: Belief check: YES Probability = 0.58\n[R12][twitter] Sara Kim #162: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Mendez #37: Belief check: YES Probability = 0.75\n[R12][twitter] Maria Gonzalez #184: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Hernandez #187: Belief check: YES Probability = 0.75\n[R12][twitter] Emily Chen #134: Belief check: YES Probability = 0.75\n[R12][twitter] Fei-Fei Li #7: Belief check: YES Probability = 0.75\n[R12][twitter] John Wong #256: Belief check: YES Probability = 0.75\n[R12][twitter] Linda Chen #42: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Lee #265: Belief check: YES Probability = 0.75\n[R12][twitter] Elena Martinez #40: Belief check: YES Probability = 0.75\n[R12][twitter] Microsoft #20: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #146: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Altman #30: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Lee #216: Belief check: YES Probability = 0.75\n[R12][twitter] Takashi Sato #158: Belief check: YES Probability = 0.75\n[R12][twitter] Aisha Patel #212: Belief check: YES Probability = 0.75\n[R12][twitter] Samantha Arnett #34: Belief check: YES Probability = 0.75\n[R12][twitter] Patrick Chen #142: Belief check: YES Probability = 0.75\n[R12][twitter] Sophia Lee #205: Belief check: YES Probability = 0.75\n[R12][twitter] Ahmed Hassan #203: Belief check: YES Probability = 0.58\n[R12][twitter] Dr. Laura Chen #259: Belief check: YES Probability = 0.75\n[R12][twitter] Demis Hassabis #8: Belief check: YES Probability = 0.75\n[R12][twitter] Natalia Ivanova #78: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Chen #110: Belief check: YES Probability = 0.75\n[R12][twitter] The Federal Reserve #14: Belief check: YES Probability = 0.5\n[R12][twitter] Dr. Li Na #167: Belief check: YES Probability = 0.58\n[R12][twitter] Linda Chen #200: Belief check: YES Probability = 0.45\n[R12][twitter] Emma Lee #252: Belief check: YES Probability = 0.58\n[R12][twitter] Ahmed Ali #178: Belief check: YES Probability = 0.75\n[R12][twitter] John Doe #116: Belief check: YES Probability = 0.75\n[R12][twitter] Takashi Tanaka #79: Belief check: YES Probability = 0.58\n[R12][twitter] Samuel Williams #244: Belief check: YES Probability = 0.75\n[R12][twitter] IBM #22: Belief check: YES Probability = 0.75\n[R12][twitter] Alicia Chen #156: Belief check: YES Probability = 0.58\n[R12][twitter] Alexander Altman #62: Belief check: YES Probability = 0.75\n[R12][twitter] OpenAI #29: Belief check: YES Probability = 0.75\n[R12][twitter] Carlos Rodriguez #111: Belief check: YES Probability = 0.58\n[R12][twitter] Linda Nguyen #104: Belief check: YES Probability = 0.75\n[R15][twitter] Sam Altman #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] Sam Altman #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  },
+  {
+    "event_id": "C6",
+    "unit_id": "C6_A_r1",
+    "question": "How many Fed rate cuts in 2025?",
+    "ground_truth": "1",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4+"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/C6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "0": 0.23076923076923078,
+      "1": 0.0,
+      "2": 0.46153846153846156,
+      "3": 0.0,
+      "4+": 0.30769230769230776
+    },
+    "brier": 1.360947,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.622916,
+    "yes_probability": null,
+    "rps": 0.834319526627219,
+    "calibration_bracket": "0.25-0.5",
+    "calibration_predicted_probability": 0.46153846153846156,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "polarization": {
+        "very_low": 0.3,
+        "low": 0.2,
+        "high": 0.25,
+        "very_high": 0.25
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.45,
+        "very_high": 0.3
+      },
+      "deliberation_quality": {
+        "very_low": 0.05,
+        "low": 0.1,
+        "high": 0.6,
+        "very_high": 0.25
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.45,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.45,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.25,
+        "low": 0.25,
+        "high": 0.25,
+        "very_high": 0.25
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.683333,
+        "polarization_score": 0.483333,
+        "herd_effect_score": 0.65,
+        "deliberation_quality_score": 0.683333,
+        "susceptibility_score": 0.65,
+        "convergence_score": 0.65,
+        "information_diversity_score": 0.5,
+        "weighted_rubric_score": 0.622916
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      },
+      "market_prior": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      }
+    },
+    "micro_epistemic_mapping": {
+      "C6_q1_dot_plot": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q2_tariff_inflation": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q3_starting_rate": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# Federal Reserve 2025 Rate Cuts: Pre-Resolution Intelligence Dossier\n\n**Question:** How many Fed rate cuts in 2025?  \n**Market Opened:** January 2025  \n**Information Cutoff:** June 30, 2025 (Mid-Year Assessment)\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** Following a sequence of rate cuts in late 2024, the Federal Reserve entered 2025 navigating crosscurrents of sticky inflation and shifting fiscal policies. Forecasters must determine the total number of times the Federal Open Market Committee (FOMC) will vote to reduce the federal funds target range throughout the entire 2025 calendar year.\n\n**Resolution Contract:** This market resolves to the categorical bracket corresponding to the exact number of discrete rate cut decisions (reductions in the Federal Funds target range) officially announced by the FOMC between January 1, 2025, and December 31, 2025. \n- *Measurement Standard:* The metric is the *number of meetings/decisions* resulting in a cut, not the total basis points. A 50-basis-point cut counts as \"1 cut.\" Emergency inter-meeting cuts count individually. Holds (0bps) or hikes do not count toward the total.\n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: Predicting full-year central bank policy requires aggregating both macroeconomic data and futures market pricing.*\n- **Current Target Rate (Entering 2025):** 4.25%–4.50%.\n- **December 2024 FOMC \"Dot Plot\" Median:** Projected ~2 cuts for 2025.\n- **CME FedWatch Implied Probabilities (Early 2025):** 0 cuts (~15%), 1 cut (~35%), 2 cuts (~30%), 3+ cuts (~20%).\n- **Headline CPI (Mid-2025):** Hovering in the 2.5% to 2.8% range, resistant to further drops.\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **Q3/Q4 2024:** The Fed executes three rate cuts (September, November, December) to normalize policy as inflation appears contained and the labor market cools.\n- **December 2024:** The FOMC shifts its tone, indicating a \"new, cautious phase\" of policy. The December SEP dot plot signals a hawkish shift compared to market expectations, penciling in only two cuts for 2025.\n- **January 2025:** A new US presidential administration takes office, signaling aggressive new tariff and immigration policies that economists flag as potentially inflationary.\n- **H1 2025:** Economic data remains mixed. GDP growth remains solid, but specific sectors (manufacturing, housing) show strain due to sustained high borrowing costs.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The \"Sticky\" Last Mile:**\nThe primary structural obstacle to further cuts is Core PCE inflation. While goods deflation has largely run its course, services inflation and shelter costs remain persistently high. If core inflation plateaus above 2.5%, the Fed's mandate strictly prevents aggressive easing, raising the probability of a \"0\" or \"1\" cut outcome.\n\n**The Fiscal Policy Shock:**\nThe market must weigh the immediate impact of proposed universal tariffs (e.g., 10% baseline, 60% on China). \n- *Inflationary Spike:* Tariffs mechanically raise consumer prices. If the Fed treats this as a permanent inflationary shock, they will halt all rate cuts.\n- *Growth Shock:* If tariffs trigger retaliatory trade wars that damage global growth and US corporate earnings, the resulting economic slowdown could force the Fed to cut rates aggressively (3+ cuts) to prevent a recession.\n\n## 5.0 Institutional Divergence\n\n**The Wall Street Consensus vs. Fed Guidance:**\n- **Hawkish Institutions (e.g., Deutsche Bank):** Projecting only 1 cut, arguing that structural inflation and expansionary fiscal policy will tie the Fed's hands.\n- **Moderate Institutions (e.g., Goldman Sachs, JPMorgan):** Aligning with the Fed's dot plot, projecting 2 cuts as the Fed cautiously normalizes toward a neutral rate of ~3.5%.\n- **Dovish View:** Some analysts predict that labor market weakness, masked by late-2024 hiring data, will suddenly manifest in mid-2025, forcing 3 or 4 panic cuts.\n\n## 6.0 Key Unknowns & Catalyst Tr"
+  },
+  {
+    "event_id": "C6",
+    "unit_id": "C6_B_r1",
+    "question": "How many Fed rate cuts in 2025?",
+    "ground_truth": "1",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4+"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/C6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "0": 0.4444444444444445,
+      "1": 0.0,
+      "2": 0.33333333333333337,
+      "3": 0.0,
+      "4+": 0.22222222222222224
+    },
+    "brier": 1.358025,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.491667,
+    "yes_probability": null,
+    "rps": 0.6049382716049383,
+    "calibration_bracket": "0.25-0.5",
+    "calibration_predicted_probability": 0.44444444444444436,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "polarization": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "herd_effect": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.1
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      },
+      "susceptibility": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "convergence": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "information_diversity": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.4
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.666667,
+        "polarization_score": 0.333333,
+        "herd_effect_score": 0.266667,
+        "deliberation_quality_score": 0.666667,
+        "susceptibility_score": 0.333333,
+        "convergence_score": 0.333333,
+        "information_diversity_score": 0.666667,
+        "weighted_rubric_score": 0.491667
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.5971622975291753,
+      0.7582766571931678,
+      0.5988405146652431,
+      0.5988405146652431,
+      0.5864761185567972,
+      0.5864761185567972,
+      0.603827948298856,
+      0.603827948298856,
+      0.6109743312847089
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      },
+      "market_prior": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      }
+    },
+    "micro_epistemic_mapping": {
+      "C6_q1_dot_plot": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q2_tariff_inflation": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q3_starting_rate": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\n and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\n{'user_profile': '- Worldview: Environmentalism\\n- Motivation: Protect the environment\\n- Style: Innovative\\n- Biases: Triggered by government regulation\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INFJ', 'gender': 'female', 'age': 36, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological optimism\\n- Motivation: Promote technological advancement\\n- Style: Forward-thinking\\n- Biases: Triggered by intellectual property disputes\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 39, 'country': 'USA'}\n{'user_profile': '- Worldview: Constructivist...\\n- Motivation: Achieve international consensus...\\n- Style: Diplomatic...\\n- Biases: Triggered by unilateral actions.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INFJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/C6_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Twitter] Injection triggered at step 15\n[Reddit] Injection triggered at step 15\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 131.7seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 160.5seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Williams #0: How many Fed rate cuts in 2025?\n[R0][reddit] John Williams #0: How many Fed rate cuts in 2025?\n[R9][twitter] John Williams #0: How many Fed rate cuts in 2025?\n[R9][reddit] John Williams #0: How many Fed rate cuts in 2025?\n[R12][twitter] Lina Rodriguez #111: Belief check: YES Probability = 0.5\n[R12][twitter] Maria Lopez #225: Belief check: YES Probability = 0.5\n[R12][twitter] Bertha Bernanke #126: Belief check: YES Probability = 0.5\n[R12][twitter] Rahul Singh #298: Belief check: YES Probability = 0.5\n[R12][twitter] Sara Lee #290: Belief check: YES Probability = 0.45\n[R12][twitter] Emma Carney #219: Belief check: YES Probability = 0.45\n[R12][twitter] Lisa Hernandez #51: Belief check: YES Probability = 0.45\n[R12][twitter] Bennett Bernanke #127: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Mendez #210: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Sandra Lee #179: Belief check: YES Probability = 0.45\n[R12][twitter] James Carney #161: Belief check: YES Probability = 0.45\n[R12][twitter] Oliver Kim #44: Belief check: YES Probability = 0.45\n[R12][twitter] Ahmed El-Sayed #226: Belief check: YES Probability = 0.45\n[R12][twitter] Jasmine Patel #43: Belief check: YES Probability = 0.45\n[R12][twitter] Jill Williams #63: Belief check: YES Probability = 0.45\n[R12][twitter] Maria Rodriguez #71: Belief check: YES Probability = 0.45\n[R12][twitter] Emma Wood #109: Belief check: YES Probability = 0.45\n[R12][twitter] Linda Chen #196: Belief check: YES Probability = 0.45\n[R12][twitter] Laura Kim #141: Belief check: YES Probability = 0.45\n[R12][twitter] Fatima Khan #77: Belief check: YES Probability = 0.45\n[R12][twitter] Hanna Johnson #122: Belief check: YES Probability = 0.5\n[R12][twitter] Hanna Kim #151: Belief check: YES Probability = 0.5\n[R12][twitter] Morgan Powell #36: Belief check: YES Probability = 0.45\n[R12][twitter] Bernie Bernanke #96: Belief check: YES Probability = 0.45\n[R12][twitter] Mr. Michael O'Connor #265: Belief check: YES Probability = 0.45\n[R12][twitter] Sean O'Connor #200: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Martinez #260: Belief check: YES Probability = 0.45\n[R12][twitter] Gideon Miller #123: Belief check: YES Probability = 0.45\n[R12][twitter] David Thompson #197: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Alvarado #145: Belief check: YES Probability = 0.45\n[R12][twitter] Larry Summers #6: Belief check: YES Probability = 0.45\n[R12][twitter] Edward Bernanke #184: Belief check: YES Probability = 0.45\n[R12][twitter] Thomas Quinn #57: Belief check: YES Probability = 0.45\n[R12][twitter] Ravi Patel #105: Belief check: YES Probability = 0.45\n[R12][twitter] Rachel Carney #162: Belief check: YES Probability = 0.45\n[R12][twitter] Ben Bernanke #154: Belief check: YES Probability = 0.45\n[R12][twitter] Christopher Carney #253: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Lopez #255: Belief check: YES Probability = 0.45\n[R12][twitter] Bloomberg #13: Belief check: YES Probability = 0.45\n[R12][twitter] The Economic Policy Institute (EPI) #27: Belief check: YES Probability = 0.75\n[R12][twitter] Charles Powell #67: Belief check: YES Probability = 0.7\n[R12][twitter] Mr. John Williams #267: Belief check: YES Probability = 0.5\n[R12][twitter] Ben Bernanke #4: Belief check: YES Probability = 0.45\n[R12][twitter] Congressional Budget Office (CBO) #18: Belief check: YES Probability = 0.45\n[R12][twitter] The Wall Street Journal #10: Belief check: YES Probability = 0.45\n[R12][twitter] Richard Martinez #202: Belief check: YES Probability = 0.45\n[R12][twitter] Elizabeth Bernanke #187: Belief check: YES Probability = 0.45\n[R12][twitter] Bernard Bernanke #215: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Rodriguez #195: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Lopez #150: Belief check: YES Probability = 0.45\n[R12][twitter] Federal Reserve #17: Belief check: YES Probability = 0.45\n[R12][twitter] Alice Thompson #259: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Gonzalez #236: Belief check: YES Probability = 0.45\n[R12][twitter] David Lee #88: Belief check: YES Probability = 0.45\n[R15][twitter] John Williams #0: The latest Personal Consumption Expenditures (PCE) report highlights persistent price increases in the core services and shelter sectors. Analysts suggest this lack of disinflationary momentum favors a 'higher-for-longer' policy path, where the FOMC remains constrained to a minimal adjustment cycle.\n[R15][reddit] John Williams #0: The latest Personal Consumption Expenditures (PCE) report highlights persistent price increases in the core services and shelter sectors. Analysts suggest this lack of disinflationary momentum favors a 'higher-for-longer' policy path, where the FOMC remains constrained to a minimal adjustment cycle."
+  },
+  {
+    "event_id": "C6",
+    "unit_id": "C6_C_r1",
+    "question": "How many Fed rate cuts in 2025?",
+    "ground_truth": "1",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4+"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/C6/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "0": 0.11111111111111112,
+      "1": 0.0,
+      "2": 0.6666666666666667,
+      "3": 0.0,
+      "4+": 0.22222222222222224
+    },
+    "brier": 1.506173,
+    "directional_accuracy": 0.0,
+    "directional_correct": 0,
+    "weighted_rubric_score": 0.483333,
+    "yes_probability": null,
+    "rps": 0.9012345679012346,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.6666666666666666,
+    "calibration_hit": 0,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {},
+    "evaluator_reliability_status": "absent",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.3,
+        "low": 0.39999999999999997,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "deliberation_quality": {
+        "very_low": 0.39999999999999997,
+        "low": 0.3,
+        "high": 0.19999999999999998,
+        "very_high": 0.09999999999999999
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.6,
+        "very_high": 0.1
+      },
+      "information_diversity": {
+        "very_low": 0.5,
+        "low": 0.3,
+        "high": 0.1,
+        "very_high": 0.1
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.366667,
+        "herd_effect_score": 0.566667,
+        "deliberation_quality_score": 0.333333,
+        "susceptibility_score": 0.566667,
+        "convergence_score": 0.566667,
+        "information_diversity_score": 0.266667,
+        "weighted_rubric_score": 0.483333
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.603464073344724,
+      0.7582766571931678,
+      0.5772812619712804,
+      0.5772812619712804,
+      0.604159297415788,
+      0.604159297415788,
+      0.6243290021663536,
+      0.6243290021663536,
+      0.6399143866302087
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      },
+      "market_prior": {
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.2,
+          "2": 0.2,
+          "3": 0.2,
+          "4+": 0.2
+        },
+        "brier": 0.8000000000000003
+      }
+    },
+    "micro_epistemic_mapping": {
+      "C6_q1_dot_plot": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q2_tariff_inflation": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "C6_q3_starting_rate": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\n and post strictly in English only.', 'mbti': 'ENTJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\n{'user_profile': '- Worldview: Environmentalism\\n- Motivation: Protect the environment\\n- Style: Innovative\\n- Biases: Triggered by government regulation\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INFJ', 'gender': 'female', 'age': 36, 'country': 'USA'}\n{'user_profile': '- Worldview: Technological optimism\\n- Motivation: Promote technological advancement\\n- Style: Forward-thinking\\n- Biases: Triggered by intellectual property disputes\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 39, 'country': 'USA'}\n{'user_profile': '- Worldview: Constructivist...\\n- Motivation: Achieve international consensus...\\n- Style: Diplomatic...\\n- Biases: Triggered by unilateral actions.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INFJ', 'gender': 'male', 'age': 45, 'country': 'USA'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/C6_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 146.3seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 158.5seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Williams #0: How many Fed rate cuts in 2025?\n[R0][reddit] John Williams #0: How many Fed rate cuts in 2025?\n[R9][twitter] John Williams #0: How many Fed rate cuts in 2025?\n[R9][reddit] John Williams #0: How many Fed rate cuts in 2025?\n[R12][twitter] Hanna Johnson #122: Belief check: YES Probability = 0.5\n[R12][twitter] Charles Powell #67: Belief check: YES Probability = 0.45\n[R12][twitter] Elizabeth Bernanke #187: Belief check: YES Probability = 0.45\n[R12][twitter] Thomas Quinn #57: Belief check: YES Probability = 0.45\n[R12][twitter] Christopher Carney #253: Belief check: YES Probability = 0.45\n[R12][twitter] Gideon Miller #123: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Lopez #255: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Rodriguez #270: Belief check: YES Probability = 0.45\n[R12][twitter] Larry Summers #6: Belief check: YES Probability = 0.45\n[R12][twitter] Edward Bernanke #184: Belief check: YES Probability = 0.45\n[R12][twitter] Amelia Perez #198: Belief check: YES Probability = 0.45\n[R12][twitter] Leo Powell #37: Belief check: YES Probability = 0.45\n[R12][twitter] Bernard Bernanke #215: Belief check: YES Probability = 0.45\n[R12][twitter] David Lee #88: Belief check: YES Probability = 0.45\n[R12][twitter] Morgan Powell #36: Belief check: YES Probability = 0.45\n[R12][twitter] The Economic Policy Institute (EPI) #27: Belief check: YES Probability = 0.75\n[R12][twitter] Aisha Patel #241: Belief check: YES Probability = 0.45\n[R12][twitter] Mark Carney #279: Belief check: YES Probability = 0.45\n[R12][twitter] David Thompson #197: Belief check: YES Probability = 0.45\n[R12][twitter] Rachel Carney #162: Belief check: YES Probability = 0.45\n[R12][twitter] Christina Romer #8: Belief check: YES Probability = 0.45\n[R12][twitter] Jonathan Kim #212: Belief check: YES Probability = 0.5\n[R12][twitter] John Williams #30: Belief check: YES Probability = 0.45\n[R12][twitter] Aisha Patel #256: Belief check: YES Probability = 0.45\n[R12][twitter] Javier Martinez #78: Belief check: YES Probability = 0.45\n[R12][twitter] Samantha Green #146: Belief check: YES Probability = 0.45\n[R12][twitter] David Chua #142: Belief check: YES Probability = 0.45\n[R12][twitter] Federal Open Market Committee (FOMC) #20: Belief check: YES Probability = 0.45\n[R12][twitter] Bernadette Bernanke #216: Belief check: YES Probability = 0.45\n[R12][twitter] Mr. Carlos Martinez #205: Belief check: YES Probability = 0.45\n[R12][twitter] Alice Thompson #259: Belief check: YES Probability = 0.45\n[R12][twitter] Mohamed El-Erian #7: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #134: Belief check: YES Probability = 0.75\n[R12][twitter] Mr. Michael O'Connor #265: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Patel #203: Belief check: YES Probability = 0.45\n[R12][twitter] Daniel Williams #34: Belief check: YES Probability = 0.45\n[R12][twitter] Michael Bernanke #158: Belief check: YES Probability = 0.45\n[R12][twitter] Eleanor Blackwood #104: Belief check: YES Probability = 0.45\n[R12][twitter] Lena Wang #79: Belief check: YES Probability = 0.5\n[R12][twitter] Carlos Martinez #42: Belief check: YES Probability = 0.45\n[R12][twitter] Mohammad Ali #110: Belief check: YES Probability = 0.45\n[R12][twitter] Alex Johnson #40: Belief check: YES Probability = 0.45\n[R12][twitter] Mr. John Williams #267: Belief check: YES Probability = 0.5\n[R12][twitter] Elizabeth Bernanke #155: Belief check: YES Probability = 0.5\n[R12][twitter] Lina Rodriguez #111: Belief check: YES Probability = 0.5\n[R12][twitter] Ben Bernanke #244: Belief check: YES Probability = 0.45\n[R12][twitter] The Peterson Institute for International Economics #22: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Gonzalez #236: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Li Wei #178: Belief check: YES Probability = 0.45\n[R12][twitter] Elizabeth Carney #252: Belief check: YES Probability = 0.45\n[R12][twitter] Sean O'Connor #200: Belief check: YES Probability = 0.45\n[R12][twitter] Joseph Williams #62: Belief check: YES Probability = 0.45\n[R12][twitter] Bernard Bernanke #247: Belief check: YES Probability = 0.45\n[R12][twitter] Goldman Sachs #14: Belief check: YES Probability = 0.45\n[R15][twitter] John Williams #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] John Williams #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  },
+  {
+    "event_id": "T8",
+    "unit_id": "T8_A_r1",
+    "question": "Will Bitcoin hit $110k in 2025?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "A",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T8/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": false,
+    "probabilities": {
+      "YES": 0.7,
+      "NO": 0.3
+    },
+    "brier": 0.18,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.597917,
+    "yes_probability": 0.7,
+    "rps": 0.09000000000000002,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.7,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "polarization": {
+        "run1": "low",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "high",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "deliberation_quality": {
+        "very_low": 0.15,
+        "low": 0.25,
+        "high": 0.4,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.15,
+        "low": 0.25,
+        "high": 0.35,
+        "very_high": 0.25
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.65,
+        "polarization_score": 0.5,
+        "herd_effect_score": 0.6,
+        "deliberation_quality_score": 0.55,
+        "susceptibility_score": 0.633333,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.566667,
+        "weighted_rubric_score": 0.597917
+      }
+    },
+    "round_jsd": null,
+    "convergence_monotonic": null,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T8_q1_six_figure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q2_may_high": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q3_etf_floors": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "No-Sim Seed Context (Condition A baseline):\n# Bitcoin $110,000 Barrier: Pre-Resolution Intelligence Dossier\n\n**Question:** Will Bitcoin hit $110,000 in 2025?  \n**Market Opened:** December 2024  \n**Information Cutoff:** January 31, 2025\n\n---\n\n## 1.0 Executive Summary & Resolution Criteria\n\n**Summary:** Following its historic breach of the $100,000 psychological barrier in late 2024, Bitcoin entered 2025 in a state of extreme price discovery and high volatility. Forecasters must determine whether the macro tailwinds and institutional inflows are sufficient to propel the asset through its next major integer resistance at $110,000 before the end of the year.\n\n**Resolution Contract:** This market resolves \"YES\" if, at any point between January 1, 2025, and December 31, 2025, the spot price of Bitcoin reaches or exceeds $110,000.00. It resolves \"NO\" if the price fails to touch this threshold at any point during the 2025 calendar year.\n- *Measurement Standard:* Resolution is based strictly on the spot price recorded on a designated, high-liquidity consensus exchange (e.g., Coinbase, Binance, or a specified index). \n\n## 2.0 Key Quantitative Indicators (Snapshot as of Cutoff)\n\n*Note: Predicting specific price targets in crypto requires analyzing both macro liquidity and micro order-book mechanics.*\n- **Current Price Range (Jan 2025):** Highly volatile, fluctuating between $85,000 and $105,000.\n- **Distance to Threshold:** A modest ~5% to 25% price movement required to hit $110k from current ranges.\n- **Spot ETF Inflows:** Continuing to absorb hundreds of millions of dollars per week, drastically altering supply/demand mechanics.\n- **Market Implied Probability:** Modeled at >80% probability, reflecting the relatively short distance to the target within a 11-month window.\n\n## 3.0 Factual Reconstruction (Timeline)\n\n- **April 2024:** The Bitcoin Halving cuts daily mined supply by 50%.\n- **November 5, 2024:** Donald Trump wins the US Presidency, initiating a massive \"Trump Trade\" rally based on promises of a crypto-friendly regulatory regime.\n- **December 2024:** Bitcoin crosses $100,000 for the first time in history, triggering massive mainstream media coverage and retail FOMO, followed immediately by severe profit-taking volatility.\n- **January 2025:** The new administration dismantles the hostile Biden-era SEC. Speculation surges regarding the establishment of a US \"Strategic Bitcoin Reserve.\" The price chops violently in the $90k-$105k range as the market digests the explosive Q4 2024 gains.\n\n## 4.0 Structural Mechanics & Systemic Vulnerabilities\n\n**The \"Price Discovery\" Vacuum:**\nBecause Bitcoin has never traded above $105,000, there is zero historical chart resistance above this level. However, human psychology creates \"round number\" gravity. \n- Massive limit-sell orders are clustered around $100k, $105k, and $110k. \n- *The Vulnerability:* The derivatives market is heavily over-leveraged. If spot buying pushes the price through $108,000, it is highly likely to trigger a cascading \"short squeeze\"—forcing liquidated short-sellers to buy back BTC at market price, which would violently propel the price through $110,000 in a matter of minutes.\n\n## 5.0 Macroeconomic & Institutional Divergence\n\n**The Institutional Buy Wall:**\nThe market structure in 2025 is fundamentally different from 2021. Wealth managers are systematically allocating 1-3% of client portfolios into Spot ETFs (BlackRock, Fidelity). Additionally, the \"MicroStrategy Playbook\" has proliferated, with multiple public companies issuing convertible debt to acquire BTC for their treasuries. This creates a relentless, price-agnostic bid that absorbs selling pressure.\n\n**The Macroeconomic Headwind:**\nThe primary threat to the $110k target is global fiat liquidity. If the incoming administration's universal tariffs trigger a resurgence in inflation, the Federal Reserve will be forced to halt rate cuts or even hike rates. Higher interest rates drain liquidity from risk assets, potentially capping Bitcoin's rally and forcing it i"
+  },
+  {
+    "event_id": "T8",
+    "unit_id": "T8_B_r1",
+    "question": "Will Bitcoin hit $110k in 2025?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "B",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T8/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.6,
+      "NO": 0.4
+    },
+    "brier": 0.32,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.59375,
+    "yes_probability": 0.6,
+    "rps": 0.16000000000000003,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.6,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "high"
+      },
+      "polarization": {
+        "run1": "very_low",
+        "run2": "very_low"
+      },
+      "herd_effect": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "low",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.3,
+        "low": 0.2,
+        "high": 0.3,
+        "very_high": 0.2
+      },
+      "herd_effect": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.25
+      },
+      "deliberation_quality": {
+        "very_low": 0.05,
+        "low": 0.15,
+        "high": 0.6,
+        "very_high": 0.2
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.15,
+        "high": 0.5,
+        "very_high": 0.25
+      },
+      "information_diversity": {
+        "very_low": 0.25,
+        "low": 0.3,
+        "high": 0.25,
+        "very_high": 0.2
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.65,
+        "polarization_score": 0.466667,
+        "herd_effect_score": 0.633333,
+        "deliberation_quality_score": 0.65,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.466667,
+        "weighted_rubric_score": 0.59375
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.4505067871354691,
+      0.7582766571931678,
+      0.4423595533144391,
+      0.4423595533144391,
+      0.45172745562787514,
+      0.45172745562787514,
+      0.43310617679874336,
+      0.43310617679874336,
+      0.4452837914261168
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T8_q1_six_figure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q2_may_high": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q3_etf_floors": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\ny urban sprawl.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 38, 'country': 'United States'}\n{'user_profile': '- Worldview: Critical realism...\\n- Motivation: Eliminate poverty...\\n- Style: Analytical...\\n- Biases: Triggered by corruption.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'male', 'age': 42, 'country': 'Mexico'}\n{'user_profile': '- Worldview: Pragmatic...\\n- Motivation: Protect data...\\n- Style: Precise...\\n- Biases: Triggered by data breaches.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ISTP', 'gender': 'female', 'age': 31, 'country': 'South Korea'}\n{'user_profile': '- Worldview: Realpolitik...\\n- Motivation: Resolve conflicts...\\n- Style: Strategic...\\n- Biases: Triggered by geopolitical tensions.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 45, 'country': 'Jordan'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T8_B_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 149.1seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 157.2seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R0][reddit] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R9][twitter] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R9][reddit] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R12][twitter] Tomás Rodríguez #179: Belief check: YES Probability = 0.3\n[R12][twitter] David Jones #214: Belief check: YES Probability = 0.3\n[R12][twitter] Emily Davis #5: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Maria Rodriguez #85: Belief check: YES Probability = 0.25\n[R12][twitter] Michael Brown #34: Belief check: YES Probability = 0.45\n[R12][twitter] John Doe #0: Belief check: YES Probability = 0.45\n[R12][twitter] Sara Wong #197: Belief check: YES Probability = 0.35\n[R12][twitter] The Cato Institute #24: Belief check: YES Probability = 0.35\n[R12][twitter] Michael Johnson #224: Belief check: YES Probability = 0.35\n[R12][twitter] Maria Gonzalez #171: Belief check: YES Probability = 0.35\n[R12][twitter] Hiroshi Tanaka #177: Belief check: YES Probability = 0.25\n[R12][twitter] Eleanor Turner #135: Belief check: YES Probability = 0.45\n[R12][twitter] David Wang #228: Belief check: YES Probability = 0.35\n[R12][twitter] Willa Johnson #163: Belief check: YES Probability = 0.35\n[R12][twitter] Jill Smith #121: Belief check: YES Probability = 0.35\n[R12][twitter] Wendy Johnson #131: Belief check: YES Probability = 0.35\n[R12][twitter] Ahmed Hassan #107: Belief check: YES Probability = 0.35\n[R12][twitter] Dr. Emily Clarke #55: Belief check: YES Probability = 0.35\n[R12][twitter] Elizabeth Davis #127: Belief check: YES Probability = 0.25\n[R12][twitter] Alice Johnson #45: Belief check: YES Probability = 0.25\n[R12][twitter] William Johnson #10: Belief check: YES Probability = 0.75\n[R12][twitter] Laura Davis #37: Belief check: YES Probability = 0.35\n[R12][twitter] Hassan Khan #231: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Christine Lee #115: Belief check: YES Probability = 0.25\n[R12][twitter] Mohammad Ali #268: Belief check: YES Probability = 0.35\n[R12][twitter] Maria Lopez #51: Belief check: YES Probability = 0.35\n[R12][twitter] Michael Wang #150: Belief check: YES Probability = 0.35\n[R12][twitter] Jane Smith #211: Belief check: YES Probability = 0.35\n[R12][twitter] Sophia Kim #83: Belief check: YES Probability = 0.35\n[R12][twitter] William Jones #252: Belief check: YES Probability = 0.35\n[R12][twitter] Reuters #17: Belief check: YES Probability = 0.35\n[R12][twitter] Carlos Rivera #297: Belief check: YES Probability = 0.25\n[R12][twitter] Emily Davis #245: Belief check: YES Probability = 0.45\n[R12][twitter] Wilma Johnson #133: Belief check: YES Probability = 0.45\n[R12][twitter] Hannah Kim #53: Belief check: YES Probability = 0.45\n[R12][twitter] William Lee #193: Belief check: YES Probability = 0.45\n[R12][twitter] Emily Chen #296: Belief check: YES Probability = 0.25\n[R12][twitter] William Davis #192: Belief check: YES Probability = 0.35\n[R12][twitter] Alex Chen #175: Belief check: YES Probability = 0.35\n[R12][twitter] Sara Ahmed #287: Belief check: YES Probability = 0.45\n[R12][twitter] Emma Davis #157: Belief check: YES Probability = 0.25\n[R12][twitter] Christopher Davis #38: Belief check: YES Probability = 0.45\n[R12][twitter] Maria Santos #293: Belief check: YES Probability = 0.35\n[R12][twitter] Sophia Chen #277: Belief check: YES Probability = 0.45\n[R12][twitter] Michael Johnson #180: Belief check: YES Probability = 0.35\n[R12][twitter] Laura Martinez #7: Belief check: YES Probability = 0.45\n[R12][twitter] Jordan Smith #110: Belief check: YES Probability = 0.45\n[R12][twitter] Carlos Rodriguez #167: Belief check: YES Probability = 0.15\n[R12][twitter] Laura Nguyen #274: Belief check: YES Probability = 0.35\n[R12][twitter] Erik Johnson #152: Belief check: YES Probability = 0.35\n[R12][twitter] David Martinez #47: Belief check: YES Probability = 0.35\n[R12][twitter] Bill Johnson #42: Belief check: YES Probability = 0.35\n[R12][twitter] Emily Chen #241: Belief check: YES Probability = 0.35\n[R12][twitter] Mr. John Doe #86: Belief check: YES Probability = 0.25\n[R15][twitter] John Doe #0: Regulatory changes and new leadership have led major investment banks to re-evaluate their 2025 price targets. Analysts cite a structural transition phase from 'speculative asset' to 'reserve-grade digital commodity,' logically favoring a test of the $110,000 threshold.\n[R15][reddit] John Doe #0: Regulatory changes and new leadership have led major investment banks to re-evaluate their 2025 price targets. Analysts cite a structural transition phase from 'speculative asset' to 'reserve-grade digital commodity,' logically favoring a test of the $110,000 threshold."
+  },
+  {
+    "event_id": "T8",
+    "unit_id": "T8_C_r1",
+    "question": "Will Bitcoin hit $110k in 2025?",
+    "ground_truth": "YES",
+    "options": [
+      "YES",
+      "NO"
+    ],
+    "condition": "C",
+    "repeat": 1,
+    "seed_file": "../../data/seeds/T8/context.md",
+    "simulation_status": "completed",
+    "full_simulation_completed": true,
+    "simulation_executed": true,
+    "probabilities": {
+      "YES": 0.7,
+      "NO": 0.3
+    },
+    "brier": 0.18,
+    "directional_accuracy": 1.0,
+    "directional_correct": 1,
+    "weighted_rubric_score": 0.620833,
+    "yes_probability": 0.7,
+    "rps": 0.09000000000000002,
+    "calibration_bracket": "0.5-0.75",
+    "calibration_predicted_probability": 0.7,
+    "calibration_hit": 1,
+    "strict_contract": true,
+    "evaluator_fallback_used": false,
+    "evaluator_fallback_reason": null,
+    "evaluator_fallback_source": null,
+    "injection_direction": null,
+    "signed_delta": null,
+    "belief_update_failure": null,
+    "evaluator_noisy_dimensions": [],
+    "evaluator_dimension_labels": {
+      "prediction_accuracy": {
+        "run1": "high",
+        "run2": "very_high"
+      },
+      "polarization": {
+        "run1": "low",
+        "run2": "very_high"
+      },
+      "herd_effect": {
+        "run1": "very_high",
+        "run2": "very_low"
+      },
+      "deliberation_quality": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "susceptibility": {
+        "run1": "very_high",
+        "run2": "very_low"
+      },
+      "convergence": {
+        "run1": "high",
+        "run2": "very_low"
+      },
+      "information_diversity": {
+        "run1": "high",
+        "run2": "very_low"
+      }
+    },
+    "evaluator_reliability_status": "complete",
+    "mcq_dimensions": {
+      "prediction_accuracy": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.5,
+        "very_high": 0.2
+      },
+      "polarization": {
+        "very_low": 0.2,
+        "low": 0.4,
+        "high": 0.3,
+        "very_high": 0.1
+      },
+      "herd_effect": {
+        "very_low": 0.0,
+        "low": 0.1,
+        "high": 0.3,
+        "very_high": 0.6
+      },
+      "deliberation_quality": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "susceptibility": {
+        "very_low": 0.1,
+        "low": 0.3,
+        "high": 0.3,
+        "very_high": 0.3
+      },
+      "convergence": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      },
+      "information_diversity": {
+        "very_low": 0.1,
+        "low": 0.2,
+        "high": 0.4,
+        "very_high": 0.3
+      }
+    },
+    "validated_scales": {
+      "schema_version": "v1",
+      "scores": {
+        "prediction_accuracy_score": 0.6,
+        "polarization_score": 0.433333,
+        "herd_effect_score": 0.833333,
+        "deliberation_quality_score": 0.633333,
+        "susceptibility_score": 0.6,
+        "convergence_score": 0.633333,
+        "information_diversity_score": 0.633333,
+        "weighted_rubric_score": 0.620833
+      }
+    },
+    "round_jsd": [
+      0.7582766571931678,
+      0.4682179069483417,
+      0.7582766571931678,
+      0.4614449753818505,
+      0.4614449753818505,
+      0.445749699040296,
+      0.445749699040296,
+      0.4211106485148455,
+      0.4211106485148455,
+      0.4531722769243336
+    ],
+    "convergence_monotonic": false,
+    "delta_conformity": null,
+    "baseline_scores": {
+      "uniform_random": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      },
+      "market_prior": {
+        "probabilities": {
+          "YES": 0.5,
+          "NO": 0.5
+        },
+        "brier": 0.5
+      }
+    },
+    "micro_epistemic_mapping": {
+      "T8_q1_six_figure": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q2_may_high": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      },
+      "T8_q3_etf_floors": {
+        "dominant_tag": "N/A",
+        "short_rationale": "Missing in LLM response"
+      }
+    },
+    "error": null,
+    "evidence_text": "Simulation high-level log tail:\ny urban sprawl.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENFJ', 'gender': 'female', 'age': 38, 'country': 'United States'}\n{'user_profile': '- Worldview: Critical realism...\\n- Motivation: Eliminate poverty...\\n- Style: Analytical...\\n- Biases: Triggered by corruption.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'INTP', 'gender': 'male', 'age': 42, 'country': 'Mexico'}\n{'user_profile': '- Worldview: Pragmatic...\\n- Motivation: Protect data...\\n- Style: Precise...\\n- Biases: Triggered by data breaches.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ISTP', 'gender': 'female', 'age': 31, 'country': 'South Korea'}\n{'user_profile': '- Worldview: Realpolitik...\\n- Motivation: Resolve conflicts...\\n- Style: Strategic...\\n- Biases: Triggered by geopolitical tensions.\\n- Global Language Rule: Speak and post strictly in English only.', 'mbti': 'ENTP', 'gender': 'male', 'age': 45, 'country': 'Jordan'}\ndb_path /tmp/ecnbench_run_10805064/qwen-14b-awq/ecnbench_20260607T081556247384Z/T8_C_r1/reddit_simulation.db\n[Twitter] Environment started\n[Reddit] Environment started\n[Twitter] Published 1 initial posts\n[Twitter] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Published 1 initial posts\n[Reddit] Telemetry probes scheduled at rounds: [12, 24, 36, 48, 60]\n[Reddit] Injection triggered at step 15\n[Twitter] Injection triggered at step 15\n[Reddit] Day 1, 19:00 - Round 20/60 (33.3%)\n[Twitter] Day 1, 19:00 - Round 20/60 (33.3%)\n[Reddit] Day 2, 15:00 - Round 40/60 (66.7%)\n[Twitter] Day 2, 15:00 - Round 40/60 (66.7%)\n[Reddit] Day 3, 11:00 - Round 60/60 (100.0%)\n[Reddit] Simulation loop completed! Time taken: 142.5seconds, Total actions: 503\n[Reddit] Simulation completed at step 60\n[Twitter] Day 3, 11:00 - Round 60/60 (100.0%)\n[Twitter] Simulation loop completed! Time taken: 164.2seconds, Total actions: 503\n[Twitter] Simulation completed at step 60\nSimulation process exited\n\n\nRepresentative Social Media Actions (Sample):\n[R0][twitter] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R0][reddit] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R9][twitter] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R9][reddit] John Doe #0: Will Bitcoin hit $110k in 2025?\n[R12][twitter] Tomás Rodríguez #179: Belief check: YES Probability = 0.3\n[R12][twitter] Jane Smith #211: Belief check: YES Probability = 0.35\n[R12][twitter] Willa Johnson #163: Belief check: YES Probability = 0.35\n[R12][twitter] Laura Nguyen #279: Belief check: YES Probability = 0.45\n[R12][twitter] William Lee #193: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Kim #83: Belief check: YES Probability = 0.35\n[R12][twitter] Emily Davis #245: Belief check: YES Probability = 0.45\n[R12][twitter] Laura Davis #37: Belief check: YES Probability = 0.35\n[R12][twitter] Michael Wang #150: Belief check: YES Probability = 0.35\n[R12][twitter] Alex Chen #175: Belief check: YES Probability = 0.35\n[R12][twitter] Wilma Johnson #133: Belief check: YES Probability = 0.45\n[R12][twitter] William Davis #192: Belief check: YES Probability = 0.35\n[R12][twitter] David Kim #288: Belief check: YES Probability = 0.35\n[R12][twitter] William Jones #252: Belief check: YES Probability = 0.35\n[R12][twitter] Hassan Khan #231: Belief check: YES Probability = 0.45\n[R12][twitter] William Johnson #10: Belief check: YES Probability = 0.75\n[R12][twitter] Maria Lopez #51: Belief check: YES Probability = 0.35\n[R12][twitter] Reuters #17: Belief check: YES Probability = 0.35\n[R12][twitter] Hannah Kim #53: Belief check: YES Probability = 0.45\n[R12][twitter] Dr. Christine Lee #115: Belief check: YES Probability = 0.35\n[R12][twitter] David Lee #294: Belief check: YES Probability = 0.15\n[R12][twitter] Dr. Lisa Nguyen #87: Belief check: YES Probability = 0.25\n[R12][twitter] Daniel Chang #105: Belief check: YES Probability = 0.35\n[R12][twitter] Ethan Smith #97: Belief check: YES Probability = 0.35\n[R12][twitter] The International Monetary Fund #27: Belief check: YES Probability = 0.35\n[R12][twitter] John Williams #222: Belief check: YES Probability = 0.35\n[R12][twitter] Carlos Sosa #82: Belief check: YES Probability = 0.25\n[R12][twitter] Lily Davis #247: Belief check: YES Probability = 0.75\n[R12][twitter] JP Morgan #15: Belief check: YES Probability = 0.35\n[R12][twitter] Jordan Smith #80: Belief check: YES Probability = 0.45\n[R12][twitter] Hassan Ali #84: Belief check: YES Probability = 0.45\n[R12][twitter] William Johnson #220: Belief check: YES Probability = 0.45\n[R12][twitter] Maria Santos #293: Belief check: YES Probability = 0.35\n[R12][twitter] Carlos Silva #144: Belief check: YES Probability = 0.45\n[R12][twitter] Sophia Kim #173: Belief check: YES Probability = 0.25\n[R12][twitter] Arnab Das #169: Belief check: YES Probability = 0.35\n[R12][twitter] Carlos Martinez #209: Belief check: YES Probability = 0.35\n[R12][twitter] David Martinez #47: Belief check: YES Probability = 0.35\n[R12][twitter] Christopher Davis #38: Belief check: YES Probability = 0.45\n[R12][twitter] Eleanor Turner #135: Belief check: YES Probability = 0.45\n[R12][twitter] Mark Thompson #146: Belief check: YES Probability = 0.3\n[R12][twitter] Sophia Lee #153: Belief check: YES Probability = 0.3\n[R12][twitter] Luca Moretti #109: Belief check: YES Probability = 0.35\n[R12][twitter] Michael Brown #92: Belief check: YES Probability = 0.35\n[R12][twitter] Coinbase #22: Belief check: YES Probability = 0.45\n[R12][twitter] Erik Johnson #152: Belief check: YES Probability = 0.35\n[R12][twitter] Emily Davis #215: Belief check: YES Probability = 0.45\n[R12][twitter] Emily Davis #125: Belief check: YES Probability = 0.45\n[R12][twitter] John Doe #210: Belief check: YES Probability = 0.45\n[R12][twitter] Aisha Khan #201: Belief check: YES Probability = 0.35\n[R12][twitter] Victoria Davis #39: Belief check: YES Probability = 0.35\n[R12][twitter] William Johnson #160: Belief check: YES Probability = 0.45\n[R12][twitter] Frank Wilson #49: Belief check: YES Probability = 0.35\n[R12][twitter] Rachel Johnson #265: Belief check: YES Probability = 0.25\n[R15][twitter] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter.\n[R15][reddit] John Doe #0: A multi-city water authority published a phased rollout schedule for a new digital billing system and customer portal starting next quarter."
+  }
+]

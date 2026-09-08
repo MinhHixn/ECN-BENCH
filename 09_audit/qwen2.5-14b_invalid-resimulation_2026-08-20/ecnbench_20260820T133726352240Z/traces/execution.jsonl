@@ -1,0 +1,53 @@
+{"event_id": "T3", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T13:37:26.362368+00:00", "event_id": "T3", "condition": "A", "repeat": 1, "unit_id": "T3_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T13:37:27.000547+00:00", "event_id": "T3", "condition": "A", "repeat": 1, "unit_id": "T3_A_r1", "status": "completed", "probabilities": {"$80k first": 0.5, "$100k first": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T3", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T13:37:27.001749+00:00", "event_id": "T3", "condition": "B", "repeat": 1, "unit_id": "T3_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T14:04:46.538163+00:00", "event_id": "T3", "condition": "B", "repeat": 1, "unit_id": "T3_B_r1", "status": "completed", "probabilities": {"$80k first": 0.5, "$100k first": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T3", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T14:04:46.560672+00:00", "event_id": "T3", "condition": "C", "repeat": 1, "unit_id": "T3_C_r1", "status": "starting"}
+{"timestamp": "2026-08-20T14:36:00.391370+00:00", "event_id": "T3", "condition": "C", "repeat": 1, "unit_id": "T3_C_r1", "status": "completed", "probabilities": {"$80k first": 0.5, "$100k first": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T4", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T14:53:42.494176+00:00", "event_id": "T4", "condition": "A", "repeat": 1, "unit_id": "T4_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T14:53:43.131289+00:00", "event_id": "T4", "condition": "A", "repeat": 1, "unit_id": "T4_A_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T4", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T14:53:43.132382+00:00", "event_id": "T4", "condition": "B", "repeat": 1, "unit_id": "T4_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T15:23:13.648475+00:00", "event_id": "T4", "condition": "B", "repeat": 1, "unit_id": "T4_B_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T4", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T15:23:13.669201+00:00", "event_id": "T4", "condition": "C", "repeat": 1, "unit_id": "T4_C_r1", "status": "starting"}
+{"timestamp": "2026-08-20T15:52:48.245134+00:00", "event_id": "T4", "condition": "C", "repeat": 1, "unit_id": "T4_C_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T5", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T16:14:41.562212+00:00", "event_id": "T5", "condition": "A", "repeat": 1, "unit_id": "T5_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T16:14:42.196851+00:00", "event_id": "T5", "condition": "A", "repeat": 1, "unit_id": "T5_A_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T5", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T16:14:42.197954+00:00", "event_id": "T5", "condition": "B", "repeat": 1, "unit_id": "T5_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T16:59:56.722596+00:00", "event_id": "T5", "condition": "B", "repeat": 1, "unit_id": "T5_B_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T5", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T16:59:56.743105+00:00", "event_id": "T5", "condition": "C", "repeat": 1, "unit_id": "T5_C_r1", "status": "starting"}
+{"timestamp": "2026-08-20T17:30:55.327591+00:00", "event_id": "T5", "condition": "C", "repeat": 1, "unit_id": "T5_C_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T6", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T17:48:41.528785+00:00", "event_id": "T6", "condition": "A", "repeat": 1, "unit_id": "T6_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T17:48:42.165386+00:00", "event_id": "T6", "condition": "A", "repeat": 1, "unit_id": "T6_A_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T6", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T17:48:42.166287+00:00", "event_id": "T6", "condition": "B", "repeat": 1, "unit_id": "T6_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T18:17:07.968201+00:00", "event_id": "T6", "condition": "B", "repeat": 1, "unit_id": "T6_B_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T6", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T18:17:07.987999+00:00", "event_id": "T6", "condition": "C", "repeat": 1, "unit_id": "T6_C_r1", "status": "starting"}
+{"timestamp": "2026-08-20T18:45:30.940611+00:00", "event_id": "T6", "condition": "C", "repeat": 1, "unit_id": "T6_C_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "C6", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T19:03:29.862086+00:00", "event_id": "C6", "condition": "A", "repeat": 1, "unit_id": "C6_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T19:03:30.497518+00:00", "event_id": "C6", "condition": "A", "repeat": 1, "unit_id": "C6_A_r1", "status": "completed", "probabilities": {"0": 0.2, "1": 0.2, "2": 0.2, "3": 0.2, "4+": 0.2}, "brier": 0.8000000000000002, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "C6", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T19:03:30.498470+00:00", "event_id": "C6", "condition": "B", "repeat": 1, "unit_id": "C6_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T19:34:23.531053+00:00", "event_id": "C6", "condition": "B", "repeat": 1, "unit_id": "C6_B_r1", "status": "completed", "probabilities": {"0": 0.2, "1": 0.2, "2": 0.2, "3": 0.2, "4+": 0.2}, "brier": 0.8000000000000002, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "C6", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T19:34:23.548333+00:00", "event_id": "C6", "condition": "C", "repeat": 1, "unit_id": "C6_C_r1", "status": "starting"}
+{"timestamp": "2026-08-20T20:02:47.376073+00:00", "event_id": "C6", "condition": "C", "repeat": 1, "unit_id": "C6_C_r1", "status": "completed", "probabilities": {"0": 0.2, "1": 0.2, "2": 0.2, "3": 0.2, "4+": 0.2}, "brier": 0.8000000000000002, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T8", "condition": "A", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T20:20:05.527566+00:00", "event_id": "T8", "condition": "A", "repeat": 1, "unit_id": "T8_A_r1", "status": "starting"}
+{"timestamp": "2026-08-20T20:20:06.163488+00:00", "event_id": "T8", "condition": "A", "repeat": 1, "unit_id": "T8_A_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T8", "condition": "B", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T20:20:06.164404+00:00", "event_id": "T8", "condition": "B", "repeat": 1, "unit_id": "T8_B_r1", "status": "starting"}
+{"timestamp": "2026-08-20T20:49:11.291089+00:00", "event_id": "T8", "condition": "B", "repeat": 1, "unit_id": "T8_B_r1", "status": "completed", "probabilities": {"YES": 0.5, "NO": 0.5}, "brier": 0.5, "mcq_dimensions": null, "validated_scales": null, "strict_contract": false}
+{"event_id": "T8", "condition": "C", "repeat": 1, "status": "starting"}
+{"timestamp": "2026-08-20T20:49:11.311038+00:00", "event_id": "T8", "condition": "C", "repeat": 1, "unit_id": "T8_C_r1", "status": "starting"}

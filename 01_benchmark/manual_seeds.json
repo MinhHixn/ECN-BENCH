@@ -1,0 +1,602 @@
+{
+  "S2": [
+    {
+      "url": "https://www.nytimes.com/2024/11/06/us/politics/senate-elections-results",
+      "source": "New York Times",
+      "date": "2024-11-06",
+      "search_query": "2024 US Senate election results control"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-67039975",
+      "source": "BBC",
+      "date": "2024-11-07",
+      "search_query": "Senate Republicans Democrats 2024 election control"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-senate-election-results-2024/",
+      "source": "Reuters",
+      "date": "2024-11-06",
+      "search_query": "US Senate 2024 election party control"
+    },
+    {
+      "url": "https://www.politico.com/news/2024/11/06/senate-races-live-results",
+      "source": "Politico",
+      "date": "2024-11-06",
+      "search_query": "Senate elections 2024 party winners"
+    }
+  ],
+  "S3": [
+    {
+      "url": "https://www.nytimes.com/2024/11/05/us/politics/elections-trump-congress",
+      "source": "New York Times",
+      "date": "2024-11-05",
+      "search_query": "Trump 2024 presidential election red sweep Congress"
+    },
+    {
+      "url": "https://www.cnbc.com/2024/11/06/trump-congress-republicans-house-senate",
+      "source": "CNBC",
+      "date": "2024-11-06",
+      "search_query": "Republican red sweep 2024 election results"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-67039975",
+      "source": "BBC",
+      "date": "2024-11-08",
+      "search_query": "Trump Congress House Senate control 2024"
+    }
+  ],
+  "S4": [
+    {
+      "url": "https://www.nytimes.com/2024/11/06/us/politics/2024-election-results-turnout",
+      "source": "New York Times",
+      "date": "2024-11-06",
+      "search_query": "2024 election turnout percentage voters"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-turnout-2024-election-how-many-americans-voted/",
+      "source": "Reuters",
+      "date": "2024-12-01",
+      "search_query": "US election turnout 2024 final count"
+    },
+    {
+      "url": "https://www.pbs.org/newshour/politics/2024-election-turnout",
+      "source": "PBS",
+      "date": "2024-12-15",
+      "search_query": "2024 presidential election voter turnout analysis"
+    }
+  ],
+  "S5": [
+    {
+      "url": "https://www.nytimes.com/2024/11/07/upshot/2024-popular-vote",
+      "source": "New York Times",
+      "date": "2024-11-07",
+      "search_query": "2024 election popular vote margin Trump"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2024-11-06/trump-wins-popular-vote-in-2024-election",
+      "source": "Bloomberg",
+      "date": "2024-11-06",
+      "search_query": "Trump popular vote 2024 election percentage"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-67038902",
+      "source": "BBC",
+      "date": "2024-12-01",
+      "search_query": "2024 election results popular vote final tally"
+    }
+  ],
+  "C3": [
+    {
+      "url": "https://www.bbc.com/news/world-europe-68949567",
+      "source": "BBC",
+      "date": "2024-07-07",
+      "search_query": "France snap election 2024 results winners"
+    },
+    {
+      "url": "https://www.reuters.com/world/europe/french-election-results-2024/",
+      "source": "Reuters",
+      "date": "2024-07-08",
+      "search_query": "French legislative election 2024 final results"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2024/jul/07/france-election-results",
+      "source": "The Guardian",
+      "date": "2024-07-07",
+      "search_query": "France election 2024 NFP victory Macron"
+    },
+    {
+      "url": "https://www.politico.eu/article/france-election-2024-results/",
+      "source": "Politico EU",
+      "date": "2024-07-08",
+      "search_query": "French election 2024 Nouveau Front Populaire RN"
+    }
+  ],
+  "S6": [
+    {
+      "url": "https://www.bbc.com/news/world-europe-69741345",
+      "source": "BBC",
+      "date": "2024-09-29",
+      "search_query": "Austria election 2024 results FPÖ"
+    },
+    {
+      "url": "https://www.reuters.com/world/europe/austria-election-2024-results/",
+      "source": "Reuters",
+      "date": "2024-09-29",
+      "search_query": "Austrian election 2024 winner seats parliament"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2024/sep/29/austria-election",
+      "source": "The Guardian",
+      "date": "2024-09-29",
+      "search_query": "Austria election FPÖ right-wing victory 2024"
+    }
+  ],
+  "S7": [
+    {
+      "url": "https://techcrunch.com/2024/12/19/openai-for-profit/",
+      "source": "TechCrunch",
+      "date": "2024-12-19",
+      "search_query": "OpenAI converts for-profit company 2024"
+    },
+    {
+      "url": "https://www.reuters.com/technology/openai-converts-for-profit/",
+      "source": "Reuters",
+      "date": "2024-12-20",
+      "search_query": "OpenAI for-profit conversion announcement"
+    },
+    {
+      "url": "https://www.theverge.com/2024/12/19/openai-for-profit",
+      "source": "The Verge",
+      "date": "2024-12-19",
+      "search_query": "OpenAI corporate restructuring for-profit"
+    }
+  ],
+  "S9": [
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-71230176",
+      "source": "BBC",
+      "date": "2025-03-15",
+      "search_query": "US government shutdown March 2025"
+    },
+    {
+      "url": "https://www.cnbc.com/2025/03/01/government-shutdown-2025/",
+      "source": "CNBC",
+      "date": "2025-03-01",
+      "search_query": "US government shutdown funding Congress 2025"
+    },
+    {
+      "url": "https://www.reuters.com/us/us-government-shutdown-2025/",
+      "source": "Reuters",
+      "date": "2025-03-15",
+      "search_query": "government shutdown resolution 2025"
+    }
+  ],
+  "C2": [
+    {
+      "url": "https://www.nytimes.com/2024/08/22/us/politics/harris-democratic-nominee",
+      "source": "New York Times",
+      "date": "2024-08-22",
+      "search_query": "Kamala Harris Democratic nominee 2024 announcement"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-68990450",
+      "source": "BBC",
+      "date": "2024-08-22",
+      "search_query": "Harris declared Democratic nominee 2024"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/harris-clinches-democratic-nomination-2024/",
+      "source": "Reuters",
+      "date": "2024-08-22",
+      "search_query": "Harris secures 2024 Democratic nomination delegates"
+    },
+    {
+      "url": "https://www.theguardian.com/us-news/2024/aug/22/harris-biden",
+      "source": "The Guardian",
+      "date": "2024-08-22",
+      "search_query": "Harris becomes Democratic nominee Biden steps aside"
+    }
+  ],
+  "C5": [
+    {
+      "url": "https://www.nytimes.com/interactive/2024/11/05/us/elections/results-president",
+      "source": "New York Times",
+      "date": "2024-11-08",
+      "search_query": "2024 balance of power Republicans Congress presidency"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-elections-results-2024/",
+      "source": "Reuters",
+      "date": "2024-11-08",
+      "search_query": "2024 election results Trump Congress control"
+    }
+  ],
+  "T1": [
+    {
+      "url": "https://www.cnbc.com/2024/11/07/fed-interest-rate-decision-november-2024/",
+      "source": "CNBC",
+      "date": "2024-11-07",
+      "search_query": "Fed interest rate cut November 2024 FOMC"
+    },
+    {
+      "url": "https://www.reuters.com/finance/fed/fed-cuts-rates-25bps-november-2024/",
+      "source": "Reuters",
+      "date": "2024-11-07",
+      "search_query": "Federal Reserve rate cut decision November"
+    },
+    {
+      "url": "https://www.bbc.com/news/business-70458819",
+      "source": "BBC",
+      "date": "2024-11-07",
+      "search_query": "Fed cuts interest rates 25 basis points"
+    }
+  ],
+  "T2": [
+    {
+      "url": "https://www.cnbc.com/2024/12/20/government-shutdown-news-2024/",
+      "source": "CNBC",
+      "date": "2024-12-31",
+      "search_query": "US government shutdown 2024 avoided budget passed"
+    },
+    {
+      "url": "https://www.reuters.com/us/us-government-shutdown-avoided-december-2024/",
+      "source": "Reuters",
+      "date": "2024-12-31",
+      "search_query": "Congress avoids shutdown 2024 funding bill"
+    }
+  ],
+  "T3": [
+    {
+      "url": "https://www.coindesk.com/price/bitcoin/",
+      "source": "CoinDesk",
+      "date": "2025-12-01",
+      "search_query": "Bitcoin price $100k milestone December 2025"
+    },
+    {
+      "url": "https://www.cnbc.com/crypto/bitcoin-100k-2025/",
+      "source": "CNBC",
+      "date": "2025-12-15",
+      "search_query": "Bitcoin hits $100000 December 2025"
+    },
+    {
+      "url": "https://www.bloomberg.com/quote/BTCUSD",
+      "source": "Bloomberg",
+      "date": "2025-12-10",
+      "search_query": "BTC $100k price level achieved 2025"
+    }
+  ],
+  "T4": [
+    {
+      "url": "https://www.bls.gov/news.release/cpi.txt",
+      "source": "Bureau of Labor Statistics",
+      "date": "2024-11-13",
+      "search_query": "October 2024 CPI inflation rate report"
+    },
+    {
+      "url": "https://www.cnbc.com/2024/11/13/cpi-inflation-october-2024/",
+      "source": "CNBC",
+      "date": "2024-11-13",
+      "search_query": "CPI inflation October 2024 above 2.5%"
+    },
+    {
+      "url": "https://www.reuters.com/business/inflation/us-cpi-october-2024/",
+      "source": "Reuters",
+      "date": "2024-11-13",
+      "search_query": "US inflation CPI October 2024 data"
+    }
+  ],
+  "T5": [
+    {
+      "url": "https://www.cnbc.com/2024/08/05/ethereum-etf-launches-inflows/",
+      "source": "CNBC",
+      "date": "2024-08-05",
+      "search_query": "Ethereum spot ETF inflows first week positive"
+    },
+    {
+      "url": "https://www.reuters.com/technology/ethereum-etf-launches-2024/",
+      "source": "Reuters",
+      "date": "2024-08-05",
+      "search_query": "Ethereum ETF net inflows debut week 2024"
+    },
+    {
+      "url": "https://www.theblock.co/post/311401/ethereum-spot-etf-inflows",
+      "source": "The Block",
+      "date": "2024-08-05",
+      "search_query": "ETH ETF positive net flows launch"
+    }
+  ],
+  "T6": [
+    {
+      "url": "https://www.nytimes.com/2024/12/31/technology/openai-gpt5-release-2024",
+      "source": "New York Times",
+      "date": "2024-12-31",
+      "search_query": "GPT-5 release 2024 OpenAI announcement"
+    },
+    {
+      "url": "https://www.reuters.com/technology/openai-gpt5-not-released-2024/",
+      "source": "Reuters",
+      "date": "2024-12-31",
+      "search_query": "OpenAI GPT-5 delayed beyond 2024"
+    },
+    {
+      "url": "https://www.theverge.com/2024/12/openai-gpt5-status",
+      "source": "The Verge",
+      "date": "2024-12-31",
+      "search_query": "GPT-5 release date 2025 OpenAI plans"
+    }
+  ],
+  "C6": [
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251218.htm",
+      "source": "Federal Reserve",
+      "date": "2025-12-31",
+      "search_query": "Fed rate cuts 2025 total policy decisions"
+    },
+    {
+      "url": "https://www.cnbc.com/2025/12/16/fed-cuts-rates-final-2025/",
+      "source": "CNBC",
+      "date": "2025-12-31",
+      "search_query": "Federal Reserve rate cuts 2025 summary year"
+    },
+    {
+      "url": "https://www.reuters.com/finance/fed-rate-cuts-2025-total/",
+      "source": "Reuters",
+      "date": "2025-12-31",
+      "search_query": "2025 Fed monetary policy rate cuts final tally"
+    }
+  ],
+  "T8": [
+    {
+      "url": "https://www.coindesk.com/price/bitcoin/110000-milestone/",
+      "source": "CoinDesk",
+      "date": "2025-01-15",
+      "search_query": "Bitcoin hits $110000 January 2025"
+    },
+    {
+      "url": "https://www.cnbc.com/crypto/bitcoin-110k-milestone-2025/",
+      "source": "CNBC",
+      "date": "2025-01-15",
+      "search_query": "BTC $110k price level January 2025"
+    }
+  ],
+  "T9": [
+    {
+      "url": "https://www.nytimes.com/2025/12/31/technology/openai-agi-announcement",
+      "source": "New York Times",
+      "date": "2025-12-31",
+      "search_query": "OpenAI AGI artificial general intelligence announcement 2025"
+    },
+    {
+      "url": "https://www.theverge.com/2025/12/openai-agi-status",
+      "source": "The Verge",
+      "date": "2025-12-31",
+      "search_query": "OpenAI AGI claims 2025 no announcement"
+    }
+  ],
+  "C9": [
+    {
+      "url": "https://www.reuters.com/business/trade-deals-us-2025/",
+      "source": "Reuters",
+      "date": "2025-06-30",
+      "search_query": "US trade deals negotiations 2025 UK India Japan"
+    },
+    {
+      "url": "https://www.cnbc.com/business/trade-agreements-2025/",
+      "source": "CNBC",
+      "date": "2025-06-30",
+      "search_query": "US trade agreements signed 2025 bilateral countries"
+    },
+    {
+      "url": "https://www.reuters.com/world/us-uk-trade-deal-2025/",
+      "source": "Reuters",
+      "date": "2025-06-01",
+      "search_query": "US UK trade agreement deal 2025 signed"
+    }
+  ],
+  "C1": [
+    {
+      "url": "https://www.nytimes.com/interactive/2024/11/05/us/elections/results-president",
+      "source": "New York Times",
+      "date": "2024-11-05",
+      "search_query": "2024 US presidential election results Trump wins"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-us-canada-67039975",
+      "source": "BBC",
+      "date": "2024-11-06",
+      "search_query": "US election 2024 results Trump victory"
+    },
+    {
+      "url": "https://www.reuters.com/world/us/us-2024-presidential-election-results/",
+      "source": "Reuters",
+      "date": "2024-11-06",
+      "search_query": "2024 presidential election winner results"
+    },
+    {
+      "url": "https://www.theguardian.com/us-news/2024/nov/05/trump-wins-2024-election",
+      "source": "The Guardian",
+      "date": "2024-11-05",
+      "search_query": "Trump wins 2024 presidential election"
+    }
+  ],
+  "C4": [
+    {
+      "url": "https://www.bbc.com/news/uk-politics-69286545",
+      "source": "BBC",
+      "date": "2024-07-05",
+      "search_query": "2024 UK election results Labour wins most seats"
+    },
+    {
+      "url": "https://www.theguardian.com/politics/2024/jul/04/uk-election-results-labour",
+      "source": "The Guardian",
+      "date": "2024-07-05",
+      "search_query": "UK general election 2024 Labour victory Keir Starmer"
+    },
+    {
+      "url": "https://www.reuters.com/world/uk/uk-election-results-2024-labour-wins/",
+      "source": "Reuters",
+      "date": "2024-07-05",
+      "search_query": "UK election 2024 Labour party wins"
+    }
+  ],
+  "C7": [
+    {
+      "url": "https://www.bbc.com/news/world-europe-68969677",
+      "source": "BBC",
+      "date": "2024-07-14",
+      "search_query": "2024 UEFA Euro final Spain wins championship"
+    },
+    {
+      "url": "https://sports.yahoo.com/news/spain-wins-euro-2024/",
+      "source": "Yahoo Sports",
+      "date": "2024-07-14",
+      "search_query": "Euro 2024 final Spain victory champions"
+    },
+    {
+      "url": "https://www.reuters.com/sports/soccer/euro-2024-final-spain-wins/",
+      "source": "Reuters",
+      "date": "2024-07-14",
+      "search_query": "Spain wins UEFA Euro 2024 championship final"
+    }
+  ],
+  "C8": [
+    {
+      "url": "https://www.theverge.com/2024/10/openai-o1-mmlu-performance",
+      "source": "The Verge",
+      "date": "2024-12-01",
+      "search_query": "OpenAI model 90% MMLU benchmark score 2024"
+    },
+    {
+      "url": "https://www.reuters.com/technology/ai-models-mmlu-benchmark/",
+      "source": "Reuters",
+      "date": "2024-12-01",
+      "search_query": "AI companies MMLU scores 90 percent benchmark"
+    },
+    {
+      "url": "https://techcrunch.com/2024/10/openai-o1-releases/",
+      "source": "TechCrunch",
+      "date": "2024-10-20",
+      "search_query": "OpenAI first 90% MMLU benchmark achievement"
+    }
+  ],
+  "C10": [
+    {
+      "url": "https://www.bbc.com/news/uk-politics-69286544",
+      "source": "BBC",
+      "date": "2024-07-05",
+      "search_query": "UK election 2024 Keir Starmer new Prime Minister"
+    },
+    {
+      "url": "https://www.theguardian.com/politics/2024/jul/05/keir-starmer-becomes-pm",
+      "source": "The Guardian",
+      "date": "2024-07-05",
+      "search_query": "Keir Starmer becomes Prime Minister Labour win"
+    },
+    {
+      "url": "https://www.reuters.com/world/uk/keir-starmer-uk-prime-minister-2024/",
+      "source": "Reuters",
+      "date": "2024-07-05",
+      "search_query": "Starmer elected UK Prime Minister July 2024"
+    }
+  ],
+  "C11": [
+    {
+      "url": "https://www.bbc.com/news/newsbeat-70568969",
+      "source": "BBC",
+      "date": "2024-10-11",
+      "search_query": "2024 Nobel Peace Prize Nihon Hidankyo winner"
+    },
+    {
+      "url": "https://www.reuters.com/world/nobel-peace-prize-2024-winner/",
+      "source": "Reuters",
+      "date": "2024-10-11",
+      "search_query": "2024 Nobel Peace Prize awarded organization Japan"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2024/oct/11/nobel-peace-prize",
+      "source": "The Guardian",
+      "date": "2024-10-11",
+      "search_query": "Nobel Peace Prize 2024 Nihon Hidankyo nuclear"
+    }
+  ],
+  "C12": [
+    {
+      "url": "https://www.nba.com/news/celtics-2024-championship-winners",
+      "source": "NBA",
+      "date": "2024-06-17",
+      "search_query": "2024 NBA Championship Boston Celtics winners"
+    },
+    {
+      "url": "https://www.bbc.com/sport/basketball/69316752",
+      "source": "BBC",
+      "date": "2024-06-17",
+      "search_query": "2024 NBA Finals Celtics win title"
+    },
+    {
+      "url": "https://www.reuters.com/sports/basketball/nba-finals-2024-celtics/",
+      "source": "Reuters",
+      "date": "2024-06-17",
+      "search_query": "Boston Celtics win 2024 NBA championship"
+    }
+  ],
+  "C13": [
+    {
+      "url": "https://www.nytimes.com/2025/03/02/movies/oscars-2025-best-picture-anora",
+      "source": "New York Times",
+      "date": "2025-03-02",
+      "search_query": "2025 Oscars Best Picture winner Anora"
+    },
+    {
+      "url": "https://www.bbc.com/news/entertainment_and_arts-72093635",
+      "source": "BBC",
+      "date": "2025-03-02",
+      "search_query": "Oscars 2025 Best Picture Anora wins"
+    },
+    {
+      "url": "https://www.reuters.com/entertainment/oscars-2025-best-picture/",
+      "source": "Reuters",
+      "date": "2025-03-02",
+      "search_query": "Academy Awards 2025 Anora Best Picture winner"
+    }
+  ],
+  "C14": [
+    {
+      "url": "https://www.bbc.com/news/world-europe-72083427",
+      "source": "BBC",
+      "date": "2025-02-23",
+      "search_query": "German election 2025 CDU CSU coalition government forms"
+    },
+    {
+      "url": "https://www.reuters.com/world/europe/german-election-2025-results/",
+      "source": "Reuters",
+      "date": "2025-02-23",
+      "search_query": "Germany election 2025 CDU CSU SPD coalition"
+    },
+    {
+      "url": "https://www.theguardian.com/world/2025/feb/23/germany-election",
+      "source": "The Guardian",
+      "date": "2025-02-23",
+      "search_query": "German federal election 2025 CDU-led coalition winner"
+    }
+  ],
+  "C15": [
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218.htm",
+      "source": "Federal Reserve",
+      "date": "2024-12-18",
+      "search_query": "Fed rate cuts 2024 total final count December"
+    },
+    {
+      "url": "https://www.cnbc.com/2024/12/18/fed-rate-cuts-2024-final/",
+      "source": "CNBC",
+      "date": "2024-12-18",
+      "search_query": "2024 Federal Reserve interest rate cuts total"
+    },
+    {
+      "url": "https://www.reuters.com/finance/fed-rate-cuts-2024-final/",
+      "source": "Reuters",
+      "date": "2024-12-18",
+      "search_query": "Federal Reserve 2024 rate cut decisions final tally"
+    }
+  ]
+}

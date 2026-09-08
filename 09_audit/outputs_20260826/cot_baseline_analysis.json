@@ -1,0 +1,471 @@
+{
+  "description": "Single-agent RAG+CoT baseline vs the multi-agent swarm, on the 20 contamination-clean events.",
+  "clean_events": [
+    "C1",
+    "C5",
+    "C6",
+    "C8",
+    "C9",
+    "C11",
+    "C13",
+    "C14",
+    "C15",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S9",
+    "T2",
+    "T6",
+    "T8",
+    "T9"
+  ],
+  "chance_mean_inverse_k": 0.3264,
+  "poisson_binomial_note": "Exact for the t0 and ens3 variants, whose hit counts are integers. For `single` the hit count is a mean over 3 replicates and therefore fractional; the survival function is evaluated at ceil(count), so that p is approximate and conservative. Quote the t0 figure when an exact test is needed.",
+  "sign_convention": "Both deltas are oriented so that POSITIVE = the swarm is better: delta_brier is BS_CoT - BS_swarm (Brier is a loss) and delta_dir_acc is acc_swarm - acc_CoT.",
+  "cot_variant_definitions": {
+    "single": "mean over the 3 replicates of the per-replicate score; the expected cost of ONE CoT call, and the primary basis",
+    "ens3": "score of the mean of the 3 replicate probability vectors; a 3x-cost ensemble and an upper bound on the CoT arm",
+    "t0": "replicate 1 only (seed 42, temperature 0); replicates 2 and 3 ran at temperature 0.7, so the three are not homogeneous draws"
+  },
+  "arms": [
+    {
+      "cot_model": "Llama-3.1-8B",
+      "cot_slug": "meta-llama/llama-3.1-8b-instruct",
+      "swarm_campaign": "Llama-3.1-8B",
+      "identity_matched": true,
+      "note": "meta-llama/llama-3.1-8b-instruct (OpenRouter, FP16) vs the same checkpoint served locally as AWQ-INT4 under vLLM",
+      "n_events": 20,
+      "swarm_dir_acc": 0.675,
+      "swarm_brier": 0.5449,
+      "swarm_poisson_binomial_p": 0.0003461139242541153,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.7778,
+          "cot_brier": 0.3635,
+          "cot_poisson_binomial_p": 6.113100405092594e-06,
+          "delta_brier_cot_minus_swarm": [
+            -0.1813,
+            -0.3655,
+            -0.0198
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.1028,
+            -0.3194,
+            0.1
+          ],
+          "dm_hln_brier": -1.958,
+          "p_2sided_brier": 0.065,
+          "dm_hln_dir_acc": -0.912,
+          "p_2sided_dir_acc": 0.3734
+        },
+        "ens3": {
+          "cot_dir_acc": 0.85,
+          "cot_brier": 0.339,
+          "cot_poisson_binomial_p": 5.261381172839507e-07,
+          "delta_brier_cot_minus_swarm": [
+            -0.2058,
+            -0.3879,
+            -0.0463
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.175,
+            -0.4,
+            0.025
+          ],
+          "dm_hln_brier": -2.249,
+          "p_2sided_brier": 0.0366,
+          "dm_hln_dir_acc": -1.544,
+          "p_2sided_dir_acc": 0.1391
+        },
+        "t0": {
+          "cot_dir_acc": 0.825,
+          "cot_brier": 0.3296,
+          "cot_poisson_binomial_p": 5.261381172839507e-07,
+          "delta_brier_cot_minus_swarm": [
+            -0.2152,
+            -0.4096,
+            -0.0424
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.15,
+            -0.4,
+            0.1
+          ],
+          "dm_hln_brier": -2.178,
+          "p_2sided_brier": 0.0422,
+          "dm_hln_dir_acc": -1.073,
+          "p_2sided_dir_acc": 0.2965
+        }
+      }
+    },
+    {
+      "cot_model": "Qwen2.5-7B",
+      "cot_slug": "qwen/qwen-2.5-7b-instruct",
+      "swarm_campaign": "Qwen2.5-7B",
+      "identity_matched": true,
+      "note": "qwen/qwen-2.5-7b-instruct (OpenRouter, FP16) vs the same checkpoint served locally as GGUF under Ollama",
+      "n_events": 20,
+      "swarm_dir_acc": 0.85,
+      "swarm_brier": 0.3475,
+      "swarm_poisson_binomial_p": 5.261381172839507e-07,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.79,
+          "cot_brier": 0.3176,
+          "cot_poisson_binomial_p": 6.113100405092594e-06,
+          "delta_brier_cot_minus_swarm": [
+            -0.0299,
+            -0.1343,
+            0.0813
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.06,
+            -0.1167,
+            0.2233
+          ],
+          "dm_hln_brier": -0.514,
+          "p_2sided_brier": 0.6134,
+          "dm_hln_dir_acc": 0.663,
+          "p_2sided_dir_acc": 0.5155
+        },
+        "ens3": {
+          "cot_dir_acc": 0.825,
+          "cot_brier": 0.2841,
+          "cot_poisson_binomial_p": 5.261381172839507e-07,
+          "delta_brier_cot_minus_swarm": [
+            -0.0634,
+            -0.1534,
+            0.0264
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.025,
+            -0.175,
+            0.225
+          ],
+          "dm_hln_brier": -1.304,
+          "p_2sided_brier": 0.2078,
+          "dm_hln_dir_acc": 0.231,
+          "p_2sided_dir_acc": 0.82
+        },
+        "t0": {
+          "cot_dir_acc": 0.71,
+          "cot_brier": 0.3342,
+          "cot_poisson_binomial_p": 5.2499397183641994e-05,
+          "delta_brier_cot_minus_swarm": [
+            -0.0133,
+            -0.1228,
+            0.104
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.14,
+            -0.05,
+            0.34
+          ],
+          "dm_hln_brier": -0.216,
+          "p_2sided_brier": 0.8313,
+          "dm_hln_dir_acc": 1.291,
+          "p_2sided_dir_acc": 0.2123
+        }
+      }
+    },
+    {
+      "cot_model": "Mistral-8B",
+      "cot_slug": "mistralai/ministral-8b-2512",
+      "swarm_campaign": "Mistral-7B",
+      "identity_matched": false,
+      "note": "mistralai/ministral-8b-2512 is a different model and a later generation than Mistral-7B-Instruct-v0.1; cross-model, not paired",
+      "n_events": 20,
+      "swarm_dir_acc": 0.85,
+      "swarm_brier": 0.3778,
+      "swarm_poisson_binomial_p": 5.261381172839507e-07,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.9117,
+          "cot_brier": 0.2077,
+          "cot_poisson_binomial_p": 1.1654449588477364e-09,
+          "delta_brier_cot_minus_swarm": [
+            -0.1701,
+            -0.3691,
+            0.0122
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.0617,
+            -0.25,
+            0.1083
+          ],
+          "dm_hln_brier": -1.654,
+          "p_2sided_brier": 0.1145,
+          "dm_hln_dir_acc": -0.64,
+          "p_2sided_dir_acc": 0.5301
+        },
+        "ens3": {
+          "cot_dir_acc": 0.9,
+          "cot_brier": 0.19,
+          "cot_poisson_binomial_p": 3.146701388888889e-08,
+          "delta_brier_cot_minus_swarm": [
+            -0.1878,
+            -0.381,
+            -0.0129
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.05,
+            -0.25,
+            0.15
+          ],
+          "dm_hln_brier": -1.883,
+          "p_2sided_brier": 0.075,
+          "dm_hln_dir_acc": -0.427,
+          "p_2sided_dir_acc": 0.6742
+        },
+        "t0": {
+          "cot_dir_acc": 0.9,
+          "cot_brier": 0.2091,
+          "cot_poisson_binomial_p": 3.146701388888889e-08,
+          "delta_brier_cot_minus_swarm": [
+            -0.1687,
+            -0.3765,
+            0.0345
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.05,
+            -0.25,
+            0.15
+          ],
+          "dm_hln_brier": -1.519,
+          "p_2sided_brier": 0.1452,
+          "dm_hln_dir_acc": -0.427,
+          "p_2sided_dir_acc": 0.6742
+        }
+      }
+    },
+    {
+      "cot_model": "Qwen3-14B",
+      "cot_slug": "qwen/qwen3-14b",
+      "swarm_campaign": "Qwen2.5-14B",
+      "identity_matched": false,
+      "note": "qwen/qwen3-14b is a different generation than Qwen2.5-14B; cross-model, not paired",
+      "n_events": 20,
+      "swarm_dir_acc": 0.9,
+      "swarm_brier": 0.2888,
+      "swarm_poisson_binomial_p": 3.146701388888889e-08,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.8583,
+          "cot_brier": 0.2804,
+          "cot_poisson_binomial_p": 3.146701388888889e-08,
+          "delta_brier_cot_minus_swarm": [
+            -0.0084,
+            -0.1157,
+            0.093
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.0417,
+            -0.125,
+            0.2083
+          ],
+          "dm_hln_brier": -0.152,
+          "p_2sided_brier": 0.8807,
+          "dm_hln_dir_acc": 0.466,
+          "p_2sided_dir_acc": 0.6463
+        },
+        "ens3": {
+          "cot_dir_acc": 0.85,
+          "cot_brier": 0.2756,
+          "cot_poisson_binomial_p": 5.261381172839507e-07,
+          "delta_brier_cot_minus_swarm": [
+            -0.0132,
+            -0.1204,
+            0.0874
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.05,
+            -0.1,
+            0.2
+          ],
+          "dm_hln_brier": -0.239,
+          "p_2sided_brier": 0.8134,
+          "dm_hln_dir_acc": 0.553,
+          "p_2sided_dir_acc": 0.5866
+        },
+        "t0": {
+          "cot_dir_acc": 0.825,
+          "cot_brier": 0.3063,
+          "cot_poisson_binomial_p": 5.261381172839507e-07,
+          "delta_brier_cot_minus_swarm": [
+            0.0175,
+            -0.0864,
+            0.1083
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.075,
+            -0.1,
+            0.25
+          ],
+          "dm_hln_brier": 0.335,
+          "p_2sided_brier": 0.7411,
+          "dm_hln_dir_acc": 0.804,
+          "p_2sided_dir_acc": 0.4311
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "matched": {
+      "scope": "identity-matched arms only (PRIMARY)",
+      "arms": [
+        "Llama-3.1-8B",
+        "Qwen2.5-7B"
+      ],
+      "n_unit_pairs": 40,
+      "n_event_clusters": 20,
+      "chance": 0.3264,
+      "swarm_dir_acc": 0.7625,
+      "swarm_poisson_binomial_p": 1.018660731709202e-09,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.7839,
+          "cot_poisson_binomial_p": 1.0826764152496948e-10,
+          "delta_brier_cot_minus_swarm": [
+            -0.1056,
+            -0.2258,
+            0.0092
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.0214,
+            -0.1864,
+            0.1353
+          ],
+          "cluster_t_brier": -1.68,
+          "p_2sided_brier_clustered": 0.1093,
+          "cluster_t_dir_acc": -0.247,
+          "p_2sided_dir_acc_clustered": 0.8078,
+          "p_2sided_brier_naive_unclustered": 0.0607
+        },
+        "ens3": {
+          "cot_dir_acc": 0.8375,
+          "cot_poisson_binomial_p": 7.483524190785814e-13,
+          "delta_brier_cot_minus_swarm": [
+            -0.1346,
+            -0.2472,
+            -0.028
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.075,
+            -0.25,
+            0.1
+          ],
+          "cluster_t_brier": -2.286,
+          "p_2sided_brier_clustered": 0.0339,
+          "cluster_t_dir_acc": -0.789,
+          "p_2sided_dir_acc_clustered": 0.4399,
+          "p_2sided_brier_naive_unclustered": 0.0131
+        },
+        "t0": {
+          "cot_dir_acc": 0.7675,
+          "cot_poisson_binomial_p": 1.018660731709202e-09,
+          "delta_brier_cot_minus_swarm": [
+            -0.1143,
+            -0.2441,
+            0.0069
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.005,
+            -0.2,
+            0.195
+          ],
+          "cluster_t_brier": -1.7,
+          "p_2sided_brier_clustered": 0.1054,
+          "cluster_t_dir_acc": -0.046,
+          "p_2sided_dir_acc_clustered": 0.9634,
+          "p_2sided_brier_naive_unclustered": 0.0603
+        }
+      }
+    },
+    "all": {
+      "scope": "all four arms (two are cross-model; secondary)",
+      "arms": [
+        "Llama-3.1-8B",
+        "Qwen2.5-7B",
+        "Mistral-8B",
+        "Qwen3-14B"
+      ],
+      "n_unit_pairs": 80,
+      "n_event_clusters": 20,
+      "chance": 0.3264,
+      "swarm_dir_acc": 0.8187,
+      "swarm_poisson_binomial_p": 3.746367492808367e-22,
+      "variants": {
+        "single": {
+          "cot_dir_acc": 0.8344,
+          "cot_poisson_binomial_p": 2.9322519285438206e-23,
+          "delta_brier_cot_minus_swarm": [
+            -0.0974,
+            -0.1989,
+            -0.0001
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.0157,
+            -0.1167,
+            0.0847
+          ],
+          "cluster_t_brier": -1.832,
+          "p_2sided_brier_clustered": 0.0827,
+          "cluster_t_dir_acc": -0.292,
+          "p_2sided_dir_acc_clustered": 0.7737,
+          "p_2sided_brier_naive_unclustered": 0.0158
+        },
+        "ens3": {
+          "cot_dir_acc": 0.8562,
+          "cot_poisson_binomial_p": 1.3458923032350456e-25,
+          "delta_brier_cot_minus_swarm": [
+            -0.1176,
+            -0.2147,
+            -0.0252
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            -0.0375,
+            -0.1562,
+            0.0938
+          ],
+          "cluster_t_brier": -2.314,
+          "p_2sided_brier_clustered": 0.032,
+          "cluster_t_dir_acc": -0.569,
+          "p_2sided_dir_acc_clustered": 0.5757,
+          "p_2sided_brier_naive_unclustered": 0.0029
+        },
+        "t0": {
+          "cot_dir_acc": 0.815,
+          "cot_poisson_binomial_p": 3.746367492808367e-22,
+          "delta_brier_cot_minus_swarm": [
+            -0.0949,
+            -0.2018,
+            0.013
+          ],
+          "delta_dir_acc_swarm_minus_cot": [
+            0.0038,
+            -0.1125,
+            0.1363
+          ],
+          "cluster_t_brier": -1.651,
+          "p_2sided_brier_clustered": 0.1152,
+          "cluster_t_dir_acc": 0.057,
+          "p_2sided_dir_acc_clustered": 0.9555,
+          "p_2sided_brier_naive_unclustered": 0.0273
+        }
+      }
+    }
+  },
+  "power_matched_pool": {
+    "basis": "per-event mean of the matched-arm Brier differences, paired t, two-sided 0.05",
+    "n_events": 20,
+    "mean_diff": -0.1056,
+    "sd_diff": 0.2739,
+    "cohen_dz": 0.3855,
+    "achieved_power_at_n": 0.3735,
+    "n_for_80_pct_power": 55,
+    "n_for_90_pct_power": 73
+  }
+}

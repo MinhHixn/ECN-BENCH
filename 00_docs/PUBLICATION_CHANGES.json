@@ -1,0 +1,37 @@
+[
+  {
+    "path": "07_pipeline/hpc/_add_run2_for_kappa.py",
+    "reason": "Removed embedded API credential; historical helper is not a ready-to-run job.",
+    "replacements": 1,
+    "source_sha256": "28c72682b7a79db8b47884d414b8f0949eab0b59aeb881792ecca2fb875fa2b3",
+    "published_sha256": "683aa96bfab42ff0f413a8959a406aae6cbad787dfa30b8d7c0c48c7951b03bf"
+  },
+  {
+    "path": "07_pipeline/repair/build_dataset_and_run_phase2.py",
+    "reason": "Removed embedded API credential; historical helper is not a ready-to-run job.",
+    "replacements": 1,
+    "source_sha256": "190c741b9cb36d66d54f1a073cee023aad354bef6a4be72ce25e05a36558a4d0",
+    "published_sha256": "87c1c6f9d8d4ae8f86d01ed43c6da2809cf6e2f01d8e76a5e761cca430d1122f"
+  },
+  {
+    "path": "07_pipeline/repair/run_23_events_direct_openrouter.py",
+    "reason": "Removed embedded API credential; historical helper is not a ready-to-run job.",
+    "replacements": 1,
+    "source_sha256": "cb3a8b67e8a9f34d8943baae4773ac346be468214e9c4ba0834c895fb7d0c854",
+    "published_sha256": "a6c98aa96336aaf5e35af0fe3625b100ecedf13852c6d3a6a0d1d3589839a201"
+  },
+  {
+    "path": "07_pipeline/slurm/run_23_events_waves_openrouter.slurm",
+    "reason": "Removed embedded API credential; historical helper is not a ready-to-run job.",
+    "replacements": 1,
+    "source_sha256": "af268ffe10987a95cd2cc34e733ee70fafc4edd294e6a803a5e541ac4afe331d",
+    "published_sha256": "8a6fa07d96937684ae9e6bc4e703e186d0c87ac9c298bb4b16a60a260154d535"
+  },
+  {
+    "path": "07_pipeline/slurm/run_6_events_qwen14b_fix.slurm",
+    "reason": "Removed embedded API credential; historical helper is not a ready-to-run job.",
+    "replacements": 1,
+    "source_sha256": "bde31a7062ddce70fe0056a37bde03979700a9f8798cfa6a9c442e6a27be8a5e",
+    "published_sha256": "f10bf94e86b8a2a4be0e9d6a87a7cf4b8a3a78a0ae68a7e865a208489dd5b842"
+  }
+]

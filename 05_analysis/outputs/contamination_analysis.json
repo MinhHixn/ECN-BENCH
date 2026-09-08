@@ -1,0 +1,53 @@
+{
+  "contaminated_events": [
+    "C10",
+    "C12",
+    "C14",
+    "C15",
+    "C2",
+    "C4",
+    "S2",
+    "S6",
+    "T1",
+    "T4",
+    "T9"
+  ],
+  "borderline_events": [
+    "C13",
+    "C7",
+    "C9",
+    "S4",
+    "S7",
+    "T5"
+  ],
+  "clean_events": [
+    "C1",
+    "C11",
+    "C3",
+    "C5",
+    "C6",
+    "C8",
+    "S3",
+    "S5",
+    "S9",
+    "T2",
+    "T3",
+    "T6",
+    "T8"
+  ],
+  "all_contaminated_across_models": [
+    "C10",
+    "C12",
+    "C14",
+    "C15",
+    "C2",
+    "C4",
+    "S2",
+    "S6",
+    "T1",
+    "T4",
+    "T9"
+  ],
+  "contamination_threshold": 0.15,
+  "contamination_rate": 0.36666666666666664
+}

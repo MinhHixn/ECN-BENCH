@@ -1,0 +1,108 @@
+{
+  "run_id": "ecnbench_20260820T133726352240Z",
+  "created_at": "2026-08-20T13:37:26.352700+00:00",
+  "seeds_dir": "../../data/seeds",
+  "events_raw": "../../data/events_raw.json",
+  "injection_bank": "../../data/injections/step30_injection_bank.json",
+  "output_dir": "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/simulation_logs/qwen2.5-14b-awq/ecnbench_20260727_qwen14b_complete/qwen2.5_14b/ecnbench_20260820T133726352240Z",
+  "events_requested": 30,
+  "events_loaded": 6,
+  "repeats": 1,
+  "conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "python_exe": "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/project_backup/MiroFish-Offline/backend/venv/bin/python",
+  "total_agents": 300,
+  "total_simulation_hours": 60,
+  "minutes_per_round": 60,
+  "trace_out": "/scratch/waves/users/mhnguyn2025@ec-nantes.fr/ecnbench_workspace/simulation_logs/qwen2.5-14b-awq/ecnbench_20260727_qwen14b_complete/qwen2.5_14b/ecnbench_20260820T133726352240Z/traces/execution.jsonl",
+  "seed_files": [
+    "../../data/seeds/C1/context.md",
+    "../../data/seeds/C10/context.md",
+    "../../data/seeds/C11/context.md",
+    "../../data/seeds/C12/context.md",
+    "../../data/seeds/C13/context.md",
+    "../../data/seeds/C14/context.md",
+    "../../data/seeds/C15/context.md",
+    "../../data/seeds/C2/context.md",
+    "../../data/seeds/C3/context.md",
+    "../../data/seeds/C4/context.md",
+    "../../data/seeds/C5/context.md",
+    "../../data/seeds/C6/context.md",
+    "../../data/seeds/C7/context.md",
+    "../../data/seeds/C8/context.md",
+    "../../data/seeds/C9/context.md",
+    "../../data/seeds/S2/context.md",
+    "../../data/seeds/S3/context.md",
+    "../../data/seeds/S4/context.md",
+    "../../data/seeds/S5/context.md",
+    "../../data/seeds/S6/context.md",
+    "../../data/seeds/S7/context.md",
+    "../../data/seeds/S9/context.md",
+    "../../data/seeds/T1/context.md",
+    "../../data/seeds/T2/context.md",
+    "../../data/seeds/T3/context.md",
+    "../../data/seeds/T4/context.md",
+    "../../data/seeds/T5/context.md",
+    "../../data/seeds/T6/context.md",
+    "../../data/seeds/T8/context.md",
+    "../../data/seeds/T9/context.md"
+  ],
+  "event_ids": [
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "C6",
+    "T8"
+  ],
+  "workflow_mode": "abc-per-event",
+  "benchmark_model": "qwen2.5:14b",
+  "expected_run_units": 18,
+  "weights_schema_version": "v1",
+  "mcq_prompt_version": "v1",
+  "deterministic_mode": true,
+  "deterministic_mode_snapshot": {
+    "benchmark_mode": true,
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "enforced_temperature": 0.0,
+  "enforced_seed": 42,
+  "headless_mode": true,
+  "phase1_config_version": "phase1_v1",
+  "layer23_config_version": "layer23_v1",
+  "telemetry_checkpoints": [
+    6,
+    12,
+    18,
+    24,
+    30
+  ],
+  "jsd_monotonic_tolerance_epsilon": 0.002,
+  "baseline_agents": [
+    "uniform_random",
+    "market_prior"
+  ],
+  "preflight_market_prior_check": "pass",
+  "leakage_check": "pass",
+  "telemetry_mode": "neo4j",
+  "telemetry_required": true,
+  "neo4j_connected": true,
+  "neo4j_error": null,
+  "topology": {
+    "source": "benchmark_defaults",
+    "degree_distribution_descriptor": "oasis-default-unspecified",
+    "clustering_coefficient": null,
+    "declared_topology_parameters": {
+      "graph_generator": {
+        "twitter": "generate_twitter_agent_graph",
+        "reddit": "generate_reddit_agent_graph"
+      },
+      "degree_distribution_descriptor": "oasis-default-unspecified",
+      "clustering_coefficient": null
+    }
+  }
+}

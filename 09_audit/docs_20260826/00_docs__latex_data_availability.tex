@@ -1,0 +1,133 @@
+% =====================================================================
+% ECN-BENCH — Data Availability section
+%
+% STATUS: ALREADY APPLIED. As of 2026-08-26 this section is live in
+%   08_paper/ecn_bench_paper.tex, and the macros below are in its preamble.
+%   The paper compiles clean at 87 pages, 0 errors, 0 undefined references,
+%   0 overfull boxes. Only \ecnarchivedoi is still a placeholder.
+%
+%   This standalone copy is kept for reference, and for pasting into a
+%   different manuscript. Editing it does NOT change the paper.
+%
+% HOW TO USE
+%   1. Upload ECNBENCH-RELEASE/ to Zenodo, OSF, Figshare or a Dataverse.
+%      Zenodo gives a permanent, versioned DOI and accepts up to 50 GB;
+%      this archive is ~2.4 GB.
+%   2. Fill in \ecnarchivedoi and \ecnarchiveurl below.
+%   3. Replace the existing \section*{Data Availability} in
+%      ecn_bench_paper.tex with everything after the RULE line.
+%
+% ANONYMOUS REVIEW: leave \ecnanonymoustrue set. The section then routes
+% reviewers through the venue and defers the public link to camera-ready,
+% exactly as the current draft does. Flip it to \ecnanonymousfalse for the
+% camera-ready and the real link appears everywhere it is needed.
+% =====================================================================
+
+\newif\ifecnanonymous
+\ecnanonymoustrue          % <-- \ecnanonymousfalse for camera-ready
+
+\newcommand{\ecnarchivedoi}{10.5281/zenodo.XXXXXXX}    % <-- your DOI
+\newcommand{\ecnarchiveurl}{https://doi.org/\ecnarchivedoi}
+\newcommand{\ecnarchive}{%
+  \ifecnanonymous
+    the replication archive accompanying this submission%
+  \else
+    the replication archive (\href{\ecnarchiveurl}{\texttt{\ecnarchivedoi}})%
+  \fi
+}
+
+% Requires \usepackage{hyperref} and \usepackage{url} in the preamble.
+
+% ===================== RULE — copy from here =========================
+
+\section*{Data Availability}
+
+Every quantitative claim in this paper is derived from artifacts released in
+\ecnarchive. The archive is arranged in reading order and each directory carries its own
+\texttt{README}; \texttt{00\_docs/PROVENANCE.md} records which claims survived the audit
+of Section~\ref{sec:evaluator_replication} and which were withdrawn, and
+\texttt{00\_docs/REPRODUCE.md} gives the exact commands that regenerate every table and
+figure below. Those commands were verified end to end against the archive: all five
+analyses reproduce byte-identical output.
+
+\textbf{Campaign records.} For each of the four campaigns we release the per-unit scored
+records: \texttt{event\_results.json} (the July 2026 pass, Evaluator~J,
+DeepSeek-R1-14B), \texttt{event\_results\_evaluatorB\_openrouter.json} together with
+\texttt{event\_results\_evaluatorA\_repeat\{1,2,3\}.json} (the four independent
+Evaluator~A reads of Section~\ref{sec:four_model_extension}), and
+\texttt{event\_results\_evaluatorC\_gptlunapro.json} (the independent Evaluator~C read).
+The passes are kept in separate files rather than merged, because the derived metrics
+stored in each are valid only for that pass's own probability vectors. The rollup behind
+Section~\ref{sec:four_model_extension} and Table~\ref{tab:four_model_clean} is
+\texttt{reproducibility\_analysis\_master.json}, which is the source of truth for those
+numbers.
+
+\textbf{Simulation transcripts.} The run-integrity audits of
+Appendices~\ref{sec:persona_audit}--\ref{sec:evidence_depth} read the per-unit SQLite
+trace databases. These are released in full for Llama-3.1-8B, Mistral-7B and
+Qwen2.5-7B ($120$ databases per model). For Qwen2.5-14B they are released for the six
+events re-simulated 2026-08-21 ($18$ units), together with a three-unit fragment of the
+original 2026-07-27 campaign (event~C15); the transcripts for that campaign's remaining
+$21$ events were removed by the cluster's scratch-filesystem retention policy before
+they could be transferred, and are unrecoverable. Their scored records are unaffected
+and are released in full. One consequence is documented rather than repaired: the
+all-campaign action-density counts of Table~\ref{tab:action_density_30event} come from a
+2026-07-27 cluster-side scan of Qwen2.5-14B's then-30-event campaign, six of which were
+later found to have been simulated under the wrong topic
+(\S\ref{sec:fourth_model_status}); that scan could not be redone against the corrected
+traces.
+
+\begin{sloppypar}
+\textbf{Post-campaign experiments.} Each is released with its generator, its analysis and
+its figure script, so that every number can be recomputed from the raw runs rather than
+taken from a summary. The cross-evaluator degeneracy-transfer probe of
+Section~\ref{sec:volume_mechanism} is \texttt{run\_\allowbreak degeneracy\_\allowbreak
+transfer.py} and \texttt{analyze\_\allowbreak degeneracy\_\allowbreak transfer.py} over
+\texttt{degeneracy\_\allowbreak transfer.json}. The $2\times4$ truncation grid is
+\texttt{build\_\allowbreak truncation\_\allowbreak inputs.py},
+\texttt{run\_\allowbreak truncation\_\allowbreak grid.py} and
+\texttt{analyze\_\allowbreak truncation\_\allowbreak grid.py} over
+\texttt{event\_\allowbreak results\_\allowbreak trunc\_*.json} and
+\texttt{truncation\_\allowbreak results.json}. The single-agent baseline of
+Section~\ref{sec:cot_baseline} is \texttt{run\_\allowbreak single\_\allowbreak
+agent\_\allowbreak cot\_\allowbreak baseline.py}, producing
+\texttt{single\_\allowbreak agent\_\allowbreak cot\_\allowbreak baseline\_\allowbreak
+results.json} ($240$ runs, all fields retained except the chain-of-thought text, which
+is truncated to $300$ characters per run), analysed by
+\texttt{analyze\_\allowbreak cot\_\allowbreak baseline.py} into
+\texttt{cot\_\allowbreak baseline\_\allowbreak analysis.json}. That last file carries all
+three CoT aggregation variants and both pooling scopes, not only the ones tabulated
+here, so a reader can check the sensitivity of \S\ref{sec:cot_baseline} directly.
+\end{sloppypar}
+
+\textbf{Benchmark and pipeline.} The event catalogue, seed dossiers, injection bank and
+scoring rubric are released so the benchmark can be run against new models, alongside
+the simulation engine, the HPC protocol runner and the SLURM job scripts as executed.
+The archive also retains the superseded and invalid artifacts the audit produced --- the
+defective repair, the wrong-topic re-simulation, the two divergent event catalogues ---
+so that every defect reported in \S\ref{sec:outage} and \S\ref{sec:fourth_model_status}
+is independently checkable rather than merely asserted.
+
+\ifecnanonymous
+To preserve anonymity during review, the archive is not linked here; it is available to
+reviewers through the venue, and the permanent public record will be linked in the
+camera-ready version.
+\else
+The archive is permanently available at \url{\ecnarchiveurl}.
+\fi
+
+% ===================== to here ======================================
+
+
+% ---------------------------------------------------------------------
+% OPTIONAL: a footnote for the first page, if the venue allows one.
+% ---------------------------------------------------------------------
+% \thanks{Data, code and audit trail: \ecnarchive.}
+
+% ---------------------------------------------------------------------
+% OPTIONAL: a bibliography entry, if you prefer to cite the archive.
+% ---------------------------------------------------------------------
+% \bibitem{ecnbench-archive}
+% ECN-BENCH replication archive: campaign records, simulation transcripts,
+% post-campaign experiments and audit trail.
+% \newblock Zenodo, 2026. \newblock DOI: \ecnarchivedoi.

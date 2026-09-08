@@ -1,0 +1,89 @@
+{
+  "analysis_version": "2026-09-06",
+  "inference": {
+    "bootstrap_draws": 100000,
+    "seed": 7,
+    "unit": "event; all model readings retained together",
+    "estimand": "equal-weight mean over events and the four fixed campaigns",
+    "p_values": "not reported; no independent-unit or fractional-hit exact test",
+    "limitations": "Exploratory percentile intervals; event dependence, selection, and evaluator knowledge leakage remain unresolved."
+  },
+  "cells": {
+    "q14b_unconstrained/2k": {
+      "attempted": 60,
+      "scored": 59,
+      "near_uniform": 7
+    },
+    "q14b_unconstrained/5k": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 4
+    },
+    "q14b_unconstrained/8k": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 0
+    },
+    "q14b_unconstrained/full": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 1
+    },
+    "q14b_enforced/2k": {
+      "attempted": 60,
+      "scored": 59,
+      "near_uniform": 5
+    },
+    "q14b_enforced/5k": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 2
+    },
+    "q14b_enforced/8k": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 4
+    },
+    "q14b_enforced/full": {
+      "attempted": 60,
+      "scored": 60,
+      "near_uniform": 0
+    }
+  },
+  "contrasts": {
+    "short_minus_full": {
+      "paired_units": 59,
+      "discordant_first_only": 6,
+      "discordant_second_only": 0,
+      "event_cluster_interval": {
+        "mean": 0.11666666666666667,
+        "low": 0.03333333333333333,
+        "high": 0.23333333333333334,
+        "n_events": 30,
+        "n_clusters": 30
+      }
+    },
+    "off_minus_on_full": {
+      "paired_units": 60,
+      "discordant_first_only": 1,
+      "discordant_second_only": 0,
+      "event_cluster_interval": {
+        "mean": 0.016666666666666666,
+        "low": 0.0,
+        "high": 0.05,
+        "n_events": 30,
+        "n_clusters": 30
+      }
+    },
+    "off_minus_on_all_lengths": {
+      "paired_units": 238,
+      "event_cluster_interval": {
+        "mean": 0.0047619047619047615,
+        "low": -0.029166666666666667,
+        "high": 0.04226190476190476,
+        "n_events": 30,
+        "n_clusters": 30
+      }
+    }
+  }
+}

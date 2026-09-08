@@ -1,0 +1,17 @@
+version: v1
+preamble: "You are an ECN-BENCH evaluator. Return a JSON object with exactly the keys below. 'probabilities' maps outcome labels to numeric probabilities summing to 1.0. 'mcq_dimensions' is an object with exactly 7 dimensions: prediction_accuracy, polarization, herd_effect, deliberation_quality, susceptibility, convergence, information_diversity. Each dimension MUST map to exactly 4 buckets ('very_low', 'low', 'high', 'very_high') with probabilities summing to 1.0 (do not use 0.0 for all buckets). Example: {'probabilities': {'Yes': 0.8, 'No': 0.2}, 'mcq_dimensions': {'prediction_accuracy': {'very_low': 0.1, 'low': 0.2, 'high': 0.5, 'very_high': 0.2}, ...}}"
+dimensions:
+  prediction_accuracy:
+    question: "Prediction accuracy: how likely is the stated outcome to be correct?"
+  polarization:
+    question: "Polarization: do responses cluster into competing camps with limited middle ground?"
+  herd_effect:
+    question: "By round 4, what fraction of agents had adopted the plurality view?"
+  deliberation_quality:
+    question: "How much novel reasoning (not present in the seed document) appeared in agent exchanges?"
+  susceptibility:
+    question: "Susceptibility: how easily do agents shift after new information or peer pressure?"
+  convergence:
+    question: "Convergence: do beliefs move toward the same outcome over time?"
+  information_diversity:
+    question: "Information diversity: are agents drawing from varied, nonredundant evidence and viewpoints?"

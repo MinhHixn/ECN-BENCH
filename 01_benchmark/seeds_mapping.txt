@@ -1,0 +1,30 @@
+C10: # Context: Next UK Prime Minister After 2024 Election
+C11: # Context: 2024 Nobel Peace Prize
+C12: # Context: 2024 NBA Championship
+C13: # Context: 2025 Oscar Best Picture
+C14: # Context: 2025 German Federal Election
+C15: # Context: Fed Rate Cuts in 2024
+C1: # Context: 2024 Presidential Election - Which Party Wins
+C2: # Context: Federal Reserve Interest Rate Cut by End of 2024
+C3: # Context: French Snap Legislative Election 2024
+C4: # Context: 2024 UK General Election
+C5: # Context: Balance of Power After 2024 Election
+C6: # Context: Federal Reserve Rate Cuts in 2025
+C7: # Context: UEFA Euro 2024 Championship
+C8: # Context: AI Model Scoring >90% on MMLU Benchmark
+C9: # Context: US Trade Deals Before July 2025
+S2: # Context: US Senate Control 2024
+S3: # Context: Red Sweep 2024 (Republican Control of Presidency, House, and Senate)
+S4: # Context: 2024 Presidential Election Turnout
+S5: # Context: Hamas Leader Elimination by Israel
+S6: # Context: Trump Popular Vote Victory 2024
+S7: # Context: Democratic Control of Senate 2024
+S9: # Context: Biden Resignation or Removal from Office
+T1: # Context: Federal Reserve November 2024 Rate Decision
+T2: # Context: US Government Shutdown Before January 1, 2025
+T3: # Context: Bitcoin $80k vs $100k - Which First?
+T4: # Context: October 2024 CPI Below 2.5%
+T5: # Context: Ethereum Spot ETF Net Inflows - First Week
+T6: # Context: OpenAI GPT-5 Release in 2024
+T8: # Context: Bitcoin $110k in 2025
+T9: # Context: OpenAI AGI Announcement in 2025

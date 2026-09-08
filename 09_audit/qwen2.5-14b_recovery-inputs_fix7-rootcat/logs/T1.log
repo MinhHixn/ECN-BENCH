@@ -1,0 +1,651 @@
+[20:30:50] INFO: Extracting 30 diverse entities from context...
+[20:35:07] ERROR: Entity extraction failed: Invalid JSON format from LLM: {
+  "entities": [
+    {
+      "name": "Shawn Fain",
+      "type": "person",
+      "bio": "UAW President leading the strike",
+      "profession": "Labor Union Leader"
+    },
+    {
+      "name": "Mary Barra",
+      "type": "person",
+      "bio": "GM CEO negotiating with UAW",
+      "profession": "Automotive Executive"
+    },
+    {
+      "name": "Carlos Tavares",
+      "type": "person",
+      "bio": "Stellantis CEO resisting UAW demands",
+      "profession": "Automotive Executive"
+    },
+    {
+      "name": "Joe Biden",
+      "type": "person",
+      "bio": "US President supporting UAW strike",
+      "profession": "Head of State"
+    },
+    {
+      "name": "Donald Trump",
+      "type": "person",
+      "bio": "Former US President supporting UAW strike",
+      "profession": "Head of State"
+    },
+    {
+      "name": "Goldman Sachs",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "News agency covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "The Federal Reserve",
+      "type": "organization",
+      "bio": "Central bank monitoring economic impact",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "JP Morgan",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "WSJ",
+      "type": "organization",
+      "bio": "News outlet covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "UAW",
+      "type": "organization",
+      "bio": "Labor union leading the strike",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Stellantis",
+      "type": "organization",
+      "bio": "Automaker resisting UAW demands",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Ford Motor Company",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "General Motors",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "The White House",
+      "type": "organization",
+      "bio": "Government agency monitoring labor dispute",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Peugeot S.A.",
+      "type": "organization",
+      "bio": "European parent of Stellantis",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Gallup",
+      "type": "organization",
+      "bio": "Pollster tracking public opinion",
+      "profession": "Research Institution"
+    },
+    {
+      "name": "TikTok",
+      "type": "organization",
+      "bio": "Social media platform used by UAW",
+      "profession": "Social Media Platform"
+    },
+    {
+      "name": "Instagram",
+      "type": "organization",
+      "bio": "Social media platform used by UAW",
+      "profession": "Social Media Platform"
+    },
+    {
+      "name": "Facebook",
+      "type": "organization",
+      "bio": "Social media platform used by UAW",
+      "profession": "Social Media Platform"
+    },
+    {
+      "name": "The UAWD",
+      "type": "organization",
+      "bio": "Labor union caucus supporting Shawn Fain",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Ray Curry",
+      "type": "person",
+      "bio": "Former UAW President",
+      "profession": "Labor Union Leader"
+    },
+    {
+      "name": "FDR",
+      "type": "person",
+      "bio": "Former US President",
+      "profession": "Head of State"
+    },
+    {
+      "name": "The Fed",
+      "type": "organization",
+      "bio": "Central bank monitoring economic impact",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Peugeot",
+      "type": "organization",
+      "bio": "Automotive company",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Ram",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Jeep",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Dodge",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Bronco",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Aviator",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Explorer",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Silverado",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "F-150 Lightning",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Ram Truck",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Wrangler",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Stellantis",
+      "type": "organization",
+      "bio": "Automaker resisting UAW demands",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "UAWD",
+      "type": "organization",
+      "bio": "Labor union caucus supporting Shawn Fain",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Peugeot S.A.",
+      "type": "organization",
+      "bio": "European parent of Stellantis",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Goldman Sachs",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "JP Morgan",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "The Federal Reserve",
+      "type": "organization",
+      "bio": "Central bank monitoring economic impact",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "WSJ",
+      "type": "organization",
+      "bio": "News outlet covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "News agency covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "UAW",
+      "type": "organization",
+      "bio": "Labor union leading the strike",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Ford Motor Company",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "General Motors",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "The White House",
+      "type": "organization",
+      "bio": "Government agency monitoring labor dispute",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Peugeot",
+      "type": "organization",
+      "bio": "Automotive company",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Ram",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Jeep",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Dodge",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Bronco",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Aviator",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Explorer",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Silverado",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "F-150 Lightning",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Ram Truck",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Wrangler",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Stellantis",
+      "type": "organization",
+      "bio": "Automaker resisting UAW demands",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "UAWD",
+      "type": "organization",
+      "bio": "Labor union caucus supporting Shawn Fain",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Peugeot S.A.",
+      "type": "organization",
+      "bio": "European parent of Stellantis",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Goldman Sachs",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "JP Morgan",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "The Federal Reserve",
+      "type": "organization",
+      "bio": "Central bank monitoring economic impact",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "WSJ",
+      "type": "organization",
+      "bio": "News outlet covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "News agency covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "UAW",
+      "type": "organization",
+      "bio": "Labor union leading the strike",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Ford Motor Company",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "General Motors",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "The White House",
+      "type": "organization",
+      "bio": "Government agency monitoring labor dispute",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Peugeot",
+      "type": "organization",
+      "bio": "Automotive company",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Ram",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Jeep",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Dodge",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Bronco",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Aviator",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Explorer",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Silverado",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "F-150 Lightning",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Ram Truck",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Wrangler",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Stellantis",
+      "type": "organization",
+      "bio": "Automaker resisting UAW demands",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "UAWD",
+      "type": "organization",
+      "bio": "Labor union caucus supporting Shawn Fain",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Peugeot S.A.",
+      "type": "organization",
+      "bio": "European parent of Stellantis",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Goldman Sachs",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "JP Morgan",
+      "type": "organization",
+      "bio": "Investment bank analyzing market impact",
+      "profession": "Financial Institution"
+    },
+    {
+      "name": "The Federal Reserve",
+      "type": "organization",
+      "bio": "Central bank monitoring economic impact",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "WSJ",
+      "type": "organization",
+      "bio": "News outlet covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "Reuters",
+      "type": "organization",
+      "bio": "News agency covering the strike",
+      "profession": "News Outlet"
+    },
+    {
+      "name": "UAW",
+      "type": "organization",
+      "bio": "Labor union leading the strike",
+      "profession": "Labor Union"
+    },
+    {
+      "name": "Ford Motor Company",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "General Motors",
+      "type": "organization",
+      "bio": "Automaker negotiating with UAW",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "The White House",
+      "type": "organization",
+      "bio": "Government agency monitoring labor dispute",
+      "profession": "Government Agency"
+    },
+    {
+      "name": "Peugeot",
+      "type": "organization",
+      "bio": "Automotive company",
+      "profession": "Automotive Company"
+    },
+    {
+      "name": "Ram",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Jeep",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Dodge",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Bronco",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Aviator",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Explorer",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Silverado",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "F-150 Lightning",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Ram Truck",
+      "type": "organization",
+      "bio": "Automotive brand",
+      "profession": "Automotive Brand"
+    },
+    {
+      "name": "Wrangler",
+      "type": "organization",
+      "bio
+Intelligent persona generation failed, falling back to basic seed profile.
+[20:35:07] INFO: Loaded 30 profiles from event checkpoint: T1
+[20:35:07] INFO: Expansion Progress: 30/300. Requesting 3 parallel batches of 5...
+[20:35:16] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 4
+[20:35:16] INFO: Expansion Progress: 30/300. Requesting 3 parallel batches of 5...
+[20:35:25] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 3
+[20:35:25] INFO: Expansion Progress: 30/300. Requesting 3 parallel batches of 5...
+[20:35:30] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 2
+[20:35:30] INFO: Expansion Progress: 30/300. Requesting 3 parallel batches of 5...
+[20:35:32] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 1
+[20:35:32] INFO: Expansion Progress: 30/300. Requesting 3 parallel batches of 5...
+[20:35:36] INFO: Expansion Progress: 35/300. Requesting 3 parallel batches of 5...
+[20:35:43] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 4
+[20:35:43] INFO: Expansion Progress: 35/300. Requesting 3 parallel batches of 5...
+[20:35:51] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 3
+[20:35:51] INFO: Expansion Progress: 35/300. Requesting 3 parallel batches of 5...
+[20:35:56] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 2
+[20:35:56] INFO: Expansion Progress: 35/300. Requesting 3 parallel batches of 5...
+[20:35:59] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 1
+[20:35:59] INFO: Expansion Progress: 35/300. Requesting 3 parallel batches of 5...
+[20:36:07] WARNING: Micro-batch generation yielded 0 valid agents. Global retries left: 0
+[20:36:07] WARNING: Resorting to DIVERSIFIED rule-based fallback for 265 agents.
+[20:36:07] INFO: Injecting Global Language Rule into 300 profiles...
+DEV_MINIMAL_MODE enabled: polymarket_opening_prior validation relaxed for architecture run.
+DEV_MINIMAL_MODE enabled: leakage preflight skipped for architecture run.
+Neo4j connected — strict telemetry enabled.
