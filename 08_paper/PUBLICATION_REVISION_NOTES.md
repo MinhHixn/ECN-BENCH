@@ -35,6 +35,11 @@ Các bảng SQL scan và hình lịch sử được giữ đúng tư cách audit
 
 ## Trước khi thực sự public
 
-Tác giả còn cần xác nhận author/affiliation/acknowledgments, rà soát quyền phân phối và thông tin nhạy cảm trong artifact, deposit dữ liệu rồi thêm DOI/URL thật. Nếu chọn venue, cần chỉnh template/page limit/anonymization riêng. Đây là bản đầy đủ theo hướng technical report/preprint; không phải cam kết được phản biện chấp nhận.
+Thông tin tác giả, affiliation, email học thuật, giáo viên hướng dẫn và repository
+private đã được xác nhận trong bản metadata 1.2.2. Trước khi chuyển repository sang
+public, tác giả còn cần rà soát quyền phân phối và thông tin nhạy cảm trong artifact;
+chỉ thêm DOI sau khi có định danh thật. Nếu chọn venue, cần chỉnh template/page
+limit/anonymization riêng. Đây là bản đầy đủ theo hướng technical report/preprint;
+không phải cam kết được phản biện chấp nhận.
 
 Không cần thêm simulation để công bố đúng phạm vi audit hiện tại. Những thí nghiệm cần cho claim mạnh hơn được giữ trong phần future work, không được thực hiện hoặc lập lịch.

@@ -25,35 +25,38 @@ network access; the research analyses are offline.
 
 ## Final owner decisions
 
-- Confirm the existing author name, affiliation, contact email and acknowledgments.
+- Author metadata is confirmed as Minh Hien NGUYEN, student no. 21618468,
+  L2 EEA (Bi-disciplinaire) / minor in Mechanics, Faculté des Sciences et
+  Ingénierie, Sorbonne Université; academic contact email
+  `nguyen.minh_hien@etu.sorbonne-universite.fr`.
 - Review distribution rights for the quoted news material and historical artifacts.
   Existing license notices and upstream AGPL text are included; this technical
   freeze is not a rights clearance.
 - Revoke/rotate the credential found in the five original scripts if it is real
   and active. No API request was made to test its validity.
-- Choose the GitHub owner/repository and public/private visibility. Add the actual
-  URL to `CITATION.cff` and Data Availability once publication occurs. A DOI is
-  optional for GitHub; never insert a placeholder DOI as though deposited.
+- The repository is `MinhHixn/ECN-BENCH`, private, with `main` as its principal
+  branch. Decide separately whether to make it public. A DOI is optional for
+  GitHub; never insert a placeholder DOI as though deposited.
 
-## Create the repository
+## Update the existing repository
 
-Create an empty GitHub repository with your chosen visibility. Do not initialize
-it with an extra README/license, because this package already includes them.
-Then, from this package root:
+The repository and local `origin` already exist. After reviewing the metadata
+change, commit and push from this package root. Do not move the existing
+`v1.2.1` tag: it identifies commit `ec161cef73f79758b85bf91fd7cc89e9908c9697`.
 
 ```sh
-git init -b main
 git add .
 git diff --cached --stat
 git status --short
-git commit -m "Freeze ECN-BENCH technical report and reproducible audit"
+git commit -m "Add author, supervisor, and repository metadata"
+git tag v1.2.2
+git push origin main
+git push origin v1.2.2
 ```
 
-Add the remote using the exact URL shown by GitHub and push `main`. The workspace
-preparation does not create a remote, commit on your behalf or publish data.
+The configured remote is `https://github.com/MinhHixn/ECN-BENCH.git`.
 `.gitattributes` preserves source bytes across platforms so input hashes survive
-cloning. Use Git or upload the prepared ZIP; browser drag-and-drop may omit dotfiles
-such as `.github`, `.gitignore` and `.gitattributes`.
+cloning.
 
 ## Companion artifact and version
 
@@ -63,9 +66,9 @@ optional for offline numerical reproduction but is needed to distribute all
 available transcripts. Attach it to a repository release or deposit it separately
 after the owner review. Record the real URL in `03_traces/TRACE_MANIFEST.json`.
 
-The package version is 1.2.1; scientific analysis versions remain 2026-09-06 and
-2026-09-06-full. After the final metadata update and passing hosted checks, a
-version tag such as `v1.2.1` can identify the published commit.
+The package version is 1.2.2; scientific analysis versions remain 2026-09-06 and
+2026-09-06-full. Tag `v1.2.1` remains the initial freeze; tag `v1.2.2` should
+identify this metadata-only revision after verification.
 
 Every edit changes the frozen checksums. Regenerate `checksums.sha256` deliberately
 after final metadata edits, then rerun verification and rebuild the publication

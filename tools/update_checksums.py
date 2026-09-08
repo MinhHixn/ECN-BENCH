@@ -23,7 +23,7 @@ def main():
         name = relative.parts[0] if len(relative.parts) > 1 else "(root)"
         count, size = groups.get(name, (0, 0))
         groups[name] = count + 1, size + path.stat().st_size
-    lines = ["# Publication package inventory", "", "Package 1.2.1; research analysis versions 2026-09-06 / 2026-09-06-full.", "",
+    lines = ["# Publication package inventory", "", "Package 1.2.2; research analysis versions 2026-09-06 / 2026-09-06-full.", "",
              "Counts exclude this generated inventory and `checksums.sha256`.",
              "Raw traces are separate; see `03_traces/TRACE_MANIFEST.json`.", "",
              "| Directory | Files | Bytes |", "|---|---:|---:|"]
@@ -34,10 +34,10 @@ def main():
               "Run `python tools/verify_release.py` for complete validation.", "",
               "Five credential redactions are recorded in `00_docs/PUBLICATION_CHANGES.json`.",
               "Scored observations and current numerical analysis sources are unchanged.", ""]
-    (ROOT / "MANIFEST.md").write_text("\n".join(lines), encoding="utf-8")
+    (ROOT / "MANIFEST.md").write_bytes("\n".join(lines).encode("utf-8"))
     listed = list(files())
-    (ROOT / "checksums.sha256").write_text("".join(
-        f"{digest(p)}  {p.relative_to(ROOT).as_posix()}\n" for p in listed), encoding="utf-8")
+    (ROOT / "checksums.sha256").write_bytes("".join(
+        f"{digest(p)}  {p.relative_to(ROOT).as_posix()}\n" for p in listed).encode("utf-8"))
     print(f"Updated manifest and checksums for {len(listed)} files. Run verification before publication.")
 
 

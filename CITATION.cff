@@ -15,18 +15,21 @@ abstract: >-
   serving differences and incomplete raw traces limit interpretation.
   The September revision adds no simulation or evaluator calls.
 type: dataset
-version: "1.2.1"
+version: "1.2.2"
+date-released: 2026-09-08
+repository-code: "https://github.com/MinhHixn/ECN-BENCH"
 
 # ---------------------------------------------------------------------------
-# Author/affiliation metadata is inherited from the research archive.
-# See 00_docs/GITHUB_PUBLISH.md for final metadata review and deposition.
-# Add repository-code / doi only after real identifiers have been assigned.
+# Repository is private at this revision; access requires owner authorization.
+# Tag v1.2.1 identifies the initially uploaded freeze. Version 1.2.2 adds the
+# confirmed author, supervision and repository metadata. Add a DOI only after
+# a real persistent identifier has been assigned.
 # ---------------------------------------------------------------------------
 authors:
   - given-names: Minh Hien
-    family-names: Nguyen
-    email: nguyenminhhienthd1@gmail.com
-    affiliation: École Centrale de Nantes
+    family-names: NGUYEN
+    email: nguyen.minh_hien@etu.sorbonne-universite.fr
+    affiliation: Faculté des Sciences et Ingénierie, Sorbonne Université
 
 
 keywords:
@@ -48,13 +51,14 @@ references:
       ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-Agent Forecasting
     authors:
       - given-names: Minh Hien
-        family-names: Nguyen
-        affiliation: École Centrale de Nantes
+        family-names: NGUYEN
+        affiliation: Faculté des Sciences et Ingénierie, Sorbonne Université
     year: 2026
     notes: >-
       The technical report this archive accompanies; included in the archive at
       08_paper/ecn_bench_paper.pdf. Replace with the published venue, volume and
-      DOI once available.
+      DOI once available. The work was conducted under the academic supervision
+      of Hugues DIGONNET (Centrale Nantes, GeM).
 
   - type: software
     title: MiroFish-Offline

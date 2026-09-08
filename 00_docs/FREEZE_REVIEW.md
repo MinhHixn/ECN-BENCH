@@ -1,8 +1,9 @@
 # Final technical freeze review — 2026-09-08
 
 Scientific scope: the restored 2026-09-06 full technical report and its retrospective
-measurement audit. Package version: 1.2.1. No simulation, evaluator call, model
-download, HPC job, GitHub push or public deposition was performed for this freeze.
+measurement audit. Package version: 1.2.2. No simulation, evaluator call, model
+download or HPC job was performed for this metadata revision. The private GitHub
+repository and its initial `v1.2.1` tag were confirmed locally.
 
 ## Findings and fixes
 
@@ -49,16 +50,17 @@ contamination freedom or full historical system reproducibility.
 
 All three PDFs were rebuilt with local Tectonic 0.17.0 using only its existing
 package cache: full report 78 pages, short report 10 pages, conference wrapper
-8 pages. Extracted text matches the previous PDFs. No missing references,
+8 pages. No missing references,
 multiply defined labels, blank pages or overfull boxes were found. The logs retain
-font-substitution warnings and underfull-box spacing warnings (3 / 1 / 25),
+font-substitution warnings and underfull-box spacing warnings (3 / 1 / 26),
 particularly in the conference layout; these are documented rather than hidden.
 
 ## Publication status
 
 The prepared package supports a technical freeze of this existing research scope.
-Public release still depends on the owner's metadata/rights review and repository
-choice, described in `GITHUB_PUBLISH.md`. No public URL or DOI is asserted.
+The repository is private and access-controlled; any public release still depends
+on the owner's rights review and visibility choice, described in
+`GITHUB_PUBLISH.md`. No DOI is asserted.
 The two short paper variants are not venue-specific submission compliance checks.
 
 Build and verification evidence is in the sibling local `verification/` directory;

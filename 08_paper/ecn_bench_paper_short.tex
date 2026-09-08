@@ -18,10 +18,19 @@
 pdftitle={The Evaluator Is Part of the Forecast: A Forensic Audit of ECN-BENCH}}
 \input{paper_tables.tex}
 \title{The Evaluator Is Part of the Forecast:\\A Forensic Audit of ECN-BENCH}
-\author{Minh Hien Nguyen%
-\thanks{Independent research using university high-performance computing infrastructure.
-Revised September 6, 2026. This revision reanalyses existing records; it adds no
-simulation runs or evaluator calls.}}
+\ifdefined\ECNConferenceVersion
+\author{\IEEEauthorblockN{Minh Hien NGUYEN}
+\IEEEauthorblockA{L2 EEA (Bi-disciplinaire), minor in Mechanics\\
+Facult\'e des Sciences et Ing\'enierie, Sorbonne Universit\'e\\
+Student no.~21618468; \texttt{nguyen.minh\_hien@etu.sorbonne-universite.fr}}}
+\else
+\author{Minh Hien NGUYEN%
+\thanks{Primary and corresponding author. Student no.~21618468; L2 EEA
+(Bi-disciplinaire), minor in Mechanics, Facult\'e des Sciences et Ing\'enierie,
+Sorbonne Universit\'e. Email: \texttt{nguyen.minh\_hien@etu.sorbonne-universite.fr}.
+Scientific analysis revised September 6, 2026; authorship and repository metadata updated
+September 8, 2026. This revision adds no simulation runs or evaluator calls.}}
+\fi
 \begin{document}
 \maketitle
 
@@ -698,16 +707,19 @@ and removes unvalidated convergence, size-threshold and optimal-configuration
 claims. No new model observations were collected. The defects remain
 available to audit and remain explicit limits on inference.
 
+\section*{Acknowledgment}
+The author thanks Hugues DIGONNET (Centrale Nantes / GeM) for academic
+supervision and acknowledges the university high-performance computing
+infrastructure used for the historical experiments.
+
 \section*{Data Availability}
-The replication package accompanies this manuscript and supports offline
-reanalysis. A permanent repository identifier has not yet been assigned in
-this working release; no public deposition or reviewer access is asserted.
-Scored records and evidence fields survive even where raw simulation traces
-were lost. Qwen2.5-14B's original raw traces are unavailable for 21 events
-following scratch-storage deletion; recovery traces and the surviving original
-fragment are retained. The original evaluator deployment cannot be replayed
-exactly from the recorded artifacts. Reproducing the reported analysis and
-rerunning the historical system are distinct capabilities.
+The private replication repository is
+\url{https://github.com/MinhHixn/ECN-BENCH} (branch \texttt{main}; access by owner
+authorization). Tag \texttt{v1.2.1} marks the initial freeze; package 1.2.2 adds
+the present metadata. No DOI is assigned. Scored evidence survives where raw
+traces do not, including 21 Qwen2.5-14B events. The original evaluator deployment
+cannot be replayed exactly; offline reanalysis and historical rerunning remain
+distinct capabilities.
 
 \section*{Research Scope}
 Inputs concern public events and were assembled for retrospective computational
@@ -739,5 +751,3 @@ capabilities}, arXiv:2409.19839, 2024.
 \url{https://arxiv.org/abs/2409.19839}.
 \end{thebibliography}
 \end{document}
-
-

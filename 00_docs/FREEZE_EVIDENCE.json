@@ -1,6 +1,6 @@
 {
   "review_date": "2026-09-08",
-  "package_version": "1.2.1",
+  "package_version": "1.2.2",
   "numerical_checks": {
     "python": "3.14.2",
     "integrity": "passed",
@@ -59,12 +59,13 @@
         "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
       ],
       "overfull_boxes": 0,
-      "underfull_boxes": 25
+      "underfull_boxes": 26
     }
   ],
   "source_comparison": {
-    "byte_identical_retained_files": 630,
+    "byte_identical_retained_files": 625,
     "changed_paths": [
+      "00_docs/latex_data_availability.tex",
       "03_traces/README.md",
       "07_pipeline/hpc/_add_run2_for_kappa.py",
       "07_pipeline/repair/build_dataset_and_run_phase2.py",
@@ -72,8 +73,12 @@
       "07_pipeline/slurm/run_23_events_waves_openrouter.slurm",
       "07_pipeline/slurm/run_6_events_qwen14b_fix.slurm",
       "08_paper/ecn_bench_paper.pdf",
+      "08_paper/ecn_bench_paper.tex",
       "08_paper/ecn_bench_paper_conf.pdf",
       "08_paper/ecn_bench_paper_short.pdf",
+      "08_paper/ecn_bench_paper_short.tex",
+      "08_paper/PUBLICATION_REVISION_NOTES.md",
+      "08_paper/README.md",
       "checksums.sha256",
       "CITATION.cff",
       "LICENSE.txt",

@@ -1,12 +1,13 @@
 # ECN-BENCH: retrospective extraction audit
 
-Publication package **1.2.1**, prepared 2026-09-08. Start with
+Publication package **1.2.2**, updated 2026-09-08. Start with
 [freeze review](00_docs/FREEZE_REVIEW.md) and
 [GitHub publishing instructions](00_docs/GITHUB_PUBLISH.md).
 This folder contains the paper, offline analysis inputs, historical code and
 audit trail. Raw traces are a separate companion ZIP, described in
 [the trace manifest](03_traces/TRACE_MANIFEST.json); they are not required to
-reproduce the current numerical results. No public upload has been made.
+reproduce the current numerical results. The GitHub repository is uploaded but
+private; no public deposition has been made.
 
 This package accompanies **ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-Agent Forecasting — Full Technical Report** (restored full edition: 2026-09-06).
 
@@ -51,7 +52,15 @@ No simulation, model download, credentials or API calls are needed for the analy
 | 08_paper | Current manuscript, generated tables and PDFs |
 | 09_audit | Invalid and superseded artifacts, including the prior manuscripts |
 
-No public deposition is asserted. Add the assigned repository identifier after actual deposition. `CITATION.cff` uses the author metadata already present in this project.
+Repository: `MinhHixn/ECN-BENCH` (private at this revision), principal branch
+`main`. Tag `v1.2.1` identifies the initially uploaded freeze; version 1.2.2 adds
+confirmed authorship, supervision and repository metadata. No DOI is asserted.
+
+Minh Hien NGUYEN is the primary and corresponding author (L2 EEA,
+Bi-disciplinaire, minor in Mechanics, Faculté des Sciences et Ingénierie,
+Sorbonne Université; student no. 21618468). The work was conducted under the
+academic supervision of [Hugues DIGONNET](https://www.ec-nantes.fr/version-francaise/annuaire/digonnet-hugues),
+Centrale Nantes / GeM. Supervision acknowledgment does not imply co-authorship.
 
 Five historical helper scripts were sanitized to remove embedded API credentials.
 See `00_docs/PUBLICATION_CHANGES.json`. They remain historical records and require
