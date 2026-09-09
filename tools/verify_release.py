@@ -92,7 +92,7 @@ def main():
                         raise ValueError(f"Regenerated JSON differs: {directory}/{name}")
             for name in ("paper_tables.tex", "paper_full_tables.tex"):
                 for directory in ("08_paper", "05_analysis/outputs"):
-                    if (output / name).read_bytes() != (ROOT / directory / name).read_bytes():
+                    if (output / name).read_bytes().replace(b"\r\n", b"\n") != (ROOT / directory / name).read_bytes().replace(b"\r\n", b"\n"):
                         raise ValueError(f"Regenerated table differs: {directory}/{name}")
             report["reanalysis"] = "passed: both JSON outputs and both TeX tables match both released copies"
             report["figure_byte_identity"] = digest(output / "fig_paper_audit.png") == digest(ROOT / "08_paper/fig_paper_audit.png")

@@ -19,7 +19,7 @@ Raw traces are separate; see `03_traces/TRACE_MANIFEST.json`.
 | 07_pipeline | 99 | 1876787 |
 | 08_paper | 17 | 6046378 |
 | 09_audit | 288 | 97336391 |
-| tools | 2 | 8333 |
+| tools | 2 | 8381 |
 
 All publication files, including this manifest and dotfiles, are hashed in
 `checksums.sha256`. The checksum file itself, runtime caches, extracted
