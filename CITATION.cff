@@ -15,15 +15,16 @@ abstract: >-
   serving differences and incomplete raw traces limit interpretation.
   The September revision adds no simulation or evaluator calls.
 type: dataset
-version: "1.2.2"
-date-released: 2026-09-08
+version: "1.2.3"
+date-released: 2026-09-10
 repository-code: "https://github.com/MinhHixn/ECN-BENCH"
 
 # ---------------------------------------------------------------------------
 # Repository is private at this revision; access requires owner authorization.
-# Tag v1.2.1 identifies the initially uploaded freeze. Version 1.2.2 adds the
-# confirmed author, supervision and repository metadata. Add a DOI only after
-# a real persistent identifier has been assigned.
+# Version 1.2.3 contains the reference correction and is not yet tagged. The
+# 2026-09-10 audit found non-monotonic older tags: v1.2.1 points to 689c9f1 and
+# v1.2.2 to its parent 197f087. Publish 1.2.3 under a new tag and cite its full
+# target commit. Add a DOI only after a real persistent identifier is assigned.
 # ---------------------------------------------------------------------------
 authors:
   - given-names: Minh Hien
@@ -45,6 +46,22 @@ keywords:
 
 license: CC-BY-4.0
 
+preferred-citation:
+  type: report
+  title: >-
+    ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of
+    Multi-Agent Forecasting
+  authors:
+    - given-names: Minh Hien
+      family-names: NGUYEN
+      affiliation: Faculté des Sciences et Ingénierie, Sorbonne Université
+  year: 2026
+  url: "https://github.com/MinhHixn/ECN-BENCH"
+  notes: >-
+    Package version 1.2.3. Add its release tag, full target commit and persistent
+    DOI here when those identifiers are assigned; do not infer chronology from
+    the existing v1.2.1 and v1.2.2 tags.
+
 references:
   - type: report
     title: >-
@@ -62,7 +79,77 @@ references:
 
   - type: software
     title: MiroFish-Offline
+    authors:
+      - name: MiroFish-Offline contributors
+    url: "https://github.com/nikmcfly/MiroFish-Offline"
     notes: >-
       The multi-agent social-simulation engine underlying the benchmark;
       the app package is included at 07_pipeline/backend/. Its own license
-      terms apply to that directory.
+      terms apply to that directory. The ECN-BENCH snapshot contains later
+      project-specific changes. Its local project commit is not verified as a
+      publicly reachable upstream commit; do not cite it as an upstream version.
+
+  - type: article
+    title: >-
+      OASIS: Open Agent Social Interaction Simulations with One Million Agents
+    authors:
+      - given-names: Ziyi
+        family-names: Yang
+      - given-names: Zaibin
+        family-names: Zhang
+      - given-names: Zirui
+        family-names: Zheng
+      - given-names: Yuxian
+        family-names: Jiang
+      - given-names: Ziyue
+        family-names: Gan
+      - given-names: Zhiyu
+        family-names: Wang
+      - given-names: Zijian
+        family-names: Ling
+      - given-names: Jinsong
+        family-names: Chen
+      - given-names: Martz
+        family-names: Ma
+      - given-names: Bowen
+        family-names: Dong
+      - given-names: Prateek
+        family-names: Gupta
+      - given-names: Shuyue
+        family-names: Hu
+      - given-names: Zhenfei
+        family-names: Yin
+      - given-names: Guohao
+        family-names: Li
+      - given-names: Xu
+        family-names: Jia
+      - given-names: Lijun
+        family-names: Wang
+      - given-names: Bernard
+        family-names: Ghanem
+      - given-names: Huchuan
+        family-names: Lu
+      - given-names: Chaochao
+        family-names: Lu
+      - given-names: Wanli
+        family-names: Ouyang
+      - given-names: Yu
+        family-names: Qiao
+      - given-names: Philip
+        family-names: Torr
+      - given-names: Jing
+        family-names: Shao
+    year: 2024
+    url: "https://arxiv.org/abs/2411.11581"
+    identifiers:
+      - type: other
+        value: "arXiv:2411.11581"
+
+  - type: software
+    title: "OASIS: Open Agent Social Interaction Simulations"
+    authors:
+      - name: CAMEL-AI
+    version: "0.2.5"
+    url: "https://github.com/camel-ai/oasis"
+    notes: >-
+      The release environment pins camel-oasis 0.2.5 and camel-ai 0.2.78.

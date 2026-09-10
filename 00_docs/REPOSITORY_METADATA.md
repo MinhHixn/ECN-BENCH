@@ -8,8 +8,11 @@ Confirmed 2026-09-08:
 - Initial freeze commit: `ec161cef73f79758b85bf91fd7cc89e9908c9697`.
 - Initial freeze subject: `Freeze ECN-BENCH technical report and reproducible audit`.
 - Initial freeze Git author: `Minh Hien Nguyen <nguyenminhhienthd1@gmail.com>`.
-- Initial freeze tag: `v1.2.1`.
-- Metadata revision version/tag: `1.2.2` / `v1.2.2`.
+- Current `main` and `v1.2.1`: `689c9f11ede54830b5fad7f0f12e8d0fca7a7e12`.
+- `v1.2.2`: `197f0875ce6a2faf8a0752c4756a4da31e389818` (the parent
+  metadata revision).
+- Tag numbering is not chronologically monotonic. Cite the full commit SHA until
+  a new monotonic release (at least `v1.2.3`) is created without rewriting tags.
 
 The primary and corresponding author of the research is **Minh Hien NGUYEN**,
 student no. 21618468, L2 EEA (Bi-disciplinaire), minor in Mechanics, Faculté des

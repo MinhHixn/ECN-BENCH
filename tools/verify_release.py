@@ -25,7 +25,7 @@ def files():
         rel = p.relative_to(ROOT)
         if any(part in {".git", ".venv", "__pycache__", ".pytest_cache", "_workspace", "_verification"} for part in rel.parts):
             continue
-        if p.suffix == ".pyc" or (rel.parts[0] == "08_paper" and p.suffix in {".log", ".aux", ".out", ".xdv", ".gz"}):
+        if p.suffix == ".pyc" or (rel.parts[0] == "08_paper" and p.suffix in {".log", ".aux", ".out", ".xdv", ".gz", ".blg", ".toc", ".bbl"}):
             continue
         if rel.parts[0] == "03_traces" and rel.as_posix() not in {"03_traces/README.md", "03_traces/TRACE_MANIFEST.json"}:
             continue
@@ -66,6 +66,8 @@ def main():
         if SECRET.search(path.read_bytes()):
             raise ValueError(f"Potential credential in {name}; value suppressed")
     report.update(integrity="passed", secret_scan="passed", files_verified=len(actual))
+    from verify_paper_sources import verify as verify_paper_sources
+    report["paper_source_checks"] = verify_paper_sources()
     for filename in ("paper_results.json", "paper_full_results.json"):
         saved = json.loads((ROOT / "08_paper" / filename).read_text(encoding="utf-8"))
         for name, checksum in saved["input_sha256"].items():

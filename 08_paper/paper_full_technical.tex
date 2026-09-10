@@ -458,7 +458,7 @@ These examples motivate a distinction between generating conversation and delive
 
 \subsection{Rubric repeatability and construct validity}
 \label{sec:evaluator_reliability}
-The historical rubric compares repeated calls of a deployed evaluator, not independent human raters. Cohen's kappa describes label agreement after its marginal adjustment and depends on label prevalence. A low value is a repeatability warning; a high value would still not demonstrate that the labels measure polarization, herding or deliberation quality.
+The historical rubric compares repeated calls of a deployed evaluator, not independent human raters. Cohen's kappa~\cite{cohen1960} describes label agreement after its marginal adjustment and depends on label prevalence. A low value is a repeatability warning; a high value would still not demonstrate that the labels measure polarization, herding or deliberation quality.
 \begin{table}[!htbp]
 \centering
 \caption{Historical repeated-call rubric agreement values. The operational 0.8 cutoff was a project rule, not a universal validity threshold. Campaign and evaluator revisions are not matched; these figures do not rank model capacity.}
@@ -487,7 +487,7 @@ The project applied a 0.8 operational threshold and dropped unstable dimensions.
 
 \subsection{Telemetry placeholders and the meaning of convergence}
 \label{sec:jsd_convergence}
-The historical JSD audit found repeated initialization-like values and constant series. A non-increasing series passes a non-strict monotonicity test even when it never changes. It follows that a count of monotonic runs cannot establish convergence without verifying successful probes and understanding what distributions were compared.
+The historical Jensen--Shannon divergence (JSD) audit~\cite{lin1991jsd} found repeated initialization-like values and constant series. A non-increasing series passes a non-strict monotonicity test even when it never changes. It follows that a count of monotonic runs cannot establish convergence without verifying successful probes and understanding what distributions were compared.
 \begin{table}[!htbp]
 \centering
 \caption{Historical telemetry integrity summary, before recovery: 60 B/C units and 600 checkpoints per campaign. The last column counts decreasing transitions out of 540, not converging runs. Constant initialization values cannot establish convergence.}
@@ -539,7 +539,7 @@ The historical execution stack was designed for restricted-network HPC environme
 $\downarrow$ \\
 \textbf{Step 2: Persona Generation (4-Axis DNA, Neo4j Graph Memory)} \\
 $\downarrow$ \\
-\textbf{Step 3: 60-Step OASIS Simulation (MiroFish-Offline Engine)} \\
+\textbf{Step 3: 60-Step OASIS Simulation (MiroFish-Offline Engine)~\cite{yang2024,oasissoftware,mirofishoffline}} \\
 $\rightarrow$ \textit{Step 30: Nominally Relevant vs. Unrelated Injection} \\
 $\downarrow$ \\
 \textbf{Step 4: Output Extraction (Telemetry Logging \& Actions DB)} \\
@@ -556,9 +556,9 @@ $\downarrow$ \\
 \subsection{The Local Serving Stack}
 The project's original compute jobs used restricted-network nodes, motivating local services. This is a constraint of the recorded environment, not a claim that every university cluster prohibits outbound access. Hosted recovery and post-campaign evaluator calls are separately identified. The intended local components were:
 \begin{itemize}
-    \item \textbf{Primary Inference Server:} vLLM~\cite{vllm} is utilized to host open-weight models (e.g., Qwen2.5-72B-Instruct, Llama-3-70B-Instruct). vLLM's continuous batching and PagedAttention~\cite{vllm} support batched serving.
-    \item \textbf{Embedding Server:} An Infinity or Ollama background server hosting \texttt{nomic-embed-text} handles embedding queries for vector similarity.
-    \item \textbf{Graph Engine:} A self-hosted Neo4j Community Edition instance coupled with the Graphiti context library manages the relational and temporal state of the swarm memory.
+    \item \textbf{Primary Inference Server:} vLLM~\cite{vllm} hosted open-weight models. Its continuous batching and PagedAttention support batched serving; the archived jobs record the deployment-specific vLLM configuration rather than implying portability across versions.
+    \item \textbf{Embedding Server:} The archived release implements an Ollama endpoint~\cite{ollamasoftware} hosting \texttt{nomic-embed-text} for vector-similarity queries. The Nomic model card~\cite{nomiccard} documents the model family; the archived alias does not preserve an exact version or revision. No Infinity dependency or import is present in the released source, so Infinity is not claimed as an executed component.
+    \item \textbf{Graph Engine:} A self-hosted Neo4j Community Edition instance and project-specific Neo4j storage/retrieval code manage graph state. No Graphiti dependency or import is present in the archived release, so this report does not attribute the implementation to Graphiti.
 \end{itemize}
 
 \subsection{HPC Scalability Migration (Architecture v5.0 - v5.10)}
@@ -631,7 +631,7 @@ At 60 rounds, the population settings were 30, 100, 300, 1,000 and 3,000 agents.
 \end{tabular}
 \setlength{\tabcolsep}{6pt}
 \end{table}
-The theoretical upper bound $N(N-1)$ on directed non-self links is not the realized number of graph edges or messages. A complete graph at 3,000 agents would have many potential links, but the deployed interaction policy is not a complete communication network. Neither memory saturation nor collapsing signal-to-noise was directly measured by these Brier cells. A uniform distribution also maximizes, rather than minimizes, Shannon entropy, so an earlier low-entropy uniform-weight argument is mathematically incorrect.
+The theoretical upper bound $N(N-1)$ on directed non-self links is not the realized number of graph edges or messages. A complete graph at 3,000 agents would have many potential links, but the deployed interaction policy is not a complete communication network. Neither memory saturation nor collapsing signal-to-noise was directly measured by these Brier cells. A uniform distribution also maximizes, rather than minimizes, Shannon entropy~\cite{shannon1948}, so an earlier low-entropy uniform-weight argument is mathematically incorrect.
 
 \subsection{Round sweep}
 \label{sec:r_scaling}

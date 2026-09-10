@@ -1,8 +1,10 @@
 # ECN-BENCH: retrospective extraction audit
 
-Publication package **1.2.2**, updated 2026-09-08. Start with
+Publication package **1.2.3**, updated 2026-09-10. Start with
 [freeze review](00_docs/FREEZE_REVIEW.md) and
 [GitHub publishing instructions](00_docs/GITHUB_PUBLISH.md).
+For arXiv, use the [submission checklist](00_docs/ARXIV_READINESS.md) and
+[copy-ready metadata](00_docs/ARXIV_METADATA.md).
 This folder contains the paper, offline analysis inputs, historical code and
 audit trail. Raw traces are a separate companion ZIP, described in
 [the trace manifest](03_traces/TRACE_MANIFEST.json); they are not required to
@@ -53,8 +55,11 @@ No simulation, model download, credentials or API calls are needed for the analy
 | 09_audit | Invalid and superseded artifacts, including the prior manuscripts |
 
 Repository: `MinhHixn/ECN-BENCH` (private at this revision), principal branch
-`main`. Tag `v1.2.1` identifies the initially uploaded freeze; version 1.2.2 adds
-confirmed authorship, supervision and repository metadata. No DOI is asserted.
+`main`. Version 1.2.3 contains the reference and provenance correction and is
+not yet tagged. The pre-correction `main` commit audited on 2026-09-10 was
+`689c9f11ede54830b5fad7f0f12e8d0fca7a7e12`; `v1.2.1` points there and
+`v1.2.2` to its parent. Publish 1.2.3 under a new monotonic tag and cite that
+tag's full target commit; do not rewrite the existing tags.
 
 Minh Hien NGUYEN is the primary and corresponding author (L2 EEA,
 Bi-disciplinaire, minor in Mechanics, Faculté des Sciences et Ingénierie,

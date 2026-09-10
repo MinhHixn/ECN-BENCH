@@ -2,8 +2,10 @@
 
 Scientific scope: the restored 2026-09-06 full technical report and its retrospective
 measurement audit. Package version: 1.2.2. No simulation, evaluator call, model
-download or HPC job was performed for this metadata revision. The private GitHub
-repository and its initial `v1.2.1` tag were confirmed locally.
+download or HPC job was performed for this metadata revision. A later 2026-09-10
+audit found that `v1.2.1` points to `689c9f1`, a descendant of `v1.2.2` at
+`197f087`; use the full current commit SHA rather than inferring chronology from
+those tag numbers.
 
 ## Findings and fixes
 

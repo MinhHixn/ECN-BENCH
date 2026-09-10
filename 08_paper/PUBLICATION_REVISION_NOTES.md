@@ -4,7 +4,7 @@
 
 `ecn_bench_paper.pdf` là báo cáo kỹ thuật đầy đủ, không còn là bản 10 trang. Nguồn chính là `ecn_bench_paper.tex`, kèm `paper_full_technical.tex`, `paper_full_tables.tex` và `paper_historical_figures.tex`.
 
-Bản rút gọn được tách thành `ecn_bench_paper_short.tex` / `.pdf`. `ecn_bench_paper_conf.tex` dàn trang hai cột cho bản rút gọn, không thay thế báo cáo đầy đủ. Bản gốc tháng 8 vẫn còn nguyên trong `paper_archive/`.
+Bản rút gọn được tách thành `ecn_bench_paper_short.tex` / `.pdf`. `ecn_bench_paper_conf.tex` dàn trang hai cột cho bản rút gọn, không thay thế báo cáo đầy đủ. Bản gốc tháng 8 được giữ trong `../09_audit/`.
 
 ## Nội dung đã khôi phục và hoàn thiện
 
@@ -12,7 +12,7 @@ Bản rút gọn được tách thành `ecn_bench_paper_short.tex` / `.pdf`. `ec
 - Phương pháp thống kê, scoring, calibration, BSS, hiện tượng tương quan do dùng chung số hạng, và giới hạn power/độc lập.
 - Source audit, micro-question mapping, schema bypass, retry/fallback, evaluator replication, transfer/truncation và baseline single-agent.
 - Audit persona, outage, lỗi repair, catalogue/injection, sampled evidence, telemetry/JSD, kappa, missing traces và phân tích định tính từng trường hợp.
-- Kiến trúc GraphRAG/Graphiti/Neo4j, serving/HPC/container/storage; đầy đủ ma trận N/R scaling, cross-model anchors, runtime và quyết định cấu hình với kết luận đã sửa.
+- Kiến trúc GraphRAG/custom Neo4j storage, serving/HPC/container/storage; đầy đủ ma trận N/R scaling, cross-model anchors, runtime và quyết định cấu hình với kết luận đã sửa. Snapshot phát hành không chứa dependency/import Graphiti.
 - Danh mục 30 câu hỏi và bảng cho toàn bộ 360 unit của bốn campaign, tái tính từ vector thay vì chép bảng lỗi.
 - Giữ đủ 30 hình của bản dài trong phụ lục có diễn giải sửa ngay cạnh từng hình. Hình cũ được ghi rõ là historical artifact, không được dùng p-value/claim bên trong làm kết quả hiện hành.
 

@@ -10,6 +10,9 @@ _verification/
 *.pem
 *.key
 08_paper/*.aux
+08_paper/*.blg
+08_paper/*.toc
+08_paper/*.bbl
 08_paper/*.log
 08_paper/*.out
 08_paper/*.xdv

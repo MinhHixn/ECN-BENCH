@@ -14,6 +14,10 @@ tectonic --only-cached --keep-logs 08_paper/ecn_bench_paper_short.tex
 tectonic --only-cached --keep-logs 08_paper/ecn_bench_paper_conf.tex
 ```
 
+Tectonic runs BibTeX automatically for the shared `08_paper/references.bib`.
+Run the commands from the archive root so bibliography and included-file paths
+resolve consistently.
+
 Installing packages may require network access. Analysis itself performs no network calls and never reads credentials. Tectonic's `--only-cached` flag requires TeX packages to have been cached previously; it cannot download missing packages. Without that flag, an initial build may need network access.
 
 ## Generated artifacts

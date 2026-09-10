@@ -1,5 +1,22 @@
 # Changes
 
+## 1.2.3 — reference and provenance correction, 2026-09-10
+
+- Centralized the manuscripts' references in `08_paper/references.bib` and added
+  primary citations for model families, confidence elicitation, social-simulation
+  validity, statistical methods, OASIS and MiroFish-Offline.
+- Replaced outdated arXiv-only records where archival conference publications
+  are available.
+- Corrected the implementation description to match the archived custom
+  Neo4j-backed retrieval code; the release does not contain Graphiti or Infinity.
+- Recorded the non-monotonic existing tag mapping. No tag was rewritten.
+  `689c9f11ede54830b5fad7f0f12e8d0fca7a7e12` identifies the pre-correction
+  repository, not this corrected paper; cite the new target commit after release.
+- Corrected Zhou and Sharma author lists, expanded software/model attribution
+  to 47 references, and removed an unverified public-upstream commit claim.
+- Added standalone arXiv source packaging, a fresh-extraction offline build
+  check, explicit XeTeX fonts and a submission-readiness checklist.
+
 ## 1.2.2 — author and repository metadata, 2026-09-08
 
 - Identified Minh Hien NGUYEN as primary and corresponding author, with the

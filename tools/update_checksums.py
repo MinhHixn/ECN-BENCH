@@ -23,7 +23,7 @@ def main():
         name = relative.parts[0] if len(relative.parts) > 1 else "(root)"
         count, size = groups.get(name, (0, 0))
         groups[name] = count + 1, size + path.stat().st_size
-    lines = ["# Publication package inventory", "", "Package 1.2.2; research analysis versions 2026-09-06 / 2026-09-06-full.", "",
+    lines = ["# Publication package inventory", "", "Package 1.2.3; research analysis versions 2026-09-06 / 2026-09-06-full.", "",
              "Counts exclude this generated inventory and `checksums.sha256`.",
              "Raw traces are separate; see `03_traces/TRACE_MANIFEST.json`.", "",
              "| Directory | Files | Bytes |", "|---|---:|---:|"]

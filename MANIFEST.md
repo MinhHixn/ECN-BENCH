@@ -1,25 +1,25 @@
 # Publication package inventory
 
-Package 1.2.2; research analysis versions 2026-09-06 / 2026-09-06-full.
+Package 1.2.3; research analysis versions 2026-09-06 / 2026-09-06-full.
 
 Counts exclude this generated inventory and `checksums.sha256`.
 Raw traces are separate; see `03_traces/TRACE_MANIFEST.json`.
 
 | Directory | Files | Bytes |
 |---|---:|---:|
-| (root) | 6 | 13603 |
+| (root) | 6 | 17795 |
 | .github | 1 | 503 |
-| 00_docs | 9 | 27844 |
+| 00_docs | 11 | 40633 |
 | 01_benchmark | 97 | 385051 |
-| 02_campaigns | 42 | 28923001 |
+| 02_campaigns | 42 | 28923005 |
 | 03_traces | 2 | 368212 |
 | 04_experiments | 37 | 11229697 |
 | 05_analysis | 25 | 746974 |
 | 06_figures | 32 | 4810031 |
 | 07_pipeline | 99 | 1876787 |
-| 08_paper | 17 | 6046378 |
+| 08_paper | 18 | 6064833 |
 | 09_audit | 288 | 97336391 |
-| tools | 2 | 8381 |
+| tools | 5 | 17286 |
 
 All publication files, including this manifest and dotfiles, are hashed in
 `checksums.sha256`. The checksum file itself, runtime caches, extracted

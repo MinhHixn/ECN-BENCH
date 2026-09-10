@@ -1,10 +1,18 @@
+% IEEEtran initializes Times before fontspec; give that initialization T1 fonts.
+\RequirePackage[T1]{fontenc}
 \ifdefined\ECNConferenceVersion
 \documentclass[10pt,conference]{IEEEtran}
 \else
 \documentclass[11pt,journal,onecolumn]{IEEEtran}
 \fi
+\usepackage{iftex}
+\ifPDFTeX
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\else
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf,SmallCapsFont=lmromancaps10-regular.otf]
+\fi
 \usepackage{amsmath,amssymb,booktabs,graphicx,array}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -12,13 +20,13 @@
 \usepackage{etoolbox}
 \usepackage{multirow}
 \setcounter{tocdepth}{2}
-\IfFileExists{ECNBENCH-RELEASE/06_figures/fig1_lift_heatmap.png}{\def\HistoricalFigureRoot{ECNBENCH-RELEASE/06_figures}}{\def\HistoricalFigureRoot{../06_figures}}
+\IfFileExists{figures/fig1_lift_heatmap.png}{\def\HistoricalFigureRoot{figures}}{\IfFileExists{ECNBENCH-RELEASE/06_figures/fig1_lift_heatmap.png}{\def\HistoricalFigureRoot{ECNBENCH-RELEASE/06_figures}}{\def\HistoricalFigureRoot{../06_figures}}}
 \appto\ttfamily{\hyphenchar\font=45}
 \setlength{\emergencystretch}{3em}
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\textfraction}{0.08}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
-pdftitle={ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-Agent Forecasting}}
+pdfauthor={Minh Hien NGUYEN},pdftitle={ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-Agent Forecasting}}
 \input{paper_tables.tex}
 \title{ECN-BENCH: Design, Systems Engineering,\\and a Forensic Audit of Multi-Agent Forecasting\\[0.3em]\large Full Technical Report}
 \author{Minh Hien NGUYEN%
@@ -26,7 +34,7 @@ pdftitle={ECN-BENCH: Design, Systems Engineering, and a Forensic Audit of Multi-
 (Bi-disciplinaire), minor in Mechanics, Facult\'e des Sciences et Ing\'enierie,
 Sorbonne Universit\'e. Email: \texttt{nguyen.minh\_hien@etu.sorbonne-universite.fr}.
 Scientific analysis revised September 6, 2026; authorship and repository metadata updated
-September 8, 2026. This revision adds no simulation runs or evaluator calls.}}
+September 10, 2026. This revision adds no simulation runs or evaluator calls.}}
 \begin{document}
 \maketitle
 
@@ -126,7 +134,10 @@ Haldar and Hockenmaier~\cite{haldar2025} directly investigate inconsistency acro
 repeated judgments. We do not claim that repeated-judge instability is new.
 Our narrower contribution concerns the extraction of categorical probabilities
 from social-simulation evidence and the associated source-code and data-provenance
-audit.
+audit. Work on verbalized confidence and uncertainty elicitation shows that
+probability-like outputs depend on the elicitation procedure and calibration
+strategy~\cite{tian2023calibration,xiong2024uncertainty}; this motivates treating
+the extractor as part of the measured system rather than as a transparent reader.
 
 Proper scoring rules provide a framework for evaluating probabilistic forecasts.
 Gneiting and Raftery~\cite{gneiting2007} distinguish calibration from sharpness:
@@ -135,9 +146,15 @@ depend on which outcome is eventually observed. A higher Brier score alone canno
 locate an error in either the agents' reasoning or the extractor's interpretation.
 Likewise, a sharp distribution is not necessarily a faithful or accurate one.
 
-OASIS~\cite{yang2024} supports large-scale LLM social simulations. ECN-BENCH uses
-the MiroFish-Offline pipeline built on that framework; the simulation infrastructure
-is the testbed for this audit, rather than a new simulation algorithm.
+OASIS~\cite{yang2024,oasissoftware} supports large-scale LLM social simulations.
+ECN-BENCH uses a project-modified snapshot of the MiroFish-Offline
+pipeline~\cite{mirofishoffline,mirofishupstream} built on that framework and
+CAMEL~\cite{camelsoftware}; the simulation
+infrastructure is the testbed for this audit, rather than a new simulation
+algorithm. Prior work demonstrates the promise of LLM-based human simulation,
+while subsequent validation work finds that success in omniscient simulations
+does not transfer reliably to information-asymmetric interaction
+settings~\cite{aher2023simulate,zhou2024socialsimulation}.
 ForecastBench~\cite{karger2024} evaluates questions whose answers are unknown when
 forecasts are submitted. That prospective design addresses a limitation our
 retrospective release-date filter cannot resolve: every LLM component capable
@@ -162,10 +179,11 @@ and persona audits are not validated measurements of human social behavior.
 
 \subsection{Memory systems and serving infrastructure}
 GraphRAG~\cite{graphrag2024} motivates graph-indexed retrieval and
-summarization. The project uses Graphiti/Neo4j-based temporal memory in its
-execution stack, but no matched memory ablation here establishes a
-forecasting benefit. The archived source, rather than a contemporary
-software landing page, defines the relevant implementation.
+summarization. The archived release implements custom Neo4j-backed~\cite{neo4jsoftware} graph
+storage and retrieval; it does not contain a Graphiti dependency or import.
+No matched memory ablation here establishes a forecasting benefit. The archived
+source, rather than a contemporary software landing page, defines the relevant
+implementation.
 PagedAttention and vLLM~\cite{vllm} address serving efficiency; their use
 does not guarantee semantic output correctness or consistency across
 local and hosted recovery configurations.
@@ -225,11 +243,16 @@ length and stimulus diversity are therefore not separated by this design.
 
 \subsection{Campaign identity and recovery}
 \label{sec:serving_note}
-The four campaign labels are Llama-3.1-8B, Mistral-7B,
-Qwen2.5-7B and Qwen2.5-14B. The Llama campaign originally used an AWQ-INT4
-checkpoint under local vLLM; its recovery used a hosted Llama endpoint.
-Mistral used the v0.1 instruct model with local full-precision serving;
-Qwen2.5-7B used a local Ollama/GGUF deployment. The Qwen2.5-14B artifacts
+The four campaign labels are Llama-3.1-8B~\cite{llama3,llama31card},
+Mistral-7B~\cite{mistral7b,mistralcard}, and Qwen2.5-7B and
+Qwen2.5-14B~\cite{qwen25,qwen25cards}. The Llama campaign originally used an
+AWQ-INT4 checkpoint under local vLLM; its recovery used a hosted Llama endpoint.
+The Mistral manifest records the alias \texttt{mistral-7b-awq}, whereas the
+archived source audit reports that the v0.1 instruct deployment used an
+unquantized path without a vLLM quantization flag. Because the underlying served
+checkpoint is not preserved, we retain the full-precision report but do not
+treat it as independently replayable from the release.
+Qwen2.5-7B used a local Ollama/GGUF deployment~\cite{ollamasoftware}. The Qwen2.5-14B artifacts
 span original and recovery executions, and their names and serving descriptions
 are not consistent enough to establish one numerical-precision setting for
 the whole campaign. We retain the label without treating it as a controlled
@@ -262,7 +285,10 @@ events, to keep a balanced comparison.
 The archive separates evaluator files:
 \begin{itemize}
 \item \textbf{Evaluator J}: the original local DeepSeek-R1-Distill-Qwen-14B
-deployment, identified in the pipeline as \texttt{deepseek-r1-14b}.
+deployment~\cite{deepseekr1,deepseekcard}, identified in the pipeline as
+\texttt{deepseek-r1-14b}. The retained local snapshot identifier is
+\texttt{1df8507178afcc1b}\allowbreak\texttt{ef68cd8c393f61a8}\allowbreak
+\texttt{86323761}.
 \item \textbf{Evaluator A}: the recorded hosted identifier
 \texttt{deepseek/deepseek-v4-flash-0731}. Three campaigns have an initial
 pass and three additional reads. Qwen2.5-14B has three reads only.
@@ -296,7 +322,7 @@ question and $\mathcal O_e$ the outcome list. The extraction function includes
 the model, prompt, generation settings, retries, serving and post-processing.
 The final forecast is an output of this composite system.
 
-We use the unnormalised multicategory Brier score:
+We use the unnormalised multicategory Brier score~\cite{brier1950,gneiting2007}:
 \begin{equation}
  BS(\mathbf p,y)=\sum_{o\in\mathcal O}
        (p_o-\mathbf 1\{o=y\})^2,\qquad 0\leq BS\leq 2.
@@ -335,14 +361,17 @@ Within-unit Brier range and exact vector agreement describe repeatability.
 Exact agreement is a strict diagnostic; disagreement can be numerically small,
 and range tends to increase with the number of reads. These quantities should
 not be used as calibrated thresholds for which population effects are measurable.
-Nor does inter-evaluator correlation establish agreement or validity.
+Nor does inter-evaluator correlation establish agreement or
+validity~\cite{bland1986agreement}.
 
 \subsection{Dependence and uncertainty}
 \label{sec:inference}
 The four campaigns answer the same events. We first form each event's mean
 paired contrast across the four fixed campaigns, then resample events with
 replacement. All observations belonging to a sampled event are kept together.
-We use 100,000 percentile bootstrap replicates, NumPy's generator with seed 7,
+We use 100,000 percentile bootstrap replicates~\cite{efron1979}, retaining
+complete event clusters during resampling~\cite{cameron2008cluster}. The
+implementation uses NumPy 2.3.5~\cite{harris2020numpy}, its generator with seed 7,
 and 2.5th/97.5th percentiles. The estimand is the equal-event average over these
 four campaigns, not an average over a population of independently sampled models.
 Intervals condition on the observed simulations and evaluator readings.
@@ -484,9 +513,10 @@ deliberate hedge by the model.
 \subsection{Cross-evaluator transfer}
 An existing follow-up sent Mistral's 60 simulated evidence records to five
 additional unconstrained deployments. The stored experiment reports 8 near-uniform
-outputs among 58 parsed Qwen3-14B responses; six of these eight occur among the
+outputs among 58 parsed Qwen3-14B responses~\cite{qwen3}; six of these eight occur among the
 19 units that Evaluator J flattened. Other deployments report zero near-uniform
-outputs among 56 DeepSeek-R1, 54 DeepSeek-R1-Distill-Llama-70B, 57 Qwen3-32B
+outputs among 56 DeepSeek-R1~\cite{deepseekr1}, 54 DeepSeek-R1-Distill-Llama-70B,
+57 Qwen3-32B~\cite{qwen3}
 and 60 Ministral-14B responses.
 
 These are counts among usable responses, not success rates over all attempted
@@ -635,7 +665,7 @@ and injection were supplied directly in the prompt.
 
 Only Llama-3.1-8B and Qwen2.5-7B have nominal model identities matching their
 campaigns; identical served weights are not independently verified, and
-serving and precision are not fully matched. Ministral-8B and Qwen3-14B differ
+serving and precision are not fully matched. Ministral-8B~\cite{ministralcards} and Qwen3-14B differ
 from the Mistral-7B and Qwen2.5-14B campaigns and are secondary comparisons.
 
 \begin{table*}[!htbp]
@@ -796,9 +826,13 @@ infrastructure used for the historical experiments.
 The source and replication package are hosted in the private GitHub repository
 \url{https://github.com/MinhHixn/ECN-BENCH}. At the time of this revision,
 access requires authorization from the repository owner. The principal branch
-is \texttt{main}; tag \texttt{v1.2.1} identifies the initially uploaded technical
-freeze. The present authorship and repository-metadata update is package version
-\texttt{1.2.2}. A permanent DOI has not been assigned.
+is \texttt{main}. This reference-corrected archive is package version
+\texttt{1.2.3}; its release tag and permanent DOI have not yet been assigned.
+At the 2026-09-10 audit, the pre-correction \texttt{main} commit was
+\nolinkurl{689c9f11ede54830b5fad7f0f12e8d0fca7a7e12}. The existing tag numbers
+are not chronological: \texttt{v1.2.1} points to that commit, whereas
+\texttt{v1.2.2} points to its parent. Publication of version 1.2.3 must use a
+new tag and its full target commit without rewriting either existing tag.
 Scored records and evidence fields survive even where raw simulation traces
 were lost. Qwen2.5-14B's original raw traces are unavailable for 21 events
 following scratch-storage deletion; recovery traces and the surviving original
@@ -813,75 +847,6 @@ Synthetic personas and behaviours are not validated models of real populations.
 Results should not be interpreted as operational forecasting performance
 or as evidence about the beliefs of actual people.
 
-\begin{thebibliography}{99}
-\bibitem{gneiting2007}
-T.~Gneiting and A.~E.~Raftery, \emph{Strictly proper scoring rules, prediction,
-and estimation}, Journal of the American Statistical Association, vol.~102,
-no.~477, pp.~359--378, 2007, doi:10.1198/016214506000001437.
-\bibitem{zheng2023}
-L.~Zheng et al., \emph{Judging LLM-as-a-judge with MT-Bench and Chatbot Arena},
-Advances in Neural Information Processing Systems, 2023.
-\url{https://arxiv.org/abs/2306.05685}.
-\bibitem{haldar2025}
-R.~Haldar and J.~Hockenmaier, \emph{Rating roulette: Self-inconsistency in
-LLM-as-a-judge frameworks}, Findings of EMNLP, pp.~24986--25004, 2025,
-doi:10.18653/v1/2025.findings-emnlp.1361.
-\bibitem{yang2024}
-Z.~Yang et al., \emph{OASIS: Open agent social interaction simulations with
-one million agents}, arXiv:2411.11581, 2024.
-\url{https://arxiv.org/abs/2411.11581}.
-\bibitem{karger2024}
-E.~Karger et al., \emph{ForecastBench: A dynamic benchmark of AI forecasting
-capabilities}, arXiv:2409.19839, 2024.
-\url{https://arxiv.org/abs/2409.19839}.
-
-\bibitem{mmlu}
-D.~Hendrycks et al., \emph{Measuring massive multitask language understanding},
-ICLR, 2021. \url{https://arxiv.org/abs/2009.03300}.
-\bibitem{swebench}
-C.~E.~Jimenez et al., \emph{SWE-bench: Can language models resolve real-world
-GitHub issues?}, ICLR, 2024. \url{https://arxiv.org/abs/2310.06770}.
-\bibitem{webarena2023}
-S.~Zhou et al., \emph{WebArena: A realistic web environment for building
-autonomous agents}, arXiv:2307.13854, 2023.
-\url{https://arxiv.org/abs/2307.13854}.
-\bibitem{park2023generative}
-J.~S.~Park et al., \emph{Generative agents: Interactive simulacra of human
-behavior}, UIST, 2023. \url{https://arxiv.org/abs/2304.03442}.
-\bibitem{du2023debate}
-Y.~Du et al., \emph{Improving factuality and reasoning in language models
-through multiagent debate}, arXiv:2305.14325, 2023.
-\url{https://arxiv.org/abs/2305.14325}.
-\bibitem{sharma2023sycophancy}
-M.~Sharma et al., \emph{Towards understanding sycophancy in language models},
-arXiv:2310.13548, 2023. \url{https://arxiv.org/abs/2310.13548}.
-\bibitem{graphrag2024}
-D.~Edge et al., \emph{From local to global: A Graph RAG approach to
-query-focused summarization}, arXiv:2404.16130, 2024.
-\url{https://arxiv.org/abs/2404.16130}.
-\bibitem{vllm}
-W.~Kwon et al., \emph{Efficient memory management for large language model
-serving with PagedAttention}, SOSP, 2023.
-\url{https://arxiv.org/abs/2309.06180}.
-\bibitem{halawi2024approaching}
-D.~Halawi et al., \emph{Approaching human-level forecasting with language
-models}, NeurIPS, 2024. \url{https://arxiv.org/abs/2402.18563}.
-\bibitem{oren2024proving}
-Y.~Oren et al., \emph{Proving test set contamination in black box language
-models}, ICLR, 2024. \url{https://arxiv.org/abs/2310.17623}.
-
-\bibitem{esteban1994}
-J.-M.~Esteban and D.~Ray, \emph{On the measurement of polarization},
-Econometrica, vol.~62, no.~4, pp.~819--851, 1994.
-doi:10.2307/2951734.
-\bibitem{degroot1974}
-M.~H.~DeGroot, \emph{Reaching a consensus},
-Journal of the American Statistical Association, vol.~69, no.~345,
-pp.~118--121, 1974. doi:10.1080/01621459.1974.10480137.
-\bibitem{steenbergen2003}
-M.~R.~Steenbergen et al., \emph{Measuring political deliberation:
-A discourse quality index}, Comparative European Politics, vol.~1,
-pp.~21--48, 2003. doi:10.1057/palgrave.cep.6110002.
-
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 \end{document}

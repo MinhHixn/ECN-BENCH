@@ -12,6 +12,8 @@
 - `paper_results.json`: machine-readable current analysis.
 - `fig_paper_audit.png`: current figure.
 - `PAPER_DATA_MANIFEST.md`: mapping from claims to frozen sources.
+- `references.bib`: shared, primary-source bibliography for the full and concise
+  manuscripts.
 
 The original August long report and conference draft are preserved in `../09_audit/`. They contain withdrawn claims and must not be cited as current results. The full restoration preserves their research scope without reinstating unsupported conclusions. The extended audit retains all 360 stored units and excludes T1 from four-model aligned aggregates because Qwen2.5-14B T1 asks a different question; the primary 20-event analysis is unaffected.
 
@@ -23,7 +25,15 @@ and corresponding author, affiliated with the Faculté des Sciences et Ingénier
 Sorbonne Université (L2 EEA, Bi-disciplinaire, minor in Mechanics; student
 no. 21618468). Hugues DIGONNET (Centrale Nantes / GeM) is acknowledged as the
 academic supervisor and is not listed as a co-author. The private repository is
-`MinhHixn/ECN-BENCH`, branch `main`; `v1.2.1` marks the initially uploaded freeze,
-while package 1.2.2 contains this metadata update. No DOI has been assigned.
+`MinhHixn/ECN-BENCH`, branch `main`. This corrected archive is package 1.2.3 and
+is not yet tagged. The pre-correction `main` commit audited on 2026-09-10 was
+`689c9f11ede54830b5fad7f0f12e8d0fca7a7e12`; `v1.2.1` points there and
+`v1.2.2` to its parent. Publish 1.2.3 under a new monotonic tag and cite that
+tag's full target commit.
 
 Build instructions: `../00_docs/REPRODUCE.md`.
+
+arXiv packaging and remaining author decisions:
+[ARXIV_READINESS.md](../00_docs/ARXIV_READINESS.md).
+The dedicated source ZIP is generated with `tools/prepare_arxiv.py`; do not
+upload the complete GitHub or trace ZIP as the manuscript source.
